@@ -4,9 +4,10 @@ title:  "코인공주 : 오프라인 레트로 RPG"
 author: zacra
 categories: [ 게임 ]
 image: assets/images/coinprincess.jpg
+rating: 4.5
 #beforetoc: "자밥스튜디오 대표작중 하나입니다. 글로벌 370만 다운로드를 기록중에 있습니다."
 #toc: true
-rating: 4.2
+
 ---
 자밥스튜디오 대표작중 하나입니다. 글로벌 170만 다운로드를 기록중에 있습니다.
 코인왕국의 코인공주가 마왕에 의해 마왕성에 잡혀갔습니다.
