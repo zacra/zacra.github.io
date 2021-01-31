@@ -3,7 +3,7 @@ layout: post
 title:  "팩트풀니스 : 우리가 세상을 오해하는 10가지 이유와 세상이 생각보다 괜찮은 이유"
 author: zacra
 categories: [ 독서후기 ]
-image: https://postfiles.pstatic.net/MjAyMTAxMjVfMjk4/MDAxNjExNTg1MzI3OTQz.5scfTpoZ1hux6g0rxx6ZSBs6oyjPtFU4VmxbIi7b_kMg._oP_hR7UGgC3zWVc2jLZVO_OKUHpNzJOdIMJIyGYrbAg.PNG.zacra/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-01-25_%EC%98%A4%ED%9B%84_10.49.07.png?type=w580
+image: https://thumbnail6.coupangcdn.com/thumbnails/local/320/image2/PRODUCTREVIEW/201911/9/7058948765776924486/b7dcb600-8ebd-4384-bd7b-082be633352f.jpg
 description: "완독하고 적어보는 독서 후기!"
 #toc: true
 
