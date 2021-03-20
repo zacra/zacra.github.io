@@ -3,7 +3,7 @@ layout: post
 title:  "오리지널스"
 author: zacra
 categories: [ 독서후기 ]
-image: https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/8445/d8f55e070da50e25b4959200833931e2cabf62e908d23d3e45ff1e3c831c.jpg
+image: https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/7eba/91bee8b0d050df15940035f8842a5885b922587a97da4eee5b6061de9c3e.jpg
 description: "완독하고 적어보는 독서 후기!"
 #toc: true
 
