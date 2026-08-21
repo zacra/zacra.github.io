@@ -1,0 +1,1129 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>게만아 패키지 콘텐츠 1~97 가이드 | 포스팅·crontab 예시</title>
+<meta name="description" content="게만아 파이썬 자동매매 패키지 1~97번 콘텐츠의 관련 설명 포스팅과 crontab 등록 예시를 한곳에서 확인하는 공식 참고 가이드입니다.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://zacra.github.io/package-content-guide.html">
+<link rel="stylesheet" href="/assets/style.css">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="게만아 패키지 콘텐츠 1~97 가이드">
+<meta property="og:description" content="패키지 1~97번 콘텐츠의 필독 포스팅과 crontab 등록 예시를 검색해서 확인하세요.">
+<meta property="og:url" content="https://zacra.github.io/package-content-guide.html">
+<meta property="og:image" content="https://zacra.github.io/assets/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "게만아 패키지 콘텐츠 1~97 가이드", "description": "게만아 파이썬 자동매매 패키지 1~97번 콘텐츠의 관련 포스팅과 crontab 등록 예시 모음", "url": "https://zacra.github.io/package-content-guide.html", "inLanguage": "ko-KR", "dateModified": "2026-08-22", "numberOfItems": 97, "publisher": {"@id": "https://zacra.github.io/#organization"}}</script>
+<style>
+.guide-toolbar{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.4rem}
+.guide-search{flex:1 1 320px;min-width:220px;padding:.85rem 1rem;border:1px solid #d6dbe3;border-radius:12px;font:inherit;background:#fff}
+.guide-count{font-size:.92rem;opacity:.72}
+.content-list{display:grid;gap:.7rem}
+.content-item{border:1px solid #e2e6ec;border-radius:14px;background:#fff;overflow:hidden}
+.content-item summary{cursor:pointer;padding:1rem 1.05rem;font-weight:800;list-style:none}
+.content-item summary::-webkit-details-marker{display:none}
+.content-item summary::after{content:"＋";float:right;font-weight:700;opacity:.55}
+.content-item[open] summary::after{content:"−"}
+.content-item .num{display:inline-block;min-width:3.2rem;color:#4c63d2}
+.content-body{padding:0 1.05rem 1.1rem;border-top:1px solid #edf0f4}
+.content-body h3{font-size:1rem;margin:1rem 0 .55rem}
+.guide-links{display:flex;gap:.5rem;flex-wrap:wrap}
+.content-body pre{white-space:pre-wrap;word-break:break-word;margin:.45rem 0;padding:.9rem 1rem;border-radius:10px;background:#111827;color:#f8fafc;overflow:auto}
+.muted{opacity:.7}
+.cron-note{padding:.8rem 1rem;background:#f5f7fa;border-radius:10px}
+.guide-actions{display:flex;gap:.5rem;flex-wrap:wrap}
+.mini-btn{border:1px solid #d6dbe3;background:#fff;border-radius:10px;padding:.7rem .85rem;font:inherit;cursor:pointer}
+@media (max-width:640px){.content-item summary{padding:.9rem}.content-body{padding:0 .9rem .95rem}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+<header class="site-header">
+<nav class="nav" aria-label="주요 메뉴">
+<a class="brand" href="/">게만아 <small>파이썬 자동매매 Docs</small></a>
+<div class="nav-links">
+<a href="/investment-philosophy.html">투자 철학</a>
+<a href="/python-auto-trading.html">자동매매 시작</a>
+<a href="/system-guide.html">시작 가이드</a>
+<a href="/super-moving-average.html">슈퍼 이동평균</a>
+<a href="/package.html">패키지</a>
+<a href="/broker-openapi.html">7개 증권사 API</a>
+<a href="/starter.html">무료 Starter</a>
+</div>
+</nav>
+</header>
+
+<main id="main">
+<div class="breadcrumb"><a href="/">홈</a> › <a href="/package.html">패키지</a> › 콘텐츠 전체 가이드</div>
+<p class="eyebrow">PACKAGE REFERENCE</p>
+<h1>패키지 콘텐츠 1~97 전체 가이드</h1>
+<p class="lead"><strong>각 콘텐츠의 필독 포스팅과 crontab 등록 예시</strong>를 한곳에 모았습니다. 패키지 메인 페이지는 구매 판단에 집중할 수 있도록 간결하게 유지하고, 실제 사용에 필요한 상세 참고 정보는 이 페이지에서 확인합니다.</p>
+
+<section class="notice">
+<h2>사용 전 반드시 확인하세요</h2>
+<p><strong>사용하려는 번호의 관련 포스팅을 먼저 확인하세요.</strong> 아래 crontab은 등록 예시이며, 코드 버전·시장 운영시간·서버 시간대·증권사/거래소 환경 등에 따라 조정이 필요할 수 있습니다.</p>
+<p>또한 일부 콘텐츠 제목에 포함된 연복리·MDD·'무손실' 등의 표현은 <strong>해당 콘텐츠가 작성될 당시의 제목 또는 과거 백테스트 표현</strong>입니다. 미래 수익이나 손실 방지를 보장하는 의미가 아닙니다.</p>
+</section>
+
+<section>
+<div class="guide-toolbar">
+  <input id="guideSearch" class="guide-search" type="search" placeholder="번호 또는 제목 검색 — 예: TQQQ, 바이낸스, 자산배분, 65" aria-label="패키지 콘텐츠 검색">
+  <div class="guide-actions">
+    <button class="mini-btn" type="button" id="openAll">전체 펼치기</button>
+    <button class="mini-btn" type="button" id="closeAll">전체 접기</button>
+  </div>
+  <span class="guide-count" id="guideCount">97개 표시 중</span>
+</div>
+<div class="content-list" id="contentList">
+
+<details class="content-item" id="content-1" data-search="1 주식과 채권 그리고 달러까지 분산 투자하는 강력한 포트폴리오?">
+  <summary><span class="num">[01]</span> 주식과 채권 그리고 달러까지 분산 투자하는 강력한 포트폴리오?</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/222923418760" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>10 0 * * 1-5 python3 /var/autobot/Dual_KrStock_UsBond_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-2" data-search="2 환헤지? vs 환노출? 국내 상장 미국 etf는 이렇게 투자하세요!">
+  <summary><span class="num">[02]</span> 환헤지? VS 환노출? 국내 상장 미국 ETF는 이렇게 투자하세요!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/222936160836" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>11 0 * * 1-5 python3 /var/autobot/Dual_H_UsInKr_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-3" data-search="3 주식 투자를 한다면 읽어야할 단 1개의 책 (게만아 개인연금 포트폴리오 봇 )">
+  <summary><span class="num">[03]</span> 주식 투자를 한다면 읽어야할 단 1개의 책 (게만아 개인연금 포트폴리오 봇 )</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/222947571582" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>12 1 * * 1-5 python3 /var/autobot/My_Pension_Bot.py
+# 사용 전 이 영상은 꼭 체크하세요 https://youtu.be/Oaai5laLGNE</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-4" data-search="4 게만아 올웨더 포트폴리오 연금 계좌 봇 (irp계좌)">
+  <summary><span class="num">[04]</span> 게만아 올웨더 포트폴리오 연금 계좌 봇 (IRP계좌)</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/222949269705" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>13 1 * * 1-5 python3 /var/autobot/My_IRP_Bot.py
+# 사용 전 이 영상은 꼭 체크하세요 https://youtu.be/Oaai5laLGNE</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-5" data-search="5 지수 etf의 수익률을 넘어서는 핵심위성 + 섹터 모멘텀 투자 전략!">
+  <summary><span class="num">[05]</span> 지수 ETF의 수익률을 넘어서는 핵심위성 + 섹터 모멘텀 투자 전략!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/222954263002" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>0 1 * * 1-5 python3 /var/autobot/My_KR_Sector.py
+0 15 * * 1-5 python3 /var/autobot/My_US_Sector.py
+0 15 * * 1-5 python3 /var/autobot/New_US_Sector_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-6" data-search="6 주식이 30년간 하락해도 우상향하는 순환적립식 + 자산배분 전략">
+  <summary><span class="num">[06]</span> 주식이 30년간 하락해도 우상향하는 순환적립식 + 자산배분 전략</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/222967138965" target="_blank" rel="noopener noreferrer">필독 포스팅 1 열기 →</a>
+<a class="btn" href="https://blog.naver.com/zacra/222969725781" target="_blank" rel="noopener noreferrer">필독 포스팅 2 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>0 21 * * 1-5 python3 /var/autobot/Canaria_Score.py
+13 1 * * 1-5 python3 /var/autobot/My_IRP_Bot_V2.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-7" data-search="7 연복리 20%수익률의 동적자산배분 끝판왕 baa전략">
+  <summary><span class="num">[07]</span> 연복리 20%수익률의 동적자산배분 끝판왕 BAA전략</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/222979124069" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>0 15 * * 1-5 python3 /var/autobot/My_US_BAA.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-8" data-search="8 바이낸스 비트코인 현물 수수료 무료!! 비트코인 이평무한매수봇으로 수익 내기!">
+  <summary><span class="num">[08]</span> 바이낸스 비트코인 현물 수수료 무료!! 비트코인 이평무한매수봇으로 수익 내기!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/222981499437" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/5 * * * * python3 /var/autobot/binance_spot.py
+*/2 * * * * python3 /var/autobot/binance_spot_hour.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-9" data-search="9 양방향 레버리지 투자로 안정적인 0.5%씩 수익 먹기">
+  <summary><span class="num">[09]</span> 양방향 레버리지 투자로 안정적인 0.5%씩 수익 먹기</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/222988877129" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/2 12-22 * * 1-5 python3 /var/autobot/Infinity_BothSide_Stock_US.py
+*/2 0-8 * * 1-5 python3 /var/autobot/Infinity_BothSide_Stock_KR.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-10" data-search="10 양방향 이평무한매수 봇 비트코인으로!! 바이낸스 양방향 매매 봇!">
+  <summary><span class="num">[10]</span> 양방향 이평무한매수 봇 비트코인으로!! 바이낸스 양방향 매매 봇!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/222993971891" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/1 * * * * python3 /var/autobot/Infinity_BothSide_Coin.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-11" data-search="11 1천만원이 16년 만에 25억으로 소형주 20선 퀀트 전략(feat.젠포트)">
+  <summary><span class="num">[11]</span> 1천만원이 16년 만에 25억으로 소형주 20선 퀀트 전략(feat.젠포트)</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223000628375" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>24 6 * * 1-5 python3 /var/autobot/My_Small_Quant20.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-12" data-search="12 주식 양방향 매매 최종 본! 헷지 봇으로 변경해서 안정적 운영!">
+  <summary><span class="num">[12]</span> 주식 양방향 매매 최종 본! 헷지 봇으로 변경해서 안정적 운영!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223005881442" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/2 12-22 * * 1-5 python3 /var/autobot/Infinity_Hedge_Only20_Stock_US.py
+*/2 0-8 * * 1-5 python3 /var/autobot/Infinity_Hedge_Only20_Stock_KR.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-13" data-search="13 코인에서 자산배분 투자?!? 코인 이평무한매수 헷지 봇!">
+  <summary><span class="num">[13]</span> 코인에서 자산배분 투자?!? 코인 이평무한매수 헷지 봇!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223009649644" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/1 * * * * python3 /var/autobot/Infinity_Hedge_Coin.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-14" data-search="14 에브리씽 에브리웨어 올 앳 원스 etf 봇!">
+  <summary><span class="num">[14]</span> 에브리씽 에브리웨어 올 앳 원스 ETF 봇!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223013097411" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>30 0 * * 1-5 python3 /var/autobot/All_ETF_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-15" data-search="15 에브리씽 에브리웨어 올 앳 원스 업비트 자동매매 봇">
+  <summary><span class="num">[15]</span> 에브리씽 에브리웨어 올 앳 원스 업비트 자동매매 봇</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223029163144" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>0 */1 * * * python3 /var/autobot/Upbit_Momentum.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-16" data-search="16 주식 백테스팅 기초 - 시간과 돈을 아껴서 전략 검증하기">
+  <summary><span class="num">[16]</span> 주식 백테스팅 기초 - 시간과 돈을 아껴서 전략 검증하기</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223033891384" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <p class="muted">별도 crontab 예시는 없습니다. 필독 포스팅과 코드 상단 안내를 확인하세요.</p>
+  </div>
+</details>
+
+<details class="content-item" id="content-17" data-search="17 코인 백테스팅 기초 - 시간과 돈을 아껴서 전략 검증하기">
+  <summary><span class="num">[17]</span> 코인 백테스팅 기초 - 시간과 돈을 아껴서 전략 검증하기</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223036092055" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <p class="muted">별도 crontab 예시는 없습니다. 필독 포스팅과 코드 상단 안내를 확인하세요.</p>
+  </div>
+</details>
+
+<details class="content-item" id="content-18" data-search="18 무한매수 단순화 변형 버전 백테스팅 -&gt; 연복리 30%이상! mdd 절반으로 줄이기!!">
+  <summary><span class="num">[18]</span> 무한매수 단순화 변형 버전 백테스팅 -&gt; 연복리 30%이상! MDD 절반으로 줄이기!!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223042245494" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/5 12-22 * * 1-5 python3 /var/autobot/Infinity_Upgrade_Bot_US.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-19" data-search="19 주식 트레이딩뷰 웹훅 연동">
+  <summary><span class="num">[19]</span> 주식 트레이딩뷰 웹훅 연동</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223050088124" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <p class="muted">별도 crontab 예시는 없습니다. 필독 포스팅과 코드 상단 안내를 확인하세요.</p>
+  </div>
+</details>
+
+<details class="content-item" id="content-20" data-search="20 업비트 자동매매 연복리 60%이상의 괴물 전략!">
+  <summary><span class="num">[20]</span> 업비트 자동매매 연복리 60%이상의 괴물 전략!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223052327452" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>0 0 * * * python3 /var/autobot/Upbit_Gugan_Long_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-21" data-search="21 업비트 자동매매 연복리 70%이상 개선 백테스팅">
+  <summary><span class="num">[21]</span> 업비트 자동매매 연복리 70%이상 개선 백테스팅</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223063767226" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <p class="muted">별도 crontab 예시는 없습니다. 필독 포스팅과 코드 상단 안내를 확인하세요.</p>
+  </div>
+</details>
+
+<details class="content-item" id="content-22" data-search="22 좋은 수익률과 방어력! 최신 자산배분 전략 haa전략 (미국,한국)">
+  <summary><span class="num">[22]</span> 좋은 수익률과 방어력! 최신 자산배분 전략 HAA전략 (미국,한국)</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223067918613" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>0 15 * * 1-5 python3 /var/autobot/My_US_HAA.py
+0 1 * * 1-5 python3 /var/autobot/My_KR_HAA.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-23" data-search="23 업비트 자동매매 연복리 200%가까운 이평선 조합 전략!">
+  <summary><span class="num">[23]</span> 업비트 자동매매 연복리 200%가까운 이평선 조합 전략!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223074617299" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>0 0 * * * python3 /var/autobot/Upbit_MaMix_Long_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-24" data-search="24 코스닥 지수 양방향 매매 연복리 26% 자산배분 전략!">
+  <summary><span class="num">[24]</span> 코스닥 지수 양방향 매매 연복리 26% 자산배분 전략!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223078498415" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>6 0 * * * python3 /var/autobot/KrStock_Kosdaq_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-25" data-search="25 업비트 이평조합전략 수익률 및 mdd 개선하기(비트코인 이더리움)">
+  <summary><span class="num">[25]</span> 업비트 이평조합전략 수익률 및 MDD 개선하기(비트코인 이더리움)</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223083723474" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>0 0 * * * python3 /var/autobot/Upbit_MaMix_BE_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-26" data-search="26 코스피 지수 양방향 매매 연복리 27% mdd -10%대 자산배분 전략!">
+  <summary><span class="num">[26]</span> 코스피 지수 양방향 매매 연복리 27% MDD -10%대 자산배분 전략!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223085637779" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>6 0 * * * python3 /var/autobot/KrStock_Kospi_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-27" data-search="27 업비트 이평조합돌파 전략 연복리 162% mdd -41%">
+  <summary><span class="num">[27]</span> 업비트 이평조합돌파 전략 연복리 162% MDD -41%</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223087788229" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/2 * * * * python3 /var/autobot/Upbit_MaMix_Dolpa_BE_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-28" data-search="28 미국 주식 양방향 매매 최종판 - 3배 레버리지, 인버스 etf">
+  <summary><span class="num">[28]</span> 미국 주식 양방향 매매 최종판 - 3배 레버리지, 인버스 ETF</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223097613599" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/5 12-22 * * 1-5 python3 /var/autobot/Us_BothSide_3X_Strategy_Bot.py
+*/5 12-22 * * 1-5 python3 /var/autobot/Us_BothSide_3X_Strategy_V2_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-29" data-search="29 tqqq 투자 전략! 닷컴 버블, 금융 위기 포함해서 백테스팅 해보기">
+  <summary><span class="num">[29]</span> TQQQ 투자 전략! 닷컴 버블, 금융 위기 포함해서 백테스팅 해보기</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223102715455" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/5 12-22 * * 1-5 python3 /var/autobot/Us_BothSide_3X_Strategy_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-30" data-search="30 섹터 etf 변동성 돌파 전략 개선하고 자동화 하기 (연복리 28%)">
+  <summary><span class="num">[30]</span> 섹터 ETF 변동성 돌파 전략 개선하고 자동화 하기 (연복리 28%)</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223110831744" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/1 0-8 * * 1-5 python3 /var/autobot/SectorKr_Top_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-31" data-search="31 알트 코인으로 수익내기">
+  <summary><span class="num">[31]</span> 알트 코인으로 수익내기</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223122965642" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/10 0 * * * python3 /var/autobot/UpbitAlt_bot.py
+*/10 0 * * * python3 /var/autobot/BinanceAlt_bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-32" data-search="32 레버리지etf 변동성 돌파 전략 (연복리 37%)">
+  <summary><span class="num">[32]</span> 레버리지ETF 변동성 돌파 전략 (연복리 37%)</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223128702427" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/1 0-8 * * 1-5 python3 /var/autobot/Kr_Leverage_Bot.py
+*/1 0-8 * * 1-5 python3 /var/autobot/Kr_Leverage_Bot_Up.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-33" data-search="33 바이낸스 레버리지를 이용해 안전하게 비트코인으로 수익내기! - 비트코인 도미넌스 활용">
+  <summary><span class="num">[33]</span> 바이낸스 레버리지를 이용해 안전하게 비트코인으로 수익내기! - 비트코인 도미넌스 활용</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223145929993" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/1 * * * * python3 /var/autobot/Binance_BTC_DOM_Bot.py
+*/5 0 * * * python3 /var/autobot/Binance_BTC_DOM_Bot_V2.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-34" data-search="34 의외로 망하고 있다는 레이 달리오의 올웨더 포트폴리오의 반전!">
+  <summary><span class="num">[34]</span> 의외로 망하고 있다는 레이 달리오의 올웨더 포트폴리오의 반전!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223153229412" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>0 15 * * 1-5 python3 /var/autobot/All_Weather_Us_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-35" data-search="35 망가진 한국형 k-올웨더 개선하기">
+  <summary><span class="num">[35]</span> 망가진 한국형 K-올웨더 개선하기</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223155000345" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>10 1 * * 1-5 python3 /var/autobot/All_Weather_Kr_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-36" data-search="36 업비트 비트 이더 안전 전략 연복리 100% mdd -10%">
+  <summary><span class="num">[36]</span> 업비트 비트 이더 안전 전략 연복리 100% MDD -10%</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223170880153" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/2 * * * * python3 /var/autobot/Upbit_BTC_ETH_New_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-37" data-search="37 코스닥피 레인 전략 연복리 54% mdd -14%">
+  <summary><span class="num">[37]</span> 코스닥피 레인 전략 연복리 54% MDD -14%</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223177598281" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/2 0-8 * * 1-5 python3 /var/autobot/Kosdaqpi_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-38" data-search="38 최강의 동적 자산배분 전략을 찾아서">
+  <summary><span class="num">[38]</span> 최강의 동적 자산배분 전략을 찾아서</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223200777920" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <p class="muted">별도 crontab 예시는 없습니다. 필독 포스팅과 코드 상단 안내를 확인하세요.</p>
+  </div>
+</details>
+
+<details class="content-item" id="content-39" data-search="39 haa + 동적자산배분 + 양념 = xaa전략!!">
+  <summary><span class="num">[39]</span> HAA + 동적자산배분 + 양념 = XAA전략!!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223202898685" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>0 15 * * 1-5 python3 /var/autobot/XAA_Us_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-40" data-search="40 xaa전략 한국형 버전!">
+  <summary><span class="num">[40]</span> XAA전략 한국형 버전!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223212623984" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>10 0 * * 1-5 python3 /var/autobot/XAA_Kr_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-41" data-search="41 구간분할전략 주식편!">
+  <summary><span class="num">[41]</span> 구간분할전략 주식편!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223240069613" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/5 12-14 * * 1-5 python3 /var/autobot/Stock_Gugan_Bot.py (미국)
+*/5 0-1 * * 1-5 python3 /var/autobot/Stock_Gugan_Bot.py (한국으로 변형시)</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-42" data-search="42 연복리20% 미국주식 자산배분 xaa-d전략">
+  <summary><span class="num">[42]</span> 연복리20% 미국주식 자산배분 XAA-D전략</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223244683902" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>0 15 * * 1-5 python3 /var/autobot/XAA_D_Us_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-43" data-search="43 바이낸스 무한 돌파 봇으로 주문 마스터 하기">
+  <summary><span class="num">[43]</span> 바이낸스 무한 돌파 봇으로 주문 마스터 하기</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223265819278" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/1 * * * * python3 /var/autobot/Binance_InfinityDolpa_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-44" data-search="44 tqqq? schd? 미국 주식 투자 종결!">
+  <summary><span class="num">[44]</span> TQQQ? SCHD? 미국 주식 투자 종결!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223281275891" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>0 16 * * 1-5 python3 /var/autobot/Us_Simple_Power_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-45" data-search="45 국내etf로 만든 미국 주식 심플 강력 전략!">
+  <summary><span class="num">[45]</span> 국내ETF로 만든 미국 주식 심플 강력 전략!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223314161797" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>10 0 * * 1-5 python3 /var/autobot/KR_Simple_Power_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-46" data-search="46 업비트 1시간봉 변동성 돌파 트레일링 스탑 단타 전략!">
+  <summary><span class="num">[46]</span> 업비트 1시간봉 변동성 돌파 트레일링 스탑 단타 전략!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223341020867" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>58 23 * * * python3 /var/autobot/Upbit_MakeTopList.py
+*/1 * * * * python3 /var/autobot/Upbit_New_DolPa_TopCoin.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-47" data-search="47 스노우 한국형 전략!">
+  <summary><span class="num">[47]</span> 스노우 한국형 전략!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223403166183" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>20 0 * * 1-5 python3 /var/autobot/Snow_Kr_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-48" data-search="48 업비트 위험 관리 바이낸스 헤지 봇">
+  <summary><span class="num">[48]</span> 업비트 위험 관리 바이낸스 헤지 봇</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223407795261" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/5 * * * * python3 /var/autobot/DefenceUpbit_Binance_Hedge_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-49" data-search="49 스노우 미국형 전략!">
+  <summary><span class="num">[49]</span> 스노우 미국형 전략!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223419399142" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>0 16 * * 1-5 python3 /var/autobot/Snow_US_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-50" data-search="50 바이낸스 비트코인 이더리움 안전전략 현물 선물">
+  <summary><span class="num">[50]</span> 바이낸스 비트코인 이더리움 안전전략 현물 선물</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223449598379" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/2 * * * * python3 /var/autobot/BinanceF_BTC_ETH_New_Bot.py
+*/2 * * * * python3 /var/autobot/BinanceS_BTC_ETH_New_Bot_FixV.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-51" data-search="51 바이낸스 할트 전략 선물!">
+  <summary><span class="num">[51]</span> 바이낸스 할트 전략 선물!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223451342123" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/10 0 * * * python3 /var/autobot/BinanceHalt_F_bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-52" data-search="52 업비트 할트 전략!">
+  <summary><span class="num">[52]</span> 업비트 할트 전략!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223473233858" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/10 0 * * * python3 /var/autobot/UpbitHalt_S_bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-53" data-search="53 코인 백테스팅 반복응용">
+  <summary><span class="num">[53]</span> 코인 백테스팅 반복응용</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223486828128" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <p class="muted">별도 crontab 예시는 없습니다. 필독 포스팅과 코드 상단 안내를 확인하세요.</p>
+  </div>
+</details>
+
+<details class="content-item" id="content-54" data-search="54 코인원 비트 이더 안전 전략">
+  <summary><span class="num">[54]</span> 코인원 비트 이더 안전 전략</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223508324003" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/2 * * * * python3 /var/autobot/Coinone_BTC_ETH_New_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-55" data-search="55 매직 스플릿 주식 자동매매">
+  <summary><span class="num">[55]</span> 매직 스플릿 주식 자동매매</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223530451234" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/10 0-8 * * 1-5 python3 /var/autobot/Magic_Split_KR.py
+*/10 12-22 * * 1-5 python3 /var/autobot/Magic_Split_US.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-56" data-search="56 무손실 투자 스팩주 자동매매">
+  <summary><span class="num">[56]</span> 무손실 투자 스팩주 자동매매</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223548787076" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>0 0 1 * * python3 /var/autobot/SPAC_Make_List.py
+30 0 * * 1-5 python3 /var/autobot/SPAC_Auto.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-57" data-search="57 이동평균 자산 배분 전략!">
+  <summary><span class="num">[57]</span> 이동평균 자산 배분 전략!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223559959653" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>20 0 * * 1-5 python3 /var/autobot/MA_Strategy_KR_Bot.py
+0 16 * * 1-5 python3 /var/autobot/MA_Strategy_US_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-58" data-search="58 코인원 알트 전략">
+  <summary><span class="num">[58]</span> 코인원 알트 전략</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223570808965" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/10 0 * * * python3 /var/autobot/CoinoneAlt_bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-59" data-search="59 주식n분봉 가져오기!">
+  <summary><span class="num">[59]</span> 주식N분봉 가져오기!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223571914494" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <p class="muted">별도 crontab 예시는 없습니다. 필독 포스팅과 코드 상단 안내를 확인하세요.</p>
+  </div>
+</details>
+
+<details class="content-item" id="content-60" data-search="60 빗썸 비트 이더 안전 전략">
+  <summary><span class="num">[60]</span> 빗썸 비트 이더 안전 전략</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223582852975" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/2 * * * * python3 /var/autobot/Bithumb_BTC_ETH_New_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-61" data-search="61 빗썸 알트 전략!">
+  <summary><span class="num">[61]</span> 빗썸 알트 전략!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223589057576" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/10 15 * * * python3 /var/autobot/BithumbAlt_bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-62" data-search="62 코인 매직스플릿 스마트스플릿">
+  <summary><span class="num">[62]</span> 코인 매직스플릿 스마트스플릿</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223603456956" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/10 * * * * python3 /var/autobot/Upbit_Magic_Split_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-63" data-search="63 코인시총상위 자동으로 가져오기">
+  <summary><span class="num">[63]</span> 코인시총상위 자동으로 가져오기</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223728753947" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>0 22 * * 0 python3 /var/autobot/MakeGetTop100Coin.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-64" data-search="64 코인분할매매 시스템 스플릿트레이더!">
+  <summary><span class="num">[64]</span> 코인분할매매 시스템 스플릿트레이더!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223744333599" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/1 * * * * python3 /var/autobot/Upbit_SplitTrader.py
+*/1 * * * * python3 /var/autobot/Bithumb_SplitTrader.py
+*/1 * * * * python3 /var/autobot/Coinone_SplitTrader.py
+*/1 * * * * python3 /var/autobot/BinanceSpot_SplitTrader.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-65" data-search="65 주식분할매매 시스템 스플릿트레이더!">
+  <summary><span class="num">[65]</span> 주식분할매매 시스템 스플릿트레이더!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223750328250" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/1 0-8 * * 1-5 python3 /var/autobot/KIS_KR_SplitTrader.py
+*/1 12-22 * * 1-5 python3 /var/autobot/KIS_US_SplitTrader.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-66" data-search="66 미국주식 시총 top 전략">
+  <summary><span class="num">[66]</span> 미국주식 시총 TOP 전략</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223919665446" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>0 0 1 * * python3 /var/autobot/MakeGetTopStockForKIS.py
+0 17 * * 1-5 python3 /var/autobot/US_TopStrategy_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-67" data-search="67 비트코인 심플 자산배분 전략">
+  <summary><span class="num">[67]</span> 비트코인 심플 자산배분 전략</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223921683677" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>0 0 1 * * python3 /var/autobot/Binance_Strategy_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-68" data-search="68 코인(트레일링)스탑시스텝 스탑트레이더">
+  <summary><span class="num">[68]</span> 코인(트레일링)스탑시스텝 스탑트레이더</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223929948154" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/1 * * * * python3 /var/autobot/Upbit_StopTrader_System.py
+*/1 * * * * python3 /var/autobot/Bithumb_StopTrader_System.py
+*/1 * * * * python3 /var/autobot/Coinone_StopTrader_System.py
+*/1 * * * * python3 /var/autobot/BinanceSpot_StopTrader_System.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-69" data-search="69 캔들패턴인식시스템">
+  <summary><span class="num">[69]</span> 캔들패턴인식시스템</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223937061274" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <p class="muted">별도 crontab 예시는 없습니다. 필독 포스팅과 코드 상단 안내를 확인하세요.</p>
+  </div>
+</details>
+
+<details class="content-item" id="content-70" data-search="70 바이낸스 양방향 추세돌파 그리드 전략">
+  <summary><span class="num">[70]</span> 바이낸스 양방향 추세돌파 그리드 전략</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223949648897" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/1 * * * * python3 /var/autobot/Binance_Trend_Stop_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-71" data-search="71 주식(트레일링)스탑시스텝 스탑트레이더">
+  <summary><span class="num">[71]</span> 주식(트레일링)스탑시스텝 스탑트레이더</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223958658877" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/1 * * * * python3 /var/autobot/KIS_KR_StopTrader_System.py
+*/1 * * * * python3 /var/autobot/KIS_US_StopTrader_System.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-72" data-search="72 업비트 new돌파 전략">
+  <summary><span class="num">[72]</span> 업비트 New돌파 전략</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223965873743" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/1 * * * * python3 /var/autobot/Upbit_NewDolpa_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-73" data-search="73 빗썸new돌파 전략">
+  <summary><span class="num">[73]</span> 빗썸New돌파 전략</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223972328806" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/1 * * * * python3 /var/autobot/Bithumb_NewDolpa_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-74" data-search="74 추세추종백테스트!">
+  <summary><span class="num">[74]</span> 추세추종백테스트!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/223571914494" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <p class="muted">별도 crontab 예시는 없습니다. 필독 포스팅과 코드 상단 안내를 확인하세요.</p>
+  </div>
+</details>
+
+<details class="content-item" id="content-75" data-search="75 시장 관심 종목 단타 전략">
+  <summary><span class="num">[75]</span> 시장 관심 종목 단타 전략</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/224018668922" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>20 6 * * 1-5 python3 /var/autobot/MakeTopValueRateKR_StockList.py
+*/5 0-8 * * 1-5 python3 /var/autobot/Focus_Money_Bot_KR.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-76" data-search="76 ls증권파이썬공통모듈!">
+  <summary><span class="num">[76]</span> LS증권파이썬공통모듈!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/224069770862" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <p class="muted">별도 crontab 예시는 없습니다. 필독 포스팅과 코드 상단 안내를 확인하세요.</p>
+  </div>
+</details>
+
+<details class="content-item" id="content-77" data-search="77 키움증권파이썬공통모듈!">
+  <summary><span class="num">[77]</span> 키움증권파이썬공통모듈!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/224078862799" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <p class="muted">별도 crontab 예시는 없습니다. 필독 포스팅과 코드 상단 안내를 확인하세요.</p>
+  </div>
+</details>
+
+<details class="content-item" id="content-78" data-search="78 한투파이썬공통모듈!">
+  <summary><span class="num">[78]</span> 한투파이썬공통모듈!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/224098287075" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <p class="muted">별도 crontab 예시는 없습니다. 필독 포스팅과 코드 상단 안내를 확인하세요.</p>
+  </div>
+</details>
+
+<details class="content-item" id="content-79" data-search="79 코인선물_스탑(트레일링)트레이더">
+  <summary><span class="num">[79]</span> 코인선물_스탑(트레일링)트레이더</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/224111785921" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/1 * * * * python3 /var/autobot/BinanceFuture_StopTrader_System.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-80" data-search="80 aws서버 감시 시스템">
+  <summary><span class="num">[80]</span> AWS서버 감시 시스템</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/224118460953" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/10 * * * * sh /var/autobot/healthcheck.sh</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-81" data-search="81 rsi섹터돌파 전략">
+  <summary><span class="num">[81]</span> RSI섹터돌파 전략</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/224141005095" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>0 19 1 * * timeout 7200 python3 /var/autobot/RSI_Sector_MakeSectorKrFindK.py
+*/1 0-8 * * 1-5 python3 /var/autobot/RSI_Sector_Top_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-82" data-search="82 종목 갈아타기 시스템">
+  <summary><span class="num">[82]</span> 종목 갈아타기 시스템</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/224153655433" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>40 1 * * 1-5 python3 /var/autobot/Stock_Trans_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-83" data-search="83 두바이 쫀득 전략">
+  <summary><span class="num">[83]</span> 두바이 쫀득 전략</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/224171711688" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>30 1 * * 1-5 python3 /var/autobot/TwoBuy_DuJeon_Bot.py (국내 계좌일 경우)
+0 16 * * 1-5 python3 /var/autobot/TwoBuy_DuJeon_Bot.py (미국 계좌일 경우)</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-84" data-search="84 rsi다이버전스 + 추세선 돌파 전략">
+  <summary><span class="num">[84]</span> RSI다이버전스 + 추세선 돌파 전략</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/224193989402" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/1 * * * * python3 /var/autobot/Binance_RSI_Diver_Trend_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-85" data-search="85 정적 자산배분 전략">
+  <summary><span class="num">[85]</span> 정적 자산배분 전략</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/224253259587" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>10 1 * * 1-5 python3 /var/autobot/Static_Asset_Allocation_Bot_KR.py
+0 16 * * 1-5 python3 /var/autobot/Static_Asset_Allocation_Bot_US.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-86" data-search="86 거래대금new단타 전략">
+  <summary><span class="num">[86]</span> 거래대금New단타 전략</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/224274812145" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/5 0-8 * * 1-5 python3 /var/autobot/New_Money_Bot_KR.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-87" data-search="87 에올원 sar 알파 전략">
+  <summary><span class="num">[87]</span> 에올원 SAR 알파 전략</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/224297046836" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>30 0 * * 1-5 python3 /var/autobot/All_ETF_SAR_Alpha_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-88" data-search="88 토스증권공통모듈!">
+  <summary><span class="num">[88]</span> 토스증권공통모듈!</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/224316896322" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <p class="muted">별도 crontab 예시는 없습니다. 필독 포스팅과 코드 상단 안내를 확인하세요.</p>
+  </div>
+</details>
+
+<details class="content-item" id="content-89" data-search="89 코스닥피레인전략심화">
+  <summary><span class="num">[89]</span> 코스닥피레인전략심화</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/224342425920" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/2 0-8 * * 1-5 python3 /var/autobot/GMA_Kosdaqpi_Bot.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-90" data-search="90 추세기반 비중 조절 시스템">
+  <summary><span class="num">[90]</span> 추세기반 비중 조절 시스템</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/224345259949" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>0 */2 * * * python3 /var/autobot/MakeKRFindMa_Trend.py
+0 */2 * * * python3 /var/autobot/MakeUSFindMa_Trend.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-91" data-search="91 유휴현금 파킹etf 시스템">
+  <summary><span class="num">[91]</span> 유휴현금 파킹ETF 시스템</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/224354356424" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>15 6 * * 1-5 python3 /var/autobot/ParkingETFBuy_KR.py
+25 19 * * 1-5 python3 /var/autobot/ParkingETFBuy_US.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-92" data-search="92 바이낸스비트도미전략 + 보너스">
+  <summary><span class="num">[92]</span> 바이낸스비트도미전략 + 보너스</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/224355896695" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/1 * * * * python3 /var/autobot/binance_auto_GridX_with_RSI.py
+*/1 * * * * python3 /var/autobot/Binance_BTC_DOM_Bot_N.py
+*/1 * * * * python3 /var/autobot/Binance_BTC_DOM_LongOnly_Bot_N.py
+*/5 0 * * * python3 /var/autobot/Binance_BTC_DOM_Bot_N_V2.py</code></pre>
+  </div>
+</details>
+
+<details class="content-item" id="content-93" data-search="93 알트코인심화전략">
+  <summary><span class="num">[93]</span> 알트코인심화전략</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/224370434227" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <div class="cron-note">각 관련 포스팅 참고</div>
+  </div>
+</details>
+
+<details class="content-item" id="content-94" data-search="94 캔들패턴심화인식시스템">
+  <summary><span class="num">[94]</span> 캔들패턴심화인식시스템</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/224370785607" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <p class="muted">별도 crontab 예시는 없습니다. 필독 포스팅과 코드 상단 안내를 확인하세요.</p>
+  </div>
+</details>
+
+<details class="content-item" id="content-95" data-search="95 kb증권파이썬공통모듈">
+  <summary><span class="num">[95]</span> KB증권파이썬공통모듈</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/224372922844" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <p class="muted">별도 crontab 예시는 없습니다. 필독 포스팅과 코드 상단 안내를 확인하세요.</p>
+  </div>
+</details>
+
+<details class="content-item" id="content-96" data-search="96 nh투자증권파이썬공통모듈">
+  <summary><span class="num">[96]</span> NH투자증권파이썬공통모듈</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/224378296327" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <p class="muted">별도 crontab 예시는 없습니다. 필독 포스팅과 코드 상단 안내를 확인하세요.</p>
+  </div>
+</details>
+
+<details class="content-item" id="content-97" data-search="97 섹터돌파전략 심화">
+  <summary><span class="num">[97]</span> 섹터돌파전략 심화</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/224385440673" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>*/1 0-8 * * 1-5 python3 /var/autobot/GMA_RSI_Sector_Top_Bot.py
+0 19 1 * * timeout 7200 python3 /var/autobot/RSI_Sector_MakeSectorKrFindK.py</code></pre>
+  </div>
+</details>
+
+</div>
+</section>
+
+<section class="callout">
+<h2>패키지 자체가 궁금하다면</h2>
+<p>이 페이지는 콘텐츠 사용을 위한 참고 자료입니다. 패키지의 전체 성격, 지원 시장, 구매 방법은 패키지 안내 페이지에서 확인할 수 있습니다.</p>
+<p><a class="btn primary" href="/package.html">패키지 안내·구매로 돌아가기 →</a></p>
+</section>
+
+<p class="updated">문서 업데이트: 2026-08-22 · 현재 97개 콘텐츠 기준</p>
+</main>
+
+<footer class="site-footer"><div class="footer-inner">
+<p><strong>게만아</strong> · 주식·ETF·코인 파이썬 자동매매·백테스트·API 공개 기술문서</p>
+<p>교육·기술 정보 제공 목적이며 특정 금융상품의 추천 또는 수익 보장이 아닙니다. 실제 사용 전 각 콘텐츠의 최신 설명 포스팅과 코드 주석을 확인하세요.</p>
+<p><a href="https://blog.naver.com/zacra" target="_blank" rel="noopener noreferrer">네이버 블로그</a> · <a href="/package.html">패키지</a></p>
+</div></footer>
+
+<script>
+(function(){
+  const input = document.getElementById('guideSearch');
+  const items = Array.from(document.querySelectorAll('.content-item'));
+  const count = document.getElementById('guideCount');
+  function filter(){
+    const q = input.value.trim().toLowerCase();
+    let visible = 0;
+    items.forEach(item => {
+      const show = !q || item.dataset.search.includes(q);
+      item.hidden = !show;
+      if(show) visible++;
+    });
+    count.textContent = visible + '개 표시 중';
+  }
+  input.addEventListener('input', filter);
+  document.getElementById('openAll').addEventListener('click', () => items.forEach(i => { if(!i.hidden) i.open = true; }));
+  document.getElementById('closeAll').addEventListener('click', () => items.forEach(i => i.open = false));
+})();
+</script>
+</body>
+</html>
