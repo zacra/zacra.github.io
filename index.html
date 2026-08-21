@@ -3,90 +3,89 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>게만아 | 파이썬 자동매매·주식·ETF·코인·증권사 Open API</title>
-<meta name="description" content="게만아 공식 파이썬 자동매매 기술문서. 주식·ETF·코인 자동매매, 백테스트, 국내 증권사 Open API와 시스템 투자를 다룹니다. 수익률보다 MDD, 감정보다 기준, 예측보다 대응이라는 투자 철학을 바탕으로 합니다.">
+<title>게만아 | 파이썬 자동매매·멀티 증권사 API·주식·ETF·코인</title>
+<meta name="description" content="게만아 공식 파이썬 자동매매 기술문서. 주식·ETF·코인 자동매매, 백테스트, 멀티 증권사 Open API와 시스템 투자를 다룹니다. 수익률보다 MDD, 감정보다 기준, 예측보다 대응이라는 투자 철학을 바탕으로 합니다.">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <link rel="canonical" href="https://zacra.github.io/">
 <link rel="stylesheet" href="/assets/style.css">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:title" content="게만아 | 파이썬 자동매매·주식·ETF·코인·증권사 Open API">
-<meta property="og:description" content="게만아 공식 파이썬 자동매매 기술문서. 주식·ETF·코인 자동매매, 백테스트, 국내 증권사 Open API와 시스템 투자를 다룹니다. 수익률보다 MDD, 감정보다 기준, 예측보다 대응이라는 투자 철학을 바탕으로 합니다.">
+<meta property="og:title" content="게만아 | 파이썬 자동매매·멀티 증권사 API·주식·ETF·코인">
+<meta property="og:description" content="게만아 공식 파이썬 자동매매 기술문서. 주식·ETF·코인 자동매매, 백테스트, 멀티 증권사 Open API와 시스템 투자를 다룹니다.">
 <meta property="og:url" content="https://zacra.github.io/">
 <meta property="og:image" content="https://zacra.github.io/assets/og-default.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="게만아 | 파이썬 자동매매·주식·ETF·코인·증권사 Open API">
-<meta name="twitter:description" content="게만아 공식 파이썬 자동매매 기술문서. 주식·ETF·코인 자동매매, 백테스트, 국내 증권사 Open API와 시스템 투자를 다룹니다. 수익률보다 MDD, 감정보다 기준, 예측보다 대응이라는 투자 철학을 바탕으로 합니다.">
+<meta name="twitter:title" content="게만아 | 파이썬 자동매매·멀티 증권사 API·주식·ETF·코인">
+<meta name="twitter:description" content="게만아 공식 파이썬 자동매매 기술문서. 주식·ETF·코인 자동매매, 백테스트, 멀티 증권사 Open API와 시스템 투자를 다룹니다.">
 <meta name="twitter:image" content="https://zacra.github.io/assets/og-default.png">
-
-
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://zacra.github.io/#organization","name":"게만아","alternateName":"퀀트는 게만아","url":"https://zacra.github.io/","sameAs":["https://blog.naver.com/zacra","https://www.youtube.com/@게만아","https://class101.net/ko/creators/%40%EA%B2%8C%EB%A7%8C%EC%95%84"]},{"@type":"WebSite","@id":"https://zacra.github.io/#website","url":"https://zacra.github.io/","name":"게만아 파이썬 자동매매 기술문서","description":"게만아 공식 파이썬 자동매매 기술문서. 주식·ETF·코인 자동매매, 백테스트, 국내 증권사 Open API와 시스템 투자를 다룹니다. 수익률보다 MDD, 감정보다 기준, 예측보다 대응이라는 투자 철학을 바탕으로 합니다.","publisher":{"@id":"https://zacra.github.io/#organization"},"inLanguage":"ko-KR"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://zacra.github.io/#organization","name":"게만아","alternateName":"퀀트는 게만아","url":"https://zacra.github.io/","sameAs":["https://blog.naver.com/zacra","https://www.youtube.com/@게만아","https://class101.net/ko/creators/%40%EA%B2%8C%EB%A7%8C%EC%95%84"]},{"@type":"WebSite","@id":"https://zacra.github.io/#website","url":"https://zacra.github.io/","name":"게만아 파이썬 자동매매 기술문서","description":"게만아 공식 파이썬 자동매매 기술문서. 주식·ETF·코인 자동매매, 백테스트, 멀티 증권사 Open API와 시스템 투자를 다룹니다.","publisher":{"@id":"https://zacra.github.io/#organization"},"inLanguage":"ko-KR"}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">본문 바로가기</a>
-<header class="site-header">
-<nav class="nav" aria-label="주요 메뉴">
+<header class="site-header"><nav class="nav" aria-label="주요 메뉴">
 <a class="brand" href="/">게만아 <small>파이썬 자동매매 Docs</small></a>
 <div class="nav-links">
+<a href="/investment-philosophy.html">투자 철학</a>
 <a href="/python-auto-trading.html">자동매매 시작</a>
-<a href="/stock-auto-trading.html">주식·ETF</a>
-<a href="/crypto-auto-trading.html">코인</a>
-<a href="/broker-openapi.html">7개 증권사 API</a>
-<a href="/backtest.html">백테스트</a>
+<a href="/system-guide.html">시작 가이드</a>
+<a href="/super-moving-average.html">슈퍼 이동평균</a>
+<a href="/package.html">패키지</a>
+<a href="/broker-openapi.html">멀티 증권사 API</a>
 <a href="/starter.html">무료 Starter</a>
-<a href="/about.html">소개</a>
-</div>
-</nav>
-</header>
+</div></nav></header>
 <main id="main">
-
 <section class="hero">
-  <p class="eyebrow">게만아 공식 기술문서</p>
-  <h1>파이썬 자동매매 · 주식·ETF·코인 · 백테스트 · API</h1>
-  <p class="lead"><strong>게만아(퀀트는 게만아)</strong>가 실제 자동매매 시스템을 개발하고 운용하면서 정리한 공개 기술문서입니다. 주식·ETF·코인 전략을 파이썬으로 검증하고, 증권사·거래소 API와 연결해 시스템으로 만드는 과정을 다룹니다.</p>
-  <div class="actions">
-    <a class="btn primary" href="/python-auto-trading.html">파이썬 자동매매 시작</a>
-    <a class="btn" href="/broker-openapi.html">7개 증권사 API 비교</a>
-    <a class="btn" href="/crypto-auto-trading.html">코인 자동매매</a>
-    <a class="btn accent" href="https://blog.naver.com/zacra/224382618923" target="_blank" rel="noopener noreferrer">무료 주식 Starter</a>
-  </div>
+<p class="eyebrow">게만아 공식 기술문서</p>
+<h1>파이썬 자동매매 · 주식·ETF·코인 · 백테스트 · API</h1>
+<p class="lead"><strong>게만아(퀀트는 게만아)</strong>가 실제 자동매매 시스템을 개발하고 운용하면서 정리한 공개 기술문서입니다. 주식·ETF·코인 전략을 파이썬으로 검증하고, 증권사·거래소 API와 연결해 시스템으로 만드는 과정을 다룹니다.</p>
+<div class="actions">
+<a class="btn primary" href="/python-auto-trading.html">파이썬 자동매매 시작</a>
+<a class="btn" href="/broker-openapi.html">멀티 증권사 API 구조</a>
+<a class="btn" href="/crypto-auto-trading.html">코인 자동매매</a>
+<a class="btn accent" href="/starter.html">무료 주식 Starter</a>
+</div>
 </section>
-
 <section class="notice">
-  <h2>게만아의 시스템 투자 철학</h2>
-  <p><strong>수익률보다 MDD · 감정보다 기준 · 예측보다 대응.</strong></p>
-  <p>높은 수익률 하나보다 실제 돈을 넣고 끝까지 유지할 수 있는 구조를 먼저 봅니다. 현금으로 변동성을 조절하고, 추세를 예측하지 않고 확인하며, 자산배분으로 위험을 나누고, 백테스트로 그 기준을 검증합니다. 자동매매는 그 판단을 빠뜨리지 않고 반복하는 다음 단계입니다.</p>
-  <p><a href="/investment-philosophy.html">게만아 투자 철학 자세히 보기 →</a></p>
+<h2>게만아의 시스템 투자 철학</h2>
+<p><strong>수익률보다 MDD · 감정보다 기준 · 예측보다 대응.</strong></p>
+<p>높은 수익률 하나보다 실제 돈을 넣고 끝까지 유지할 수 있는 구조를 먼저 봅니다. 현금으로 변동성을 조절하고, 추세를 예측하지 않고 확인하며, 자산배분으로 위험을 나누고, 백테스트로 그 기준을 검증합니다. 자동매매는 그 판단을 빠뜨리지 않고 반복하는 다음 단계입니다.</p>
+<p><a href="/investment-philosophy.html">게만아 투자 철학 자세히 보기 →</a></p>
 </section>
 <section>
 <h2>게만아 자동매매는 이렇게 시작할 수 있습니다</h2>
 <div class="grid cards">
-<article class="card"><h3>무료 Starter</h3><p>파이썬 자동매매가 처음이라면 국내 7개 증권사 중 한 곳을 선택해 전체 흐름을 무료로 직접 체험합니다.</p><a href="/starter.html">무료로 먼저 경험하기 →</a></article>
-<article class="card"><h3>슈퍼 이동평균 자산배분</h3><p>주식·ETF 장기 시스템 하나에 집중하고 싶다면 이동평균·비중조절·리밸런싱·현금 비중 관리가 결합된 대표 전략을 살펴봅니다.</p><p><a href="/super-moving-average.html">전략 구조 보기 →</a></p><p><a class="btn primary" href="https://blog.naver.com/zacra/224158895436" target="_blank" rel="noopener noreferrer">슈퍼 이동평균 구매·다운로드</a></p></article>
-<article class="card"><h3>게만아 패키지</h3><p>주식·코인 90개 이상의 전략·시스템에서 필요한 것을 선택하고 AI와 함께 확장하고 싶다면 패키지 구조를 확인합니다.</p><p><a href="/package.html">패키지 구조 보기 →</a></p><p><a class="btn primary" href="https://blog.naver.com/zacra/223049832963" target="_blank" rel="noopener noreferrer">게만아 패키지 구매·다운로드</a></p></article>
+<article class="card"><h3>무료 Starter</h3><p>파이썬 자동매매가 처음이라면 현재 지원 중인 증권사 가운데 한 곳을 선택해 전체 흐름을 무료로 직접 체험합니다.</p><a href="/starter.html">무료로 먼저 경험하기 →</a></article>
+<article class="card"><h3>슈퍼 이동평균 자산배분</h3><p>주식·ETF 장기 시스템 하나에 집중하고 싶다면 이동평균·비중조절·리밸런싱·현금 비중 관리가 결합된 대표 전략을 살펴봅니다.</p><a href="/super-moving-average.html">전략 구조와 구매 방법 보기 →</a></article>
+<article class="card"><h3>게만아 패키지</h3><p>주식·코인 97개 콘텐츠에서 필요한 전략·시스템을 선택하고 AI와 함께 수정·확장하고 싶다면 패키지 구조를 확인합니다.</p><a href="/package.html">패키지 구조와 구매 방법 보기 →</a></article>
 </div>
 <p><a href="/system-guide.html">어떤 방식이 나에게 맞는지 비교하기 →</a></p>
 </section>
+<section class="callout">
+<h2>게만아 주식 코드의 특색 — 전략은 그대로, 증권사·시장·계좌만 선택</h2>
+<p>공통 인터페이스로 작성된 주식 봇은 증권사가 바뀔 때 전략 로직 전체를 다시 만드는 방식이 아닙니다. <strong>Broker, Market, accountMode를 선택하면 그에 맞는 Common·API Helper를 동적으로 불러오도록 설계</strong>되어 있습니다.</p>
+<pre><code>Broker = "KIS"       # KIS / DBI / LS / KIW / TOSS / KB / NH
+Market = "KR"        # KR / US
+accountMode = "REAL" # REAL / REAL2 / VIRTUAL 등
 
+Common = importlib.import_module(f"{Broker}_Common")
+Helper = importlib.import_module(f"{Broker}_API_Helper_{Market}")
+Common.SetChangeMode(accountMode)</code></pre>
+<p>전략 쪽에서는 <code>GetBalance()</code>, <code>GetCurrentPrice()</code>, <code>MakeBuyMarketOrder()</code> 같은 공통 호출 형식을 사용하므로, 증권사 차이는 공통모듈이 흡수합니다. 지원 시장·계좌·세부 기능은 각 증권사 API 범위에 따라 다릅니다.</p>
+<p><a href="/broker-openapi.html">멀티 증권사 API 구조 자세히 보기 →</a> · <a href="/architecture.html">주식·코인 코드 구조 보기 →</a></p>
+</section>
 <section><h2>게만아 기술문서의 범위</h2><div class="grid cards">
-<article class="card"><h3>주식·ETF 자동매매</h3><p>국내 증권사 Open API, 계좌 조회, 리밸런싱, 주문과 여러 증권사를 공통 구조로 연결하는 방법을 다룹니다.</p><a href="/stock-auto-trading.html">주식 자동매매 구조 →</a></article>
+<article class="card"><h3>주식·ETF 자동매매</h3><p>증권사 Open API, 계좌 조회, 리밸런싱, 주문과 여러 증권사를 공통 구조로 연결하는 방법을 다룹니다.</p><a href="/stock-auto-trading.html">주식 자동매매 구조 →</a></article>
 <article class="card"><h3>코인 자동매매</h3><p>거래소 REST API, 현물·선물, 주문 안전장치와 백테스트에서 실전으로 넘어가는 과정을 다룹니다.</p><a href="/crypto-auto-trading.html">코인 자동매매 구조 →</a></article>
 <article class="card"><h3>백테스트·자산배분</h3><p>전략을 과거 데이터로 검증하고, 효율적 투자선과 리밸런싱을 활용해 투자비중 후보를 계산하는 방법을 정리합니다.</p><a href="/backtest.html">백테스트 체크리스트 →</a></article>
 </div></section>
-<section><h2>국내 7개 증권사 Open API</h2><p>한국투자증권, LS증권, 키움증권, 토스증권, KB증권, NH투자증권, DB증권을 파이썬 자동매매 개발 관점에서 정리합니다. 단순 공식문서 요약보다 <strong>같은 기능을 여러 증권사에 구현할 때 생기는 구조적 차이와 주의점</strong>을 계속 보강하는 것이 목표입니다.</p>
+<section><h2>현재 다루는 국내 증권사 Open API</h2><p>현재 한국투자증권, LS증권, 키움증권, 토스증권, KB증권, NH투자증권, DB증권을 다룹니다. 앞으로 지원 증권사가 늘어나더라도 핵심은 숫자가 아니라 <strong>같은 전략을 여러 증권사·시장·계좌에 재사용하기 쉬운 구조</strong>입니다.</p>
 <div class="broker-grid"><a href="/brokers/kis.html">한국투자증권</a><a href="/brokers/ls.html">LS증권</a><a href="/brokers/kiwoom.html">키움증권</a><a href="/brokers/toss.html">토스증권</a><a href="/brokers/kb.html">KB증권</a><a href="/brokers/nh.html">NH투자증권</a><a href="/brokers/db.html">DB증권</a></div></section>
-<section class="callout"><h2>처음 파이썬 주식 자동매매를 직접 경험해보고 싶다면</h2><p>무료 AutobotEx Starter에서는 국내 7개 증권사 중 한 곳을 선택해 투자비중 분석 → 백테스트 → 증권사 Open API 연결 → 실제 계좌 리밸런싱 → 주문 구조까지 직접 확인할 수 있습니다.</p><p>Starter는 게만아 전체 콘텐츠의 범위를 뜻하는 것이 아니라 <strong>국내주식 자동매매 입문용 공개 Lite 시스템</strong>입니다.</p><a class="btn accent" href="https://blog.naver.com/zacra/224382618923" target="_blank" rel="noopener noreferrer">무료 Starter 전체 가이드</a></section>
+<section class="callout"><h2>처음 파이썬 주식 자동매매를 직접 경험해보고 싶다면</h2><p>무료 AutobotEx Starter에서는 현재 지원 중인 증권사 가운데 한 곳을 선택해 투자비중 분석 → 백테스트 → 증권사 Open API 연결 → 실제 계좌 리밸런싱 → 주문 구조까지 직접 확인할 수 있습니다.</p><p>Starter는 게만아 전체 콘텐츠의 범위를 뜻하는 것이 아니라 <strong>국내주식 자동매매 입문용 공개 Lite 시스템</strong>입니다.</p><a class="btn accent" href="/starter.html">무료 Starter 전체 가이드</a></section>
 <section><h2>철학은 공개하고, 구현 자산은 구분합니다</h2><p>이 사이트에서는 자동매매를 설계할 때 필요한 개념, API 비교, 오류 원인, 보안, 백테스트와 구조 설계 같은 지식을 공개합니다. 반면 완성된 증권사·거래소 모듈, 핵심 투자전략, 운영 안정화를 위한 전체 프로덕션 코드는 공개 범위가 아닐 수 있습니다.</p><p><a href="/public-private-boundary.html">공개 범위와 유료 코드의 경계 →</a></p></section>
 <section><h2>문서 원칙</h2><ul class="check"><li>특정 수익을 약속하기보다 전략을 <strong>어떻게 검증하고 시스템으로 연결하는지</strong>를 설명합니다.</li><li>증권사·거래소 API 사양은 가능한 한 최신 공식 문서를 우선합니다.</li><li>백테스트는 미래 성과 보장이 아니라 과거 규칙 검증으로 해석합니다.</li><li>실제 주문 전에는 주문 비활성화, 모의투자 또는 소액 검증을 권장합니다.</li><li>API Key·Secret·접근토큰은 공개 저장소에 올리지 않습니다.</li></ul></section>
-
-<p class="updated">문서 업데이트: 2026-08-21</p>
+<p class="updated">문서 업데이트: 2026-08-22</p>
 </main>
-<footer class="site-footer"><div class="footer-inner">
-<p><strong>게만아</strong> · 주식·ETF·코인 파이썬 자동매매·백테스트·API 공개 기술문서</p>
-<p>교육·기술 정보 제공 목적이며 특정 금융상품의 추천 또는 수익 보장이 아닙니다. 증권사 API 사양은 변경될 수 있으므로 실제 구현 전 공식 문서를 확인하세요.</p>
-<p><a href="https://blog.naver.com/zacra" target="_blank" rel="noopener noreferrer">네이버 블로그</a> · <a href="/sources.html">공식 출처</a> · 마지막 업데이트 2026-08-21</p>
-</div></footer>
-</body>
-</html>
+<footer class="site-footer"><div class="footer-inner"><p><strong>게만아</strong> · 주식·ETF·코인 파이썬 자동매매·백테스트·API 공개 기술문서</p><p>교육·기술 정보 제공 목적이며 특정 금융상품의 추천 또는 수익 보장이 아닙니다. 증권사 API 사양은 변경될 수 있으므로 실제 구현 전 공식 문서를 확인하세요.</p><p><a href="https://blog.naver.com/zacra" target="_blank" rel="noopener noreferrer">네이버 블로그</a> · <a href="/sources.html">공식 출처</a> · 마지막 업데이트 2026-08-22</p></div></footer>
+</body></html>

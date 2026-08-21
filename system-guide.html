@@ -47,7 +47,7 @@
 <a href="/system-guide.html">시작 가이드</a>
 <a href="/super-moving-average.html">슈퍼 이동평균</a>
 <a href="/package.html">패키지</a>
-<a href="/broker-openapi.html">7개 증권사 API</a>
+<a href="/broker-openapi.html">멀티 증권사 API</a>
 <a href="/starter.html">무료 Starter</a>
 </div>
 </nav>
@@ -87,6 +87,13 @@
 </tbody>
 </table>
 </div>
+</section>
+
+<section class="notice">
+<h2>주식은 한 증권사에 묶이지 않도록 설계합니다</h2>
+<p>게만아의 공통 인터페이스 기반 주식 봇은 <strong>Broker · Market · accountMode</strong>를 분리해, 같은 전략 로직을 여러 증권사·국내/미국 시장·여러 계좌에 재사용하기 쉽게 구성합니다.</p>
+<p>현재 한국투자·LS·키움·토스·KB·NH·DB증권 환경을 다루며, 지원사가 늘어나더라도 전략 파일 전체를 다시 만드는 것보다 공통모듈을 확장하는 방향을 지향합니다.</p>
+<p><a href="/broker-openapi.html">멀티 증권사 API 구조 보기 →</a></p>
 </section>
 
 <section class="callout">
@@ -163,7 +170,7 @@
 
 <section class="callout">
 <h2>아직 파이썬 자동매매 자체가 낯설다면</h2>
-<p>유료 콘텐츠를 먼저 결정하지 않아도 됩니다. 국내 7개 증권사 중 한 곳을 선택해 투자전략 → 효율적 투자비중 분석 → 백테스트 → Open API 연결 → 실제 계좌 리밸런싱 → 주문 구조까지 체험하는 무료 Starter가 있습니다.</p>
+<p>유료 콘텐츠를 먼저 결정하지 않아도 됩니다. 현재 지원 중인 증권사 가운데 한 곳을 선택해 투자전략 → 효율적 투자비중 분석 → 백테스트 → Open API 연결 → 실제 계좌 리밸런싱 → 주문 구조까지 체험하는 무료 Starter가 있습니다.</p>
 <p><a class="btn accent" href="/starter.html">무료 Starter 안내 →</a></p>
 </section>
 

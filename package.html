@@ -34,7 +34,7 @@
 <a href="/system-guide.html">시작 가이드</a>
 <a href="/super-moving-average.html">슈퍼 이동평균</a>
 <a href="/package.html">패키지</a>
-<a href="/broker-openapi.html">7개 증권사 API</a>
+<a href="/broker-openapi.html">멀티 증권사 API</a>
 <a href="/starter.html">무료 Starter</a>
 </div>
 </nav>
@@ -104,7 +104,18 @@
 <p>게만아 자동매매 생태계는 국내주식뿐 아니라 <strong>미국주식과 미국 ETF</strong>까지 함께 다룹니다. TQQQ·SOXL 같은 레버리지 ETF, 일반 미국주식·ETF 전략도 증권사 Open API를 통해 시스템화할 수 있습니다.</p>
 <p>전체 환경은 한국투자증권, LS증권, DB증권, 키움증권, 토스증권, KB증권, NH투자증권까지 7개 증권사 API를 다루며, 증권사별 국내·미국주식 지원 범위에 맞춰 활용합니다.</p>
 <p>다만 <strong>일반 패키지의 증권사 공통모듈 목록과 슈퍼 이동평균 콘텐츠의 DB증권 기반 구현은 구분</strong>해야 합니다. 패키지에는 한국투자·LS·키움·토스·KB·NH 공통모듈이 포함되며, DB증권 기반은 슈퍼 이동평균 자산배분 쪽에서 제공됩니다.</p>
-<p><a href="/broker-openapi.html">7개 증권사 Open API 지원 범위 보기 →</a></p>
+<p><a href="/broker-openapi.html">멀티 증권사 Open API 구조와 지원 범위 보기 →</a></p>
+</section>
+
+<section class="callout">
+<h2>증권사를 바꾼다고 전략을 다시 만드는 구조가 아닙니다</h2>
+<p>공통 인터페이스로 작성된 주식 봇은 <strong>Broker · Market · accountMode 설정을 바꿔 사용할 증권사, 국내/미국 시장, 계좌를 선택</strong>하도록 구성할 수 있습니다.</p>
+<pre><code>Broker = "KIS"       # KIS / DBI / LS / KIW / TOSS / KB / NH
+Market = "KR"        # KR / US
+accountMode = "REAL" # REAL / REAL2 / VIRTUAL 등</code></pre>
+<p>전략 본문에서는 잔고·현재가·보유종목·주문을 공통 함수 형식으로 호출하므로, 증권사별 차이는 공통모듈이 최대한 흡수합니다. 따라서 <strong>같은 투자 아이디어를 다른 증권사나 계좌로 옮길 때 전략 전체를 처음부터 다시 작성하는 부담을 줄일 수 있습니다.</strong></p>
+<p>패키지에는 한국투자·LS·키움·토스·KB·NH 공통모듈이 포함되며, DB증권 기반 구현은 슈퍼 이동평균 콘텐츠 쪽에서 제공됩니다. 모든 증권사·시장·계좌 조합이 같은 기능을 지원하는 것은 아니므로 실제 범위는 각 API와 모듈을 확인해야 합니다.</p>
+<p><a href="/architecture.html">멀티브로커 코드 구조 자세히 보기 →</a></p>
 </section>
 
 <section>

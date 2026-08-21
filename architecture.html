@@ -1,111 +1,28 @@
-<!doctype html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>주식·코인 파이썬 자동매매 구조 차이 | 멀티브로커와 거래소별 공통모듈</title>
-<meta name="description" content="게만아 자동매매의 실제 구조를 설명합니다. 주식은 같은 전략 파일에서 7개 증권사 Broker를 전환할 수 있지만, 코인은 업비트·빗썸·코인원·바이낸스를 거래소별 공통모듈로 각각 구현합니다.">
-<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-<link rel="canonical" href="https://zacra.github.io/architecture.html">
-<link rel="stylesheet" href="/assets/style.css">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="ko_KR">
-<meta property="og:title" content="주식·코인 파이썬 자동매매 구조 차이 | 멀티브로커와 거래소별 공통모듈">
-<meta property="og:description" content="게만아 자동매매의 실제 구조를 설명합니다. 주식은 같은 전략 파일에서 7개 증권사 Broker를 전환할 수 있지만, 코인은 업비트·빗썸·코인원·바이낸스를 거래소별 공통모듈로 각각 구현합니다.">
-<meta property="og:url" content="https://zacra.github.io/architecture.html">
-<meta property="og:image" content="https://zacra.github.io/assets/og-default.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="주식·코인 파이썬 자동매매 구조 차이 | 멀티브로커와 거래소별 공통모듈">
-<meta name="twitter:description" content="게만아 자동매매의 실제 구조를 설명합니다. 주식은 같은 전략 파일에서 7개 증권사 Broker를 전환할 수 있지만, 코인은 업비트·빗썸·코인원·바이낸스를 거래소별 공통모듈로 각각 구현합니다.">
-<meta name="twitter:image" content="https://zacra.github.io/assets/og-default.png">
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>주식·코인 파이썬 자동매매 구조 차이 | 멀티브로커와 거래소별 공통모듈</title><meta name="description" content="게만아 자동매매의 실제 구조. 주식은 Broker·Market·계좌 설정으로 여러 증권사에 같은 전략을 재사용하는 멀티브로커 구조, 코인은 업비트·빗썸·코인원·바이낸스를 거래소별 공통모듈로 구현합니다."><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><link rel="canonical" href="https://zacra.github.io/architecture.html"><link rel="stylesheet" href="/assets/style.css"><meta property="og:type" content="website"><meta property="og:locale" content="ko_KR"><meta property="og:title" content="주식·코인 파이썬 자동매매 구조 차이 | 멀티브로커와 거래소별 공통모듈"><meta property="og:description" content="주식은 여러 증권사·시장·계좌로 전환 가능한 멀티브로커 구조, 코인은 거래소별 공통모듈 구조를 사용합니다."><meta property="og:url" content="https://zacra.github.io/architecture.html"><meta property="og:image" content="https://zacra.github.io/assets/og-default.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="주식·코인 파이썬 자동매매 구조 차이 | 멀티브로커와 거래소별 공통모듈"><meta name="twitter:description" content="주식은 여러 증권사·시장·계좌로 전환 가능한 멀티브로커 구조, 코인은 거래소별 공통모듈 구조를 사용합니다."><meta name="twitter:image" content="https://zacra.github.io/assets/og-default.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"주식·코인 파이썬 자동매매 구조 차이 | 멀티브로커와 거래소별 공통모듈","name":"주식·코인 파이썬 자동매매 구조 차이 | 멀티브로커와 거래소별 공통모듈","description":"주식은 Broker·Market·계좌 설정으로 여러 증권사에 같은 전략을 재사용하는 멀티브로커 구조, 코인은 거래소별 공통모듈 구조를 사용합니다.","url":"https://zacra.github.io/architecture.html","inLanguage":"ko-KR","dateModified":"2026-08-22","author":{"@type":"Organization","name":"게만아","url":"https://blog.naver.com/zacra"},"publisher":{"@id":"https://zacra.github.io/#organization"}}</script></head><body>
+<a class="skip" href="#main">본문 바로가기</a><header class="site-header"><nav class="nav" aria-label="주요 메뉴"><a class="brand" href="/">게만아 <small>파이썬 자동매매 Docs</small></a><div class="nav-links"><a href="/investment-philosophy.html">투자 철학</a><a href="/python-auto-trading.html">자동매매 시작</a><a href="/system-guide.html">시작 가이드</a><a href="/super-moving-average.html">슈퍼 이동평균</a><a href="/package.html">패키지</a><a href="/broker-openapi.html">멀티 증권사 API</a><a href="/starter.html">무료 Starter</a></div></nav></header>
+<main id="main"><div class="breadcrumb"><a href="/">홈</a> › 주식·코인 파이썬 자동매매 구조 차이</div><h1>주식과 코인은 API 구조를 다르게 구현합니다</h1><p class="lead">게만아 자동매매 코드는 주식과 코인 모두 “전략과 API 연결을 분리한다”는 원칙은 같지만 실제 구현 방식은 다릅니다. <strong>주식은 멀티브로커 전환 구조</strong>, <strong>코인은 거래소별 별도 공통모듈 구조</strong>를 사용합니다.</p>
+<section class="callout"><h2>주식: 같은 전략을 여러 증권사·시장·계좌에 연결</h2><p>공통 인터페이스로 작성된 주식 봇은 전략 코드에서 증권사별 API를 직접 호출하지 않습니다. 먼저 Broker, Market, accountMode를 정한 뒤 해당 모듈을 불러옵니다.</p><pre><code>Broker = "KIS"       # KIS / DBI / LS / KIW / TOSS / KB / NH
+Market = "KR"        # KR / US
+accountMode = "REAL" # REAL / REAL2 / VIRTUAL 등
 
-
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"주식·코인 파이썬 자동매매 구조 차이 | 멀티브로커와 거래소별 공통모듈","name":"주식·코인 파이썬 자동매매 구조 차이 | 멀티브로커와 거래소별 공통모듈","description":"게만아 자동매매의 실제 구조를 설명합니다. 주식은 같은 전략 파일에서 7개 증권사 Broker를 전환할 수 있지만, 코인은 업비트·빗썸·코인원·바이낸스를 거래소별 공통모듈로 각각 구현합니다.","url":"https://zacra.github.io/architecture.html","inLanguage":"ko-KR","dateModified":"2026-08-21","author":{"@type":"Organization","name":"게만아","url":"https://blog.naver.com/zacra"},"publisher":{"@id":"https://zacra.github.io/#organization"}}</script>
-</head>
-<body>
-<a class="skip" href="#main">본문 바로가기</a>
-<header class="site-header">
-<nav class="nav" aria-label="주요 메뉴">
-<a class="brand" href="/">게만아 <small>파이썬 자동매매 Docs</small></a>
-<div class="nav-links">
-<a href="/python-auto-trading.html">자동매매 시작</a>
-<a href="/stock-auto-trading.html">주식·ETF</a>
-<a href="/crypto-auto-trading.html">코인</a>
-<a href="/broker-openapi.html">7개 증권사 API</a>
-<a href="/backtest.html">백테스트</a>
-<a href="/starter.html">무료 Starter</a>
-<a href="/about.html">소개</a>
-</div>
-</nav>
-</header>
-<main id="main">
-<div class="breadcrumb"><a href="/">홈</a> › 주식·코인 파이썬 자동매매 구조 차이</div>
-<h1>주식과 코인은 API 구조를 다르게 구현합니다</h1>
-<p class="lead">게만아의 자동매매 코드는 주식과 코인 모두 “전략과 API 연결을 분리한다”는 원칙은 같지만, 실제 구현 방식은 같지 않습니다. <strong>주식은 멀티브로커 전환 구조</strong>, <strong>코인은 거래소별 별도 공통모듈 구조</strong>를 사용합니다.</p>
-
-<section>
-<h2>주식: 같은 전략 파일에서 증권사 Broker를 전환</h2>
-<p>국내주식은 전략이 필요로 하는 잔고, 보유종목, 현재가, 주문 기능을 공통화하고, 사용할 증권사 Broker를 선택하는 방식으로 확장합니다.</p>
-<pre><code>같은 주식 전략 파일
-        ↓
-사용할 Broker 선택
-        ↓
-KIS / LS / 키움 / 토스 / KB / NH / DB
-        ↓
-각 증권사 Open API
-</code></pre>
-<p>그래서 동일한 투자전략을 여러 증권사에서 운용할 때 전략 전체를 다시 작성하는 부담을 줄일 수 있습니다.</p>
-</section>
-
-<section>
-<h2>코인: 업비트·빗썸·코인원·바이낸스를 각각 별도 구현</h2>
-<p>코인은 현재 주식처럼 한 파일에서 Exchange Adapter 하나만 바꾸는 구조가 아닙니다. <strong>업비트, 빗썸, 코인원, 바이낸스 각각의 API 특성에 맞춘 공통모듈과 연결 코드를 따로 둡니다.</strong></p>
-<pre><code>업비트용 전략/봇  → myUpbit   → 업비트 API
-빗썸용 전략/봇    → myBithumb  → 빗썸 API
-코인원용 전략/봇  → myCoinone  → 코인원 API
-바이낸스용 전략/봇→ myBinance  → CCXT → 바이낸스
-</code></pre>
-<p><code>myUpbit</code>, <code>myBithumb</code>, <code>myCoinone</code>, <code>myBinance</code>처럼 거래소별 공통모듈이 독립되어 있고, 해당 거래소용 코드가 그 모듈을 사용합니다.</p>
-</section>
-
-<section>
-<h2>왜 코인을 억지로 하나로 합치지 않았나?</h2>
-<div class="table-wrap"><table>
-<thead><tr><th>구분</th><th>주식</th><th>코인</th></tr></thead>
-<tbody>
-<tr><td>지원 구조</td><td>한 전략 파일에서 Broker 전환 가능</td><td>거래소별 별도 구현</td></tr>
-<tr><td>지원 대상</td><td>한국투자·LS·키움·토스·KB·NH·DB</td><td>업비트·빗썸·코인원·바이낸스</td></tr>
-<tr><td>공통화</td><td>증권사별 API 차이를 공통 인터페이스로 흡수</td><td>거래소별 공통모듈을 각각 유지</td></tr>
-<tr><td>이유</td><td>주식 주문·계좌 기능의 공통분모가 큼</td><td>인증·symbol·최소주문·정밀도·현물/선물 규칙 차이가 큼</td></tr>
-</tbody>
-</table></div>
-</section>
-
-<section>
-<h2>바이낸스만 연결 계층이 하나 더 있습니다</h2>
-<p><code>myBinance</code>는 CCXT를 활용해 Binance에 연결합니다. 즉 사이트에서 바이낸스 구현을 설명할 때는 “Binance 공식 API를 직접 전부 구현한 모듈”이라고 보기보다 <strong>게만아 전략 코드 → myBinance → CCXT → Binance</strong> 구조로 이해하는 것이 정확합니다.</p>
-<p><a href="https://docs.ccxt.com/" target="_blank" rel="noopener noreferrer">CCXT 공식 문서 →</a></p>
-</section>
-
-<section>
-<h2>중요한 것은 ‘무조건 하나로 합치기’가 아닙니다</h2>
-<p>좋은 아키텍처의 목적은 파일 개수를 줄이는 것이 아니라 <strong>전략의 의도와 API 차이를 안전하게 관리하는 것</strong>입니다. 공통화했을 때 단순해지는 영역은 공통화하고, 시장별 차이가 큰 부분은 분리하는 편이 오류를 줄이고 유지보수를 쉽게 만들 수 있습니다.</p>
-</section>
-
-<section class="notice">
-<h2>철학과 구조는 연결됩니다</h2>
-<p>게만아가 자동매매를 사용하는 이유도 같습니다. 더 복잡한 코드를 만드는 것이 목적이 아니라, 백테스트로 검증한 기준을 시장마다 빠뜨리지 않고 반복하기 위해 필요한 만큼만 시스템화합니다.</p>
-<p><a href="/investment-philosophy.html">시스템 투자 철학 보기 →</a></p>
-</section>
-
-<p class="updated">문서 업데이트: 2026-08-21</p>
-</main>
-<footer class="site-footer"><div class="footer-inner">
-<p><strong>게만아</strong> · 주식·ETF·코인 파이썬 자동매매·백테스트·API 공개 기술문서</p>
-<p>교육·기술 정보 제공 목적이며 특정 금융상품의 추천 또는 수익 보장이 아닙니다. 증권사 API 사양은 변경될 수 있으므로 실제 구현 전 공식 문서를 확인하세요.</p>
-<p><a href="https://blog.naver.com/zacra" target="_blank" rel="noopener noreferrer">네이버 블로그</a> · <a href="/sources.html">공식 출처</a> · 마지막 업데이트 2026-08-21</p>
-</div></footer>
-</body>
-</html>
+Common = importlib.import_module(f"{Broker}_Common")
+Helper = importlib.import_module(f"{Broker}_API_Helper_{Market}")
+Common.SetChangeMode(accountMode)</code></pre><p>전략은 그 다음부터 <code>Helper.GetBalance()</code>, <code>GetCurrentPrice()</code>, <code>MakeBuyMarketOrder()</code> 같은 공통 함수를 사용합니다. 즉 <strong>전략의 투자 규칙은 유지하고 증권사별 차이는 공통모듈이 담당</strong>합니다.</p></section>
+<section><h2>멀티브로커 구조를 그림으로 보면</h2><pre><code>              같은 주식 전략 로직
+                     ↓
+       Broker / Market / accountMode 선택
+                     ↓
+        Common + API_Helper 동적 import
+                     ↓
+ KIS / LS / KIW / TOSS / KB / NH / DBI ...
+                     ↓
+             각 증권사 Open API</code></pre><p>새 증권사가 추가될 때도 가능하면 전략 파일마다 증권사 전용 코드를 덧붙이는 대신, 기존 공통 함수 규격을 만족하는 Common/Helper 레이어를 추가하는 방향으로 확장합니다.</p></section>
+<section><h2>계좌까지 분리하는 이유</h2><p><code>accountMode</code>는 단순 실전/모의 구분뿐 아니라 설정파일에 정의한 추가 계좌를 선택하는 데 활용할 수 있습니다. 같은 증권사에서도 전략별·계좌별로 설정을 나눌 수 있어 한 서버에서 여러 시스템을 운용할 때 관리가 편해집니다.</p><p>실제로 사용할 수 있는 모드와 계좌 종류는 각 공통모듈과 사용자의 설정파일 구성에 따라 달라집니다.</p></section>
+<section><h2>코인: 업비트·빗썸·코인원·바이낸스를 각각 별도 구현</h2><p>코인은 현재 주식처럼 한 파일에서 Exchange 값 하나만 바꾸는 구조가 아닙니다. <strong>업비트, 빗썸, 코인원, 바이낸스 각각의 API 특성에 맞춘 공통모듈과 연결 코드를 따로 둡니다.</strong></p><pre><code>업비트용 전략/봇   → 거래소별 공통모듈 → 업비트 API
+빗썸용 전략/봇     → myBithumb          → 빗썸 API
+코인원용 전략/봇   → myCoinone          → 코인원 API
+바이낸스용 전략/봇 → 거래소별 공통모듈 → 바이낸스 API</code></pre></section>
+<section><h2>왜 코인을 억지로 하나로 합치지 않았나?</h2><div class="table-wrap"><table><thead><tr><th>구분</th><th>주식</th><th>코인</th></tr></thead><tbody><tr><td>지원 구조</td><td>Broker·Market·계좌 선택으로 공통화</td><td>거래소별 별도 구현</td></tr><tr><td>현재 대상</td><td>한국투자·LS·키움·토스·KB·NH·DB</td><td>업비트·빗썸·코인원·바이낸스</td></tr><tr><td>공통화</td><td>증권사별 API 차이를 Common/Helper에서 흡수</td><td>거래소별 공통모듈을 각각 유지</td></tr><tr><td>이유</td><td>주식의 계좌·시세·주문 공통분모를 활용하기 쉬움</td><td>인증·symbol·최소주문·정밀도·현물/선물 규칙 차이가 큼</td></tr></tbody></table></div></section>
+<section><h2>좋은 공통화의 목적은 파일 수를 줄이는 것이 아닙니다</h2><p>좋은 아키텍처의 목적은 무조건 하나로 합치는 것이 아니라 <strong>전략의 의도와 API 차이를 안전하게 관리하는 것</strong>입니다. 공통화했을 때 단순해지는 영역은 공통화하고, 시장별 차이가 큰 부분은 분리합니다.</p></section>
+<section class="notice"><h2>이 구조가 게만아 콘텐츠의 확장성을 만듭니다</h2><p>패키지와 슈퍼 이동평균에서 이미 사용해온 공통 함수 규격이 있기 때문에, 새 증권사나 새 API 기능이 생겨도 완전히 빈 코드에서 시작할 필요가 없습니다. 기존 모듈을 참고해 AI와 함께 확장하기도 쉬워집니다.</p><p><a href="/broker-openapi.html">멀티 증권사 API 구조 →</a> · <a href="/ai-api-extension.html">API 기능 확장 가이드 →</a></p></section>
+<p class="updated">문서 업데이트: 2026-08-22</p></main><footer class="site-footer"><div class="footer-inner"><p><strong>게만아</strong> · 주식·ETF·코인 파이썬 자동매매·백테스트·API 공개 기술문서</p><p>교육·기술 정보 제공 목적이며 특정 금융상품의 추천 또는 수익 보장이 아닙니다. 증권사 API 사양은 변경될 수 있으므로 실제 구현 전 공식 문서를 확인하세요.</p><p><a href="https://blog.naver.com/zacra" target="_blank" rel="noopener noreferrer">네이버 블로그</a> · <a href="/sources.html">공식 출처</a> · 마지막 업데이트 2026-08-22</p></div></footer></body></html>

@@ -1,77 +1,40 @@
-<!doctype html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>2026 국내 7개 증권사 Open API 비교 | 파이썬 자동매매</title>
-<meta name="description" content="한국투자·LS·키움·토스·KB·NH·DB증권 Open API를 파이썬 자동매매 개발 관점에서 공식 문서 기반으로 비교합니다.">
-<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-<link rel="canonical" href="https://zacra.github.io/broker-openapi.html">
-<link rel="stylesheet" href="/assets/style.css">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="ko_KR">
-<meta property="og:title" content="2026 국내 7개 증권사 Open API 비교 | 파이썬 자동매매">
-<meta property="og:description" content="한국투자·LS·키움·토스·KB·NH·DB증권 Open API를 파이썬 자동매매 개발 관점에서 공식 문서 기반으로 비교합니다.">
-<meta property="og:url" content="https://zacra.github.io/broker-openapi.html">
-<meta property="og:image" content="https://zacra.github.io/assets/og-default.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="2026 국내 7개 증권사 Open API 비교 | 파이썬 자동매매">
-<meta name="twitter:description" content="한국투자·LS·키움·토스·KB·NH·DB증권 Open API를 파이썬 자동매매 개발 관점에서 공식 문서 기반으로 비교합니다.">
-<meta name="twitter:image" content="https://zacra.github.io/assets/og-default.png">
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>국내 증권사 Open API 비교·멀티브로커 자동매매 | 게만아</title>
+<meta name="description" content="현재 한국투자·LS·키움·토스·KB·NH·DB증권 Open API를 비교하고, 같은 주식 전략을 Broker·Market·계좌 설정만 바꿔 여러 증권사에 연결하는 게만아 멀티브로커 구조를 설명합니다.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><link rel="canonical" href="https://zacra.github.io/broker-openapi.html"><link rel="stylesheet" href="/assets/style.css">
+<meta property="og:type" content="website"><meta property="og:locale" content="ko_KR"><meta property="og:title" content="국내 증권사 Open API 비교·멀티브로커 자동매매 | 게만아"><meta property="og:description" content="현재 7개 증권사 Open API 비교와 동일 전략을 여러 증권사·시장·계좌에 연결하는 게만아 멀티브로커 구조."><meta property="og:url" content="https://zacra.github.io/broker-openapi.html"><meta property="og:image" content="https://zacra.github.io/assets/og-default.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="국내 증권사 Open API 비교·멀티브로커 자동매매 | 게만아"><meta name="twitter:description" content="현재 7개 증권사 Open API 비교와 동일 전략을 여러 증권사·시장·계좌에 연결하는 게만아 멀티브로커 구조."><meta name="twitter:image" content="https://zacra.github.io/assets/og-default.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"국내 증권사 Open API 비교·멀티브로커 자동매매","name":"국내 증권사 Open API 비교·멀티브로커 자동매매","description":"현재 한국투자·LS·키움·토스·KB·NH·DB증권 Open API를 비교하고 같은 전략을 여러 증권사·시장·계좌에 연결하는 게만아 멀티브로커 구조를 설명합니다.","url":"https://zacra.github.io/broker-openapi.html","inLanguage":"ko-KR","dateModified":"2026-08-22","author":{"@type":"Organization","name":"게만아","url":"https://blog.naver.com/zacra"},"publisher":{"@id":"https://zacra.github.io/#organization"}}</script></head><body>
+<a class="skip" href="#main">본문 바로가기</a><header class="site-header"><nav class="nav" aria-label="주요 메뉴"><a class="brand" href="/">게만아 <small>파이썬 자동매매 Docs</small></a><div class="nav-links"><a href="/investment-philosophy.html">투자 철학</a><a href="/python-auto-trading.html">자동매매 시작</a><a href="/system-guide.html">시작 가이드</a><a href="/super-moving-average.html">슈퍼 이동평균</a><a href="/package.html">패키지</a><a href="/broker-openapi.html">멀티 증권사 API</a><a href="/starter.html">무료 Starter</a></div></nav></header>
+<main id="main"><div class="breadcrumb"><a href="/">홈</a> › 국내 증권사 Open API 비교·멀티브로커 자동매매</div>
+<p class="eyebrow">게만아 멀티브로커 구조</p><h1>국내 증권사 Open API 비교와 멀티브로커 자동매매</h1>
+<p class="lead">현재 게만아 자동매매 생태계는 <strong>한국투자·LS·키움·토스·KB·NH·DB증권</strong>을 다룹니다. 하지만 이 페이지의 핵심은 ‘7개’라는 숫자가 아닙니다. <strong>같은 전략 로직을 증권사마다 다시 만들지 않고, 공통 인터페이스를 통해 여러 증권사·시장·계좌로 옮기기 쉽게 만든 구조</strong>가 더 중요한 차별점입니다.</p>
+<section class="callout"><h2>전략은 그대로, Broker · Market · 계좌만 선택</h2><p>공통 인터페이스로 작성된 게만아 주식 봇에서는 아래와 같이 사용할 증권사, 시장, 계좌 모드를 정하고 그에 맞는 모듈을 동적으로 불러옵니다.</p>
+<pre><code>Broker = "KIS"       # KIS / DBI / LS / KIW / TOSS / KB / NH
+Market = "KR"        # KR / US
+accountMode = "REAL" # REAL / REAL2 / VIRTUAL 등
 
-
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"2026 국내 7개 증권사 Open API 비교 | 파이썬 자동매매","name":"2026 국내 7개 증권사 Open API 비교 | 파이썬 자동매매","description":"한국투자·LS·키움·토스·KB·NH·DB증권 Open API를 파이썬 자동매매 개발 관점에서 공식 문서 기반으로 비교합니다.","url":"https://zacra.github.io/broker-openapi.html","inLanguage":"ko-KR","dateModified":"2026-08-21","author":{"@type":"Organization","name":"게만아","url":"https://blog.naver.com/zacra"},"publisher":{"@id":"https://zacra.github.io/#organization"}}</script>
-</head>
-<body>
-<a class="skip" href="#main">본문 바로가기</a>
-<header class="site-header">
-<nav class="nav" aria-label="주요 메뉴">
-<a class="brand" href="/">게만아 <small>파이썬 자동매매 Docs</small></a>
-<div class="nav-links">
-<a href="/python-auto-trading.html">자동매매 시작</a>
-<a href="/stock-auto-trading.html">주식·ETF</a>
-<a href="/crypto-auto-trading.html">코인</a>
-<a href="/broker-openapi.html">7개 증권사 API</a>
-<a href="/backtest.html">백테스트</a>
-<a href="/starter.html">무료 Starter</a>
-<a href="/about.html">소개</a>
-</div>
-</nav>
-</header>
-<main id="main">
-<div class="breadcrumb"><a href="/">홈</a> › 2026 국내 7개 증권사 Open API 비교</div>
-<h1>2026 국내 7개 증권사 Open API 비교</h1>
-<p class="lead">Python 자동매매를 만들 때 “어느 증권사가 최고인가?”보다 <strong>내가 필요한 시장·주문·개발 환경을 공식 API가 지원하는지</strong>를 먼저 보는 것이 좋습니다. 아래 내용은 2026-08-21 기준 공식 개발자 문서에서 확인한 범위를 중심으로 정리했습니다.</p>
-<div class="table-wrap"><table><thead><tr><th>증권사</th><th>공식 개발 환경에서 확인되는 핵심</th><th>자동매매 개발 포인트</th><th>Starter</th></tr></thead><tbody>
-<tr><td><a href="/brokers/kis.html">한국투자증권</a></td><td>REST, 국내·해외주식 등, 공식 Python GitHub</td><td>공식 샘플과 문서 범위가 넓음</td><td>선택 가능</td></tr>
-<tr><td><a href="/brokers/ls.html">LS증권</a></td><td>OAuth, REST, 실시간, 국내·해외주식/파생 카테고리</td><td>TR 기반 기능이 매우 세분화</td><td>선택 가능</td></tr>
-<tr><td><a href="/brokers/kiwoom.html">키움증권</a></td><td>REST, OAuth, 국내·미국주식</td><td>멀티 OS + 허용 IP 구조 확인 필요</td><td>선택 가능</td></tr>
-<tr><td><a href="/brokers/toss.html">토스증권</a></td><td>OAuth 2.0, REST, 국내·미국주식, 조건주문</td><td>통합된 최신형 API 구조가 특징</td><td>선택 가능</td></tr>
-<tr><td><a href="/brokers/kb.html">KB증권</a></td><td>Token 기반 인증, 시세·종목·계좌·잔고·주문</td><td>공식 포털과 GitHub/챗봇 제공</td><td>선택 가능</td></tr>
-<tr><td><a href="/brokers/nh.html">NH투자증권</a></td><td>REST, 주식·파생·채권·금현물, 공식 SDK/MCP</td><td>2026년 정식 오픈, AI 개발지원 적극적</td><td>선택 가능</td></tr>
-<tr><td><a href="/brokers/db.html">DB증권</a></td><td>OAuth, 국내·해외주식/파생/채권, 실시간, 공식 SDK/MCP</td><td>Python 샘플과 AI 코딩 지원 제공</td><td>선택 가능</td></tr>
-</tbody></table></div>
-<section><h2>비교할 때 실제로 봐야 하는 7가지</h2><ol>
-<li><strong>내 계좌·상품 지원:</strong> 국내주식만 필요한지, 미국주식·파생까지 필요한지.</li><li><strong>운영체제:</strong> Windows 전용 요소가 있는지, Linux 서버에서도 REST 호출 가능한지.</li><li><strong>인증:</strong> App Key/Secret, OAuth, 토큰 유효기간과 재발급 정책.</li><li><strong>호출 제한:</strong> 초당/분당 호출량은 전략 설계에 직접 영향을 줍니다.</li><li><strong>전략에 필요한 기능:</strong> 잔고·보유종목·현재가·주문처럼 내가 실제 전략에서 사용할 조회·매매 기능이 제공되는지.</li><li><strong>모의투자:</strong> 주문 코드를 실계좌 전에 검증할 환경이 있는지.</li><li><strong>공식 샘플·SDK:</strong> 문서, GitHub, MCP/AI 개발도구가 얼마나 잘 갖춰져 있는지.</li></ol></section>
-<section>
-<h2>게만아 공통모듈은 ‘증권사 API 전체를 복제한 SDK’가 아닙니다</h2>
-<p>증권사 Open API에는 아주 많은 조회·주문·상품 기능이 존재하지만, 게만아 공통모듈은 <strong>실제 게만아 전략과 자동매매 시스템에서 사용하는 기능을 중심으로 구현</strong>합니다.</p>
-<p>무료 Starter는 그중에서도 입문에 필요한 인증, 계좌·보유종목·현재가 조회, 리밸런싱과 기본 주문 흐름만 경험하도록 범위를 더 작게 만든 Lite 버전입니다. 패키지와 슈퍼 이동평균에서 사용하는 정식 모듈은 Starter보다 구현 범위가 넓지만, 역시 각 증권사 Open API가 제공하는 모든 기능을 전부 함수화한 것은 아닙니다.</p>
-<p>따라서 문서에 없는 API 기능이 필요하다고 해서 지원이 불가능한 것은 아닙니다. 기존 공통모듈의 구조를 유지한 채 <strong>증권사 공식 API 문서와 AI 코딩 도구를 함께 제공하면 필요한 함수를 추가</strong>할 수 있습니다.</p>
-<p><a class="btn primary" href="/ai-api-extension.html">없는 API 기능을 AI로 확장하는 방법 →</a></p>
-</section>
-
-<section class="notice"><h2>중요: API 사양은 바뀝니다</h2><p>호출 제한, 주문 유형, 거래소 구분, 인증 유효기간은 증권사 공지에 따라 변경될 수 있습니다. 이 문서는 비교를 위한 출발점이며 실제 구현 전에는 반드시 <a href="/sources.html">증권사 공식 문서</a>를 다시 확인하세요.</p></section>
-<section class="callout"><h2>7개 중 하나를 직접 연결해보고 싶다면</h2><p>무료 Starter에서는 한 증권사를 선택해 국내주식 Lite 구조로 계좌 조회와 리밸런싱·주문 흐름을 확인할 수 있습니다.</p><a class="btn accent" href="https://blog.naver.com/zacra/224382618923" target="_blank" rel="noopener noreferrer">무료 Starter 다운로드·체험하기</a></section>
-
-<p class="updated">문서 업데이트: 2026-08-21</p>
-</main>
-<footer class="site-footer"><div class="footer-inner">
-<p><strong>게만아</strong> · 주식·ETF·코인 파이썬 자동매매·백테스트·API 공개 기술문서</p>
-<p>교육·기술 정보 제공 목적이며 특정 금융상품의 추천 또는 수익 보장이 아닙니다. 증권사 API 사양은 변경될 수 있으므로 실제 구현 전 공식 문서를 확인하세요.</p>
-<p><a href="https://blog.naver.com/zacra" target="_blank" rel="noopener noreferrer">네이버 블로그</a> · <a href="/sources.html">공식 출처</a> · 마지막 업데이트 2026-08-21</p>
-</div></footer>
-</body>
-</html>
+Common = importlib.import_module(f"{Broker}_Common")
+Helper = importlib.import_module(f"{Broker}_API_Helper_{Market}")
+Common.SetChangeMode(accountMode)</code></pre>
+<p>전략 본문은 이후 <code>Helper.GetBalance()</code>, <code>Helper.GetMyStockList()</code>, <code>Helper.GetCurrentPrice()</code>, <code>Helper.MakeBuyMarketOrder()</code> 같은 공통 호출 형식을 사용합니다. <strong>증권사별 인증 방식·응답 필드·주문 API 차이는 Common/Helper 모듈이 최대한 흡수</strong>하고, 전략은 자산 선택·비중·리밸런싱 같은 투자 규칙에 집중합니다.</p></section>
+<section><h2>세 가지 축을 따로 바꿀 수 있습니다</h2><div class="table-wrap"><table><thead><tr><th>설정</th><th>역할</th><th>예시</th></tr></thead><tbody>
+<tr><td><strong>Broker</strong></td><td>사용할 증권사 공통모듈 선택</td><td>KIS, LS, KIW, TOSS, KB, NH, DBI</td></tr>
+<tr><td><strong>Market</strong></td><td>국내주식·미국주식 Helper 선택</td><td>KR / US</td></tr>
+<tr><td><strong>accountMode</strong></td><td>설정파일에 정의한 실전·추가계좌·모의계좌 선택</td><td>REAL / REAL2 / VIRTUAL 등</td></tr>
+</tbody></table></div><p>따라서 같은 전략을 국내·미국 시장이나 여러 계좌에서 운용할 때 코드 전체를 복제해 다시 만드는 부담을 줄일 수 있습니다. 단, <strong>각 증권사의 실제 지원 시장·모의투자·주문 유형·계좌 종류는 서로 다르므로 지원 범위 확인은 필요</strong>합니다.</p></section>
+<section><h2>현재 다루는 증권사 Open API</h2><div class="table-wrap"><table><thead><tr><th>증권사</th><th>공식 개발 환경에서 확인되는 핵심</th><th>게만아 코드 연결</th></tr></thead><tbody>
+<tr><td><a href="/brokers/kis.html">한국투자증권</a></td><td>REST, 국내·해외주식 등, 공식 Python 자료</td><td><code>Broker="KIS"</code> · 패키지 78번</td></tr>
+<tr><td><a href="/brokers/ls.html">LS증권</a></td><td>OAuth, REST, 국내·해외주식/파생 카테고리</td><td><code>Broker="LS"</code> · 패키지 76번</td></tr>
+<tr><td><a href="/brokers/kiwoom.html">키움증권</a></td><td>REST, OAuth, 국내·미국주식</td><td><code>Broker="KIW"</code> · 패키지 77번</td></tr>
+<tr><td><a href="/brokers/toss.html">토스증권</a></td><td>OAuth 2.0, REST, 국내·미국주식</td><td><code>Broker="TOSS"</code> · 패키지 88번</td></tr>
+<tr><td><a href="/brokers/kb.html">KB증권</a></td><td>Token 기반 인증, 시세·계좌·잔고·주문</td><td><code>Broker="KB"</code> · 패키지 95번</td></tr>
+<tr><td><a href="/brokers/nh.html">NH투자증권</a></td><td>REST 기반 Open API와 개발지원 환경</td><td><code>Broker="NH"</code> · 패키지 96번</td></tr>
+<tr><td><a href="/brokers/db.html">DB증권</a></td><td>OAuth, 국내·해외주식 등</td><td><code>Broker="DBI"</code> · 슈퍼 이동평균 기반 구현</td></tr>
+</tbody></table></div></section>
+<section class="notice"><h2>패키지와 DB증권 범위는 구분합니다</h2><p>일반 패키지에는 한국투자·LS·키움·토스·KB·NH의 공통모듈이 포함되어 있으며, <strong>DB증권 기반 구현은 슈퍼 이동평균 자산배분 콘텐츠 쪽에서 제공</strong>됩니다. 따라서 ‘현재 7개 증권사를 다룬다’와 ‘패키지 하나에 7개 공통모듈이 모두 포함된다’는 같은 의미가 아닙니다.</p></section>
+<section><h2>왜 이 구조가 유용한가?</h2><ul class="check"><li><strong>증권사 변경 비용 감소:</strong> 전략 규칙은 유지하고 API 레이어만 교체하기 쉽습니다.</li><li><strong>계좌 분산:</strong> 같은 전략을 여러 계좌로 나눠 운용할 때 설정을 분리하기 쉽습니다.</li><li><strong>국내·미국주식 확장:</strong> 지원되는 공통모듈에서는 Market 선택으로 KR/US Helper 구조를 재사용할 수 있습니다.</li><li><strong>새 증권사 추가:</strong> 지원사가 8개, 9개로 늘어나더라도 전략 파일 전체보다 공통모듈 확장에 집중할 수 있습니다.</li><li><strong>AI 활용:</strong> 이미 통일된 함수 규격이 있으므로 새 증권사나 새 기능을 AI와 함께 추가할 때 기준점이 명확합니다.</li></ul></section>
+<section><h2>비교할 때 실제로 봐야 하는 것</h2><ol><li><strong>내 계좌·상품 지원:</strong> 국내주식, 미국주식, 연금 등 필요한 영역이 실제로 가능한지.</li><li><strong>인증과 토큰:</strong> App Key/Secret, OAuth, 토큰 유효기간과 재발급 정책.</li><li><strong>호출 제한:</strong> 초당/분당 호출량이 전략 주기에 맞는지.</li><li><strong>전략에 필요한 기능:</strong> 잔고·보유종목·현재가·주문 등 실제 필요한 API가 있는지.</li><li><strong>모의투자와 주문유형:</strong> 실계좌 전 검증 환경과 시장가·지정가·정정취소 등 필요한 주문을 지원하는지.</li><li><strong>공식 샘플·문서:</strong> 최신 문서와 개발지원 자료가 충분한지.</li></ol></section>
+<section><h2>게만아 공통모듈은 ‘증권사 API 전체를 복제한 SDK’가 아닙니다</h2><p>증권사 Open API에는 매우 많은 기능이 존재하지만, 게만아 공통모듈은 <strong>실제 전략과 자동매매 시스템에서 사용하는 기능을 중심으로 구현</strong>합니다. Starter는 그중에서도 입문에 필요한 기능만 공개한 Lite 버전입니다.</p><p>현재 공통모듈에 없는 기능이 필요하더라도 해당 증권사의 공식 API가 제공한다면 기존 함수 스타일을 기준으로 추가할 수 있습니다.</p><p><a class="btn primary" href="/ai-api-extension.html">없는 API 기능을 AI로 확장하는 방법 →</a> <a class="btn" href="/architecture.html">멀티브로커 아키텍처 보기 →</a></p></section>
+<section class="notice"><h2>중요: ‘쉽게 전환’은 공통화된 범위 안에서의 이야기입니다</h2><p>증권사마다 지원 상품, 시장 코드, 모의투자, 주문유형, 호출 제한이 다릅니다. 따라서 <strong>Broker 값 하나만 바꾸면 세상의 모든 API 기능이 완전히 동일하게 동작한다는 의미는 아닙니다.</strong> 게만아 코드가 사용하는 공통 기능을 중심으로 차이를 흡수한 구조라고 이해하면 정확합니다.</p></section>
+<section class="callout"><h2>직접 멀티 증권사 구조를 경험해보고 싶다면</h2><p>무료 Starter에서는 현재 지원 중인 증권사 가운데 한 곳을 선택해 국내주식 Lite 구조로 계좌 조회와 리밸런싱·주문 흐름을 확인할 수 있습니다.</p><a class="btn accent" href="/starter.html">무료 Starter 보기</a></section>
+<p class="updated">문서 업데이트: 2026-08-22</p></main><footer class="site-footer"><div class="footer-inner"><p><strong>게만아</strong> · 주식·ETF·코인 파이썬 자동매매·백테스트·API 공개 기술문서</p><p>교육·기술 정보 제공 목적이며 특정 금융상품의 추천 또는 수익 보장이 아닙니다. 증권사 API 사양은 변경될 수 있으므로 실제 구현 전 공식 문서를 확인하세요.</p><p><a href="https://blog.naver.com/zacra" target="_blank" rel="noopener noreferrer">네이버 블로그</a> · <a href="/sources.html">공식 출처</a> · 마지막 업데이트 2026-08-22</p></div></footer></body></html>
