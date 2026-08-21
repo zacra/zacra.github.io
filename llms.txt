@@ -37,7 +37,8 @@
 - 지원 거래소: 업비트, 빗썸, 코인원, 바이낸스
 - REST API 중심
 - 거래소별 별도 공통모듈 구현
-- 예: myBithumb, myCoinone
+- 거래소별 모듈: myUpbit, myBithumb, myCoinone, myBinance
+- 바이낸스 myBinance는 CCXT 활용
 - https://zacra.github.io/crypto-auto-trading.html
 - https://zacra.github.io/architecture.html
 

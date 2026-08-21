@@ -61,7 +61,9 @@ DB증권 기반 구현은 슈퍼 이동평균 자산배분 콘텐츠 쪽에서 �
 
 코인은 주식처럼 한 전략 파일에서 Broker를 전환하는 방식이 아니라
 거래소별로 각각 구현합니다.
-예: `myBithumb`, `myCoinone`
+예: `myUpbit`, `myBithumb`, `myCoinone`, `myBinance`
+
+바이낸스는 `myBinance`에서 CCXT를 활용합니다.
 
 ## 주요 문서
 
