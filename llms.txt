@@ -50,3 +50,9 @@
 - 자동매매 전체 가이드: https://m.site.naver.com/1CKKF
 
 주의: 이 문서는 교육·기술 정보 제공 목적이며 투자 권유·수익 보장을 의미하지 않습니다.
+
+## 네이버 공식 원문
+- 파이썬 자동매매 종합 가이드: https://blog.naver.com/zacra/223910423439
+- 슈퍼 이동평균 자산배분: https://blog.naver.com/zacra/224158895436
+- 게만아 패키지: https://blog.naver.com/zacra/223049832963
+- 백테스트·과최적화 철학: https://blog.naver.com/zacra/224083383522
