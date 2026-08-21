@@ -102,8 +102,8 @@
 <section>
 <h2>한국주식만이 아닙니다 — 미국주식·ETF도 가능합니다</h2>
 <p>게만아 자동매매 생태계는 국내주식뿐 아니라 <strong>미국주식과 미국 ETF</strong>까지 함께 다룹니다. TQQQ·SOXL 같은 레버리지 ETF, 일반 미국주식·ETF 전략도 증권사 Open API를 통해 시스템화할 수 있습니다.</p>
-<p>전체 환경은 한국투자증권, LS증권, DB증권, 키움증권, 토스증권, KB증권, NH투자증권까지 7개 증권사 API를 다루며, 증권사별 국내·미국주식 지원 범위에 맞춰 활용합니다.</p>
-<p>다만 <strong>일반 패키지의 증권사 공통모듈 목록과 슈퍼 이동평균 콘텐츠의 DB증권 기반 구현은 구분</strong>해야 합니다. 패키지에는 한국투자·LS·키움·토스·KB·NH 공통모듈이 포함되며, DB증권 기반은 슈퍼 이동평균 자산배분 쪽에서 제공됩니다.</p>
+<p><strong>게만아 콘텐츠 전체</strong>에서는 한국투자증권, LS증권, DB증권, 키움증권, 토스증권, KB증권, NH투자증권을 다루며, 증권사별 국내·미국주식 지원 범위에 맞춰 활용합니다.</p>
+<p>다만 <strong>패키지와 슈퍼 이동평균의 포함 범위는 구분</strong>해서 보면 됩니다. 패키지에는 한국투자·LS·키움·토스·KB·NH 공통모듈이 포함되며, <strong>DB증권 지원 코드는 슈퍼 이동평균 자산배분 전략에 포함</strong>됩니다.</p>
 <p><a href="/broker-openapi.html">멀티 증권사 Open API 구조와 지원 범위 보기 →</a></p>
 </section>
 
@@ -114,7 +114,7 @@
 Market = "KR"        # KR / US
 accountMode = "REAL" # REAL / REAL2 / VIRTUAL 등</code></pre>
 <p>전략 본문에서는 잔고·현재가·보유종목·주문을 공통 함수 형식으로 호출하므로, 증권사별 차이는 공통모듈이 최대한 흡수합니다. 따라서 <strong>같은 투자 아이디어를 다른 증권사나 계좌로 옮길 때 전략 전체를 처음부터 다시 작성하는 부담을 줄일 수 있습니다.</strong></p>
-<p>패키지에는 한국투자·LS·키움·토스·KB·NH 공통모듈이 포함되며, DB증권 기반 구현은 슈퍼 이동평균 콘텐츠 쪽에서 제공됩니다. 모든 증권사·시장·계좌 조합이 같은 기능을 지원하는 것은 아니므로 실제 범위는 각 API와 모듈을 확인해야 합니다.</p>
+<p>패키지에는 한국투자·LS·키움·토스·KB·NH 공통모듈이 포함되며, <strong>DB증권 지원 코드는 슈퍼 이동평균 자산배분 전략에 포함</strong>됩니다. 모든 증권사·시장·계좌 조합이 같은 기능을 지원하는 것은 아니므로 실제 범위는 각 API와 모듈을 확인해야 합니다.</p>
 <p><a href="/architecture.html">멀티브로커 코드 구조 자세히 보기 →</a></p>
 </section>
 
@@ -168,7 +168,7 @@ accountMode = "REAL" # REAL / REAL2 / VIRTUAL 등</code></pre>
 <p>이 페이지의 설명만으로 충분하다면 별도의 긴 소개 글을 다시 읽지 않고 바로 구매 단계로 이동할 수 있습니다. 더 많은 사례와 세부 설명이 필요할 때만 상세 포스팅을 확인하세요.</p>
 <p>
 <a class="btn" href="https://blog.naver.com/zacra/223049832963" target="_blank" rel="noopener noreferrer">더 자세히 확인하기</a>
-<a class="btn primary" href="https://forms.gle/fF2nEigv7uodQ7EZ9" target="_blank" rel="noopener noreferrer">계좌이체 구매 (5만원 할인 가능)</a>
+<a class="btn primary" href="https://forms.gle/fF2nEigv7uodQ7EZ9" target="_blank" rel="noopener noreferrer">계좌이체 구매 (교차구매 시 5만원 할인)</a>
 <a class="btn accent" href="https://www.latpeed.com/products/Wxjik" target="_blank" rel="noopener noreferrer">카드·간편결제 (정상가)</a>
 </p>
 </section>

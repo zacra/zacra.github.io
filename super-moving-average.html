@@ -103,12 +103,12 @@
 
 <section>
 <h2>증권사 구조 — 전략은 유지하고 API 레이어를 바꿉니다</h2>
-<p>기본 제공은 <strong>DB증권 API 기반의 한국·미국 계좌 버전</strong>입니다. 다른 증권사 환경으로 확장할 때는 게만아 패키지에서 제공되는 해당 증권사 공통모듈을 활용합니다.</p>
+<p><strong>슈퍼 이동평균 전략에는 DB증권으로 운용할 수 있는 한국·미국 계좌용 코드가 포함</strong>되어 있습니다. 다른 증권사 환경으로 전환할 때는 게만아 패키지에서 제공되는 해당 증권사 공통모듈을 활용합니다.</p>
 <p>게만아의 주식 코드에서 중요한 점은 증권사가 달라질 때 전략의 이동평균·비중조절·리밸런싱 로직을 전부 다시 만드는 것이 아니라, <strong>Broker · Market · 계좌 설정에 맞는 Common/API Helper를 불러와 같은 전략 로직을 재사용하는 방향</strong>으로 구성할 수 있다는 점입니다.</p>
 <pre><code>Broker = "DBI"       # 필요에 따라 KIS / LS / KIW / TOSS / KB / NH 등
 Market = "KR"        # KR / US
 accountMode = "REAL" # 설정된 계좌 모드</code></pre>
-<p>중요하게도 일반 게만아 패키지 자체에 DB증권 공통모듈이 포함되어 있다는 의미는 아닙니다. DB증권 기반 구현은 이 슈퍼 이동평균 자산배분 콘텐츠 쪽의 기본 구조이며, 다른 증권사 전환에는 해당 패키지 공통모듈이 필요합니다.</p>
+<p>즉 <strong>DB증권은 일반 패키지 공통모듈에 포함되는 것이 아니라 슈퍼 이동평균 자산배분 전략에 포함</strong>됩니다. 다른 증권사로 전환하려면 패키지의 해당 증권사 공통모듈을 활용하면 됩니다.</p>
 <p><a href="/broker-openapi.html">멀티 증권사 API 구조 보기 →</a></p>
 </section>
 
@@ -151,7 +151,7 @@ accountMode = "REAL" # 설정된 계좌 모드</code></pre>
 <p>이 페이지의 설명만으로 충분하다면 별도의 긴 소개 글을 다시 읽지 않고 바로 구매 단계로 이동할 수 있습니다. 더 많은 백테스트·운용 설명이 필요할 때만 상세 포스팅을 확인하세요.</p>
 <p>
 <a class="btn" href="https://blog.naver.com/zacra/224158895436" target="_blank" rel="noopener noreferrer">더 자세히 확인하기</a>
-<a class="btn primary" href="https://forms.gle/HooXu7DNkubKexhP6" target="_blank" rel="noopener noreferrer">계좌이체 구매 (5만원 할인 가능)</a>
+<a class="btn primary" href="https://forms.gle/HooXu7DNkubKexhP6" target="_blank" rel="noopener noreferrer">계좌이체 구매 (교차구매 시 5만원 할인)</a>
 <a class="btn accent" href="https://www.latpeed.com/products/XJLqa" target="_blank" rel="noopener noreferrer">카드·간편결제 (정상가)</a>
 </p>
 </section>
