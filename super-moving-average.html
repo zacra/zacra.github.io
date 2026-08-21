@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>슈퍼 이동평균 자산배분 | 게만아 대표 주식·ETF 자동매매 전략</title>
+<meta name="description" content="게만아 대표 주식·ETF 장기 시스템인 슈퍼 이동평균 자산배분 전략의 철학과 구조를 설명합니다. 이동평균, 비중조절, 리밸런싱, 현금 비중과 MDD 관리가 핵심입니다.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://zacra.github.io/super-moving-average.html">
+<link rel="stylesheet" href="/assets/style.css">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="슈퍼 이동평균 자산배분 | 게만아 대표 주식·ETF 자동매매 전략">
+<meta property="og:description" content="게만아 대표 주식·ETF 장기 시스템인 슈퍼 이동평균 자산배분 전략의 철학과 구조를 설명합니다. 이동평균, 비중조절, 리밸런싱, 현금 비중과 MDD 관리가 핵심입니다.">
+<meta property="og:url" content="https://zacra.github.io/super-moving-average.html">
+<meta property="og:image" content="https://zacra.github.io/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="슈퍼 이동평균 자산배분 | 게만아 대표 주식·ETF 자동매매 전략">
+<meta name="twitter:description" content="게만아 대표 주식·ETF 장기 시스템인 슈퍼 이동평균 자산배분 전략의 철학과 구조를 설명합니다. 이동평균, 비중조절, 리밸런싱, 현금 비중과 MDD 관리가 핵심입니다.">
+<meta name="twitter:image" content="https://zacra.github.io/assets/og-default.png">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","headline":"게만아 소개 | 파이썬 자동매매·백테스트·시스템 투자","name":"게만아 소개 | 파이썬 자동매매·백테스트·시스템 투자","description":"게만아(퀀트는 게만아)가 다루는 주식·ETF·코인 파이썬 자동매매, 백테스트, 시스템 투자와 공개 기술문서 운영 목적을 소개합니다.","url":"https://zacra.github.io/super-moving-average.html","inLanguage":"ko-KR","dateModified":"2026-08-21","author":{"@type":"Organization","name":"게만아","url":"https://blog.naver.com/zacra"},"publisher":{"@id":"https://zacra.github.io/#organization"}}</script>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+<header class="site-header">
+<nav class="nav" aria-label="주요 메뉴">
+<a class="brand" href="/">게만아 <small>파이썬 자동매매 Docs</small></a>
+<div class="nav-links">
+<a href="/investment-philosophy.html">투자 철학</a>
+<a href="/python-auto-trading.html">자동매매 시작</a>
+<a href="/system-guide.html">시작 가이드</a>
+<a href="/super-moving-average.html">슈퍼 이동평균</a>
+<a href="/package.html">패키지</a>
+<a href="/broker-openapi.html">7개 증권사 API</a>
+<a href="/starter.html">무료 Starter</a>
+</div>
+</nav>
+</header>
+<main id="main">
+<div class="breadcrumb"><a href="/">홈</a> › 슈퍼 이동평균 자산배분</div>
+
+<p class="eyebrow">게만아 대표 주식·ETF 장기 전략</p>
+<h1>슈퍼 이동평균 자산배분 전략</h1>
+<p class="lead">단 하나의 전략으로 장기 주식·ETF 시스템 투자를 시작한다면, 게만아가 대표적으로 운용하는 전략 중 하나입니다. 핵심은 <strong>높은 수익률 하나보다 오래 유지할 수 있는 구조</strong>를 만드는 것입니다.</p>
+
+<section class="notice">
+<h2>한 줄 요약</h2>
+<p><strong>이동평균 + 비중조절 + 리밸런싱 + 현금 비중 관리</strong>를 결합한 주식·ETF 자산배분 자동매매 시스템입니다.</p>
+</section>
+
+<section>
+<h2>어떤 문제를 해결하려 하나?</h2>
+<p>장기투자는 단순히 계속 보유하는 것만으로 끝나지 않습니다. 계좌가 커질수록 “언제 줄일지”, “현금을 얼마나 둘지”, “비중을 어떻게 조절할지”가 더 중요해집니다.</p>
+<p>이 전략은 그 고민을 <strong>감정 → 기준 → 시스템</strong>으로 바꾸는 것을 목표로 합니다.</p>
+</section>
+
+<section>
+<h2>핵심 구조</h2>
+<ul class="check">
+<li><strong>추세 판단:</strong> 이동평균을 미래 예측선이 아니라 현재 흐름을 확인하는 필터로 사용</li>
+<li><strong>비중 조절:</strong> 시장 조건에 따라 투자 비중을 조정</li>
+<li><strong>리밸런싱:</strong> 목표 비중과 실제 비중의 차이를 정해진 규칙으로 보정</li>
+<li><strong>안전마진:</strong> 조건이 나빠지면 현금 비중을 높여 전체 계좌 충격을 낮추는 구조</li>
+<li><strong>백테스트:</strong> 수익률뿐 아니라 MDD와 유지 가능성을 함께 검증</li>
+</ul>
+</section>
+
+<section>
+<h2>정적 자산배분과 동적 자산배분의 중간을 노립니다</h2>
+<p>올웨더 같은 정적 자산배분의 분산 효과와, HAA/BAA 같은 동적 자산배분의 추세 판단, 이동평균 기반 시장 전환 대응을 하나의 시스템 안에서 활용하는 방향입니다.</p>
+</section>
+
+<section>
+<h2>실제 형태</h2>
+<p>설명으로 끝나는 전략이 아니라 파이썬 기반 학습·운용 구조로 구성되어 있습니다.</p>
+<ul>
+<li>백테스트</li>
+<li>포트폴리오 설정</li>
+<li>비중 계산</li>
+<li>리밸런싱</li>
+<li>주문 연결</li>
+<li>현금 비중 조절</li>
+<li>다중 계좌 운용 구조</li>
+</ul>
+</section>
+
+<section>
+<h2>증권사 구조</h2>
+<p>기본 제공은 <strong>DB증권 API 기반의 한국·미국 계좌 버전</strong>입니다. 다른 증권사 환경으로 변환하려면 게만아 패키지에서 제공되는 해당 증권사 공통모듈을 활용합니다.</p>
+<p>중요하게도 일반 게만아 패키지 자체에 DB증권 공통모듈이 포함되어 있다는 의미는 아닙니다. DB증권 기반 구현은 이 슈퍼 이동평균 자산배분 콘텐츠 쪽의 기본 구조입니다.</p>
+</section>
+
+<section>
+<h2>어떤 사람에게 맞나?</h2>
+<ul class="check">
+<li>개별 종목보다 포트폴리오 중심으로 투자하고 싶은 사람</li>
+<li>단기매매보다 주식·ETF 장기투자를 선호하는 사람</li>
+<li>감정적인 매수·매도를 줄이고 싶은 사람</li>
+<li>연금·ISA·일반계좌를 체계적으로 운용하고 싶은 사람</li>
+<li>여러 전략보다 하나의 기준에 집중하고 싶은 사람</li>
+</ul>
+</section>
+
+<section>
+<h2>누구에게는 맞지 않을 수 있나?</h2>
+<ul>
+<li>단타·초단타 목적</li>
+<li>대박 종목을 찾는 목적</li>
+<li>보장된 수익률을 기대하는 경우</li>
+</ul>
+</section>
+
+<section class="notice">
+<h2>성과보다 더 중요한 지점</h2>
+<p>과거 백테스트와 실제 계좌 결과는 시기·포트폴리오·설정·운용 방식에 따라 달라집니다. 이 전략에서 더 중요하게 보는 것은 <strong>수익률 자체보다 수익을 만들어내는 투자 지속력과 MDD 관리</strong>입니다.</p>
+<p><a href="/investment-philosophy.html">왜 MDD를 먼저 보는지 →</a></p>
+</section>
+
+<section class="callout">
+<h2>다양한 전략보다 이 하나에 집중하고 싶다면</h2>
+<p>슈퍼 이동평균 자산배분은 패키지나 클래스101 구독 없이도 독립적으로 구축 가능한 별도 콘텐츠입니다. 반대로 주식·코인 여러 전략을 폭넓게 사용하고 싶다면 게만아 패키지가 더 적합합니다.</p>
+<p><a class="btn primary" href="/system-guide.html">나에게 맞는 시작 방법 비교 →</a></p>
+</section>
+
+<p class="updated">문서 업데이트: 2026-08-21</p>
+</main>
+<footer class="site-footer"><div class="footer-inner">
+<p><strong>게만아</strong> · 주식·ETF·코인 파이썬 자동매매·백테스트·API 공개 기술문서</p>
+<p>교육·기술 정보 제공 목적이며 특정 금융상품의 추천 또는 수익 보장이 아닙니다. 증권사 API 사양은 변경될 수 있으므로 실제 구현 전 공식 문서를 확인하세요.</p>
+<p><a href="https://blog.naver.com/zacra" target="_blank" rel="noopener noreferrer">네이버 블로그</a> · <a href="/sources.html">공식 출처</a> · 마지막 업데이트 2026-08-21</p>
+</div></footer>
+</body>
+</html>
