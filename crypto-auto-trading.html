@@ -4,25 +4,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>파이썬 코인 자동매매 시작 가이드 | 거래소 API·현물·선물</title>
-<meta name="description" content="파이썬 코인 자동매매에서 거래소 API, REST·WebSocket, 현물·선물, 백테스트, 주문 안전장치와 API Key 보안을 정리합니다.">
+<meta name="description" content="파이썬 코인 자동매매에서 거래소 REST API, 현물·선물, 백테스트, 주문 안전장치와 API Key 보안을 정리합니다.">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <link rel="canonical" href="https://zacra.github.io/crypto-auto-trading.html">
 <link rel="stylesheet" href="/assets/style.css">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:title" content="파이썬 코인 자동매매 시작 가이드 | 거래소 API·현물·선물">
-<meta property="og:description" content="파이썬 코인 자동매매에서 거래소 API, REST·WebSocket, 현물·선물, 백테스트, 주문 안전장치와 API Key 보안을 정리합니다.">
+<meta property="og:description" content="파이썬 코인 자동매매에서 거래소 REST API, 현물·선물, 백테스트, 주문 안전장치와 API Key 보안을 정리합니다.">
 <meta property="og:url" content="https://zacra.github.io/crypto-auto-trading.html">
 <meta property="og:image" content="https://zacra.github.io/assets/og-default.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="파이썬 코인 자동매매 시작 가이드 | 거래소 API·현물·선물">
-<meta name="twitter:description" content="파이썬 코인 자동매매에서 거래소 API, REST·WebSocket, 현물·선물, 백테스트, 주문 안전장치와 API Key 보안을 정리합니다.">
+<meta name="twitter:description" content="파이썬 코인 자동매매에서 거래소 REST API, 현물·선물, 백테스트, 주문 안전장치와 API Key 보안을 정리합니다.">
 <meta name="twitter:image" content="https://zacra.github.io/assets/og-default.png">
 
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"파이썬 코인 자동매매 시작 가이드 | 거래소 API·현물·선물","name":"파이썬 코인 자동매매 시작 가이드 | 거래소 API·현물·선물","description":"파이썬 코인 자동매매에서 거래소 API, REST·WebSocket, 현물·선물, 백테스트, 주문 안전장치와 API Key 보안을 정리합니다.","url":"https://zacra.github.io/crypto-auto-trading.html","inLanguage":"ko-KR","dateModified":"2026-08-21","author":{"@type":"Organization","name":"게만아","url":"https://blog.naver.com/zacra"},"publisher":{"@id":"https://zacra.github.io/#organization"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"파이썬 코인 자동매매 시작 가이드 | 거래소 API·현물·선물","name":"파이썬 코인 자동매매 시작 가이드 | 거래소 API·현물·선물","description":"파이썬 코인 자동매매에서 거래소 REST API, 현물·선물, 백테스트, 주문 안전장치와 API Key 보안을 정리합니다.","url":"https://zacra.github.io/crypto-auto-trading.html","inLanguage":"ko-KR","dateModified":"2026-08-21","author":{"@type":"Organization","name":"게만아","url":"https://blog.naver.com/zacra"},"publisher":{"@id":"https://zacra.github.io/#organization"}}</script>
 </head>
 <body>
 <a class="skip" href="#main">본문 바로가기</a>
@@ -43,9 +43,9 @@
 <main id="main">
 <div class="breadcrumb"><a href="/">홈</a> › 파이썬 코인 자동매매 시작 가이드</div>
 <h1>파이썬 코인 자동매매 시작 가이드</h1>
-<p class="lead">코인 자동매매는 거래소 API와 24시간 시장이라는 특성 때문에 주식과 공통점도 많고 차이도 큽니다. 현물·선물, REST·WebSocket, 포지션 방향, 레버리지와 주문 상태를 명확히 분리해야 합니다.</p>
+<p class="lead">코인 자동매매는 거래소 API와 24시간 시장이라는 특성 때문에 주식과 공통점도 많고 차이도 큽니다. 게만아의 코인 자동매매는 REST API를 중심으로 잔고·포지션·시세·주문을 연결하며, 현물·선물, 포지션 방향, 레버리지와 주문 상태를 명확히 분리합니다.</p>
 <section><h2>1. 현물과 선물을 먼저 구분합니다</h2><p>현물은 보유 수량과 평균단가 중심으로 생각할 수 있지만, 선물은 롱·숏 포지션, 레버리지, 증거금 방식, 청산 위험, 포지션 모드 같은 추가 상태가 있습니다.</p></section>
-<section><h2>2. REST와 WebSocket의 역할을 나눕니다</h2><ul><li><strong>REST:</strong> 잔고, 포지션, 주문, 과거 캔들, 설정 조회에 적합합니다.</li><li><strong>WebSocket:</strong> 빠른 체결·호가·실시간 가격 스트림이 필요한 전략에 유리합니다.</li></ul></section>
+<section><h2>2. REST API 중심으로 조회와 주문을 연결합니다</h2><p>게만아의 코인 자동매매는 실시간 호가창이나 초단타 처리를 전제로 하지 않고 REST API 중심으로 구성합니다. 잔고, 포지션, 현재가, 과거 캔들, 주문과 설정 정보를 전략 실행 주기에 맞춰 조회하고 처리합니다.</p></section>
 <section><h2>3. 거래소별 차이를 Adapter로 분리합니다</h2><p>같은 시장가 매수라도 거래소마다 symbol 형식, 수량 단위, 최소주문금액, precision, 선물 포지션 파라미터가 다를 수 있습니다. 전략 코드가 이런 차이를 직접 처리하게 하지 않는 편이 유지보수에 유리합니다.</p></section>
 <section><h2>4. API Key 권한을 최소화합니다</h2><div class="notice"><p>자동매매에 필요한 거래 권한만 부여하고 출금 권한은 가능하면 비활성화합니다. API Key와 Secret은 공개 GitHub, 영상, 로그, 스크린샷에 노출하지 않습니다.</p></div></section>
 <section><h2>5. 백테스트와 실전의 차이</h2><p>24시간 시장이라도 API 장애, 서버 재시작, 펀딩비, 거래수수료, 슬리피지, 레버리지, 강제청산, 거래소별 시세차이가 실전 결과에 영향을 줍니다. 선물 전략일수록 실전 검증 단계가 중요합니다.</p></section>
