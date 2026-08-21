@@ -21,8 +21,7 @@
 <meta name="twitter:description" content="게만아 파이썬 자동매매 패키지의 구조와 역할을 설명합니다. 주식·코인 전략, 증권사·거래소 API, 백테스트, 서버 자동화와 AI 수정·확장을 위한 코드 베이스입니다.">
 <meta name="twitter:image" content="https://zacra.github.io/assets/og-default.png">
 
-
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","headline":"게만아 소개 | 파이썬 자동매매·백테스트·시스템 투자","name":"게만아 소개 | 파이썬 자동매매·백테스트·시스템 투자","description":"게만아(퀀트는 게만아)가 다루는 주식·ETF·코인 파이썬 자동매매, 백테스트, 시스템 투자와 공개 기술문서 운영 목적을 소개합니다.","url":"https://zacra.github.io/package.html","inLanguage":"ko-KR","dateModified":"2026-08-21","author":{"@type":"Organization","name":"게만아","url":"https://blog.naver.com/zacra"},"publisher":{"@id":"https://zacra.github.io/#organization"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"게만아 파이썬 자동매매 패키지","name":"게만아 파이썬 자동매매 패키지","description":"주식·ETF·코인 자동매매 전략, 증권사·거래소 API, 백테스트와 서버 자동화를 포함한 게만아 파이썬 자동매매 코드 베이스를 설명합니다.","url":"https://zacra.github.io/package.html","inLanguage":"ko-KR","dateModified":"2026-08-21","author":{"@type":"Organization","name":"게만아","url":"https://blog.naver.com/zacra"},"publisher":{"@id":"https://zacra.github.io/#organization"}}</script>
 </head>
 <body>
 <a class="skip" href="#main">본문 바로가기</a>
@@ -73,7 +72,7 @@
 
 <section>
 <h2>코인 지원 범위</h2>
-<p>업비트, 빗썸, 코인원, 바이낸스를 지원합니다. 코인은 주식처럼 한 전략 파일에서 Broker만 바꾸는 방식이 아니라 거래소별로 따로 구현되어 있으며, <code>myUpbit</code>, <code>myBithumb</code>, <code>myCoinone</code>, <code>myBinance</code>처럼 각 거래소용 공통모듈을 따로 사용합니다. 바이낸스의 <code>myBinance</code>는 CCXT를 활용합니다.</p>
+<p>업비트, 빗썸, 코인원, 바이낸스를 지원합니다. 코인은 주식처럼 한 전략 파일에서 Broker만 바꾸는 방식이 아니라 거래소별로 따로 구현되어 있으며, <code>myBithumb</code>, <code>myCoinone</code>처럼 각 거래소용 공통모듈을 따로 사용합니다.</p>
 <p><a href="/architecture.html">주식과 코인 코드 구조 차이 →</a></p>
 </section>
 
@@ -89,33 +88,31 @@
 </section>
 
 <section>
-<h2>공통모듈에 없는 기능도 AI와 함께 확장할 수 있습니다</h2>
-<p>패키지의 증권사 공통모듈은 Starter보다 구현 범위가 넓지만, 증권사 공식 API의 모든 기능을 전부 함수로 만들어놓은 범용 SDK는 아닙니다. <strong>게만아 전략과 실제 자동매매에서 필요한 기능을 중심으로 구현</strong>되어 있습니다.</p>
-<p>그래서 자신에게만 필요한 API 기능이 있다면 기존 패키지 공통모듈을 AI에게 함께 보여주고, 해당 증권사의 공식 API 명세 링크를 제공한 뒤 기존 구조와 스타일을 유지하도록 요청하는 방식이 효율적입니다.</p>
-<p>개인적으로는 코드베이스 전체를 보면서 수정하기 편한 <strong>Cursor</strong>를 주로 활용합니다. AI가 만든 코드는 항상 검토·테스트해야 하며, API 명세의 정본은 반드시 증권사 공식 문서입니다.</p>
-<p>
-<a class="btn primary" href="/ai-api-extension.html">AI로 API 함수 확장하는 방법</a>
-<a class="btn" href="https://cafe.naver.com/pythonautogma/571" target="_blank" rel="noopener noreferrer">제가 사용하는 Cursor 활용법 보기</a>
-</p>
-</section>
-
-<section>
 <h2>신규 콘텐츠 추가 방식</h2>
 <p>새 전략은 먼저 멤버십에서 연구·공개되고, 일정 기간 뒤 패키지로 편입되는 방식으로 운영됩니다. 멤버십은 패키지 이용에 필수라기보다 신규 연구 콘텐츠를 더 일찍 확인하는 선택지에 가깝습니다.</p>
-</section>
-
-<section>
-<h2>패키지 구매·다운로드</h2>
-<p>현재 제공 범위와 최신 코드 목록을 확인하고, 구매 후 코드를 다운로드하는 안내는 아래 패키지 페이지에서 진행합니다. GitHub 문서는 가격이나 한시적 이벤트보다 패키지의 구조와 역할을 설명하는 데 집중합니다.</p>
-<p>
-<a class="btn primary" href="https://blog.naver.com/zacra/223049832963" target="_blank" rel="noopener noreferrer">게만아 패키지 구매·다운로드하기</a>
-<a class="btn" href="https://blog.naver.com/zacra/223910423439" target="_blank" rel="noopener noreferrer">파이썬 자동매매 종합 가이드</a>
-</p>
 </section>
 
 <section class="notice">
 <h2>패키지가 약속하지 않는 것</h2>
 <p>패키지는 특정 수익률을 약속하거나 종목을 추천하는 서비스가 아닙니다. 중요한 것은 수익률 하나가 아니라 MDD, 변동성, 장기 유지 가능성을 포함한 <strong>‘안 깨지는 시스템’을 직접 구축하고 통제하는 것</strong>입니다.</p>
+</section>
+
+<section class="callout">
+<h2>내용을 확인했다면 여기서 바로 선택할 수 있습니다</h2>
+<p>이 페이지의 설명만으로 충분하다면 별도의 긴 소개 글을 다시 읽지 않고 바로 구매 단계로 이동할 수 있습니다. 더 많은 사례와 세부 설명이 필요할 때만 상세 포스팅을 확인하세요.</p>
+<p>
+<a class="btn" href="https://blog.naver.com/zacra/223049832963" target="_blank" rel="noopener noreferrer">더 자세히 확인하기</a>
+<a class="btn primary" href="https://forms.gle/fF2nEigv7uodQ7EZ9" target="_blank" rel="noopener noreferrer">계좌이체 구매 (5만원 할인 가능)</a>
+<a class="btn accent" href="https://www.latpeed.com/products/Wxjik" target="_blank" rel="noopener noreferrer">카드·간편결제 (정상가)</a>
+</p>
+</section>
+
+<section class="notice">
+<h2>패키지 + 슈퍼 이동평균 함께 구매 시 5만원 할인</h2>
+<p><strong>어느 것을 먼저 구매했는지는 관계없습니다.</strong> 패키지 또는 슈퍼 이동평균 자산배분 중 하나를 이미 구매했다면, 다른 하나를 구매할 때 <strong>5만원 할인</strong>을 받을 수 있습니다.</p>
+<p>이 할인은 <strong>구글폼을 통한 계좌이체 구매에 적용</strong>됩니다. 이미 한쪽을 구매한 경우 다른 쪽 구글폼의 안내에 따라 정상가에서 5만원을 뺀 금액을 이체하면 됩니다.</p>
+<p>카드·간편결제(래피드)는 정상가로 바로 결제하는 경로이므로, <strong>교차 구매 5만원 할인을 적용받으려면 계좌이체 구글폼을 이용하세요.</strong></p>
+<p><a href="/super-moving-average.html">슈퍼 이동평균 자산배분도 확인하기 →</a></p>
 </section>
 
 <section class="callout">
