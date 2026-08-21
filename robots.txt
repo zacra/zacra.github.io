@@ -1,0 +1,11 @@
+# 게만아 파이썬 자동매매 Docs
+User-agent: *
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# 기본 설정은 공개 기술문서의 발견 가능성을 우선합니다.
+# 모델 학습 사용을 원치 않으면 robots-variants/robots-search-only.txt를 참고하세요.
+
+Sitemap: https://zacra.github.io/sitemap.xml

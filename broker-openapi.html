@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2026 국내 7개 증권사 Open API 비교 | 파이썬 자동매매</title>
+<meta name="description" content="한국투자·LS·키움·토스·KB·NH·DB증권 Open API를 파이썬 자동매매 개발 관점에서 공식 문서 기반으로 비교합니다.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://zacra.github.io/broker-openapi.html">
+<link rel="stylesheet" href="/assets/style.css">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="2026 국내 7개 증권사 Open API 비교 | 파이썬 자동매매">
+<meta property="og:description" content="한국투자·LS·키움·토스·KB·NH·DB증권 Open API를 파이썬 자동매매 개발 관점에서 공식 문서 기반으로 비교합니다.">
+<meta property="og:url" content="https://zacra.github.io/broker-openapi.html">
+<meta property="og:image" content="https://zacra.github.io/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="2026 국내 7개 증권사 Open API 비교 | 파이썬 자동매매">
+<meta name="twitter:description" content="한국투자·LS·키움·토스·KB·NH·DB증권 Open API를 파이썬 자동매매 개발 관점에서 공식 문서 기반으로 비교합니다.">
+<meta name="twitter:image" content="https://zacra.github.io/assets/og-default.png">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"2026 국내 7개 증권사 Open API 비교 | 파이썬 자동매매","name":"2026 국내 7개 증권사 Open API 비교 | 파이썬 자동매매","description":"한국투자·LS·키움·토스·KB·NH·DB증권 Open API를 파이썬 자동매매 개발 관점에서 공식 문서 기반으로 비교합니다.","url":"https://zacra.github.io/broker-openapi.html","inLanguage":"ko-KR","dateModified":"2026-08-21","author":{"@type":"Organization","name":"게만아","url":"https://blog.naver.com/zacra"},"publisher":{"@id":"https://zacra.github.io/#organization"}}</script>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+<header class="site-header">
+<nav class="nav" aria-label="주요 메뉴">
+<a class="brand" href="/">게만아 <small>파이썬 자동매매 Docs</small></a>
+<div class="nav-links">
+<a href="/python-auto-trading.html">자동매매 시작</a>
+<a href="/stock-auto-trading.html">주식·ETF</a>
+<a href="/crypto-auto-trading.html">코인</a>
+<a href="/broker-openapi.html">7개 증권사 API</a>
+<a href="/backtest.html">백테스트</a>
+<a href="/starter.html">무료 Starter</a>
+<a href="/about.html">소개</a>
+</div>
+</nav>
+</header>
+<main id="main">
+<div class="breadcrumb"><a href="/">홈</a> › 2026 국내 7개 증권사 Open API 비교</div>
+<h1>2026 국내 7개 증권사 Open API 비교</h1>
+<p class="lead">Python 자동매매를 만들 때 “어느 증권사가 최고인가?”보다 <strong>내가 필요한 시장·주문·개발 환경을 공식 API가 지원하는지</strong>를 먼저 보는 것이 좋습니다. 아래 내용은 2026-08-21 기준 공식 개발자 문서에서 확인한 범위를 중심으로 정리했습니다.</p>
+<div class="table-wrap"><table><thead><tr><th>증권사</th><th>공식 개발 환경에서 확인되는 핵심</th><th>자동매매 개발 포인트</th><th>Starter</th></tr></thead><tbody>
+<tr><td><a href="/brokers/kis.html">한국투자증권</a></td><td>REST + WebSocket, 국내·해외주식 등, 공식 Python GitHub</td><td>공식 샘플과 문서 범위가 넓음</td><td>선택 가능</td></tr>
+<tr><td><a href="/brokers/ls.html">LS증권</a></td><td>OAuth, REST, 실시간, 국내·해외주식/파생 카테고리</td><td>TR 기반 기능이 매우 세분화</td><td>선택 가능</td></tr>
+<tr><td><a href="/brokers/kiwoom.html">키움증권</a></td><td>REST, OAuth, WebSocket, 국내·미국주식</td><td>멀티 OS + 허용 IP 구조 확인 필요</td><td>선택 가능</td></tr>
+<tr><td><a href="/brokers/toss.html">토스증권</a></td><td>OAuth 2.0, REST, 국내·미국주식, 조건주문</td><td>통합된 최신형 API 구조가 특징</td><td>선택 가능</td></tr>
+<tr><td><a href="/brokers/kb.html">KB증권</a></td><td>Token 기반 인증, 시세·종목·계좌·잔고·주문</td><td>공식 포털과 GitHub/챗봇 제공</td><td>선택 가능</td></tr>
+<tr><td><a href="/brokers/nh.html">NH투자증권</a></td><td>REST + WebSocket, 주식·파생·채권·금현물, 공식 SDK/MCP</td><td>2026년 정식 오픈, AI 개발지원 적극적</td><td>선택 가능</td></tr>
+<tr><td><a href="/brokers/db.html">DB증권</a></td><td>OAuth, 국내·해외주식/파생/채권, 실시간, 공식 SDK/MCP</td><td>Python 샘플과 AI 코딩 지원 제공</td><td>선택 가능</td></tr>
+</tbody></table></div>
+<section><h2>비교할 때 실제로 봐야 하는 7가지</h2><ol>
+<li><strong>내 계좌·상품 지원:</strong> 국내주식만 필요한지, 미국주식·파생까지 필요한지.</li><li><strong>운영체제:</strong> Windows 전용 요소가 있는지, Linux 서버에서도 REST 호출 가능한지.</li><li><strong>인증:</strong> App Key/Secret, OAuth, 토큰 유효기간과 재발급 정책.</li><li><strong>호출 제한:</strong> 초당/분당 호출량은 전략 설계에 직접 영향을 줍니다.</li><li><strong>실시간 데이터:</strong> WebSocket이 필요한 단타인지, REST만으로 충분한 중장기인지.</li><li><strong>모의투자:</strong> 주문 코드를 실계좌 전에 검증할 환경이 있는지.</li><li><strong>공식 샘플·SDK:</strong> 문서, GitHub, MCP/AI 개발도구가 얼마나 잘 갖춰져 있는지.</li></ol></section>
+<section class="notice"><h2>중요: API 사양은 바뀝니다</h2><p>호출 제한, 주문 유형, 거래소 구분, 인증 유효기간은 증권사 공지에 따라 변경될 수 있습니다. 이 문서는 비교를 위한 출발점이며 실제 구현 전에는 반드시 <a href="/sources.html">증권사 공식 문서</a>를 다시 확인하세요.</p></section>
+<section class="callout"><h2>7개 중 하나를 직접 연결해보고 싶다면</h2><p>무료 Starter에서는 한 증권사를 선택해 국내주식 Lite 구조로 계좌 조회와 리밸런싱·주문 흐름을 확인할 수 있습니다.</p><a class="btn accent" href="https://blog.naver.com/zacra/224382618923" target="_blank" rel="noopener noreferrer">AutobotEx Starter 보기</a></section>
+
+<p class="updated">문서 업데이트: 2026-08-21</p>
+</main>
+<footer class="site-footer"><div class="footer-inner">
+<p><strong>게만아</strong> · 주식·ETF·코인 파이썬 자동매매·백테스트·API 공개 기술문서</p>
+<p>교육·기술 정보 제공 목적이며 특정 금융상품의 추천 또는 수익 보장이 아닙니다. 증권사 API 사양은 변경될 수 있으므로 실제 구현 전 공식 문서를 확인하세요.</p>
+<p><a href="https://blog.naver.com/zacra" target="_blank" rel="noopener noreferrer">네이버 블로그</a> · <a href="/sources.html">공식 출처</a> · 마지막 업데이트 2026-08-21</p>
+</div></footer>
+</body>
+</html>

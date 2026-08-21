@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>게만아 공개 기술문서와 유료 코드의 경계 | 무엇을 공개하나</title>
+<meta name="description" content="게만아 기술문서가 공개하는 설계·개념·주의사항과 공개하지 않는 완성형 모듈·전략·프로덕션 코드의 경계를 설명합니다.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://zacra.github.io/public-private-boundary.html">
+<link rel="stylesheet" href="/assets/style.css">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="게만아 공개 기술문서와 유료 코드의 경계 | 무엇을 공개하나">
+<meta property="og:description" content="게만아 기술문서가 공개하는 설계·개념·주의사항과 공개하지 않는 완성형 모듈·전략·프로덕션 코드의 경계를 설명합니다.">
+<meta property="og:url" content="https://zacra.github.io/public-private-boundary.html">
+<meta property="og:image" content="https://zacra.github.io/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="게만아 공개 기술문서와 유료 코드의 경계 | 무엇을 공개하나">
+<meta name="twitter:description" content="게만아 기술문서가 공개하는 설계·개념·주의사항과 공개하지 않는 완성형 모듈·전략·프로덕션 코드의 경계를 설명합니다.">
+<meta name="twitter:image" content="https://zacra.github.io/assets/og-default.png">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"게만아 공개 기술문서와 유료 코드의 경계 | 무엇을 공개하나","name":"게만아 공개 기술문서와 유료 코드의 경계 | 무엇을 공개하나","description":"게만아 기술문서가 공개하는 설계·개념·주의사항과 공개하지 않는 완성형 모듈·전략·프로덕션 코드의 경계를 설명합니다.","url":"https://zacra.github.io/public-private-boundary.html","inLanguage":"ko-KR","dateModified":"2026-08-21","author":{"@type":"Organization","name":"게만아","url":"https://blog.naver.com/zacra"},"publisher":{"@id":"https://zacra.github.io/#organization"}}</script>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+<header class="site-header">
+<nav class="nav" aria-label="주요 메뉴">
+<a class="brand" href="/">게만아 <small>파이썬 자동매매 Docs</small></a>
+<div class="nav-links">
+<a href="/python-auto-trading.html">자동매매 시작</a>
+<a href="/stock-auto-trading.html">주식·ETF</a>
+<a href="/crypto-auto-trading.html">코인</a>
+<a href="/broker-openapi.html">7개 증권사 API</a>
+<a href="/backtest.html">백테스트</a>
+<a href="/starter.html">무료 Starter</a>
+<a href="/about.html">소개</a>
+</div>
+</nav>
+</header>
+<main id="main">
+<div class="breadcrumb"><a href="/">홈</a> › 게만아 공개 기술문서와 유료 코드의 경계</div>
+<h1>공개 기술문서와 유료 코드의 경계</h1>
+<p class="lead">게만아 기술문서는 가능한 한 유용한 정보를 공개하되, 완성형 자동매매 시스템과 핵심 전략 소스코드의 지적재산권은 별도로 보호하는 방향으로 운영합니다.</p>
+<section><h2>공개하는 것</h2><ul class="check"><li>파이썬 자동매매의 전체 구조와 설계 원칙</li><li>증권사·거래소 API 비교와 공식 출처</li><li>백테스트에서 흔히 생기는 오류와 검증 체크리스트</li><li>API Key 보안과 주문 안전장치</li><li>여러 증권사·거래소를 공통 인터페이스로 묶는 개념</li><li>효율적 투자선과 자산배분의 원리</li><li>실제 구현 경험에서 얻은 비독점적 주의사항·트러블슈팅</li></ul></section>
+<section><h2>공개 범위를 제한할 수 있는 것</h2><ul><li>완성된 증권사·거래소 Helper/Common 모듈 전체</li><li>유료 투자전략의 핵심 진입·청산 로직</li><li>다계좌·고급주문·미체결관리·상태관리 등 프로덕션 코드</li><li>운영 안정화를 위한 전체 예외처리·재시도·알림 시스템</li><li>유료 콘텐츠로 제공하는 전략별 전체 소스</li></ul></section>
+<section><h2>왜 이 방식이 필요한가?</h2><p>기술문서는 “무엇을 왜 이렇게 설계해야 하는지”를 설명합니다. 유료 코드는 이를 실제 증권사·거래소 환경에서 바로 사용할 수 있도록 구현하고 검증하는 시간과 노하우를 포함합니다. 공개 문서가 유용해야 신뢰할 수 있지만, 모든 구현 자산을 무료로 공개해야 기술문서의 가치가 생기는 것은 아닙니다.</p></section>
+<section class="notice"><h2>Starter는 공개 입문 제품입니다</h2><p>무료 AutobotEx Starter는 국내주식 자동매매의 한 흐름을 실제로 경험할 수 있도록 의도적으로 공개한 Lite 시스템입니다. Starter의 존재가 게만아의 모든 전략·시장·기능이 무료 공개된다는 의미는 아닙니다.</p></section>
+
+<p class="updated">문서 업데이트: 2026-08-21</p>
+</main>
+<footer class="site-footer"><div class="footer-inner">
+<p><strong>게만아</strong> · 주식·ETF·코인 파이썬 자동매매·백테스트·API 공개 기술문서</p>
+<p>교육·기술 정보 제공 목적이며 특정 금융상품의 추천 또는 수익 보장이 아닙니다. 증권사 API 사양은 변경될 수 있으므로 실제 구현 전 공식 문서를 확인하세요.</p>
+<p><a href="https://blog.naver.com/zacra" target="_blank" rel="noopener noreferrer">네이버 블로그</a> · <a href="/sources.html">공식 출처</a> · 마지막 업데이트 2026-08-21</p>
+</div></footer>
+</body>
+</html>

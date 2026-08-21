@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>효율적 투자선(Efficient Frontier) 파이썬 자산배분 가이드</title>
+<meta name="description" content="동일비중, 최소분산, 최대 샤프와 비중 제한을 이용해 과거 데이터 기반 자산배분 후보를 계산하는 방법을 설명합니다.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://zacra.github.io/efficient-frontier.html">
+<link rel="stylesheet" href="/assets/style.css">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="효율적 투자선(Efficient Frontier) 파이썬 자산배분 가이드">
+<meta property="og:description" content="동일비중, 최소분산, 최대 샤프와 비중 제한을 이용해 과거 데이터 기반 자산배분 후보를 계산하는 방법을 설명합니다.">
+<meta property="og:url" content="https://zacra.github.io/efficient-frontier.html">
+<meta property="og:image" content="https://zacra.github.io/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="효율적 투자선(Efficient Frontier) 파이썬 자산배분 가이드">
+<meta name="twitter:description" content="동일비중, 최소분산, 최대 샤프와 비중 제한을 이용해 과거 데이터 기반 자산배분 후보를 계산하는 방법을 설명합니다.">
+<meta name="twitter:image" content="https://zacra.github.io/assets/og-default.png">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"효율적 투자선(Efficient Frontier) 파이썬 자산배분 가이드","name":"효율적 투자선(Efficient Frontier) 파이썬 자산배분 가이드","description":"동일비중, 최소분산, 최대 샤프와 비중 제한을 이용해 과거 데이터 기반 자산배분 후보를 계산하는 방법을 설명합니다.","url":"https://zacra.github.io/efficient-frontier.html","inLanguage":"ko-KR","dateModified":"2026-08-21","author":{"@type":"Organization","name":"게만아","url":"https://blog.naver.com/zacra"},"publisher":{"@id":"https://zacra.github.io/#organization"}}</script>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+<header class="site-header">
+<nav class="nav" aria-label="주요 메뉴">
+<a class="brand" href="/">게만아 <small>파이썬 자동매매 Docs</small></a>
+<div class="nav-links">
+<a href="/python-auto-trading.html">자동매매 시작</a>
+<a href="/stock-auto-trading.html">주식·ETF</a>
+<a href="/crypto-auto-trading.html">코인</a>
+<a href="/broker-openapi.html">7개 증권사 API</a>
+<a href="/backtest.html">백테스트</a>
+<a href="/starter.html">무료 Starter</a>
+<a href="/about.html">소개</a>
+</div>
+</nav>
+</header>
+<main id="main">
+<div class="breadcrumb"><a href="/">홈</a> › 효율적 투자선(Efficient Frontier) 파이썬 자산배분 가이드</div>
+<h1>효율적 투자선(Efficient Frontier)과 Python 자산배분</h1>
+<p class="lead">여러 자산의 비중을 바꾸면 기대수익률과 변동성이 다른 수많은 포트폴리오가 만들어집니다. 그중 위험 대비 효율적인 조합의 경계를 효율적 투자선이라고 부릅니다.</p>
+<section><h2>동일비중에서 시작하면 이해가 쉽습니다</h2><p>N개 자산에 똑같이 투자하면 각 자산 비중은 1/N입니다. 단순하고 과최적화 위험이 낮다는 장점이 있지만, 자산별 변동성과 상관관계를 반영하지는 않습니다.</p></section>
+<section><h2>대표적인 후보</h2><div class="grid cards"><article class="card"><h3>Equal Weight</h3><p>모든 자산을 동일 비중으로 배분합니다. 가장 단순한 기준점입니다.</p></article><article class="card"><h3>Minimum Variance</h3><p>과거 공분산 구조를 기준으로 전체 포트폴리오 변동성을 낮추는 조합을 찾습니다.</p></article><article class="card"><h3>Maximum Sharpe</h3><p>과거 기대수익과 변동성을 이용해 샤프 비율이 높은 조합을 찾습니다.</p></article></div></section>
+<section><h2>왜 비중 제한이 필요한가?</h2><p>제약 없는 최적화는 과거에 좋았던 자산 한두 개에 비중이 과도하게 몰릴 수 있습니다. Starter 예시는 1/N을 기준으로 최소·최대 비중 범위를 두어 극단적인 집중을 완화하는 접근을 사용합니다.</p><pre><code># 개념 예시
+base = 1 / N
+min_weight = 0.5 * base
+max_weight = 2.0 * base
+</code></pre><p>이 범위 자체가 모든 전략에 정답이라는 의미는 아닙니다. 중요한 것은 <strong>최적화 결과를 그대로 믿기보다 제약조건과 백테스트를 함께 보는 것</strong>입니다.</p></section>
+<section><h2>실전에서 확인할 항목</h2><ul><li>학습 구간을 조금 바꾸면 비중이 크게 흔들리는가?</li><li>특정 자산에 지나치게 집중되는가?</li><li>수수료·세금·리밸런싱 빈도를 반영했는가?</li><li>동일비중과 비교했을 때 위험 대비 개선이 일관적인가?</li><li>미래 데이터가 계산에 섞이지 않았는가?</li></ul></section>
+<section class="notice"><h2>해석 주의</h2><p>효율적 투자선은 미래를 알려주는 예측기가 아닙니다. 과거 데이터에 대한 수학적 최적화 결과이므로, 다른 기간에서는 결과가 달라질 수 있습니다.</p></section>
+
+<p class="updated">문서 업데이트: 2026-08-21</p>
+</main>
+<footer class="site-footer"><div class="footer-inner">
+<p><strong>게만아</strong> · 주식·ETF·코인 파이썬 자동매매·백테스트·API 공개 기술문서</p>
+<p>교육·기술 정보 제공 목적이며 특정 금융상품의 추천 또는 수익 보장이 아닙니다. 증권사 API 사양은 변경될 수 있으므로 실제 구현 전 공식 문서를 확인하세요.</p>
+<p><a href="https://blog.naver.com/zacra" target="_blank" rel="noopener noreferrer">네이버 블로그</a> · <a href="/sources.html">공식 출처</a> · 마지막 업데이트 2026-08-21</p>
+</div></footer>
+</body>
+</html>
