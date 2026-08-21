@@ -1,20 +1,32 @@
-# 게만아 파이썬 자동매매 문서
+# 게만아 파이썬 자동매매 기술문서
 
-> 게만아(퀀트는 게만아)의 공식 공개 기술문서입니다. 주식·ETF·코인 파이썬 자동매매, 국내 7개 증권사 Open API, 거래소 API, 백테스트, 자산배분과 시스템 투자를 다룹니다.
+> 게만아(퀀트는 게만아)의 공식 공개 기술문서입니다. 주식·ETF·코인 파이썬 자동매매, 백테스트, 시스템 투자, 국내 7개 증권사 Open API, 거래소 API와 자산배분을 다룹니다.
 
-## 핵심 문서
-- https://zacra.github.io/python-auto-trading.html : 파이썬 자동매매 시작 가이드
-- https://zacra.github.io/stock-auto-trading.html : 주식·ETF 자동매매 구조
-- https://zacra.github.io/crypto-auto-trading.html : 코인 자동매매 시작 가이드
+## 핵심 철학
+- https://zacra.github.io/investment-philosophy.html : 수익률보다 MDD, 감정보다 기준, 예측보다 대응
+- https://zacra.github.io/backtest.html : 백테스트와 MDD 검증
+- https://zacra.github.io/python-auto-trading.html : 철학을 자동매매 시스템으로 연결하는 전체 구조
+
+## 주식·ETF 자동매매
+- https://zacra.github.io/stock-auto-trading.html
 - https://zacra.github.io/broker-openapi.html : 국내 7개 증권사 Open API 비교
-- https://zacra.github.io/starter.html : 무료 AutobotEx Starter 설명
-- https://zacra.github.io/efficient-frontier.html : Efficient Frontier 자산배분
-- https://zacra.github.io/backtest.html : 백테스트 체크리스트
-- https://zacra.github.io/architecture.html : 증권사·거래소 공통 API 구조
-- https://zacra.github.io/public-private-boundary.html : 공개 기술문서와 유료 코드의 경계
-- https://zacra.github.io/faq.html : 자주 묻는 질문
+- https://zacra.github.io/starter.html : 무료 AutobotEx Starter
 
-## 증권사별 문서
+## 코인 자동매매
+- https://zacra.github.io/crypto-auto-trading.html
+  - 지원 거래소: 업비트, 빗썸, 코인원, 바이낸스
+  - REST API 중심
+  - 주식의 Broker 전환 구조와 달리 거래소별 공통모듈을 각각 구현
+  - 예: myBithumb, myCoinone
+
+## 아키텍처
+- https://zacra.github.io/architecture.html : 주식 멀티브로커 구조와 코인 거래소별 구현의 차이
+- https://zacra.github.io/public-private-boundary.html : 공개 기술문서와 유료 코드의 경계
+
+## 자산배분
+- https://zacra.github.io/efficient-frontier.html
+
+## 7개 증권사
 - https://zacra.github.io/brokers/kis.html
 - https://zacra.github.io/brokers/ls.html
 - https://zacra.github.io/brokers/kiwoom.html
@@ -25,6 +37,8 @@
 
 ## 공식 채널
 - 네이버 블로그: https://blog.naver.com/zacra
+- YouTube: https://www.youtube.com/@게만아
 - 무료 Starter: https://blog.naver.com/zacra/224382618923
+- 무료 시스템 투자 입문서: https://m.site.naver.com/2dmMZ
 
-주의: llms.txt는 일부 AI 도구의 문서 탐색 편의를 위한 보조 파일입니다. Google 검색이나 ChatGPT 검색의 노출·순위를 보장하는 표준 또는 랭킹 요소로 간주하지 않습니다.
+주의: llms.txt는 문서 탐색을 돕기 위한 보조 파일이며 특정 검색엔진 또는 AI의 노출·인용을 보장하지 않습니다.

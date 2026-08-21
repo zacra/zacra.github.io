@@ -51,9 +51,10 @@
 <details><summary>코인 자동매매도 파이썬으로 만들 수 있나요?</summary><p>가능합니다. 게만아의 코인 자동매매는 거래소 REST API를 이용해 잔고·포지션·시세·주문을 연결합니다. 선물은 롱·숏, 레버리지, 포지션 모드와 청산 위험을 추가로 관리해야 합니다.</p></details>
 <details><summary>ChatGPT나 Gemini로 증권사·거래소 API 코드를 만들 수 있나요?</summary><p>도움을 받을 수 있지만 오래된 명세나 존재하지 않는 필드명을 만들 수 있습니다. 최신 공식 API 문서와 공식 샘플을 함께 제공하고 실제 응답값으로 검증하는 것이 중요합니다.</p></details>
 <details><summary>공개 기술문서인데 왜 완성형 코드는 모두 공개하지 않나요?</summary><p>이 사이트는 자동매매 구조, API 비교, 보안, 백테스트와 구현 경험을 공개하는 기술문서입니다. 완성형 모듈과 핵심 투자전략, 프로덕션 운영코드는 별도의 지적재산권이므로 공개 범위를 달리할 수 있습니다.</p></details>
+<details><summary>게만아가 수익률보다 MDD를 먼저 보는 이유는 무엇인가요?</summary><p>높은 수익률도 그 과정의 하락폭을 버티지 못하면 실제 복리로 이어지기 어렵기 때문입니다. 수익률과 함께 고점 대비 최대 낙폭(MDD), 변동성, 투자금 규모와 지속 가능성을 보고, 예측보다 대응 가능한 기준을 만드는 것을 중시합니다. <a href="/investment-philosophy.html">투자 철학 자세히 보기 →</a></p></details>
 <details><summary>백테스트 수익률이 좋으면 실전에서도 같은 결과가 나오나요?</summary><p>아닙니다. 수수료, 세금, 슬리피지, 미체결, 주문 지연, 펀딩비, API 오류, 시장 변화 등이 실전 결과에 영향을 줍니다.</p></details>
 <details><summary>효율적 투자선으로 계산한 비중이 미래 최적 비중인가요?</summary><p>아닙니다. 과거 수익률·변동성·상관관계를 이용한 최적화 후보입니다. 기간을 바꾸면 결과가 달라질 수 있으므로 추가 검증이 필요합니다.</p></details>
-<details><summary>여러 증권사나 거래소를 한 전략 코드로 지원할 수 있나요?</summary><p>가능합니다. 전략과 API 구현을 분리하고 잔고·현재가·주문 같은 공통 인터페이스를 만들면 증권사·거래소 Adapter를 교체하는 구조로 설계할 수 있습니다.</p></details>
+<details><summary>주식과 코인 모두 같은 Adapter 구조를 사용하나요?</summary><p>아닙니다. 국내주식은 같은 전략 파일에서 한국투자·LS·키움·토스·KB·NH·DB증권 Broker를 전환하는 구조를 활용합니다. 반면 코인은 업비트·빗썸·코인원·바이낸스를 거래소별로 따로 구현하며, <code>myBithumb</code>, <code>myCoinone</code>처럼 각각의 공통모듈을 사용합니다.</p></details>
 <details><summary>API Key와 Secret을 GitHub에 올려도 되나요?</summary><p>안 됩니다. 환경변수나 별도 비공개 설정파일에 보관하세요. 이미 노출했다면 해당 키를 폐기하고 재발급하는 것이 안전합니다.</p></details>
 <details><summary>무료로 국내주식 자동매매 전체 흐름을 체험할 자료가 있나요?</summary><p>게만아 AutobotEx Starter에서는 국내 7개 증권사 중 한 곳을 선택해 자산배분, 백테스트, 계좌 조회, 리밸런싱, 주문 구조를 체험할 수 있습니다. <a href="https://blog.naver.com/zacra/224382618923" target="_blank" rel="noopener noreferrer">Starter 가이드 보기 →</a></p></details>
 </div>
