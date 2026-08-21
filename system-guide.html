@@ -1,26 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>파이썬 자동매매 시작·세팅 가이드 | AWS·API·crontab·메시지 연동</title>
-<meta name="description" content="게만아 파이썬 자동매매 시작 가이드. Python·VS Code, AWS EC2, 탄력적 IP, SFTP, crontab, 증권사·거래소 API, 메시지 연동과 전략 실행까지 전체 흐름을 정리합니다.">
-<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-<link rel="canonical" href="https://zacra.github.io/system-guide.html">
-<link rel="stylesheet" href="/assets/style.css">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="ko_KR">
-<meta property="og:title" content="파이썬 자동매매 시작·세팅 가이드 | AWS·API·crontab·메시지 연동">
-<meta property="og:description" content="Python·VS Code 설치부터 AWS EC2, 탄력적 IP, SFTP, crontab, API, 메시지 연동과 실제 전략 실행까지 게만아 자동매매의 전체 흐름을 정리합니다.">
-<meta property="og:url" content="https://zacra.github.io/system-guide.html">
-<meta property="og:image" content="https://zacra.github.io/assets/og-default.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="파이썬 자동매매 시작·세팅 가이드 | AWS·API·crontab·메시지 연동">
-<meta name="twitter:description" content="Python·VS Code 설치부터 AWS EC2, 탄력적 IP, SFTP, crontab, API, 메시지 연동과 실제 전략 실행까지 게만아 자동매매의 전체 흐름을 정리합니다.">
-<meta name="twitter:image" content="https://zacra.github.io/assets/og-default.png">
-
+<meta content="게만아 파이썬 자동매매 시작 가이드. Python·VS Code, AWS EC2, 탄력적 IP, SFTP, crontab, 증권사·거래소 API, 메시지 연동과 전략 실행까지 전체 흐름을 정리합니다." name="description"/>
+<meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/>
+<link href="https://zacra.github.io/system-guide.html" rel="canonical"/>
+<link href="/assets/style.css" rel="stylesheet"/>
+<meta content="website" property="og:type"/>
+<meta content="ko_KR" property="og:locale"/>
+<meta content="파이썬 자동매매 시작·세팅 가이드 | AWS·API·crontab·메시지 연동" property="og:title"/>
+<meta content="Python·VS Code 설치부터 AWS EC2, 탄력적 IP, SFTP, crontab, API, 메시지 연동과 실제 전략 실행까지 게만아 자동매매의 전체 흐름을 정리합니다." property="og:description"/>
+<meta content="https://zacra.github.io/system-guide.html" property="og:url"/>
+<meta content="https://zacra.github.io/assets/og-default.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="파이썬 자동매매 시작·세팅 가이드 | AWS·API·crontab·메시지 연동" name="twitter:title"/>
+<meta content="Python·VS Code 설치부터 AWS EC2, 탄력적 IP, SFTP, crontab, API, 메시지 연동과 실제 전략 실행까지 게만아 자동매매의 전체 흐름을 정리합니다." name="twitter:description"/>
+<meta content="https://zacra.github.io/assets/og-default.png" name="twitter:image"/>
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -39,7 +39,7 @@
 <body>
 <a class="skip" href="#main">본문 바로가기</a>
 <header class="site-header">
-<nav class="nav" aria-label="주요 메뉴">
+<nav aria-label="주요 메뉴" class="nav">
 <a class="brand" href="/">게만아 <small>공식 가이드</small></a>
 <div class="nav-links">
 <a href="/investment-philosophy.html">투자 철학</a>
@@ -52,22 +52,12 @@
 </div>
 </nav>
 </header>
-
 <main id="main">
 <div class="breadcrumb"><a href="/">홈</a> › 파이썬 자동매매 시작·세팅 가이드</div>
-
 <p class="eyebrow">게만아 파이썬 자동매매 시작 가이드</p>
 <h1>처음부터 실제 자동 실행까지, 전체 흐름을 먼저 이해하세요</h1>
 <p class="lead">게만아 자동매매의 핵심은 누군가가 계좌를 대신 운용하는 것이 아니라, <strong>투자자가 직접 이해하고 통제하는 시스템 투자 구조</strong>를 만드는 것입니다. Python 설치부터 서버·API·백테스트·자동 실행까지 큰 흐름을 먼저 잡으면 개별 전략을 세팅하기가 훨씬 쉬워집니다.</p>
-
-<section class="notice">
-<h2>먼저 철학부터 — 왜 추세추종인가?</h2>
-<p><strong>수익률보다 MDD · 감정보다 기준 · 예측보다 대응.</strong></p>
-<p>가치투자는 훌륭하지만 개인이 기업의 본질 가치와 시장이 그 가치를 인정할 시점까지 정확히 판단하기는 어렵습니다. 그래서 게만아 시스템 투자는 미래를 맞히기보다 <strong>현재 가격의 추세를 확인하고, 흐름이 살아 있으면 보유하고 무너지면 줄이는 추세추종</strong>을 중요한 축으로 사용합니다.</p>
-<p>바닥과 꼭대기를 맞히려는 대신 반복 가능한 규칙을 만들고, 작은 손절을 받아들이더라도 큰 하락에서 MDD를 관리합니다. 그 기준을 백테스트하고 자동으로 반복하는 것이 자동매매로 이어집니다.</p>
-<p><a href="/investment-philosophy.html">가치투자의 한계와 게만아 추세추종 철학 보기 →</a></p>
-</section>
-
+<section class="notice"><h2>먼저 방향만 이해하세요 — 예측보다 대응</h2><p>게만아 시스템 투자는 미래를 정확히 맞히기보다 <strong>규칙을 정하고 백테스트한 뒤, 시장이 움직이면 그 기준대로 대응</strong>하는 것을 중요하게 봅니다. 추세추종을 핵심 축으로 활용하지만 이동평균 하나에만 의존하지 않고 다양한 지표와 전략을 검증해 사용할 수 있습니다. <a href="/investment-philosophy.html">투자 철학 자세히 보기 →</a></p></section>
 <section>
 <h2>자동매매 세팅은 이 순서로 진행합니다</h2>
 <div class="table-wrap">
@@ -88,41 +78,35 @@
 </table>
 </div>
 </section>
-
 <section class="notice">
 <h2>주식은 한 증권사에 묶이지 않도록 설계합니다</h2>
 <p>게만아의 공통 인터페이스 기반 주식 봇은 <strong>Broker · Market · accountMode</strong>를 분리해, 같은 전략 로직을 여러 증권사·국내/미국 시장·여러 계좌에 재사용하기 쉽게 구성합니다.</p>
 <p>현재 한국투자·LS·키움·토스·KB·NH·DB증권 환경을 다루며, 지원사가 늘어나더라도 전략 파일 전체를 다시 만드는 것보다 공통모듈을 확장하는 방향을 지향합니다.</p>
 <p><a href="/broker-openapi.html">멀티 증권사 API 구조 보기 →</a></p>
 </section>
-
 <section class="callout">
 <h2>처음 세팅한다면 — 스크린샷 가이드를 그대로 따라가세요</h2>
 <p>Python·Visual Studio Code 설치부터 AWS 계정, EC2 서버, 탄력적 IP, SFTP/FileZilla, crontab, 파이썬 모듈 설치까지는 실제 화면을 보면서 진행하는 것이 가장 빠릅니다.</p>
 <p>게만아의 상세 가이드에는 각 단계의 스크린샷과 실제 입력 예시가 정리되어 있습니다. AWS 화면이나 설치 UI는 시간이 지나며 바뀔 수 있으므로, 이 문서에서는 전체 구조를 설명하고 <strong>실제 클릭 과정은 네이버 블로그 상세 가이드</strong>에서 계속 업데이트합니다.</p>
-<p><a class="btn primary" href="https://blog.naver.com/zacra/223813258178" target="_blank" rel="noopener noreferrer">Python·AWS 서버 상세 세팅 가이드 →</a></p>
+<p><a class="btn primary" href="https://blog.naver.com/zacra/223813258178" rel="noopener noreferrer" target="_blank">Python·AWS 서버 상세 세팅 가이드 →</a></p>
 </section>
-
 <section>
 <h2>게만아 환경에서는 서버 준비를 더 단순화할 수 있습니다</h2>
 <p>게만아 세팅 가이드에서는 AWS EC2 생성 시 <strong>GMA_AutobotServer</strong>로 검색되는 AMI를 활용하는 방법을 안내합니다. 해당 AMI에는 자동매매용 기본 폴더와 crontab 등 일부 서버 세팅을 미리 준비해 두어 처음부터 모든 명령어를 직접 구성하는 부담을 줄이는 방식입니다.</p>
 <p>서버 환경이나 AWS 정책은 바뀔 수 있으므로 실제 생성 시점의 안내는 위 스크린샷 가이드를 기준으로 확인하세요.</p>
 </section>
-
 <section>
 <h2>메시지 연동은 별도 상세 가이드가 있습니다</h2>
 <p>자동매매는 주문만 실행되는 것보다 <strong>봇이 실행됐는지, 매수·매도가 발생했는지, 오류가 있었는지를 메시지로 확인</strong>할 수 있어야 운영이 편합니다.</p>
 <p>기존 LINE Notify 종료 이후 게만아 가이드에서는 <strong>텔레그램 · 슬랙 · 디스코드 · 카카오톡</strong> 연동 방법과 <code>telegram_alert.py</code>, <code>slack_alert.py</code>, <code>discord_alert.py</code>, <code>kakao_alert.py</code>, <code>All_alert.py</code> 활용 구조를 설명합니다.</p>
-<p><a class="btn primary" href="https://blog.naver.com/zacra/223622479916" target="_blank" rel="noopener noreferrer">자동매매 메시지 연동 상세 가이드 →</a></p>
+<p><a class="btn primary" href="https://blog.naver.com/zacra/223622479916" rel="noopener noreferrer" target="_blank">자동매매 메시지 연동 상세 가이드 →</a></p>
 </section>
-
 <section class="notice">
 <h2>환경 구축이 끝났다면 전략 하나만 선택하세요</h2>
 <p>처음부터 여러 전략을 동시에 세팅할 필요는 없습니다. <strong>전략 하나를 선택 → 관련 가이드 확인 → 필요 API 발급 → 공통모듈 준비 → 백테스트 → 서버 실행 테스트 → crontab 등록</strong> 순으로 한 사이클을 완성해 보는 것이 좋습니다.</p>
 <p>게만아 패키지 코드 상단에는 해당 전략의 설명·세팅 포스팅을 연결해 두었으므로, 먼저 코드 상단 주석과 관련 가이드를 확인하세요.</p>
-<p><a class="btn" href="https://blog.naver.com/zacra/223086628069" target="_blank" rel="noopener noreferrer">패키지 실전 세팅 전체 가이드 →</a></p>
+<p><a class="btn" href="https://blog.naver.com/zacra/223086628069" rel="noopener noreferrer" target="_blank">패키지 실전 세팅 전체 가이드 →</a></p>
 </section>
-
 <section>
 <h2>1. 다양한 주식·코인 자동매매를 원한다면 — 게만아 패키지</h2>
 <p><strong>한국주식·미국주식·ETF·코인</strong>까지 다양한 전략 중에서 자신의 투자 성향에 맞는 시스템을 선택하고 확장하고 싶은 분을 위한 코드·가이드 묶음입니다.</p>
@@ -139,11 +123,10 @@
 <p>패키지는 하나의 전략이 아니라 <strong>현재 97개 전략·시스템 콘텐츠에서 필요한 것을 선택해 사용하는 ‘무기창고’</strong>에 가깝습니다.</p>
 <p>
 <a class="btn" href="/package.html">패키지 내용 확인</a>
-<a class="btn primary" href="https://forms.gle/fF2nEigv7uodQ7EZ9" target="_blank" rel="noopener noreferrer">계좌이체 구매 (교차구매 시 5만원 할인)</a>
-<a class="btn accent" href="https://www.latpeed.com/products/Wxjik" target="_blank" rel="noopener noreferrer">카드·간편결제 (정상가)</a>
+<a class="btn primary" href="https://forms.gle/fF2nEigv7uodQ7EZ9" rel="noopener noreferrer" target="_blank">계좌이체 구매 (교차구매 시 5만원 할인)</a>
+<a class="btn accent" href="https://www.latpeed.com/products/Wxjik" rel="noopener noreferrer" target="_blank">카드·간편결제 (정상가)</a>
 </p>
 </section>
-
 <section>
 <h2>2. 주식·ETF 장기투자 하나에 집중한다면 — 슈퍼 이동평균 자산배분</h2>
 <p>여러 전략을 직접 비교하기보다, 장기 주식·ETF 투자 시스템 하나에 집중하고 싶은 분을 위한 게만아의 대표 전략입니다.</p>
@@ -157,28 +140,24 @@
 <p><strong>DB증권 지원 코드는 슈퍼 이동평균 자산배분 전략에 포함</strong>되어 있으며, 다른 증권사 환경으로 전환할 때는 별도 패키지의 해당 증권사 공통모듈을 활용하는 방식입니다.</p>
 <p>
 <a class="btn" href="/super-moving-average.html">슈퍼 이동평균 내용 확인</a>
-<a class="btn primary" href="https://forms.gle/HooXu7DNkubKexhP6" target="_blank" rel="noopener noreferrer">계좌이체 구매 (교차구매 시 5만원 할인)</a>
-<a class="btn accent" href="https://www.latpeed.com/products/XJLqa" target="_blank" rel="noopener noreferrer">카드·간편결제 (정상가)</a>
+<a class="btn primary" href="https://forms.gle/HooXu7DNkubKexhP6" rel="noopener noreferrer" target="_blank">계좌이체 구매 (교차구매 시 5만원 할인)</a>
+<a class="btn accent" href="https://www.latpeed.com/products/XJLqa" rel="noopener noreferrer" target="_blank">카드·간편결제 (정상가)</a>
 </p>
 </section>
-
 <section class="notice">
 <h2>두 콘텐츠를 모두 구매한다면</h2>
 <p>패키지와 슈퍼 이동평균 자산배분은 <strong>어느 것을 먼저 구매해도</strong> 두 번째 콘텐츠 구매 시 <strong>5만원 할인</strong>이 적용됩니다.</p>
 <p>할인은 <strong>구글폼을 통한 계좌이체 구매에서 적용</strong>됩니다. 이미 한쪽을 구매했다면 다른 쪽을 계좌이체로 구매하면서 정상가에서 5만원을 뺀 금액을 이체하면 됩니다. 카드·간편결제(래피드)는 정상가 결제 경로입니다.</p>
 </section>
-
 <section class="callout">
 <h2>아직 파이썬 자동매매 자체가 낯설다면</h2>
 <p>유료 콘텐츠를 먼저 결정하지 않아도 됩니다. 현재 지원 중인 증권사 가운데 한 곳을 선택해 투자전략 → 효율적 투자비중 분석 → 백테스트 → Open API 연결 → 실제 계좌 리밸런싱 → 주문 구조까지 체험하는 무료 Starter가 있습니다.</p>
 <p><a class="btn accent" href="/starter.html">무료 Starter 안내 →</a></p>
 </section>
-
 <section>
 <h2>기초부터 차근히 배우고 싶다면</h2>
 <p>패키지와 슈퍼 이동평균은 제공되는 가이드에 따라 세팅할 수 있도록 구성되어 있지만, Python 자동매매의 원리를 기초부터 이해하고 싶다면 클래스101의 게만아 자동매매 강의를 선택적으로 활용할 수 있습니다.</p>
 </section>
-
 <section>
 <h2>실전에서는 세 가지를 반드시 확인합니다</h2>
 <ul class="check">
@@ -188,38 +167,26 @@
 </ul>
 <p>백테스트 결과가 좋아도 실제 주문에서는 API 사양, 수수료, 체결, 데이터 지연, 계좌 상태 같은 변수가 추가됩니다. 조회·로그·소액 테스트를 거쳐 단계적으로 실전으로 옮기세요.</p>
 </section>
-
 <section class="callout">
 <h2>실전 결과는 ‘수익 인증’보다 전략의 작동 과정을 봅니다</h2>
 <p><strong>게만아 투자 실험실</strong>에서는 실제 계좌의 수익과 손실, 수익률과 MDD, 전략이 상승장과 하락장을 지나며 어떻게 움직였는지를 기록하고 <strong>매월 결산</strong>합니다.</p>
 <p><strong>주식·연금 계좌</strong>는 낮은 변동성으로 큰돈을 오래 운용하는 방향을 지향합니다. 최근 공개된 메인 주식 계좌 종합 기록은 <strong>연환산 수익률 약 20%대, MDD 약 -10% 수준</strong>이며 연금계좌 역시 같은 위험관리 철학으로 운용합니다. 이 수치는 시간이 지나면서 계속 변경될 수 있습니다.</p>
-<p><a class="btn primary" href="https://m.site.naver.com/2eWen" target="_blank" rel="noopener noreferrer">주식·연금 메인 계좌 · 최신 결산 보기 →</a></p>
+<p><a class="btn primary" href="https://m.site.naver.com/2eWen" rel="noopener noreferrer" target="_blank">주식·연금 메인 계좌 · 최신 결산 보기 →</a></p>
 <p><strong>코인</strong>은 큰 상승률보다 폭락에서 계좌를 지키는 것을 중요하게 봅니다. 과거 특정 구간에서는 비트코인이 전고점 대비 약 절반 수준까지 하락하는 동안 실계좌 낙폭을 <strong>-15% 미만 수준으로 방어한 사례</strong>도 공개했습니다.</p>
-<p><a class="btn" href="https://m.site.naver.com/1TgXn" target="_blank" rel="noopener noreferrer">게만아 투자 실험실 · 전체 최근 월간 결산 보기 →</a></p>
+<p><a class="btn" href="https://m.site.naver.com/1TgXn" rel="noopener noreferrer" target="_blank">게만아 투자 실험실 · 전체 최근 월간 결산 보기 →</a></p>
 <p><small>실계좌 기록은 과거의 특정 기간 결과이며 미래 성과를 보장하지 않습니다.</small></p>
 </section>
-
 <section class="notice">
 <h2>어떤 경로를 선택하든 공통점</h2>
 <p>자동매매의 목적은 더 좋은 종목을 대신 찾아주는 것이 아니라, <strong>투자자가 만든 기준을 감정에 흔들리지 않고 반복 실행</strong>하는 것입니다.</p>
 </section>
 
-<section class="callout">
-<h2>세팅 관련 상세 자료</h2>
-<ul>
-<li><a href="https://blog.naver.com/zacra/223086628069" target="_blank" rel="noopener noreferrer"><strong>패키지 실전 세팅 전체 가이드</strong></a> — 전략 선택부터 API·공통모듈·실행·crontab·투자비중까지</li>
-<li><a href="https://blog.naver.com/zacra/223813258178" target="_blank" rel="noopener noreferrer"><strong>Python·AWS 서버 상세 세팅 가이드</strong></a> — 설치 화면과 AWS·SFTP·crontab 스크린샷 중심</li>
-<li><a href="https://blog.naver.com/zacra/223622479916" target="_blank" rel="noopener noreferrer"><strong>자동매매 메시지 연동 가이드</strong></a> — 텔레그램·슬랙·디스코드·카카오톡</li>
-</ul>
-</section>
-
 <p class="updated">문서 업데이트: 2026-08-22</p>
 </main>
-
 <footer class="site-footer"><div class="footer-inner">
 <p><strong>게만아</strong> · 주식·ETF·코인 파이썬 자동매매·백테스트·API 공식 가이드</p>
 <p>교육·기술 정보 제공 목적이며 특정 금융상품의 추천 또는 수익 보장이 아닙니다. 증권사·거래소 API 사양과 외부 서비스 UI는 변경될 수 있으므로 실제 구현 전 최신 안내와 공식 문서를 확인하세요.</p>
-<p><a href="https://blog.naver.com/zacra" target="_blank" rel="noopener noreferrer">네이버 블로그</a> · <a href="/sources.html">공식 출처</a> · 마지막 업데이트 2026-08-22</p>
+<p><a href="https://blog.naver.com/zacra" rel="noopener noreferrer" target="_blank">네이버 블로그</a> · <a href="/sources.html">공식 출처</a> · 마지막 업데이트 2026-08-22</p>
 </div></footer>
 </body>
 </html>

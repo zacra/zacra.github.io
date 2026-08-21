@@ -1,77 +1,22 @@
-<!doctype html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>한국투자증권 KIS Open API 파이썬 자동매매 가이드</title>
-<meta name="description" content="한국투자증권 KIS Developers의 REST·WebSocket, 인증, 공식 Python 샘플과 자동매매 개발 포인트.">
-<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-<link rel="canonical" href="https://zacra.github.io/brokers/kis.html">
-<link rel="stylesheet" href="/assets/style.css">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="ko_KR">
-<meta property="og:title" content="한국투자증권 KIS Open API 파이썬 자동매매 가이드">
-<meta property="og:description" content="한국투자증권 KIS Developers의 REST·WebSocket, 인증, 공식 Python 샘플과 자동매매 개발 포인트.">
-<meta property="og:url" content="https://zacra.github.io/brokers/kis.html">
-<meta property="og:image" content="https://zacra.github.io/assets/og-default.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="한국투자증권 KIS Open API 파이썬 자동매매 가이드">
-<meta name="twitter:description" content="한국투자증권 KIS Developers의 REST·WebSocket, 인증, 공식 Python 샘플과 자동매매 개발 포인트.">
-<meta name="twitter:image" content="https://zacra.github.io/assets/og-default.png">
-
-
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"한국투자증권 KIS Open API 파이썬 자동매매 가이드","name":"한국투자증권 KIS Open API 파이썬 자동매매 가이드","description":"한국투자증권 KIS Developers의 REST·WebSocket, 인증, 공식 Python 샘플과 자동매매 개발 포인트.","url":"https://zacra.github.io/brokers/kis.html","inLanguage":"ko-KR","dateModified":"2026-08-21","author":{"@type":"Organization","name":"게만아","url":"https://blog.naver.com/zacra"},"publisher":{"@id":"https://zacra.github.io/#organization"}}</script>
-</head>
-<body>
-<a class="skip" href="#main">본문 바로가기</a>
-<header class="site-header">
-<nav class="nav" aria-label="주요 메뉴">
-<a class="brand" href="/">게만아 <small>파이썬 자동매매 Docs</small></a>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>한국투자증권 KIS Open API 파이썬 자동매매 가이드</title><meta name="description" content="한국투자증권 KIS Developers의 REST·WebSocket, 인증, 공식 Python 샘플과 자동매매 개발 포인트."><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><link rel="canonical" href="https://zacra.github.io/brokers/kis.html"><link rel="stylesheet" href="/assets/style.css">
+<meta property="og:type" content="website"><meta property="og:locale" content="ko_KR"><meta property="og:title" content="한국투자증권 KIS Open API 파이썬 자동매매 가이드"><meta property="og:description" content="한국투자증권 KIS Developers의 REST·WebSocket, 인증, 공식 Python 샘플과 자동매매 개발 포인트."><meta property="og:url" content="https://zacra.github.io/brokers/kis.html"><meta property="og:image" content="https://zacra.github.io/assets/og-default.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="한국투자증권 KIS Open API 파이썬 자동매매 가이드"><meta name="twitter:description" content="한국투자증권 KIS Developers의 REST·WebSocket, 인증, 공식 Python 샘플과 자동매매 개발 포인트."><meta name="twitter:image" content="https://zacra.github.io/assets/og-default.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"한국투자증권 KIS Open API 파이썬 자동매매 가이드","name":"한국투자증권 KIS Open API 파이썬 자동매매 가이드","description":"한국투자증권 KIS Developers의 REST·WebSocket, 인증, 공식 Python 샘플과 자동매매 개발 포인트.","url":"https://zacra.github.io/brokers/kis.html","inLanguage":"ko-KR","dateModified":"2026-08-22","author":{"@type":"Organization","name":"게만아","url":"https://blog.naver.com/zacra"},"publisher":{"@id":"https://zacra.github.io/#organization"}}</script></head><body><a class="skip" href="#main">본문 바로가기</a><header class="site-header"><nav class="nav" aria-label="주요 메뉴">
+<a class="brand" href="/">게만아 <small>공식 가이드</small></a>
 <div class="nav-links">
+<a href="/investment-philosophy.html">투자 철학</a>
 <a href="/python-auto-trading.html">자동매매 시작</a>
-<a href="/stock-auto-trading.html">주식·ETF</a>
-<a href="/crypto-auto-trading.html">코인</a>
-<a href="/broker-openapi.html">7개 증권사 API</a>
-<a href="/backtest.html">백테스트</a>
+<a href="/system-guide.html">시작 가이드</a>
+<a href="/super-moving-average.html">슈퍼 이동평균</a>
+<a href="/package.html">패키지</a>
+<a href="/broker-openapi.html">멀티 증권사 API</a>
 <a href="/starter.html">무료 Starter</a>
-<a href="/about.html">소개</a>
-</div>
-</nav>
-</header>
-<main id="main">
-<div class="breadcrumb"><a href="/">홈</a> › 한국투자증권 KIS Open API 파이썬 자동매매 가이드</div>
-<h1>한국투자증권 KIS Open API 파이썬 자동매매 가이드</h1>
-<p class="lead">KIS Developers는 REST와 WebSocket을 제공하고 국내주식·해외주식 등 다양한 상품 API와 공식 Python 샘플 저장소를 운영합니다.</p>
-
-<section>
-<h2>공식 문서에서 확인할 핵심</h2>
-<ul><li>REST 호출은 App Key/App Secret을 기반으로 접근토큰을 발급한 뒤 사용하는 구조입니다.</li><li>공식 포털에서 REST·WebSocket API 문서와 테스트베드 진입점을 확인할 수 있습니다.</li><li>한국투자증권 공식 GitHub에는 Python 기반 샘플과 통합 예제가 공개되어 있습니다.</li><li>호출 제한과 토큰 정책은 공지에 따라 달라질 수 있으므로 최신 공식 공지를 확인해야 합니다.</li></ul>
-</section>
-
-<section>
-<h2>게만아 Starter에서의 위치</h2>
-<p>무료 Starter에서 한국투자증권 버전을 선택하면 국내주식 기준으로 계좌·보유종목·현재가·리밸런싱·주문 흐름을 확인할 수 있습니다.</p>
-<p>Starter는 전략을 이해하고 실제 계좌 연결 흐름을 경험하기 위한 Lite 예제입니다. 세부 주문유형·호출 제한·거래시간·거래소 구분은 반드시 최신 공식 문서를 다시 확인하세요.</p>
-</section>
-
-<section>
-<h2>공식 자료</h2>
-<p><a href="https://apiportal.koreainvestment.com/" target="_blank" rel="noopener noreferrer">KIS Developers</a> · <a href="https://github.com/koreainvestment/open-trading-api" target="_blank" rel="noopener noreferrer">공식 Python GitHub</a></p>
-</section>
-
-<section class="notice">
-<h2>API 보안</h2>
-<p>App Key, App Secret, 접근토큰, 계좌 관련 민감정보는 공개 GitHub 저장소에 올리지 마세요. 환경변수 또는 별도 비공개 설정파일을 사용하고, 키가 노출되었다면 폐기·재발급하는 것이 안전합니다.</p>
-</section>
-
-<p class="updated">문서 업데이트: 2026-08-21</p>
-</main>
-<footer class="site-footer"><div class="footer-inner">
-<p><strong>게만아</strong> · 주식·ETF·코인 파이썬 자동매매·백테스트·API 공개 기술문서</p>
-<p>교육·기술 정보 제공 목적이며 특정 금융상품의 추천 또는 수익 보장이 아닙니다. 증권사 API 사양은 변경될 수 있으므로 실제 구현 전 공식 문서를 확인하세요.</p>
-<p><a href="https://blog.naver.com/zacra" target="_blank" rel="noopener noreferrer">네이버 블로그</a> · <a href="/sources.html">공식 출처</a> · 마지막 업데이트 2026-08-21</p>
-</div></footer>
-</body>
-</html>
+</div></nav></header><main id="main"><div class="breadcrumb"><a href="/">홈</a> › 한국투자증권 KIS Open API 파이썬 자동매매 가이드</div><h1>한국투자증권 KIS Open API 파이썬 자동매매 가이드</h1><p class="lead">KIS Developers는 REST와 WebSocket을 제공하고 국내주식·해외주식 등 다양한 상품 API와 공식 Python 샘플 저장소를 운영합니다.</p><section><h2>공식 문서에서 확인할 핵심</h2><ul><li>REST 호출은 App Key/App Secret을 기반으로 접근토큰을 발급한 뒤 사용하는 구조입니다.</li><li>공식 포털에서 REST·WebSocket API 문서와 테스트베드 진입점을 확인할 수 있습니다.</li><li>한국투자증권 공식 GitHub에는 Python 기반 샘플과 통합 예제가 공개되어 있습니다.</li><li>호출 제한과 토큰 정책은 최신 공식 공지를 확인해야 합니다.</li></ul></section>
+<section><h2>게만아 Starter에서의 위치</h2><p>무료 Starter에서 해당 증권사 버전을 선택하면 국내주식 기준으로 계좌 조회·보유종목·리밸런싱·주문 흐름을 확인할 수 있습니다.</p><p>Starter는 전체 흐름을 이해하기 위한 Lite 예제입니다. 세부 주문유형·호출 제한·거래시간·지원 시장은 최신 공식 문서를 다시 확인하세요.</p></section>
+<section><h2>공식 자료</h2><p><a href="https://apiportal.koreainvestment.com/" target="_blank" rel="noopener noreferrer">KIS Developers</a> · <a href="https://github.com/koreainvestment/open-trading-api" target="_blank" rel="noopener noreferrer">공식 Python GitHub</a></p></section>
+<section class="notice"><h2>API 보안</h2><p>발급받은 <strong>API 키·Secret·접근토큰은 비밀번호와 같은 민감한 정보</strong>입니다. 다른 사람에게 보이거나 공개적으로 노출되지 않게 주의하고, 노출됐다면 폐기·재발급하는 것이 안전합니다.</p></section>
+<p><a href="/broker-openapi.html">멀티 증권사 API 구조와 비교 보기 →</a></p><p class="updated">문서 업데이트: 2026-08-22</p></main><footer class="site-footer"><div class="footer-inner">
+<p><strong>게만아</strong> · 주식·ETF·코인 파이썬 자동매매·백테스트·API 공식 가이드</p>
+<p>교육·기술 정보 제공 목적이며 특정 금융상품의 추천 또는 수익 보장이 아닙니다. 증권사·거래소 API 사양은 변경될 수 있으므로 실제 구현 전 최신 공식 문서를 확인하세요.</p>
+<p><a href="https://blog.naver.com/zacra" target="_blank" rel="noopener noreferrer">네이버 블로그</a> · <a href="/sources.html">공식 출처</a> · 마지막 업데이트 2026-08-22</p>
+</div></footer></body></html>

@@ -1,154 +1,30 @@
-<!doctype html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>파이썬 백테스트 체크리스트 | 자동매매 전략 검증</title>
-<meta name="description" content="게만아의 파이썬 자동매매 백테스트 철학. 수익률보다 MDD, 단순한 팩터, 이동평균 패스트·슬로우 조합, 과최적화·미래참조 한계, 여러 기간 조합과 실계좌 검증 관점을 정리합니다.">
-<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-<link rel="canonical" href="https://zacra.github.io/backtest.html">
-<link rel="stylesheet" href="/assets/style.css">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="ko_KR">
-<meta property="og:title" content="파이썬 백테스트 체크리스트 | 자동매매 전략 검증">
-<meta property="og:description" content="게만아의 파이썬 자동매매 백테스트 철학. 수익률보다 MDD, 단순한 팩터, 이동평균 패스트·슬로우 조합, 과최적화·미래참조 한계, 여러 기간 조합과 실계좌 검증 관점을 정리합니다.">
-<meta property="og:url" content="https://zacra.github.io/backtest.html">
-<meta property="og:image" content="https://zacra.github.io/assets/og-default.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="파이썬 백테스트 체크리스트 | 자동매매 전략 검증">
-<meta name="twitter:description" content="게만아의 파이썬 자동매매 백테스트 철학. 수익률보다 MDD, 단순한 팩터, 이동평균 패스트·슬로우 조합, 과최적화·미래참조 한계, 여러 기간 조합과 실계좌 검증 관점을 정리합니다.">
-<meta name="twitter:image" content="https://zacra.github.io/assets/og-default.png">
-
-
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"파이썬 백테스트 체크리스트 | 자동매매 전략 검증","name":"파이썬 백테스트 체크리스트 | 자동매매 전략 검증","description":"게만아의 파이썬 자동매매 백테스트 철학. 수익률보다 MDD, 단순한 팩터, 이동평균 패스트·슬로우 조합, 과최적화·미래참조 한계, 여러 기간 조합과 실계좌 검증 관점을 정리합니다.","url":"https://zacra.github.io/backtest.html","inLanguage":"ko-KR","dateModified":"2026-08-21","author":{"@type":"Organization","name":"게만아","url":"https://blog.naver.com/zacra"},"publisher":{"@id":"https://zacra.github.io/#organization"}}</script>
-</head>
-<body>
-<a class="skip" href="#main">본문 바로가기</a>
-<header class="site-header">
-<nav class="nav" aria-label="주요 메뉴">
-<a class="brand" href="/">게만아 <small>파이썬 자동매매 Docs</small></a>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>파이썬 백테스트 체크리스트 | 자동매매 전략 검증</title><meta name="description" content="게만아의 파이썬 자동매매 백테스트 철학. 수익률보다 MDD, 과최적화·미래참조, 여러 기간·조합과 실계좌 검증 관점을 정리합니다."><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><link rel="canonical" href="https://zacra.github.io/backtest.html"><link rel="stylesheet" href="/assets/style.css">
+<meta property="og:type" content="website"><meta property="og:locale" content="ko_KR"><meta property="og:title" content="파이썬 백테스트 체크리스트 | 자동매매 전략 검증"><meta property="og:description" content="게만아의 파이썬 자동매매 백테스트 철학. 수익률보다 MDD, 과최적화·미래참조, 여러 기간·조합과 실계좌 검증 관점을 정리합니다."><meta property="og:url" content="https://zacra.github.io/backtest.html"><meta property="og:image" content="https://zacra.github.io/assets/og-default.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="파이썬 백테스트 체크리스트 | 자동매매 전략 검증"><meta name="twitter:description" content="게만아의 파이썬 자동매매 백테스트 철학. 수익률보다 MDD, 과최적화·미래참조, 여러 기간·조합과 실계좌 검증 관점을 정리합니다."><meta name="twitter:image" content="https://zacra.github.io/assets/og-default.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"파이썬 백테스트 체크리스트 | 자동매매 전략 검증","name":"파이썬 백테스트 체크리스트 | 자동매매 전략 검증","description":"게만아의 파이썬 자동매매 백테스트 철학. 수익률보다 MDD, 과최적화·미래참조, 여러 기간·조합과 실계좌 검증 관점을 정리합니다.","url":"https://zacra.github.io/backtest.html","inLanguage":"ko-KR","dateModified":"2026-08-22","author":{"@type":"Organization","name":"게만아","url":"https://blog.naver.com/zacra"},"publisher":{"@id":"https://zacra.github.io/#organization"}}</script></head><body><a class="skip" href="#main">본문 바로가기</a><header class="site-header"><nav class="nav" aria-label="주요 메뉴">
+<a class="brand" href="/">게만아 <small>공식 가이드</small></a>
 <div class="nav-links">
 <a href="/investment-philosophy.html">투자 철학</a>
 <a href="/python-auto-trading.html">자동매매 시작</a>
 <a href="/system-guide.html">시작 가이드</a>
 <a href="/super-moving-average.html">슈퍼 이동평균</a>
 <a href="/package.html">패키지</a>
-<a href="/broker-openapi.html">7개 증권사 API</a>
+<a href="/broker-openapi.html">멀티 증권사 API</a>
 <a href="/starter.html">무료 Starter</a>
-</div>
-</nav>
-</header>
-<main id="main">
-<div class="breadcrumb"><a href="/">홈</a> › 파이썬 백테스트와 과최적화</div>
-
-<p class="eyebrow">게만아 백테스트 철학</p>
-<h1>백테스트는 정답을 만드는 도구가 아니라 위험을 이해하는 도구입니다</h1>
-<p class="lead">게만아는 백테스트를 할 때 가장 높은 수익률을 찾는 것보다 <strong>MDD를 낮추고 실제 돈을 넣어 오래 유지할 수 있는가</strong>를 먼저 봅니다. 동시에 과최적화와 미래참조 문제가 존재할 수 있다는 점도 인정하며, 이를 완전히 제거한 단 하나의 정답보다 여러 기간·여러 조합·포트폴리오 분산·실계좌 검증을 함께 보는 실용적인 접근을 사용합니다.</p>
-
-<section class="notice">
-<h2>먼저 전제: 이 페이지는 ‘표준 퀀트 검증법의 정답’이 아니라 게만아의 현재 운용 관점입니다</h2>
-<p>보다 엄밀한 성능 추정을 위해서는 워크포워드·롤링 백테스트, 아웃오브샘플 검증처럼 시간 순서를 지키는 검증이 더 적절할 수 있습니다. 게만아 역시 미래참조와 과최적화 가능성을 알고 있습니다.</p>
-<p>다만 실제 포트폴리오를 여러 자산·여러 기간·여러 조합으로 동시에 재현하는 엄밀한 롤링 테스트의 비용과 복잡도를 고려해, <strong>단순한 팩터 + 여러 학습기간의 조합 분산 + 파라미터 주변 분포 확인 + 실제 계좌 관찰</strong>을 함께 사용하는 방식으로 운용합니다.</p>
-<p><a href="https://blog.naver.com/zacra/224083383522" target="_blank" rel="noopener noreferrer">네이버 원문: 백테스트·과최적화에 대한 게만아의 생각 →</a></p>
-</section>
-
-<section>
-<h2>1. 수익률보다 MDD를 먼저 봅니다</h2>
-<p>낮은 MDD가 중요한 이유는 단순합니다. 실제 투자에서 높은 수익률을 얻더라도 중간 낙폭이 너무 크면 큰 금액을 넣고 계속 유지하기 어렵기 때문입니다.</p>
-<p>그래서 좋은 전략을 볼 때 “얼마나 올랐나?”와 함께 <strong>고점에서 얼마나 깊게 하락했나, 그 하락을 실제 투자자가 감당할 수 있나</strong>를 봅니다.</p>
-<p><a href="/investment-philosophy.html">수익률보다 MDD를 먼저 보는 투자 철학 →</a></p>
-</section>
-
-<section>
-<h2>2. MDD를 낮추는 핵심 도구로 현금과 추세추종을 봅니다</h2>
-<p>위험자산의 변동성을 없앨 수는 없지만, 하락 추세에서 투자 비중을 줄이고 현금을 늘리면 계좌가 경험하는 충격을 낮출 수 있습니다. 이 때문에 게만아의 여러 전략에서는 추세추종을 활용하고, 추세를 정의하는 가장 단순한 도구 중 하나로 이동평균을 사용합니다.</p>
-</section>
-
-<section>
-<h2>3. 팩터는 많을수록 좋은 것이 아니라 단순할수록 해석하기 쉽습니다</h2>
-<p>이동평균, RSI, MACD, 추세선 등 수많은 조건을 동시에 맞추면 특정 과거 구간에 지나치게 잘 맞는 과적합 위험이 커질 수 있습니다.</p>
-<p>슈퍼 이동평균 자산배분의 핵심 추세 조건은 <strong>패스트 이동평균과 슬로우 이동평균이라는 두 개의 이동평균 조합</strong>처럼 비교적 단순하게 유지합니다. 조건의 개수를 줄이는 것 자체가 과최적화를 없애지는 않지만, 전략을 이해하고 민감도를 확인하기는 더 쉬워집니다.</p>
-</section>
-
-<section>
-<h2>4. 문제는 “어떤 패스트·슬로우 조합을 고를 것인가?”입니다</h2>
-<p>5일·20일·120일 같은 관습적인 숫자 하나를 정답으로 고정하기보다, 파이썬으로 여러 패스트·슬로우 조합을 비교해 특정 기간에서 수익률과 MDD 특성이 좋은 조합을 찾습니다.</p>
-<p>하지만 여기서 새로운 과최적화 문제가 생길 수 있습니다. 특정 기간에서 가장 좋았던 조합이 그 기간에만 우연히 잘 맞았을 수도 있기 때문입니다. 따라서 최상위 한 점만 보는 대신 <strong>주변 조합들의 성과 분포도 함께 확인</strong>합니다. 인접한 여러 조합도 비슷한 성격을 보인다면 한 개의 날카로운 최적값보다 상대적으로 안정적이라는 직관을 얻을 수 있습니다.</p>
-</section>
-
-<section>
-<h2>5. 한 개의 학습기간 대신 여러 기간에서 구한 조합을 함께 사용합니다</h2>
-<p>슈퍼 이동평균 자산배분을 만들면서 중요하게 반영한 아이디어는 <strong>“어떤 기간 하나를 정답으로 고르기보다 여러 기간에서 구한 이동평균 조합을 나눠서 사용하자”</strong>입니다.</p>
-<p>네이버 원문에서는 예시로 <strong>2300·1300·600·300 거래일</strong>처럼 서로 다른 길이의 데이터에서 패스트·슬로우 조합을 각각 구하고, 그 결과를 여러 갈래로 분산해 사용하는 방식을 설명합니다.</p>
-<ul>
-<li>긴 기간: 여러 장세가 섞인 상대적으로 느린 특성</li>
-<li>짧은 기간: 최근 장세의 특성을 더 빠르게 반영</li>
-<li>여러 기간을 동시에 사용: 특정 한 기간·한 조합에 대한 의존도를 낮추려는 목적</li>
-</ul>
-<p>즉 <strong>여러 기간의 최적 조합 + 다양한 포트폴리오 + 분할 투자</strong>가 슈퍼 이동평균 접근의 중요한 축입니다.</p>
-<p><a href="/super-moving-average.html">슈퍼 이동평균 자산배분 구조 →</a></p>
-</section>
-
-<section>
-<h2>6. 리컨디셔닝과 미래참조 문제를 어떻게 바라보나?</h2>
-<p>최근 일정 기간의 데이터를 이용해 좋은 조합을 구하고, 30일·90일 같은 주기로 다시 계산해 반영하는 방식을 게만아는 ‘리컨디셔닝’이라고 표현해 왔습니다.</p>
-<p>엄밀한 과거 재현을 하려면 각 과거 시점마다 그 시점 이전 데이터만 사용해 조합을 다시 구하는 롤링·워크포워드 백테스트가 필요합니다. 현재 시점에서 구한 조합을 과거 전체에 적용하면 미래참조 문제가 생길 수 있다는 지적은 타당합니다.</p>
-<p>게만아의 실전 접근은 이 문제를 모른 척하는 것이 아니라, <strong>한계를 인정한 상태에서 계산 비용과 실용성을 고려한 절충</strong>입니다. 특히 긴 학습기간에서 나온 조합은 짧은 주기의 리컨디셔닝에도 상대적으로 덜 바뀌는 경향을 보고, 짧고 긴 학습기간을 함께 분산하는 방식으로 보완하려 합니다.</p>
-</section>
-
-<section>
-<h2>7. “기간의 순서”뿐 아니라 “장세의 다양성”도 중요하게 봅니다</h2>
-<p>게만아의 관점에서는 상승장 하나에서 만든 전략을 하락장 하나에서 검증하는 것처럼 단순히 과거/미래를 나누는 것만으로는 충분하지 않을 수 있습니다. 그 기간에 상승·하락·횡보·급변 등 다양한 장세가 들어 있는지도 중요하게 봅니다.</p>
-<p>그래서 단일 기간의 최고 조합 하나보다 여러 길이의 기간에서 나온 조합을 함께 쓰고, 백테스트 구간 자체도 바꿔가며 결과가 크게 무너지는지 확인하는 방식으로 스트레스 테스트를 시도합니다.</p>
-</section>
-
-<section>
-<h2>8. 이것이 엄밀한 롤링 백테스트를 대체한다는 뜻은 아닙니다</h2>
-<p>여러 기간과 조합을 섞는 것이 미래참조 오류를 수학적으로 제거하는 것은 아닙니다. 또한 좋은 과거 결과가 미래의 동일한 MDD나 수익률을 보장하지도 않습니다.</p>
-<p>보다 엄격한 검증을 원하는 사용자는 학습기간, 테스트기간, 리컨디셔닝 주기를 직접 분리해 롤링·워크포워드 검증을 추가하는 것이 좋습니다. 게만아가 공개하는 방식은 <strong>“현재 실제 운용에서 어떤 효율적 절충을 선택했는가”</strong>에 대한 설명입니다.</p>
-</section>
-
-<section>
-<h2>9. 그래서 마지막 검증은 실계좌에서 계속 관찰합니다</h2>
-<p>백테스트만으로 확신하지 않기 때문에 실제 계좌에서 전략을 운용하고 수익뿐 아니라 손실과 MDD를 함께 기록합니다. 백테스트와 실제 운용이 얼마나 비슷하거나 달라지는지 장기간 관찰하는 것 자체를 하나의 검증 과정으로 봅니다.</p>
-<p><a href="https://m.site.naver.com/1TgXn" target="_blank" rel="noopener noreferrer">게만아 투자 실험실 보기 →</a></p>
-</section>
-
-<section>
-<h2>10. 게만아 방식에서 확인하는 백테스트 체크리스트</h2>
-<p>게만아는 주로 ETF·지수성 자산의 <strong>일봉 가격과 이동평균 같은 차트·지표</strong>를 이용해 시스템을 검증합니다. 따라서 개별 종목 유니버스의 상장폐지 여부를 추적하는 방식보다, 신호 계산 시점과 일봉 데이터의 일관성, 거래비용과 기간 민감도를 더 중요하게 확인합니다.</p>
-<ol>
-<li><strong>미래정보 참조:</strong> 실제 시점에서 알 수 없던 정보를 사용했는가?</li>
-<li><strong>과최적화:</strong> 파라미터를 조금만 바꿔도 결과가 무너지는가?</li>
-<li><strong>수수료·세금·슬리피지:</strong> 거래비용을 현실적으로 반영했는가?</li>
-<li><strong>일봉·지표 계산 일관성:</strong> 같은 기준의 일봉 데이터를 사용하고, 이동평균 등 지표 계산 시점에 미래 데이터가 섞이지 않았는가?</li>
-<li><strong>체결 가능성:</strong> 백테스트 가격에 실제로 체결 가능한가?</li>
-<li><strong>MDD와 회복:</strong> 최종수익률뿐 아니라 중간 낙폭과 회복기간은 어떤가?</li>
-<li><strong>기간 민감도:</strong> 백테스트 시작·종료 시점을 바꿔도 성격이 유지되는가?</li>
-<li><strong>실전 차이:</strong> API, 미체결, 환율, 세금, 서버 장애를 감안했는가?</li>
-</ol>
-</section>
-
-<section class="callout">
-<h2>게만아의 백테스트를 한 문장으로</h2>
-<p><strong>정확한 미래 예측보다, 단순한 규칙이 여러 장세에서 감당 가능한 MDD를 만드는지 보고 — 한 개의 최적값보다 여러 기간·여러 조합·포트폴리오로 분산한 뒤 — 실제 계좌에서 계속 확인합니다.</strong></p>
-<p><a class="btn primary" href="https://blog.naver.com/zacra/224083383522" target="_blank" rel="noopener noreferrer">백테스트 철학 원문 보기</a>
-<a class="btn" href="/super-moving-average.html">슈퍼 이동평균 보기</a></p>
-</section>
-
-<section class="notice">
-<h2>투자에 정답은 없습니다</h2>
-<p>이 접근 역시 틀릴 수 있다는 전제를 둡니다. 백테스트는 증거이지 보증이 아니며, 과거의 계좌 사례도 미래 성과를 보장하지 않습니다. 자신의 기준에 맞게 검증 방법과 운용 방식을 조정해야 합니다.</p>
-</section>
-
-<p class="updated">문서 업데이트: 2026-08-21</p>
-</main>
-<footer class="site-footer"><div class="footer-inner">
-<p><strong>게만아</strong> · 주식·ETF·코인 파이썬 자동매매·백테스트·API 공개 기술문서</p>
-<p>교육·기술 정보 제공 목적이며 특정 금융상품의 추천 또는 수익 보장이 아닙니다. 증권사 API 사양은 변경될 수 있으므로 실제 구현 전 공식 문서를 확인하세요.</p>
-<p><a href="https://blog.naver.com/zacra" target="_blank" rel="noopener noreferrer">네이버 블로그</a> · <a href="/sources.html">공식 출처</a> · 마지막 업데이트 2026-08-21</p>
-</div></footer>
-</body>
-</html>
+</div></nav></header><main id="main"><div class="breadcrumb"><a href="/">홈</a> › 파이썬 백테스트와 과최적화</div><h1>백테스트는 정답을 만드는 도구가 아니라 위험을 이해하는 도구입니다</h1><p class="lead">게만아는 가장 높은 수익률을 찾기보다 <strong>MDD와 유지 가능성</strong>을 먼저 봅니다. 과최적화와 미래참조의 한계를 인정하고, 여러 기간·조합과 실계좌 검증을 함께 보는 실용적인 접근을 사용합니다.</p><section class="notice"><h2>먼저 전제: ‘정답 검증법’이 아니라 현재 운용 관점입니다</h2><p>보다 엄밀한 성능 추정을 위해서는 워크포워드·롤링 백테스트, 아웃오브샘플 검증이 더 적절할 수 있습니다. 게만아도 미래참조와 과최적화 가능성을 전제로 봅니다.</p><p>실제 포트폴리오를 여러 자산·기간·조합으로 재현하는 비용과 복잡도를 고려해 <strong>단순한 규칙 + 여러 학습기간의 조합 분산 + 파라미터 주변 분포 + 실계좌 관찰</strong>을 함께 사용합니다.</p><p><a href="https://blog.naver.com/zacra/224083383522" target="_blank" rel="noopener noreferrer">백테스트·과최적화에 대한 원문 →</a></p></section>
+<section><h2>1. 수익률보다 MDD를 먼저 봅니다</h2><p>높은 수익률도 중간 낙폭이 너무 크면 큰 금액을 넣고 계속 유지하기 어렵습니다. 그래서 최종 수익률과 함께 <strong>고점에서 얼마나 깊게 하락했는지, 그 하락을 실제로 감당할 수 있는지</strong>를 봅니다.</p><p><a href="/investment-philosophy.html">투자 철학 →</a></p></section>
+<section><h2>2. 현금과 추세추종으로 위험 노출을 조절합니다</h2><p>위험자산의 변동성을 없앨 수는 없지만 하락 추세에서 비중을 줄이고 현금을 늘리면 계좌가 경험하는 충격을 낮출 수 있습니다. 이동평균은 대표적인 추세 필터 중 하나이며, 전략에 따라 RSI·모멘텀·변동성 등 다른 지표도 활용할 수 있습니다.</p></section>
+<section><h2>3. 규칙은 복잡할수록 좋은 것이 아닙니다</h2><p>조건을 지나치게 많이 맞추면 특정 과거 구간에 과적합될 수 있습니다. 핵심 규칙을 이해할 수 있을 만큼 단순하게 두고, 파라미터를 조금 바꿔도 결과가 크게 무너지지 않는지 확인합니다.</p></section>
+<section><h2>4. 최고값 한 점보다 주변 조합도 봅니다</h2><p>5일·20일·120일 같은 숫자 하나를 정답으로 고정하기보다 여러 조합을 비교합니다. 특정 기간의 최고 조합이 우연일 수 있으므로 <strong>주변 조합들의 성과 분포</strong>도 함께 확인합니다.</p></section>
+<section><h2>5. 한 개의 학습기간보다 여러 기간을 함께 봅니다</h2><p>슈퍼 이동평균에서는 어떤 기간 하나를 정답으로 고르기보다 서로 다른 길이의 데이터에서 구한 조합을 나눠 사용하는 접근을 활용합니다.</p><ul><li>긴 기간: 여러 장세가 섞인 느린 특성</li><li>짧은 기간: 최근 장세를 더 빠르게 반영</li><li>여러 기간 병행: 특정 한 기간·한 조합에 대한 의존도를 낮추려는 목적</li></ul><p><a href="/super-moving-average.html">슈퍼 이동평균 구조 →</a></p></section>
+<section><h2>6. 리컨디셔닝과 미래참조 문제를 구분합니다</h2><p>최근 일정 기간의 데이터를 이용해 조합을 다시 계산하고 반영할 수 있지만, 엄밀한 과거 재현에서는 각 과거 시점 이전의 데이터만 사용해야 합니다. 현재 시점에서 구한 조합을 과거 전체에 적용하면 미래참조 문제가 생길 수 있습니다.</p><p>게만아의 실전 접근은 이 한계를 인정한 상태에서 여러 기간·조합 분산과 실계좌 관찰을 함께 사용하는 실용적 절충입니다.</p></section>
+<section><h2>7. 기간의 순서뿐 아니라 장세의 다양성도 봅니다</h2><p>백테스트 구간에 상승·하락·횡보·급변이 다양하게 포함됐는지 확인하고, 시작·종료 시점을 바꿨을 때 전략의 성격이 크게 무너지지 않는지 봅니다.</p></section>
+<section><h2>8. 이것이 엄밀한 롤링 백테스트를 대체하지는 않습니다</h2><p>여러 기간과 조합을 섞는다고 미래참조 오류가 수학적으로 사라지는 것은 아닙니다. 더 엄격한 검증이 필요하다면 학습·테스트기간과 리컨디셔닝 주기를 분리해 롤링·워크포워드 검증을 추가해야 합니다.</p></section>
+<section><h2>9. 마지막 검증은 실계좌에서 계속 관찰합니다</h2><p>백테스트만으로 확신하지 않고 실제 계좌에서 수익뿐 아니라 손실과 MDD를 함께 기록합니다. 백테스트와 실전의 차이를 장기간 관찰하는 것 자체를 검증 과정으로 봅니다.</p><p><a href="https://m.site.naver.com/1TgXn" target="_blank" rel="noopener noreferrer">게만아 투자 실험실 →</a></p></section>
+<section><h2>10. 백테스트 체크리스트</h2><ol><li><strong>미래정보:</strong> 당시 알 수 없던 정보를 썼는가?</li><li><strong>과최적화:</strong> 파라미터를 조금만 바꿔도 무너지는가?</li><li><strong>비용:</strong> 수수료·세금·슬리피지를 반영했는가?</li><li><strong>데이터·지표:</strong> 일봉과 지표 계산 시점에 미래 데이터가 섞이지 않았는가?</li><li><strong>체결:</strong> 백테스트 가격에 실제 체결 가능한가?</li><li><strong>MDD와 회복:</strong> 중간 낙폭과 회복기간은 어떤가?</li><li><strong>기간 민감도:</strong> 시작·종료 시점을 바꿔도 성격이 유지되는가?</li><li><strong>실전 차이:</strong> API·미체결·환율·세금·서버 장애를 감안했는가?</li></ol></section>
+<section class="callout"><h2>게만아의 백테스트를 한 문장으로</h2><p><strong>미래를 정확히 맞히기보다 규칙이 여러 장세에서 감당 가능한 MDD를 만드는지 보고, 한 개의 최적값에 몰리지 않도록 분산한 뒤 실제 계좌에서 계속 확인합니다.</strong></p><p><a class="btn primary" href="https://blog.naver.com/zacra/224083383522" target="_blank" rel="noopener noreferrer">백테스트 철학 원문 →</a> <a class="btn" href="/super-moving-average.html">슈퍼 이동평균 보기</a></p></section>
+<section class="notice"><h2>투자에 정답은 없습니다</h2><p>백테스트는 증거이지 보증이 아니며 과거 계좌 기록도 미래 성과를 보장하지 않습니다. 자신의 기준에 맞게 검증 방법과 운용 방식을 조정해야 합니다.</p></section><p class="updated">문서 업데이트: 2026-08-22</p></main><footer class="site-footer"><div class="footer-inner">
+<p><strong>게만아</strong> · 주식·ETF·코인 파이썬 자동매매·백테스트·API 공식 가이드</p>
+<p>교육·기술 정보 제공 목적이며 특정 금융상품의 추천 또는 수익 보장이 아닙니다. 증권사·거래소 API 사양은 변경될 수 있으므로 실제 구현 전 최신 공식 문서를 확인하세요.</p>
+<p><a href="https://blog.naver.com/zacra" target="_blank" rel="noopener noreferrer">네이버 블로그</a> · <a href="/sources.html">공식 출처</a> · 마지막 업데이트 2026-08-22</p>
+</div></footer></body></html>
