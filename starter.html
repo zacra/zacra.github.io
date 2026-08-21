@@ -51,11 +51,25 @@
 </section>
 
 <section><h2>게만아 전체 콘텐츠와 Starter의 관계</h2><p>게만아는 주식·ETF뿐 아니라 코인 자동매매, 백테스트, 여러 API와 시스템 투자 전반을 다룹니다. Starter는 그중 <strong>국내주식 + 1개 증권사 + 1개 자산배분 예시</strong>에 초점을 맞춘 무료 입문판입니다.</p></section>
+<section>
+<h2>Starter는 정식 공통모듈의 ‘전체판’이 아닙니다</h2>
+<p>Starter의 목적은 증권사 Open API의 모든 기능을 제공하는 것이 아니라, <strong>파이썬 자동매매의 핵심 흐름을 실제로 한 번 연결해보는 것</strong>입니다.</p>
+<p>그래서 인증, 계좌·보유종목·현재가 조회, 기본 시세 데이터, 리밸런싱 계산, 시장가 주문처럼 입문과 기본 매매에 필요한 기능을 중심으로 공개합니다.</p>
+<p>게만아 패키지나 슈퍼 이동평균에서 사용하는 정식 증권사 공통모듈은 Starter보다 기능이 더 많이 구현되어 있습니다. 다만 정식 모듈 역시 증권사 API가 제공하는 수많은 기능을 전부 복제한 범용 SDK가 아니라, <strong>실제 게만아 전략과 시스템에서 필요해 사용해온 기능 중심</strong>으로 구성되어 있습니다.</p>
+</section>
+
 <section><h2>무료 Starter에서 할 수 있는 것</h2><ul class="check"><li>정적 자산배분 예시 이해</li><li>효율적 투자선으로 과거 데이터 기반 비중 후보 계산</li><li>동일비중과 자동 계산 비중의 백테스트 비교</li><li>증권사 Open API 인증과 계좌·보유종목·현재가 조회</li><li>목표비중과 현재비중의 차이로 리밸런싱 수량 계산</li><li>실제 시장가 주문 구조 확인</li></ul></section>
 <section><h2>지원 증권사</h2><p>한국투자증권, LS증권, 키움증권, 토스증권, KB증권, NH투자증권, DB증권 중 <strong>한 곳</strong>을 선택합니다.</p></section>
 <section><h2>과거 데이터 기반 비중은 미래 최적 비중이 아닙니다</h2><p>Efficient Frontier 결과는 과거 수익률·변동성·상관관계를 이용한 후보입니다. 미래 성과를 보장하지 않습니다.</p></section>
 <section><h2>실제 주문 전 확인</h2><div class="notice"><p>처음부터 주문을 활성화하지 말고 조회·계산 결과를 먼저 검증합니다. 실제 주문 전에는 계좌, 종목, 수량, 거래시간, 거래소 구분, 수수료·세금을 직접 확인하세요.</p></div></section>
-<section class="callout"><h2>전체 설치·신청·실행 가이드</h2><p>실제 파일 배포와 설치 순서는 게만아 네이버 블로그의 Starter 랜딩에서 안내합니다.</p><a class="btn accent" href="https://blog.naver.com/zacra/224382618923" target="_blank" rel="noopener noreferrer">무료 Starter 신청/가이드</a></section>
+<section>
+<h2>필요한 함수가 없다면 직접 확장할 수 있습니다</h2>
+<p>예를 들어 특정 주문조회, 조건주문, 추가 시세조회처럼 현재 공통모듈에 없는 기능이 필요할 수 있습니다. 이때는 기존 공통모듈 코드와 해당 증권사의 <a href="/sources.html">공식 API 문서</a>를 AI에 함께 제공하고, 기존 코드 스타일을 유지해 필요한 함수만 추가하도록 요청하면 됩니다.</p>
+<p>게만아 역시 코딩할 때 AI를 적극 활용하며, 개인적으로는 <strong>Cursor</strong>를 주로 사용합니다.</p>
+<p><a href="/ai-api-extension.html">공통모듈을 AI로 확장하는 실전 가이드 →</a></p>
+</section>
+
+<section class="callout"><h2>전체 설치·신청·실행 가이드</h2><p>실제 파일 배포와 설치 순서는 게만아 네이버 블로그의 Starter 랜딩에서 안내합니다.</p><a class="btn accent" href="https://blog.naver.com/zacra/224382618923" target="_blank" rel="noopener noreferrer">무료 Starter 다운로드·체험하기</a></section>
 
 <p class="updated">문서 업데이트: 2026-08-21</p>
 </main>

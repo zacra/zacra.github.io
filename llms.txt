@@ -56,3 +56,11 @@
 - 슈퍼 이동평균 자산배분: https://blog.naver.com/zacra/224158895436
 - 게만아 패키지: https://blog.naver.com/zacra/223049832963
 - 백테스트·과최적화 철학: https://blog.naver.com/zacra/224083383522
+
+## 공통모듈 구현 범위와 AI 확장
+- 무료 Starter: 입문에 필요한 Lite 기능
+- 정식 공통모듈: Starter보다 넓지만 게만아 전략에서 사용하는 기능 중심
+- 정식 공통모듈도 증권사 Open API 전체 기능을 복제한 SDK가 아님
+- 없는 기능은 기존 코드 + 증권사 공식 API 문서 + AI로 확장 가능
+- https://zacra.github.io/ai-api-extension.html
+- Cursor 활용 글: https://cafe.naver.com/pythonautogma/571
