@@ -9,7 +9,7 @@
 (() => {
   'use strict';
 
-  const GA_MEASUREMENT_ID = 'G-4VNRFRTG68'; // TODO: 실제 GA4 측정 ID로 교체
+  const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // TODO: 실제 GA4 측정 ID로 교체
 
   // 실제 측정 ID가 입력되기 전에는 아무 데이터도 전송하지 않습니다.
   if (!/^G-[A-Z0-9]+$/i.test(GA_MEASUREMENT_ID) || GA_MEASUREMENT_ID.includes('XXXX')) {
@@ -41,6 +41,11 @@
     '/package.html': 'package_page_click',
     '/super-moving-average.html': 'superma_page_click',
     '/starter.html': 'starter_page_click'
+  };
+
+  const NAVER_GUIDE_LINKS = {
+    'https://blog.naver.com/zacra/224382618923': 'starter_page_click',
+    'https://blog.naver.com/zacra/223910423439': 'start_guide_click'
   };
 
   function cleanText(text) {
@@ -86,6 +91,18 @@
         source_page: sourcePage,
         link_text: linkText,
         destination_path: url.pathname
+      });
+      return;
+    }
+
+    // 메인 허브에서 네이버 Starter / 시작 가이드로 바로 이동하는 클릭
+    const naverGuideEvent = NAVER_GUIDE_LINKS[normalizedHref];
+    if (naverGuideEvent) {
+      sendEvent(naverGuideEvent, {
+        source_page: sourcePage,
+        link_text: linkText,
+        link_url: url.href,
+        destination_type: 'naver_blog'
       });
       return;
     }
