@@ -1,33 +1,32 @@
 <!DOCTYPE html>
-
 <html lang="ko">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>파이썬 자동매매 시작·세팅 가이드 | AWS·API·crontab·메시지 연동</title>
-<meta content="게만아 파이썬 자동매매 시작 가이드. Python·VS Code, AWS EC2, 탄력적 IP, SFTP, crontab, 증권사·거래소 API, 메시지 연동과 전략 실행까지 전체 흐름을 정리합니다." name="description"/>
+<title>파이썬 자동매매 시작 안내 | 패키지·슈퍼 이동평균 세팅 흐름</title>
+<meta content="파이썬 자동매매 세팅이 처음에는 복잡해 보여도 한 번에 모두 알 필요는 없습니다. 게만아 패키지·슈퍼 이동평균·무료 Starter 중 자신에게 맞는 시작 방법을 먼저 고르고, 필요한 세팅은 단계별 가이드에 따라 진행하세요." name="description"/>
 <meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/>
 <link href="https://zacra.github.io/system-guide.html" rel="canonical"/>
 <link href="/assets/style.css" rel="stylesheet"/>
 <meta content="website" property="og:type"/>
 <meta content="ko_KR" property="og:locale"/>
-<meta content="파이썬 자동매매 시작·세팅 가이드 | AWS·API·crontab·메시지 연동" property="og:title"/>
-<meta content="Python·VS Code 설치부터 AWS EC2, 탄력적 IP, SFTP, crontab, API, 메시지 연동과 실제 전략 실행까지 게만아 자동매매의 전체 흐름을 정리합니다." property="og:description"/>
+<meta content="파이썬 자동매매 시작 안내 | 패키지·슈퍼 이동평균 세팅 흐름" property="og:title"/>
+<meta content="처음부터 AWS·API·crontab을 모두 이해할 필요는 없습니다. 먼저 자신에게 맞는 콘텐츠를 선택하고, 실제 세팅은 제공되는 단계별 가이드에 따라 진행하면 됩니다." property="og:description"/>
 <meta content="https://zacra.github.io/system-guide.html" property="og:url"/>
 <meta content="https://zacra.github.io/assets/og-default.png" property="og:image"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="파이썬 자동매매 시작·세팅 가이드 | AWS·API·crontab·메시지 연동" name="twitter:title"/>
-<meta content="Python·VS Code 설치부터 AWS EC2, 탄력적 IP, SFTP, crontab, API, 메시지 연동과 실제 전략 실행까지 게만아 자동매매의 전체 흐름을 정리합니다." name="twitter:description"/>
+<meta content="파이썬 자동매매 시작 안내 | 패키지·슈퍼 이동평균 세팅 흐름" name="twitter:title"/>
+<meta content="처음부터 모든 기술을 이해하기보다 자신에게 맞는 시작 방법을 고르고 단계별로 세팅하는 흐름을 안내합니다." name="twitter:description"/>
 <meta content="https://zacra.github.io/assets/og-default.png" name="twitter:image"/>
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"TechArticle",
-  "headline":"파이썬 자동매매 시작·세팅 가이드 | AWS·API·crontab·메시지 연동",
-  "name":"게만아 파이썬 자동매매 시작·세팅 가이드",
-  "description":"Python·VS Code 설치, AWS EC2 서버, 탄력적 IP, SFTP, crontab, API 키, 메시지 연동, 전략 실행까지 파이썬 자동매매 구축 흐름을 정리합니다.",
+  "headline":"파이썬 자동매매 시작 안내 | 패키지·슈퍼 이동평균 세팅 흐름",
+  "name":"게만아 파이썬 자동매매 시작 안내",
+  "description":"게만아 패키지·슈퍼 이동평균·무료 Starter 중 시작 방법을 선택하고, 이후 필요한 자동매매 환경을 단계별로 준비하는 흐름을 안내합니다.",
   "url":"https://zacra.github.io/system-guide.html",
   "inLanguage":"ko-KR",
   "dateModified":"2026-08-22",
@@ -53,132 +52,134 @@
 </nav>
 </header>
 <main id="main">
-<div class="breadcrumb"><a href="/">홈</a> › 파이썬 자동매매 시작·세팅 가이드</div>
-<p class="eyebrow">게만아 파이썬 자동매매 시작 가이드</p>
-<h1>처음부터 실제 자동 실행까지, 전체 흐름을 먼저 이해하세요</h1>
-<p class="lead">게만아 자동매매의 핵심은 누군가가 계좌를 대신 운용하는 것이 아니라, <strong>투자자가 직접 이해하고 통제하는 시스템 투자 구조</strong>를 만드는 것입니다. Python 설치부터 서버·API·백테스트·자동 실행까지 큰 흐름을 먼저 잡으면 개별 전략을 세팅하기가 훨씬 쉬워집니다.</p>
-<section class="notice"><h2>먼저 방향만 이해하세요 — 예측보다 대응</h2><p>게만아 시스템 투자는 미래를 정확히 맞히기보다 <strong>규칙을 정하고 백테스트한 뒤, 시장이 움직이면 그 기준대로 대응</strong>하는 것을 중요하게 봅니다. 추세추종을 핵심 축으로 활용하지만 이동평균 하나에만 의존하지 않고 다양한 지표와 전략을 검증해 사용할 수 있습니다. <a href="/investment-philosophy.html">투자 철학 자세히 보기 →</a></p></section>
-<section>
-<h2>자동매매 세팅은 이 순서로 진행합니다</h2>
-<div class="table-wrap">
-<table>
-<thead>
-<tr><th>단계</th><th>무엇을 하나요?</th><th>핵심</th></tr>
-</thead>
-<tbody>
-<tr><td><strong>1. 개발환경</strong></td><td>Python · Visual Studio Code 설치</td><td>코드를 열고 수정·백테스트할 기본 환경</td></tr>
-<tr><td><strong>2. AWS 서버</strong></td><td>AWS 계정 생성 · EC2 인스턴스 준비</td><td>내 PC를 꺼도 24시간 실행되는 자동매매 환경</td></tr>
-<tr><td><strong>3. 고정 IP</strong></td><td>탄력적 IP 생성 및 EC2 연결</td><td>거래소·증권사 API의 허용 IP 등록에 활용</td></tr>
-<tr><td><strong>4. 파일 업로드</strong></td><td>SFTP/FileZilla 등으로 서버 연결</td><td>봇·공통모듈을 <code>/var/autobot</code> 등에 업로드</td></tr>
-<tr><td><strong>5. 자동 실행</strong></td><td>crontab 등록</td><td>원하는 시간·주기마다 파이썬 봇을 자동 실행</td></tr>
-<tr><td><strong>6. API 연결</strong></td><td>증권사·거래소 API Key 발급 및 적용</td><td>잔고·시세·주문 기능을 실제 계좌와 연결</td></tr>
-<tr><td><strong>7. 메시지</strong></td><td>텔레그램·슬랙·디스코드·카카오톡 등 연동</td><td>봇 실행·주문·오류 상태를 메시지로 확인</td></tr>
-<tr><td><strong>8. 전략 실행</strong></td><td>전략 이해 → 백테스트 → 비중 설정 → 실행 테스트</td><td>처음에는 낮은 비중과 주문 안전장치부터 확인</td></tr>
-</tbody>
-</table>
-</div>
-</section>
+<div class="breadcrumb"><a href="/">홈</a> › 파이썬 자동매매 시작 안내</div>
+<p class="eyebrow">게만아 파이썬 자동매매 시작 안내</p>
+<h1>세팅이 복잡해 보여도, 처음부터 다 알 필요는 없습니다</h1>
+<p class="lead">Python, 서버, API 같은 단어를 한꺼번에 보면 어렵게 느껴질 수 있습니다. 하지만 실제로는 <strong>자신에게 맞는 콘텐츠를 하나 선택하고 → 제공되는 가이드를 순서대로 따라가며 → 작은 규모로 실행을 확인</strong>하면 됩니다. 코딩 경험이 많지 않아도 각 단계를 하나씩 진행할 수 있도록 필요한 코드와 안내를 함께 제공합니다.</p>
+
 <section class="notice">
-<h2>주식은 한 증권사에 묶이지 않도록 설계합니다</h2>
-<p>게만아의 공통 인터페이스 기반 주식 봇은 <strong>Broker · Market · accountMode</strong>를 분리해, 같은 전략 로직을 여러 증권사·국내/미국 시장·여러 계좌에 재사용하기 쉽게 구성합니다.</p>
-<p>현재 한국투자·LS·키움·토스·KB·NH·DB증권 환경을 다루며, 지원사가 늘어나더라도 전략 파일 전체를 다시 만드는 것보다 공통모듈을 확장하는 방향을 지향합니다.</p>
-<p><a href="/broker-openapi.html">멀티 증권사 API 구조 보기 →</a></p>
+<h2>먼저 세팅 방법보다 “무엇으로 시작할지”만 고르세요</h2>
+<p>자동매매를 시작하기 전에 AWS나 API 문서를 공부할 필요는 없습니다. <strong>내가 어떤 방식의 투자를 자동화하고 싶은지</strong>를 먼저 정하면 됩니다. 실제 세팅은 그 다음 단계입니다.</p>
 </section>
-<section class="callout">
-<h2>처음 세팅한다면 — 스크린샷 가이드를 그대로 따라가세요</h2>
-<p>Python·Visual Studio Code 설치부터 AWS 계정, EC2 서버, 탄력적 IP, SFTP/FileZilla, crontab, 파이썬 모듈 설치까지는 실제 화면을 보면서 진행하는 것이 가장 빠릅니다.</p>
-<p>게만아의 상세 가이드에는 각 단계의 스크린샷과 실제 입력 예시가 정리되어 있습니다. AWS 화면이나 설치 UI는 시간이 지나며 바뀔 수 있으므로, 이 문서에서는 전체 구조를 설명하고 <strong>실제 클릭 과정은 네이버 블로그 상세 가이드</strong>에서 계속 업데이트합니다.</p>
-<p><a class="btn primary" href="https://blog.naver.com/zacra/223813258178" rel="noopener noreferrer" target="_blank">Python·AWS 서버 상세 세팅 가이드 →</a></p>
-</section>
+
 <section>
-<h2>게만아 환경에서는 서버 준비를 더 단순화할 수 있습니다</h2>
-<p>게만아 세팅 가이드에서는 AWS EC2 생성 시 <strong>GMA_AutobotServer</strong>로 검색되는 AMI를 활용하는 방법을 안내합니다. 해당 AMI에는 자동매매용 기본 폴더와 crontab 등 일부 서버 세팅을 미리 준비해 두어 처음부터 모든 명령어를 직접 구성하는 부담을 줄이는 방식입니다.</p>
-<p>서버 환경이나 AWS 정책은 바뀔 수 있으므로 실제 생성 시점의 안내는 위 스크린샷 가이드를 기준으로 확인하세요.</p>
-</section>
-<section>
-<h2>메시지 연동은 별도 상세 가이드가 있습니다</h2>
-<p>자동매매는 주문만 실행되는 것보다 <strong>봇이 실행됐는지, 매수·매도가 발생했는지, 오류가 있었는지를 메시지로 확인</strong>할 수 있어야 운영이 편합니다.</p>
-<p>기존 LINE Notify 종료 이후 게만아 가이드에서는 <strong>텔레그램 · 슬랙 · 디스코드 · 카카오톡</strong> 연동 방법과 <code>telegram_alert.py</code>, <code>slack_alert.py</code>, <code>discord_alert.py</code>, <code>kakao_alert.py</code>, <code>All_alert.py</code> 활용 구조를 설명합니다.</p>
-<p><a class="btn primary" href="https://blog.naver.com/zacra/223622479916" rel="noopener noreferrer" target="_blank">자동매매 메시지 연동 상세 가이드 →</a></p>
-</section>
-<section class="notice">
-<h2>환경 구축이 끝났다면 전략 하나만 선택하세요</h2>
-<p>처음부터 여러 전략을 동시에 세팅할 필요는 없습니다. <strong>전략 하나를 선택 → 관련 가이드 확인 → 필요 API 발급 → 공통모듈 준비 → 백테스트 → 서버 실행 테스트 → crontab 등록</strong> 순으로 한 사이클을 완성해 보는 것이 좋습니다.</p>
-<p>게만아 패키지 코드 상단에는 해당 전략의 설명·세팅 포스팅을 연결해 두었으므로, 먼저 코드 상단 주석과 관련 가이드를 확인하세요.</p>
-<p><a class="btn" href="https://blog.naver.com/zacra/223086628069" rel="noopener noreferrer" target="_blank">패키지 실전 세팅 전체 가이드 →</a></p>
-</section>
-<section>
-<h2>1. 다양한 주식·코인 자동매매를 원한다면 — 게만아 패키지</h2>
-<p><strong>한국주식·미국주식·ETF·코인</strong>까지 다양한 전략 중에서 자신의 투자 성향에 맞는 시스템을 선택하고 확장하고 싶은 분을 위한 코드·가이드 묶음입니다.</p>
+<h2>1. 다양한 주식·코인 전략을 골라 활용하고 싶다면 — 게만아 패키지</h2>
+<p><strong>한국주식·미국주식·ETF·코인</strong>까지 여러 전략과 시스템 코드를 직접 받아 활용하고, 필요하면 AI와 함께 수정·확장하고 싶은 분에게 맞습니다.</p>
 <ul class="check">
-<li>주식·ETF 자산배분과 추세추종 전략</li>
-<li>코인 현물·선물 자동매매 전략</li>
-<li><strong>떨사오팔(평균회귀·역추세)</strong> 등 분할매매 구조</li>
-<li><strong>TQQQ·SOXL 같은 미국 레버리지 ETF 분할매수</strong> 아이디어의 시스템화·변형 코드</li>
-<li>백테스트와 서버 자동 실행</li>
-<li>증권사·거래소 연동 모듈 및 세팅 가이드</li>
-<li>한 번 받은 코드를 직접 보유하고 AI와 함께 수정·확장</li>
+<li>현재 97개 전략·시스템 콘텐츠에서 필요한 것을 선택</li>
+<li>자산배분·추세추종·분할매매·레버리지 ETF·코인 현물·선물 등 다양한 구조</li>
+<li>백테스트 코드와 실제 자동매매 봇을 함께 활용</li>
+<li>증권사·거래소 연동에 필요한 공통 구조와 보조시스템 포함</li>
+<li>받은 소스 코드를 직접 확인하고 AI와 함께 변경·확장 가능</li>
 </ul>
-<p>게만아가 개인적으로 추세추종과 MDD 관리를 더 선호한다고 해서 역추세·레버리지 전략을 배제하는 것은 아닙니다. 패키지는 <strong>여러 방법론을 실제 코드로 비교하고 자신에게 맞게 디벨롭할 수 있는 연구용 무기창고</strong>라는 성격도 있습니다.</p>
-<p>패키지는 하나의 전략이 아니라 <strong>현재 97개 전략·시스템 콘텐츠에서 필요한 것을 선택해 사용하는 ‘무기창고’</strong>에 가깝습니다.</p>
+<p><strong>여러 방법론을 코드로 비교하고 자신에게 맞는 시스템을 만들어가는 ‘무기창고’</strong>에 가까운 콘텐츠입니다.</p>
 <p>
-<a class="btn" href="/package.html">패키지 내용 확인</a>
+<a class="btn" href="/package.html">패키지 자세히 보기</a>
 <a class="btn primary" href="https://forms.gle/fF2nEigv7uodQ7EZ9" rel="noopener noreferrer" target="_blank">계좌이체 구매 (교차구매 시 5만원 할인)</a>
 <a class="btn accent" href="https://www.latpeed.com/products/Wxjik" rel="noopener noreferrer" target="_blank">카드·간편결제 (정상가)</a>
 </p>
 </section>
+
 <section>
-<h2>2. 주식·ETF 장기투자 하나에 집중한다면 — 슈퍼 이동평균 자산배분</h2>
-<p>여러 전략을 직접 비교하기보다, 장기 주식·ETF 투자 시스템 하나에 집중하고 싶은 분을 위한 게만아의 대표 전략입니다.</p>
+<h2>2. 주식·ETF 장기투자 시스템 하나에 집중한다면 — 슈퍼 이동평균 자산배분</h2>
+<p>많은 전략을 직접 고르기보다 <strong>추세 판단·비중 조절·리밸런싱·현금 비중 관리</strong>를 하나의 장기 투자 시스템으로 운용하고 싶은 분에게 맞습니다.</p>
 <ul class="check">
-<li>이동평균 기반 추세 판단</li>
-<li>비중 조절과 리밸런싱</li>
-<li>조건에 따른 현금 비중 확보</li>
-<li>MDD와 투자 지속력 관리</li>
-<li>백테스트 → 포트폴리오 설정 → 자동매매까지 연결</li>
+<li>이동평균을 중심으로 한 추세 판단과 자산배분</li>
+<li>시장 상황에 따른 투자 비중 조절과 리밸런싱</li>
+<li>현금 비중을 활용한 MDD 관리</li>
+<li>백테스트 → 포트폴리오 설정 → 실제 자동매매까지 연결</li>
+<li><strong>DB증권 지원 코드는 슈퍼 이동평균 전략에 포함</strong></li>
 </ul>
-<p><strong>DB증권 지원 코드는 슈퍼 이동평균 자산배분 전략에 포함</strong>되어 있으며, 다른 증권사 환경으로 전환할 때는 별도 패키지의 해당 증권사 공통모듈을 활용하는 방식입니다.</p>
 <p>
-<a class="btn" href="/super-moving-average.html">슈퍼 이동평균 내용 확인</a>
+<a class="btn" href="/super-moving-average.html">슈퍼 이동평균 자세히 보기</a>
 <a class="btn primary" href="https://forms.gle/HooXu7DNkubKexhP6" rel="noopener noreferrer" target="_blank">계좌이체 구매 (교차구매 시 5만원 할인)</a>
 <a class="btn accent" href="https://www.latpeed.com/products/XJLqa" rel="noopener noreferrer" target="_blank">카드·간편결제 (정상가)</a>
 </p>
 </section>
-<section class="notice">
-<h2>두 콘텐츠를 모두 구매한다면</h2>
-<p>패키지와 슈퍼 이동평균 자산배분은 <strong>어느 것을 먼저 구매해도</strong> 두 번째 콘텐츠 구매 시 <strong>5만원 할인</strong>이 적용됩니다.</p>
-<p>할인은 <strong>구글폼을 통한 계좌이체 구매에서 적용</strong>됩니다. 이미 한쪽을 구매했다면 다른 쪽을 계좌이체로 구매하면서 정상가에서 5만원을 뺀 금액을 이체하면 됩니다. 카드·간편결제(래피드)는 정상가 결제 경로입니다.</p>
-</section>
+
 <section class="callout">
-<h2>아직 파이썬 자동매매 자체가 낯설다면</h2>
-<p>유료 콘텐츠를 먼저 결정하지 않아도 됩니다. 현재 지원 중인 증권사 가운데 한 곳을 선택해 투자전략 → 효율적 투자비중 분석 → 백테스트 → Open API 연결 → 실제 계좌 리밸런싱 → 주문 구조까지 체험하는 무료 Starter가 있습니다.</p>
-<p><a class="btn accent" href="/starter.html">무료 Starter 안내 →</a></p>
+<h2>아직 유료 콘텐츠를 결정하기 어렵다면 — 무료 Starter</h2>
+<p>자동매매가 어떤 방식으로 이어지는지 먼저 경험해보고 싶다면 무료 Starter부터 시작해도 됩니다. <strong>투자전략 → 비중 분석 → 백테스트 → Open API 연결 → 실제 주문 구조</strong>의 흐름을 직접 확인할 수 있습니다.</p>
+<p><a class="btn accent" href="/starter.html">무료 Starter로 먼저 체험하기 →</a></p>
 </section>
-<section>
-<h2>기초부터 차근히 배우고 싶다면</h2>
-<p>패키지와 슈퍼 이동평균은 제공되는 가이드에 따라 세팅할 수 있도록 구성되어 있지만, Python 자동매매의 원리를 기초부터 이해하고 싶다면 클래스101의 게만아 자동매매 강의를 선택적으로 활용할 수 있습니다.</p>
+
+<section class="notice">
+<h2>세팅 때문에 구매를 망설일 필요가 없는 이유</h2>
+<ul class="check">
+<li><strong>처음부터 모든 기술을 공부하는 구조가 아닙니다.</strong> 필요한 순서대로 하나씩 따라가면 됩니다.</li>
+<li><strong>실전 운용에 필요한 핵심 API 기능은 이미 코드에 구현</strong>되어 있습니다. 증권사 API 문서를 처음부터 읽고 직접 기능을 만드는 것이 기본 과정이 아닙니다.</li>
+<li><strong>서버와 자동 실행 환경은 한 번 세팅해두면 반복해서 처음부터 만들 필요가 없습니다.</strong></li>
+<li><strong>구매한 콘텐츠에는 관련 설명과 세팅 가이드가 연결</strong>되어 있어 코드만 던져드리는 방식이 아닙니다.</li>
+<li>추가 아이디어가 생기면 전략·백테스트·자동매매 봇·공통모듈·보조시스템까지 <strong>AI와 함께 수정·확장</strong>할 수 있습니다.</li>
+</ul>
+<p>처음 화면만 보면 어려워 보일 수 있지만, 실제로는 <strong>한 단계 완료 → 다음 단계 진행</strong>의 반복입니다.</p>
 </section>
+
+<section class="notice">
+<h2>패키지와 슈퍼 이동평균을 모두 이용한다면</h2>
+<p>어느 것을 먼저 구매해도 두 번째 콘텐츠를 <strong>구글폼 계좌이체로 구매할 때 5만원 할인</strong>이 적용됩니다. 카드·간편결제는 정상가 결제 경로입니다.</p>
+</section>
+
 <section>
-<h2>실전에서는 세 가지를 반드시 확인합니다</h2>
+<h2>구매 후 실제 세팅은 대략 이런 흐름입니다</h2>
+<p>아래 용어를 지금 외울 필요는 없습니다. 전체 과정을 미리 보고 싶은 분만 펼쳐보세요. 실제 진행 때는 각 콘텐츠에서 연결되는 세팅 안내를 보며 순서대로 따라가면 됩니다.</p>
+<details>
+<summary><strong>자동매매 세팅 8단계 전체 흐름 보기</strong> — 처음에는 펼치지 않아도 됩니다</summary>
+<div class="table-wrap">
+<table>
+<thead><tr><th>단계</th><th>무엇을 하나요?</th><th>쉽게 말하면</th></tr></thead>
+<tbody>
+<tr><td><strong>1. 개발환경</strong></td><td>Python · Visual Studio Code 설치</td><td>코드를 열고 실행할 준비</td></tr>
+<tr><td><strong>2. 서버</strong></td><td>AWS EC2 등 실행 환경 준비</td><td>내 PC를 꺼도 봇이 돌아갈 공간</td></tr>
+<tr><td><strong>3. 고정 IP</strong></td><td>필요한 경우 탄력적 IP 연결</td><td>API에서 허용할 서버 주소 고정</td></tr>
+<tr><td><strong>4. 파일 준비</strong></td><td>전략·공통모듈 등을 서버에 업로드</td><td>실행할 코드를 서버에 넣기</td></tr>
+<tr><td><strong>5. API 연결</strong></td><td>증권사·거래소에서 발급받은 API 정보 적용</td><td>내 계좌와 코드 연결</td></tr>
+<tr><td><strong>6. 실행 테스트</strong></td><td>잔고·시세·전략 설정·주문 안전장치 확인</td><td>실전 전에 제대로 연결됐는지 점검</td></tr>
+<tr><td><strong>7. 자동 실행</strong></td><td>crontab 등으로 실행 시간 등록</td><td>정해진 시간에 봇이 스스로 실행</td></tr>
+<tr><td><strong>8. 알림·운영</strong></td><td>필요하면 메시지 알림을 연결하고 상태 확인</td><td>주문·오류 등을 편하게 확인</td></tr>
+</tbody>
+</table>
+</div>
+</details>
+</section>
+
+<section>
+<h2>처음부터 하지 않아도 되는 것들</h2>
+<ul class="check">
+<li><strong>증권사 API 문서 전체 공부:</strong> 자동매매에 필요한 모든 기능을 직접 구현할 필요는 없습니다.</li>
+<li><strong>여러 전략 동시 세팅:</strong> 처음에는 전략 하나만 정상 실행해보면 충분합니다.</li>
+<li><strong>여러 증권사 동시 연결:</strong> 내가 사용할 증권사 하나부터 시작하면 됩니다.</li>
+<li><strong>메시지 서비스 여러 개 연결:</strong> 알림은 필요할 때 나중에 추가해도 됩니다.</li>
+<li><strong>코드 전체 이해:</strong> 처음에는 설정값과 실행 흐름을 익히고, 필요할 때 조금씩 코드 이해 범위를 넓혀도 됩니다.</li>
+</ul>
+</section>
+
+<section class="callout">
+<h2>상세 세팅 자료는 필요한 시점에 확인하면 됩니다</h2>
+<p>Python 설치, 서버 생성, 파일 업로드, API 연결, 자동 실행처럼 화면을 보며 따라가야 하는 내용은 <strong>실제 콘텐츠 이용 시 연결되는 단계별 가이드</strong>에서 확인할 수 있습니다. AWS나 증권사 화면은 시간이 지나며 바뀔 수 있기 때문에 실제 세팅 시점의 안내를 기준으로 따라가는 것이 가장 편합니다.</p>
+<p>즉, 구매 전에 복잡한 세팅 문서를 미리 공부할 필요는 없습니다. <strong>먼저 어떤 투자 시스템을 사용할지 결정하고, 세팅은 그 다음에 하나씩 진행</strong>하면 됩니다.</p>
+</section>
+
+<section>
+<h2>실전 전에는 이것만 꼭 확인하세요</h2>
 <ul class="check">
 <li><strong>투자 비중:</strong> 처음에는 낮은 비중으로 충분히 테스트합니다.</li>
-<li><strong>주문 실행 여부:</strong> <code>ENABLE_ORDER_EXECUTION</code> 같은 안전장치가 있는 코드라면 실제 주문 전 값을 직접 확인합니다.</li>
-<li><strong>포트폴리오:</strong> 종목·코인 리스트와 비중이 자신의 전략에 맞게 설정됐는지 확인합니다.</li>
+<li><strong>주문 실행 여부:</strong> 실제 주문을 켜기 전에 주문 안전장치와 설정값을 직접 확인합니다.</li>
+<li><strong>종목·코인과 비중:</strong> 자신의 전략에 맞게 설정됐는지 확인합니다.</li>
 </ul>
-<p>백테스트 결과가 좋아도 실제 주문에서는 API 사양, 수수료, 체결, 데이터 지연, 계좌 상태 같은 변수가 추가됩니다. 조회·로그·소액 테스트를 거쳐 단계적으로 실전으로 옮기세요.</p>
+<p>백테스트와 실제 주문 환경은 수수료·체결·데이터·계좌 상태 등에서 차이가 날 수 있으므로 처음에는 조회와 소액 테스트부터 단계적으로 진행하는 것이 좋습니다.</p>
 </section>
-<section class="callout">
-<h2>실전 결과는 ‘수익 인증’보다 전략의 작동 과정을 봅니다</h2>
-<p><strong>게만아 투자 실험실</strong>에서는 실제 계좌의 수익과 손실, 수익률과 MDD, 전략이 상승장과 하락장을 지나며 어떻게 움직였는지를 기록하고 <strong>매월 결산</strong>합니다.</p>
-<p><strong>주식·연금 계좌</strong>는 낮은 변동성으로 큰돈을 오래 운용하는 방향을 지향합니다. 최근 공개된 메인 주식 계좌 종합 기록은 <strong>연환산 수익률 약 20%대, MDD 약 -10% 수준</strong>이며 연금계좌 역시 같은 위험관리 철학으로 운용합니다. 이 수치는 시간이 지나면서 계속 변경될 수 있습니다.</p>
-<p><a class="btn primary" href="https://m.site.naver.com/2eWen" rel="noopener noreferrer" target="_blank">주식·연금 메인 계좌 · 최신 결산 보기 →</a></p>
-<p><strong>코인</strong>은 큰 상승률보다 폭락에서 계좌를 지키는 것을 중요하게 봅니다. 과거 특정 구간에서는 비트코인이 전고점 대비 약 절반 수준까지 하락하는 동안 실계좌 낙폭을 <strong>-15% 미만 수준으로 방어한 사례</strong>도 공개했습니다.</p>
-<p><a class="btn" href="https://m.site.naver.com/1TgXn" rel="noopener noreferrer" target="_blank">게만아 투자 실험실 · 전체 최근 월간 결산 보기 →</a></p>
-<p><small>실계좌 기록은 과거의 특정 기간 결과이며 미래 성과를 보장하지 않습니다.</small></p>
+
+<section>
+<h2>기초 원리부터 천천히 배우고 싶다면</h2>
+<p>패키지와 슈퍼 이동평균은 제공되는 가이드에 따라 세팅할 수 있도록 구성되어 있습니다. Python 자동매매의 원리 자체를 기초부터 배우고 싶다면 클래스101의 게만아 자동매매 강의를 선택적으로 활용할 수 있습니다.</p>
+<p><a class="btn" href="https://abr.ge/b8xyee" rel="noopener noreferrer" target="_blank">클래스101 강의 보기 →</a></p>
 </section>
+
 <section class="notice">
-<h2>어떤 경로를 선택하든 공통점</h2>
-<p>자동매매의 목적은 더 좋은 종목을 대신 찾아주는 것이 아니라, <strong>투자자가 만든 기준을 감정에 흔들리지 않고 반복 실행</strong>하는 것입니다.</p>
+<h2>정리하면</h2>
+<p><strong>콘텐츠 선택 → 가이드대로 세팅 → 작은 규모로 확인 → 자동 실행.</strong> 처음부터 개발자가 될 필요는 없습니다. 내가 사용할 시스템을 이해하고 통제할 수 있을 만큼 하나씩 익혀가면 됩니다.</p>
+<p><a class="btn primary" href="/package.html">다양한 전략이 필요하다면 패키지 →</a> <a class="btn" href="/super-moving-average.html">장기 주식·ETF라면 슈퍼 이동평균 →</a></p>
 </section>
 
 <p class="updated">문서 업데이트: 2026-08-22</p>
