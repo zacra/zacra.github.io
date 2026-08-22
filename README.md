@@ -63,17 +63,22 @@ https://zacra.github.io/package.html
 
 ## 주요 문서
 
+- 게만아 소개: https://zacra.github.io/about.html
 - 투자 철학: https://zacra.github.io/investment-philosophy.html
 - 자동매매 시작: https://zacra.github.io/python-auto-trading.html
 - 시작 가이드: https://zacra.github.io/system-guide.html
-- 멀티 증권사 API: https://zacra.github.io/broker-openapi.html
+- 주식·멀티 증권사 API: https://zacra.github.io/broker-openapi.html
+- 코인 자동매매: https://zacra.github.io/crypto-auto-trading.html
 - 주식/코인 구조 차이: https://zacra.github.io/architecture.html
 - 백테스트: https://zacra.github.io/backtest.html
+- 효율적 투자선: https://zacra.github.io/efficient-frontier.html
+- FAQ: https://zacra.github.io/faq.html
 - 패키지 콘텐츠 가이드: https://zacra.github.io/package-content-guide.html
 
 ## 공식 채널
 
 - 네이버 블로그: https://blog.naver.com/zacra
+- 게만아 파이썬 자동매매 연구소 카페: https://cafe.naver.com/pythonautogma
 - 투자 실험실: https://m.site.naver.com/1TgXn
 - YouTube: https://www.youtube.com/@게만아
 
