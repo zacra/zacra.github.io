@@ -11,6 +11,7 @@
 <a href="/package.html">패키지</a>
 <a href="/broker-openapi.html">멀티 증권사 API</a>
 <a href="/starter.html">무료 Starter</a>
+<a href="/faq.html">FAQ</a>
 </div></nav></header><main id="main"><div class="breadcrumb"><a href="/">홈</a> › 효율적 투자선 파이썬 자산배분</div><h1>효율적 투자선(Efficient Frontier)과 Python 자산배분</h1><p class="lead">여러 자산의 비중을 바꾸면 기대수익률과 변동성이 다른 수많은 포트폴리오가 만들어집니다. 그중 <strong>위험 대비 효율적인 조합의 경계</strong>를 효율적 투자선이라고 부릅니다.</p><section><h2>동일비중에서 시작하면 이해가 쉽습니다</h2><p>N개 자산에 똑같이 투자하면 각 자산 비중은 1/N입니다. 단순하고 이해하기 쉽지만 자산별 변동성과 상관관계를 반영하지는 않습니다.</p></section>
 <section><h2>대표적인 후보</h2><div class="grid cards"><article class="card"><h3>Equal Weight</h3><p>모든 자산을 동일 비중으로 배분하는 가장 단순한 기준점입니다.</p></article><article class="card"><h3>Minimum Variance</h3><p>과거 공분산 구조를 기준으로 포트폴리오 변동성을 낮추는 조합을 찾습니다.</p></article><article class="card"><h3>Maximum Sharpe</h3><p>과거 기대수익과 변동성을 이용해 위험 대비 수익 효율이 높은 조합을 찾습니다.</p></article></div></section>
 <section><h2>왜 비중 제한이 필요한가?</h2><p>제약 없는 최적화는 과거에 좋았던 자산 한두 개에 비중이 지나치게 몰릴 수 있습니다. Starter 예시는 1/N을 기준으로 최소·최대 비중 범위를 두어 극단적인 집중을 완화합니다.</p><pre><code># 개념 예시
@@ -22,5 +23,5 @@ max_weight = 2.0 * base
 <section class="notice"><h2>해석 주의</h2><p>효율적 투자선은 미래를 알려주는 예측기가 아닙니다. 과거 데이터 기반의 자산배분 후보이며, 기간과 시장이 바뀌면 결과도 달라질 수 있습니다.</p></section><p class="updated">문서 업데이트: 2026-08-22</p></main><footer class="site-footer"><div class="footer-inner">
 <p><strong>게만아</strong> · 주식·ETF·코인 파이썬 자동매매·백테스트·API 공식 가이드</p>
 <p>교육·기술 정보 제공 목적이며 특정 금융상품의 추천 또는 수익 보장이 아닙니다. 증권사·거래소 API 사양은 변경될 수 있으므로 실제 구현 전 최신 공식 문서를 확인하세요.</p>
-<p><a href="https://blog.naver.com/zacra" target="_blank" rel="noopener noreferrer">네이버 블로그</a> · <a href="/sources.html">공식 출처</a> · 마지막 업데이트 2026-08-22</p>
+<p><a href="https://blog.naver.com/zacra" target="_blank" rel="noopener noreferrer">네이버 블로그</a> · <a href="/sources.html">공식 출처</a> · <a href="/faq.html">FAQ</a> · 마지막 업데이트 2026-08-22</p>
 </div></footer></body></html>
