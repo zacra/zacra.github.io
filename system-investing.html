@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <script defer src="/assets/analytics.js"></script>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>시스템 투자란? 감정보다 기준, 예측보다 대응하는 투자 방법 | 게만아</title>
+  <meta name="description" content="시스템 투자의 뜻과 실제 구조를 설명합니다. 감정 대신 규칙을 세우고, 예측보다 대응하며, MDD·현금·자산배분·백테스트·파이썬 자동매매로 이어지는 게만아의 시스템 투자 관점을 정리합니다."/>
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/>
+  <link rel="canonical" href="https://zacra.github.io/system-investing.html"/>
+  <link rel="stylesheet" href="/assets/style.css"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:locale" content="ko_KR"/>
+  <meta property="og:title" content="시스템 투자란? 감정보다 기준, 예측보다 대응하는 투자 방법 | 게만아"/>
+  <meta property="og:description" content="시스템 투자의 뜻과 실제 구조를 설명합니다. 감정 대신 규칙을 세우고, 예측보다 대응하며, MDD·현금·자산배분·백테스트·파이썬 자동매매로 이어지는 게만아의 시스템 투자 관점을 정리합니다."/>
+  <meta property="og:url" content="https://zacra.github.io/system-investing.html"/>
+  <meta property="og:image" content="https://zacra.github.io/assets/og-default.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="시스템 투자란? 감정보다 기준, 예측보다 대응하는 투자 방법 | 게만아"/>
+  <meta name="twitter:description" content="시스템 투자의 뜻과 실제 구조를 설명합니다. 감정 대신 규칙을 세우고, 예측보다 대응하며, MDD·현금·자산배분·백테스트·파이썬 자동매매로 이어지는 게만아의 시스템 투자 관점을 정리합니다."/>
+  <meta name="twitter:image" content="https://zacra.github.io/assets/og-default.png"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://zacra.github.io/system-investing.html#article","headline":"시스템 투자란? 감정보다 기준, 예측보다 대응하는 투자 방법 | 게만아","description":"시스템 투자의 뜻과 실제 구조를 설명합니다. 감정 대신 규칙을 세우고, 예측보다 대응하며, MDD·현금·자산배분·백테스트·파이썬 자동매매로 이어지는 게만아의 시스템 투자 관점을 정리합니다.","url":"https://zacra.github.io/system-investing.html","datePublished":"2026-08-25","dateModified":"2026-08-25","inLanguage":"ko-KR","author":{"@type":"Person","name":"게만아","alternateName":"퀀트는 게만아","url":"https://zacra.github.io/about.html"},"publisher":{"@id":"https://zacra.github.io/#organization"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://zacra.github.io/system-investing.html"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://zacra.github.io/"},{"@type":"ListItem","position":2,"name":"시스템 투자란? 감정보다 기준, 예측보다 대응하는 투자 방법","item":"https://zacra.github.io/system-investing.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"시스템 투자란 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"투자 판단을 미리 정한 규칙으로 정의하고, 같은 조건에서 같은 방식으로 반복 실행하는 투자 접근입니다. 무엇을 살지뿐 아니라 언제 위험을 줄일지, 얼마를 투자할지, 언제 다시 비중을 조정할지도 규칙에 포함할 수 있습니다."}},{"@type":"Question","name":"시스템 투자는 자동매매와 같은 뜻인가요?","acceptedAnswer":{"@type":"Answer","text":"같은 뜻은 아닙니다. 시스템 투자는 판단 규칙을 만드는 상위 개념이고 자동매매는 그 규칙의 일부 또는 전부를 코드로 반복 실행하는 방법입니다. 시스템 투자를 수동으로 실행할 수도 있고, 파이썬으로 자동화할 수도 있습니다."}},{"@type":"Question","name":"시스템 투자는 시장을 예측하지 않나요?","acceptedAnswer":{"@type":"Answer","text":"예측을 완전히 배제한다기보다 미래를 정확히 맞히는 데 의존하지 않는 방향에 가깝습니다. 현재 관찰 가능한 가격·추세·변동성·비중 등의 조건을 기준으로 미리 정한 대응을 실행합니다."}},{"@type":"Question","name":"시스템 투자에서도 손실이 날 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"그렇습니다. 규칙이 있다고 손실이 사라지는 것은 아닙니다. 시스템의 목적은 손실을 없애는 것이 아니라 감정적 판단을 줄이고, 손실과 최대낙폭을 감당 가능한 범위에서 관리하면서 같은 기준을 반복할 수 있게 만드는 데 있습니다."}}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+<header class="site-header"><nav class="nav" aria-label="주요 메뉴">
+  <a class="brand" href="/">게만아 <small>공식 가이드</small></a>
+  <div class="nav-links">
+    <a href="/investment-philosophy.html">투자 철학</a>
+    <a href="/system-guide.html">시작 가이드</a>
+    <a href="/super-moving-average.html">슈퍼 이동평균</a>
+    <a href="/package.html">패키지</a>
+    <a href="/starter.html">무료 Starter</a>
+    <a href="/faq.html">FAQ</a>
+  </div>
+</nav></header>
+<main id="main">
+  <div class="breadcrumb"><a href="/">홈</a> › 시스템 투자 핵심 개념</div>
+  <section class="hero">
+    <p class="eyebrow">시스템 투자 핵심 개념</p>
+    <h1>시스템 투자란? 감정보다 기준, 예측보다 대응하는 투자 방법</h1>
+    <p class="lead"><strong>시스템 투자</strong>는 투자 판단을 미리 정한 규칙으로 바꾸고, 같은 조건에서 같은 방식으로 반복하는 투자 접근입니다. 게만아는 여기에 <strong>수익률보다 MDD · 감정보다 기준 · 예측보다 대응</strong>이라는 원칙을 두고 전략·백테스트·위험관리·자동매매를 하나의 흐름으로 연결합니다.</p>
+  </section>
+
+  <nav class="notice" aria-label="이 페이지 목차">
+    <h2>한눈에 보기</h2>
+    <p><a href="#definition">시스템 투자의 뜻</a> · <a href="#rules">규칙이 필요한 이유</a> · <a href="#response">예측보다 대응</a> · <a href="#risk">MDD와 위험관리</a> · <a href="#allocation">자산배분과 현금</a> · <a href="#backtest">백테스트</a> · <a href="#automation">파이썬 자동매매</a> · <a href="#faq">FAQ</a></p>
+  </nav>
+
+  <section id="definition">
+    <h2>시스템 투자는 투자 판단을 ‘규칙’으로 바꾸는 방법입니다</h2>
+    <p><strong>시스템 투자</strong>는 시장을 볼 때마다 즉흥적으로 판단하기보다, 투자 조건과 위험관리 기준을 미리 정하고 같은 상황에서 같은 방식으로 반복하는 투자 접근입니다.</p>
+    <p>예를 들어 “좋아 보이면 산다”가 아니라 <strong>어떤 조건에서 매수하고, 얼마를 투자하고, 어떤 조건에서 비중을 줄이고, 언제 다시 리밸런싱할지</strong>를 숫자와 규칙으로 표현합니다. 이 규칙은 사람이 직접 실행할 수도 있고, 파이썬 코드로 자동화할 수도 있습니다.</p>
+    <div class="callout">
+      <h3>게만아가 시스템 투자를 보는 기준</h3>
+      <p><strong>수익률보다 MDD · 감정보다 기준 · 예측보다 대응</strong></p>
+      <p>높은 수익률 하나보다 실제로 계속 지킬 수 있는 규칙과 감당 가능한 손실 구조를 먼저 봅니다.</p>
+    </div>
+  </section>
+
+  <section id="rules">
+    <h2>규칙이 없으면 같은 시장에서도 판단이 계속 바뀝니다</h2>
+    <p>가격이 오를 때는 더 오를 것 같고, 떨어질 때는 더 떨어질 것 같은 감정이 생기기 쉽습니다. 시장 상황에 따라 생각이 바뀌는 것 자체가 문제라기보다, <strong>매수할 때의 기준과 손실이 났을 때의 기준이 서로 달라지는 것</strong>이 운용을 어렵게 만듭니다.</p>
+    <p>시스템 투자는 다음과 같은 질문을 사전에 답하려고 합니다.</p>
+    <ul>
+      <li>어떤 자산을 투자 대상으로 둘 것인가?</li>
+      <li>어떤 조건에서 위험자산 비중을 늘리거나 줄일 것인가?</li>
+      <li>한 자산 또는 한 전략에 얼마까지 투자할 것인가?</li>
+      <li>손실이 커질 때 어떤 행동을 할 것인가?</li>
+      <li>리밸런싱과 재평가를 얼마나 자주 할 것인가?</li>
+      <li>전략이 예상과 다르게 움직일 때 무엇을 점검할 것인가?</li>
+    </ul>
+    <p>중요한 것은 복잡한 규칙을 많이 만드는 것이 아니라 <strong>설명할 수 있고, 검증할 수 있고, 실제로 반복할 수 있는 규칙</strong>을 만드는 것입니다.</p>
+  </section>
+
+  <section id="response">
+    <h2>예측보다 대응한다는 것은 ‘미래를 맞히지 않아도 행동할 수 있게’ 만드는 것입니다</h2>
+    <p>시장은 언제든 예상과 다르게 움직일 수 있습니다. 그래서 시스템 투자에서는 “내일 오를까, 떨어질까?”보다 <strong>“이 조건이 되면 나는 무엇을 할 것인가?”</strong>를 더 중요하게 봅니다.</p>
+    <p>추세가 확인되면 위험자산을 유지하고, 추세가 약해지면 비중을 줄이는 방식도 그중 하나입니다. 항상 가장 좋은 가격에 사고팔 수는 없지만, 판단 기준을 미리 정하면 공포와 욕심이 큰 시기에도 같은 원칙을 적용하기 쉬워집니다.</p>
+    <p><a href="/investment-philosophy.html">게만아 투자 철학 자세히 보기 →</a></p>
+  </section>
+
+  <section id="risk">
+    <h2>시스템 투자에서 수익률만큼 중요한 숫자가 MDD입니다</h2>
+    <p>전략의 최종 수익률이 높아도 중간에 너무 큰 하락을 겪으면 실제 자금을 유지하기 어렵습니다. 그래서 게만아는 백테스트와 실제 운용을 볼 때 <strong>최대낙폭(MDD), 손실 구간, 회복 과정</strong>을 함께 확인합니다.</p>
+    <p>위험관리는 손실을 완전히 없애는 기술이 아닙니다. <strong>어느 정도의 손실을 감당할지 미리 정하고, 한 번의 판단 오류가 전체 계좌를 훼손하지 않도록 구조를 만드는 것</strong>에 가깝습니다.</p>
+  </section>
+
+  <section id="allocation">
+    <h2>현금과 자산배분도 시스템의 일부입니다</h2>
+    <p>시스템 투자는 늘 100% 투자 상태를 유지해야 한다는 뜻이 아닙니다. 시장 환경과 전략 조건에 따라 위험자산 비중을 낮추고 현금을 늘리는 것 역시 하나의 명시적인 행동입니다.</p>
+    <p>또 여러 자산을 함께 운용할 때는 단순히 종목을 많이 보유하는 것이 아니라 <strong>각 자산의 비중, 상관관계, 변동성, 리밸런싱 기준</strong>을 함께 생각해야 합니다. 자산배분과 추세 판단을 결합하면 시장 상황에 따라 위험 노출을 조절하는 동적 자산배분 구조로 확장할 수 있습니다.</p>
+    <p><a href="/efficient-frontier.html">효율적 투자선과 자산배분 이해하기 →</a> · <a href="/super-moving-average.html">슈퍼 이동평균 자산배분 구조 →</a></p>
+  </section>
+
+  <section id="backtest">
+    <h2>규칙을 만들었다면 과거 데이터에서 먼저 검증합니다</h2>
+    <p>시스템의 장점 중 하나는 규칙이 명확할수록 과거 데이터에서 같은 기준을 적용해볼 수 있다는 점입니다. 백테스트에서는 단순한 최종 수익률뿐 아니라 MDD, 거래 횟수, 비용, 파라미터 민감도, 여러 장세에서의 행동을 함께 확인합니다.</p>
+    <p>다만 백테스트는 미래를 보장하지 않습니다. 데이터 선택, 미래참조, 과최적화, 체결 가정에 따라 결과가 크게 달라질 수 있으므로 <strong>백테스트 → 작은 실제 운용 → 장기 관찰</strong>을 이어서 보는 편이 현실적입니다.</p>
+    <p><a href="/backtest.html">파이썬 백테스트 체크리스트 →</a></p>
+  </section>
+
+  <section id="automation">
+    <h2>파이썬 자동매매는 시스템 투자를 반복 실행하는 도구입니다</h2>
+    <p>시스템 투자와 자동매매는 같은 말은 아닙니다. 시스템 투자가 <strong>판단 기준을 만드는 일</strong>이라면, 파이썬 자동매매는 그 기준을 데이터·API·주문·서버와 연결해 반복 실행하는 방법입니다.</p>
+    <p>게만아의 자동매매 구조는 화려한 UI 프로그램을 계속 켜놓는 방식보다 서버에서 정해진 시간마다 파이썬 코드를 실행하고, 전략 조건에 따라 주문·리밸런싱을 수행하며 결과를 확인하는 형태에 가깝습니다.</p>
+    <p><a class="btn primary" href="/python-auto-trading.html">파이썬 자동매매 전체 구조 보기</a></p>
+  </section>
+
+  <section>
+    <h2>시스템 투자라고 해서 모두 같은 전략을 쓰는 것은 아닙니다</h2>
+    <p>시스템 투자라는 큰 틀 안에는 추세추종, 모멘텀, 자산배분, 평균회귀, 분할매매 등 서로 다른 방법이 존재할 수 있습니다. 핵심은 특정 전략 이름이 아니라 <strong>조건을 정의하고 → 검증하고 → 위험을 관리하고 → 반복 실행할 수 있는가</strong>입니다.</p>
+    <p>게만아는 개인적으로 추세추종과 자산배분, MDD 관리를 중요하게 보지만 다른 알려진 전략도 코드로 구현하고 검증할 수 있는 대상으로 봅니다.</p>
+  </section>
+
+  <section id="faq">
+    <h2>시스템 투자 자주 묻는 질문</h2>
+    <h3>시스템 투자란 무엇인가요?</h3>
+    <p>투자 판단을 미리 정한 규칙으로 정의하고, 같은 조건에서 같은 방식으로 반복 실행하는 투자 접근입니다. 종목 선택뿐 아니라 비중, 위험관리, 리밸런싱 기준까지 시스템에 포함할 수 있습니다.</p>
+    <h3>시스템 투자는 자동매매와 같은 뜻인가요?</h3>
+    <p>같은 뜻은 아닙니다. 시스템 투자는 판단 규칙을 만드는 상위 개념이고 자동매매는 그 규칙을 코드로 실행하는 방법 중 하나입니다.</p>
+    <h3>시스템 투자는 시장을 예측하지 않나요?</h3>
+    <p>미래를 정확히 맞히는 데 의존하지 않고 현재 확인 가능한 조건에 따라 행동 기준을 미리 정하는 쪽에 가깝습니다.</p>
+    <h3>시스템 투자에서도 손실이 날 수 있나요?</h3>
+    <p>그렇습니다. 손실을 제거하는 방법이 아니라 손실 가능성을 전제로 기준과 위험관리 구조를 만드는 접근입니다.</p>
+  </section>
+
+  <section class="notice">
+    <h2>관련 공식 문서</h2>
+    <p><a href="/python-auto-trading.html">파이썬 자동매매</a> · <a href="/investment-philosophy.html">투자 철학</a> · <a href="/backtest.html">백테스트</a> · <a href="/efficient-frontier.html">효율적 투자선</a> · <a href="/super-moving-average.html">슈퍼 이동평균</a></p>
+  </section>
+
+  <p class="updated">문서 업데이트: 2026-08-25</p>
+</main>
+<footer class="site-footer"><div class="footer-inner">
+  <p><strong>게만아</strong> · 주식·ETF·코인 파이썬 자동매매·백테스트·API 공식 가이드</p>
+  <p>교육·기술 정보 제공 목적이며 특정 금융상품의 추천 또는 수익 보장이 아닙니다. 백테스트와 과거 운용 결과는 미래 성과를 보장하지 않습니다.</p>
+  <p>자밥스튜디오(게만아)는 금융투자업자가 아닌 <strong>유사투자자문업자로 신고·운영 중</strong>이며, 개별 투자상담·계좌·자금 운용을 제공하지 않습니다. <a href="/about.html#compliance">운영 원칙 자세히 보기 →</a></p>
+  <p><a href="/about.html">게만아 소개</a> · <a href="https://blog.naver.com/zacra" target="_blank" rel="noopener noreferrer">네이버 블로그</a> · <a href="https://cafe.naver.com/pythonautogma" target="_blank" rel="noopener noreferrer">카페(Q&amp;A·업데이트)</a> · <a href="https://www.youtube.com/@게만아" target="_blank" rel="noopener noreferrer">YouTube</a> · <a href="/sources.html">공식 출처</a> · <a href="/faq.html">FAQ</a></p>
+</div></footer>
+</body>
+</html>
