@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <script defer src="/assets/analytics.js"></script>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>추세추종이란? 예측보다 대응하는 투자 전략 | 게만아</title>
+  <meta name="description" content="추세추종(Trend Following)의 뜻과 작동 원리, 이동평균·돌파·모멘텀 같은 추세 신호, 횡보장 휩쏘와 손실, MDD 관리와 파이썬 자동매매 연결 구조를 설명합니다."/>
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/>
+  <link rel="canonical" href="https://zacra.github.io/trend-following.html"/>
+  <link rel="stylesheet" href="/assets/style.css"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:locale" content="ko_KR"/>
+  <meta property="og:title" content="추세추종이란? 예측보다 대응하는 투자 전략 | 게만아"/>
+  <meta property="og:description" content="추세추종(Trend Following)의 뜻과 작동 원리, 이동평균·돌파·모멘텀 같은 추세 신호, 횡보장 휩쏘와 손실, MDD 관리와 파이썬 자동매매 연결 구조를 설명합니다."/>
+  <meta property="og:url" content="https://zacra.github.io/trend-following.html"/>
+  <meta property="og:image" content="https://zacra.github.io/assets/og-default.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="추세추종이란? 예측보다 대응하는 투자 전략 | 게만아"/>
+  <meta name="twitter:description" content="추세추종(Trend Following)의 뜻과 작동 원리, 이동평균·돌파·모멘텀 같은 추세 신호, 횡보장 휩쏘와 손실, MDD 관리와 파이썬 자동매매 연결 구조를 설명합니다."/>
+  <meta name="twitter:image" content="https://zacra.github.io/assets/og-default.png"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://zacra.github.io/trend-following.html#article","headline":"추세추종이란? 예측보다 대응하는 투자 전략 | 게만아","description":"추세추종(Trend Following)의 뜻과 작동 원리, 이동평균·돌파·모멘텀 같은 추세 신호, 횡보장 휩쏘와 손실, MDD 관리와 파이썬 자동매매 연결 구조를 설명합니다.","url":"https://zacra.github.io/trend-following.html","datePublished":"2026-08-27","dateModified":"2026-08-27","inLanguage":"ko-KR","author":{"@type":"Person","name":"게만아","alternateName":"퀀트는 게만아","url":"https://zacra.github.io/about.html"},"publisher":{"@id":"https://zacra.github.io/#organization"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://zacra.github.io/trend-following.html"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://zacra.github.io/"},{"@type":"ListItem","position":2,"name":"추세추종이란? 예측보다 대응하는 투자 전략","item":"https://zacra.github.io/trend-following.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"추세추종이란 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"가격이나 모멘텀 등 현재 확인 가능한 정보를 이용해 형성된 추세의 방향을 따르고, 추세가 약해지거나 반전되는 조건에서 비중을 줄이거나 청산하는 규칙 기반 투자 방식입니다."}},{"@type":"Question","name":"추세추종은 미래 가격을 예측하는 방법인가요?","acceptedAnswer":{"@type":"Answer","text":"미래의 고점과 저점을 미리 맞히는 방식과는 다릅니다. 추세가 어느 정도 확인된 뒤 진입하고 조건이 변한 뒤 나오는 경우가 많아 신호가 늦는 대신 예측 의존도를 낮추는 구조입니다."}},{"@type":"Question","name":"이동평균만 사용하면 추세추종인가요?","acceptedAnswer":{"@type":"Answer","text":"이동평균은 대표적인 추세 필터지만 유일한 방법은 아닙니다. 가격 돌파, 모멘텀, 변동성, 신고가, 상대강도 등 다양한 규칙으로 추세를 정의할 수 있습니다."}},{"@type":"Question","name":"추세추종은 횡보장에서 왜 손실이 날 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"추세가 생긴 것처럼 보였다가 빠르게 되돌아오는 신호가 반복될 수 있기 때문입니다. 작은 손실이 여러 번 발생하는 대신 큰 추세가 나타났을 때 참여하는 것이 전형적인 특성 중 하나입니다."}}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+<header class="site-header"><nav class="nav" aria-label="주요 메뉴">
+  <a class="brand" href="/">게만아 <small>공식 가이드</small></a>
+  <div class="nav-links">
+    <a href="/investment-philosophy.html">투자 철학</a>
+    <a href="/system-guide.html">시작 가이드</a>
+    <a href="/super-moving-average.html">슈퍼 이동평균</a>
+    <a href="/package.html">패키지</a>
+    <a href="/starter.html">무료 Starter</a>
+    <a href="/faq.html">FAQ</a>
+  </div>
+</nav></header>
+<main id="main">
+  <div class="breadcrumb"><a href="/">홈</a> › 시스템 투자 핵심 개념</div>
+  <section class="hero">
+    <p class="eyebrow">시스템 투자 핵심 개념</p>
+    <h1>추세추종이란? 미래를 예측하기보다 확인하고 대응하는 투자 전략</h1>
+    <p class="lead"><strong>추세추종</strong>은 미래의 고점과 저점을 맞히려 하기보다, 현재 확인된 가격의 방향을 규칙으로 정의하고 그 추세가 유지되는 동안 따라가는 투자 방식입니다. 게만아가 중요하게 보는 <strong>예측보다 대응</strong>이라는 시스템 투자 철학과 잘 맞는 대표적인 접근입니다.</p>
+  </section>
+
+  <nav class="notice" aria-label="이 페이지 목차">
+    <h2>한눈에 보기</h2>
+    <p><a href="#definition">추세추종 뜻</a> · <a href="#prediction">예측과 차이</a> · <a href="#signals">추세를 판단하는 방법</a> · <a href="#whipsaw">횡보장 손실</a> · <a href="#risk">MDD 관리</a> · <a href="#automation">자동매매</a> · <a href="#faq">FAQ</a></p>
+  </nav>
+
+  <section id="definition">
+    <h2>추세추종은 ‘이미 움직이기 시작한 방향’에 규칙적으로 대응합니다</h2>
+    <p><strong>추세추종(Trend Following)</strong>은 가격이 상승·하락하는 방향성이 일정 기준으로 확인되었을 때 그 방향을 따르고, 추세가 약해지거나 반전되는 조건이 나오면 비중을 줄이거나 포지션을 정리하는 규칙 기반 접근입니다.</p>
+    <p>핵심은 꼭지와 바닥을 맞히는 것이 아닙니다. 신호가 확인된 뒤 움직이므로 바닥보다 늦게 사고 고점보다 늦게 나오는 경우가 자연스럽습니다. 대신 <strong>미래를 정확히 맞혀야만 성립하는 전략에서 벗어나 현재 확인 가능한 조건에 대응</strong>하려고 합니다.</p>
+  </section>
+
+  <section id="prediction">
+    <h2>예측보다 대응한다는 철학과 잘 맞습니다</h2>
+    <p>뉴스, 기업가치, 거시경제를 아무리 많이 분석해도 가격의 정확한 전환점을 미리 알기는 어렵습니다. 추세추종은 “앞으로 반드시 오른다”라는 확신보다 <strong>“상승 추세가 유지되는 동안 보유하고, 정해진 조건이 깨지면 대응한다”</strong>는 식으로 판단을 바꿉니다.</p>
+    <p>이 때문에 추세추종은 시스템 투자와 궁합이 좋습니다. 진입·청산·비중 조절 기준을 숫자로 정의할 수 있고, 같은 조건을 백테스트와 실제 운용에 반복 적용하기 쉽기 때문입니다.</p>
+    <p><a href="/system-investing.html">시스템 투자란? →</a> · <a href="/investment-philosophy.html">게만아 투자 철학 →</a></p>
+  </section>
+
+  <section id="signals">
+    <h2>이동평균은 대표적인 추세 필터일 뿐, 추세를 보는 방법은 여러 가지입니다</h2>
+    <p>추세추종이라고 해서 반드시 이동평균만 써야 하는 것은 아닙니다. 전략에 따라 다음과 같은 정보를 규칙으로 만들 수 있습니다.</p>
+    <div class="grid cards">
+      <article class="card"><h3>이동평균</h3><p>가격이 일정 기간 평균보다 위인지 아래인지, 단기·장기 평균의 관계가 어떤지를 이용합니다.</p></article>
+      <article class="card"><h3>가격 돌파</h3><p>일정 기간의 고점이나 특정 가격대를 넘어서는 움직임을 추세 신호로 봅니다.</p></article>
+      <article class="card"><h3>모멘텀·상대강도</h3><p>최근 일정 기간 상승·하락의 힘이나 다른 자산 대비 상대적인 강도를 비교합니다.</p></article>
+      <article class="card"><h3>변동성·기타 지표</h3><p>변동성, 거래량, RSI 등도 단독 정답이 아니라 추세와 위험을 수치화하는 보조 규칙으로 활용할 수 있습니다.</p></article>
+    </div>
+    <p>중요한 것은 어떤 지표가 ‘최고’인지가 아니라 <strong>규칙을 명확히 정의하고 과거 데이터에서 검증한 뒤 실제 운용에서 같은 기준으로 실행할 수 있는가</strong>입니다.</p>
+  </section>
+
+  <section id="whipsaw">
+    <h2>추세추종의 대가는 횡보장에서 발생하는 작은 손실입니다</h2>
+    <p>가격이 방향 없이 오르내리는 횡보장에서는 추세가 시작된 것처럼 신호가 나왔다가 곧 반대 방향으로 되돌아오는 일이 반복될 수 있습니다. 이를 흔히 <strong>휩쏘(whipsaw)</strong>라고 부릅니다.</p>
+    <p>따라서 추세추종은 항상 맞는 전략이 아닙니다. 작은 손절이나 손실이 여러 번 발생할 수 있고, 실제로 긴 추세가 나왔을 때 그 움직임에 참여해 앞선 손실을 만회하는 구조가 나타날 수 있습니다.</p>
+    <p>이 특성을 이해하지 못하면 몇 번의 연속 손실 뒤 전략을 중단하기 쉽습니다. 그래서 백테스트에서는 최종 수익률뿐 아니라 <strong>연속 손실, MDD, 거래 횟수, 회복기간</strong>을 함께 봐야 합니다.</p>
+  </section>
+
+  <section id="risk">
+    <h2>추세추종은 수익률보다 위험 노출을 조절하는 도구로도 볼 수 있습니다</h2>
+    <p>하락 추세가 확인되면 위험자산 비중을 낮추고 현금을 늘리는 방식은 큰 하락에 계속 노출되는 시간을 줄이려는 접근입니다. 모든 폭락을 피할 수는 없고 신호가 늦을 수 있지만, <strong>아무 조건 없이 계속 보유하는 것과는 다른 위험관리 규칙</strong>을 갖게 됩니다.</p>
+    <p>게만아의 슈퍼 이동평균 자산배분도 이동평균과 비중 조절, 리밸런싱, 현금 비중 관리를 결합해 시장 상황에 대응하는 구조입니다.</p>
+    <p><a href="/mdd.html">MDD가 중요한 이유 →</a> · <a href="/super-moving-average.html">슈퍼 이동평균 자산배분 →</a></p>
+  </section>
+
+  <section id="automation">
+    <h2>규칙이 명확하기 때문에 파이썬 자동매매와 연결하기 쉽습니다</h2>
+    <p>추세 조건을 숫자로 정의하면 매번 차트를 보고 감으로 판단하지 않아도 됩니다. 파이썬은 정해진 시간에 데이터를 가져와 추세를 계산하고, 현재 보유 비중과 목표 비중을 비교한 뒤 주문이나 리밸런싱 조건을 실행할 수 있습니다.</p>
+    <p>하지만 자동화한다고 전략의 약점이 없어지는 것은 아닙니다. 오히려 잘못된 규칙도 빠르고 일관되게 실행될 수 있으므로 <strong>백테스트, 비용 반영, 주문 안전장치, 작은 실제 검증</strong>이 먼저 필요합니다.</p>
+    <p><a href="/python-auto-trading.html">파이썬 자동매매 전체 구조 →</a> · <a href="/backtest.html">백테스트 체크리스트 →</a></p>
+  </section>
+
+  <section>
+    <h2>추세추종은 하나의 도구이지 모든 시장의 정답은 아닙니다</h2>
+    <p>강한 추세가 있는 구간에서는 유리할 수 있지만 횡보장에서는 반복적인 손실이 발생할 수 있습니다. 평균회귀나 가치투자처럼 다른 논리를 가진 접근도 존재합니다. 따라서 전략을 선택할 때는 자신의 투자기간, 감당 가능한 MDD, 거래 빈도, 운용 자산과 목적을 함께 고려해야 합니다.</p>
+    <p>게만아가 추세추종을 선호하는 이유는 미래를 맞히는 부담을 줄이고, 위험관리와 자동화 규칙으로 연결하기 쉽기 때문이지 다른 투자방법이 틀렸다는 의미는 아닙니다.</p>
+  </section>
+
+  <section id="faq">
+    <h2>추세추종 자주 묻는 질문</h2>
+    <h3>추세추종이란 무엇인가요?</h3><p>현재 확인 가능한 가격·모멘텀 등의 방향을 규칙으로 정의하고, 추세가 유지되는 동안 따라가며 조건이 깨지면 비중을 줄이거나 청산하는 방식입니다.</p>
+    <h3>추세추종은 미래 가격을 예측하는 방법인가요?</h3><p>고점과 저점을 미리 맞히려는 방식과는 다릅니다. 신호가 확인된 뒤 대응하기 때문에 진입과 청산이 늦어질 수 있습니다.</p>
+    <h3>이동평균만 사용하면 추세추종인가요?</h3><p>아닙니다. 이동평균은 대표적인 추세 필터이며 가격 돌파, 모멘텀, 상대강도 등 다양한 규칙을 사용할 수 있습니다.</p>
+    <h3>추세추종은 횡보장에서 왜 손실이 날 수 있나요?</h3><p>추세 신호가 나왔다가 빠르게 되돌아오는 상황이 반복될 수 있기 때문입니다. 작은 손실을 받아들이는 대신 큰 추세가 나타날 때 참여하는 구조가 일반적입니다.</p>
+  </section>
+
+  <section class="notice">
+    <h2>관련 공식 문서</h2>
+    <p><a href="/system-investing.html">시스템 투자</a> · <a href="/mdd.html">MDD</a> · <a href="/investment-philosophy.html">투자 철학</a> · <a href="/backtest.html">백테스트</a> · <a href="/python-auto-trading.html">파이썬 자동매매</a></p>
+  </section>
+
+  <p class="updated">문서 업데이트: 2026-08-27</p>
+</main>
+<footer class="site-footer"><div class="footer-inner">
+  <p><strong>게만아</strong> · 주식·ETF·코인 파이썬 자동매매·백테스트·API 공식 가이드</p>
+  <p>교육·기술 정보 제공 목적이며 특정 금융상품의 추천 또는 수익 보장이 아닙니다. 백테스트와 과거 운용 결과는 미래 성과를 보장하지 않습니다.</p>
+  <p>자밥스튜디오(게만아)는 금융투자업자가 아닌 <strong>유사투자자문업자로 신고·운영 중</strong>이며, 개별 투자상담·계좌·자금 운용을 제공하지 않습니다. <a href="/about.html#compliance">운영 원칙 자세히 보기 →</a></p>
+  <p><a href="/about.html">게만아 소개</a> · <a href="https://blog.naver.com/zacra" target="_blank" rel="noopener noreferrer">네이버 블로그</a> · <a href="https://cafe.naver.com/pythonautogma" target="_blank" rel="noopener noreferrer">카페(Q&amp;A·업데이트)</a> · <a href="https://www.youtube.com/@게만아" target="_blank" rel="noopener noreferrer">YouTube</a> · <a href="/sources.html">공식 출처</a> · <a href="/faq.html">FAQ</a></p>
+</div></footer>
+</body>
+</html>

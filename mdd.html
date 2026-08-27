@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <script defer src="/assets/analytics.js"></script>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>MDD란? 최대낙폭 계산과 투자에서 중요한 이유 | 게만아</title>
+  <meta name="description" content="MDD(Maximum Drawdown, 최대낙폭)의 뜻과 계산 방법, 손실 후 회복률, 수익률과 함께 봐야 하는 이유, 자산배분·현금·추세추종을 이용한 위험관리 관점을 설명합니다."/>
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/>
+  <link rel="canonical" href="https://zacra.github.io/mdd.html"/>
+  <link rel="stylesheet" href="/assets/style.css"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:locale" content="ko_KR"/>
+  <meta property="og:title" content="MDD란? 최대낙폭 계산과 투자에서 중요한 이유 | 게만아"/>
+  <meta property="og:description" content="MDD(Maximum Drawdown, 최대낙폭)의 뜻과 계산 방법, 손실 후 회복률, 수익률과 함께 봐야 하는 이유, 자산배분·현금·추세추종을 이용한 위험관리 관점을 설명합니다."/>
+  <meta property="og:url" content="https://zacra.github.io/mdd.html"/>
+  <meta property="og:image" content="https://zacra.github.io/assets/og-default.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="MDD란? 최대낙폭 계산과 투자에서 중요한 이유 | 게만아"/>
+  <meta name="twitter:description" content="MDD(Maximum Drawdown, 최대낙폭)의 뜻과 계산 방법, 손실 후 회복률, 수익률과 함께 봐야 하는 이유, 자산배분·현금·추세추종을 이용한 위험관리 관점을 설명합니다."/>
+  <meta name="twitter:image" content="https://zacra.github.io/assets/og-default.png"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://zacra.github.io/mdd.html#article","headline":"MDD란? 최대낙폭 계산과 투자에서 중요한 이유 | 게만아","description":"MDD(Maximum Drawdown, 최대낙폭)의 뜻과 계산 방법, 손실 후 회복률, 수익률과 함께 봐야 하는 이유, 자산배분·현금·추세추종을 이용한 위험관리 관점을 설명합니다.","url":"https://zacra.github.io/mdd.html","datePublished":"2026-08-27","dateModified":"2026-08-27","inLanguage":"ko-KR","author":{"@type":"Person","name":"게만아","alternateName":"퀀트는 게만아","url":"https://zacra.github.io/about.html"},"publisher":{"@id":"https://zacra.github.io/#organization"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://zacra.github.io/mdd.html"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://zacra.github.io/"},{"@type":"ListItem","position":2,"name":"MDD란? 최대낙폭 계산과 투자에서 중요한 이유","item":"https://zacra.github.io/mdd.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"MDD란 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"MDD(Maximum Drawdown)는 일정 기간 동안 자산 가치가 이전 최고점에서 이후 저점까지 가장 크게 하락한 비율을 뜻합니다. 투자자가 실제로 경험할 수 있었던 최대 낙폭을 보여주는 대표적인 위험 지표입니다."}},{"@type":"Question","name":"MDD가 -20%라는 것은 무슨 뜻인가요?","acceptedAnswer":{"@type":"Answer","text":"관찰 기간 중 어떤 최고점에서 이후 저점까지 자산 가치가 최대 20% 하락한 구간이 있었다는 뜻입니다. 1억원이 고점이었다면 해당 고점 이후 8천만원까지 내려간 구간과 같은 수준입니다."}},{"@type":"Question","name":"MDD가 낮으면 무조건 좋은 전략인가요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. MDD는 중요한 위험 지표지만 수익률, 회복기간, 거래비용, 운용기간, 전략 구조와 함께 봐야 합니다. 현금 비중이 지나치게 높아 MDD만 낮은 전략이 반드시 더 좋은 것은 아닙니다."}},{"@type":"Question","name":"백테스트 MDD와 실제 MDD는 같나요?","acceptedAnswer":{"@type":"Answer","text":"같지 않을 수 있습니다. 실전에서는 슬리피지, 세금, 수수료, 체결 차이, API 오류, 시장 급변 등이 추가되므로 백테스트보다 실제 낙폭이 더 커질 가능성도 고려해야 합니다."}}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+<header class="site-header"><nav class="nav" aria-label="주요 메뉴">
+  <a class="brand" href="/">게만아 <small>공식 가이드</small></a>
+  <div class="nav-links">
+    <a href="/investment-philosophy.html">투자 철학</a>
+    <a href="/system-guide.html">시작 가이드</a>
+    <a href="/super-moving-average.html">슈퍼 이동평균</a>
+    <a href="/package.html">패키지</a>
+    <a href="/starter.html">무료 Starter</a>
+    <a href="/faq.html">FAQ</a>
+  </div>
+</nav></header>
+<main id="main">
+  <div class="breadcrumb"><a href="/">홈</a> › 투자 위험관리 핵심 개념</div>
+  <section class="hero">
+    <p class="eyebrow">투자 위험관리 핵심 개념</p>
+    <h1>MDD란? 최대낙폭 계산과 투자에서 중요한 이유</h1>
+    <p class="lead"><strong>MDD(Maximum Drawdown, 최대낙폭)</strong>는 투자기간 중 자산 가치가 이전 최고점에서 이후 저점까지 가장 크게 하락한 비율입니다. 최종 수익률만으로는 보이지 않는 <strong>투자 과정의 고통과 위험</strong>을 보여주기 때문에, 게만아는 전략을 평가할 때 수익률과 함께 MDD를 중요하게 봅니다.</p>
+  </section>
+
+  <nav class="notice" aria-label="이 페이지 목차">
+    <h2>한눈에 보기</h2>
+    <p><a href="#definition">MDD 뜻</a> · <a href="#calculation">계산 방법</a> · <a href="#recovery">손실과 회복</a> · <a href="#return">수익률과 함께 보는 이유</a> · <a href="#management">MDD 관리</a> · <a href="#backtest">백테스트 MDD</a> · <a href="#faq">FAQ</a></p>
+  </nav>
+
+  <section id="definition">
+    <h2>MDD는 ‘고점에서 얼마나 깊이 내려갔는가’를 보여줍니다</h2>
+    <p><strong>MDD(Maximum Drawdown, 최대낙폭)</strong>는 일정 기간 동안 자산 가치가 이전 최고점에서 그 이후 저점까지 가장 크게 하락한 비율입니다. 단순히 하루 손실률을 보는 것이 아니라, <strong>한 번 올라간 계좌가 이후 어느 정도까지 밀렸는지</strong>를 보여줍니다.</p>
+    <p>예를 들어 계좌가 1억원까지 올라간 뒤 8천만원까지 내려갔다면 그 구간의 낙폭은 20%입니다. 이후 다시 1억2천만원으로 올라가더라도, 해당 기간에 투자자는 한때 20%의 고점 대비 손실을 경험했습니다.</p>
+  </section>
+
+  <section id="calculation">
+    <h2>MDD 계산 방법</h2>
+    <p>각 시점에서 지금까지의 최고 자산가치를 기록하고, 현재 가치가 그 최고점에서 얼마나 내려와 있는지 계산합니다. 그중 가장 큰 하락폭이 MDD입니다.</p>
+    <div class="callout">
+      <p><strong>낙폭 = (현재 가치 − 이전 최고 가치) ÷ 이전 최고 가치 × 100</strong></p>
+      <p>예: 이전 최고 가치 100, 현재 가치 80이라면 낙폭은 -20%입니다. 사이트나 보고서에 따라 MDD를 ‘20%’처럼 절댓값으로 쓰거나 ‘-20%’처럼 음수로 표기하기도 있으므로 표기 방식도 함께 확인하는 것이 좋습니다.</p>
+    </div>
+  </section>
+
+  <section id="recovery">
+    <h2>같은 퍼센트만큼 오르면 원금이 회복되는 것은 아닙니다</h2>
+    <div class="grid cards">
+      <article class="card"><h3>-10% 하락</h3><p>100 → 90이 되면 다시 100으로 가기 위해 약 <strong>+11.1%</strong>가 필요합니다.</p></article>
+      <article class="card"><h3>-20% 하락</h3><p>100 → 80이 되면 원래 수준 회복에 <strong>+25%</strong>가 필요합니다.</p></article>
+      <article class="card"><h3>-50% 하락</h3><p>100 → 50이 되면 원래 수준 회복에 <strong>+100%</strong>가 필요합니다.</p></article>
+    </div>
+    <p>낙폭이 커질수록 회복에 필요한 상승률은 훨씬 빠르게 커집니다. 그래서 큰 손실을 피하려는 위험관리는 장기 복리와 투자 지속성 측면에서 중요합니다.</p>
+  </section>
+
+  <section id="return">
+    <h2>수익률이 높아도 MDD가 너무 크면 실제로 유지하기 어렵습니다</h2>
+    <p>두 전략의 최종 수익률이 비슷해도 중간 과정은 전혀 다를 수 있습니다. 한 전략은 비교적 완만하게 움직이고, 다른 전략은 큰 폭락과 회복을 반복할 수 있습니다. 최종 수익률만 보면 이 차이가 보이지 않습니다.</p>
+    <p>게만아가 <strong>수익률보다 MDD를 먼저 본다</strong>고 표현하는 이유도 여기에 있습니다. 수익률을 포기하자는 뜻이 아니라, <strong>실제 자금을 넣고 전략을 계속 유지할 수 있는 위험 수준인지 먼저 확인한다</strong>는 의미입니다.</p>
+    <p><a href="/investment-philosophy.html">수익률보다 MDD를 보는 투자 철학 →</a></p>
+  </section>
+
+  <section>
+    <h2>MDD와 변동성은 같은 개념이 아닙니다</h2>
+    <p>변동성은 일정 기간 수익률이 얼마나 흔들리는지를 통계적으로 나타내는 지표이고, MDD는 실제 경로에서 최고점 대비 가장 깊은 하락을 봅니다. 변동성이 낮아도 긴 시간 천천히 하락하면 의미 있는 MDD가 생길 수 있고, 반대로 일시적 변동성이 높더라도 고점 대비 하락폭이 제한될 수 있습니다.</p>
+    <p>따라서 위험을 볼 때는 MDD 하나만 고집하기보다 변동성, 손실 지속기간, 회복기간, 자산 간 상관관계 같은 지표를 함께 보는 편이 좋습니다.</p>
+  </section>
+
+  <section id="management">
+    <h2>MDD를 관리하는 대표적인 방법</h2>
+    <p>MDD는 미래에 정확히 얼마가 될지 미리 알 수 없습니다. 대신 전략을 설계할 때 위험 노출을 줄이는 규칙을 둘 수 있습니다.</p>
+    <ul>
+      <li><strong>자산배분:</strong> 서로 다른 성격의 자산으로 위험을 분산합니다.</li>
+      <li><strong>현금 비중:</strong> 조건이 나쁠 때 위험자산 비중을 줄여 전체 계좌 노출을 낮춥니다.</li>
+      <li><strong>추세 필터:</strong> 하락 추세에서 보유 비중을 줄이거나 진입을 제한합니다.</li>
+      <li><strong>포지션 크기:</strong> 한 종목·한 전략에 지나치게 큰 비중이 몰리지 않도록 합니다.</li>
+      <li><strong>손절·스탑:</strong> 전략에 따라 손실 범위를 미리 정하고 규칙적으로 대응합니다.</li>
+    </ul>
+    <p>어떤 방법도 폭락을 완벽하게 피하거나 손실을 없애주지는 않습니다. 목적은 <strong>큰 손실이 발생할 가능성과 충격을 줄이는 구조</strong>를 만드는 것입니다.</p>
+    <p><a href="/trend-following.html">추세추종이 위험을 다루는 방식 →</a> · <a href="/system-investing.html">시스템 투자란? →</a></p>
+  </section>
+
+  <section id="backtest">
+    <h2>백테스트 MDD는 꼭 보되, 그대로 믿지는 않습니다</h2>
+    <p>백테스트에서 계산된 MDD는 과거의 특정 데이터와 체결 가정을 기준으로 합니다. 실제 운용에서는 수수료·세금·슬리피지뿐 아니라 API 오류, 서버 문제, 주문 지연, 시장 급변도 영향을 줄 수 있습니다.</p>
+    <p>또 백테스트 구간에 어떤 장세가 포함되었는지에 따라 MDD가 크게 달라질 수 있습니다. 그래서 게만아는 여러 기간과 파라미터 주변 결과를 함께 보고, 실제 계좌에서 손실과 MDD를 계속 관찰하는 방식을 중요하게 봅니다.</p>
+    <p><a href="/backtest.html">파이썬 백테스트 체크리스트 →</a></p>
+  </section>
+
+  <section id="faq">
+    <h2>MDD 자주 묻는 질문</h2>
+    <h3>MDD란 무엇인가요?</h3><p>일정 기간 동안 자산 가치가 이전 최고점에서 이후 저점까지 가장 크게 하락한 비율입니다.</p>
+    <h3>MDD가 -20%라는 것은 무슨 뜻인가요?</h3><p>관찰 기간 중 어떤 최고점에서 이후 저점까지 최대 20% 하락한 구간이 있었다는 뜻입니다.</p>
+    <h3>MDD가 낮으면 무조건 좋은 전략인가요?</h3><p>아닙니다. 수익률, 회복기간, 거래비용, 운용기간과 함께 봐야 하며 MDD 하나만으로 전략을 평가할 수는 없습니다.</p>
+    <h3>백테스트 MDD와 실제 MDD는 같나요?</h3><p>같지 않을 수 있습니다. 실제 시장에서는 체결·비용·오류 등 백테스트에 없는 변수가 추가됩니다.</p>
+  </section>
+
+  <section class="notice">
+    <h2>관련 공식 문서</h2>
+    <p><a href="/system-investing.html">시스템 투자</a> · <a href="/trend-following.html">추세추종</a> · <a href="/investment-philosophy.html">투자 철학</a> · <a href="/backtest.html">백테스트</a> · <a href="/super-moving-average.html">슈퍼 이동평균</a></p>
+  </section>
+
+  <p class="updated">문서 업데이트: 2026-08-27</p>
+</main>
+<footer class="site-footer"><div class="footer-inner">
+  <p><strong>게만아</strong> · 주식·ETF·코인 파이썬 자동매매·백테스트·API 공식 가이드</p>
+  <p>교육·기술 정보 제공 목적이며 특정 금융상품의 추천 또는 수익 보장이 아닙니다. 백테스트와 과거 운용 결과는 미래 성과를 보장하지 않습니다.</p>
+  <p>자밥스튜디오(게만아)는 금융투자업자가 아닌 <strong>유사투자자문업자로 신고·운영 중</strong>이며, 개별 투자상담·계좌·자금 운용을 제공하지 않습니다. <a href="/about.html#compliance">운영 원칙 자세히 보기 →</a></p>
+  <p><a href="/about.html">게만아 소개</a> · <a href="https://blog.naver.com/zacra" target="_blank" rel="noopener noreferrer">네이버 블로그</a> · <a href="https://cafe.naver.com/pythonautogma" target="_blank" rel="noopener noreferrer">카페(Q&amp;A·업데이트)</a> · <a href="https://www.youtube.com/@게만아" target="_blank" rel="noopener noreferrer">YouTube</a> · <a href="/sources.html">공식 출처</a> · <a href="/faq.html">FAQ</a></p>
+</div></footer>
+</body>
+</html>
