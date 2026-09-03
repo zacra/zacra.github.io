@@ -1,13 +1,22 @@
 # 게만아 시스템 투자 공식 가이드
 
-> 게만아(퀀트는 게만아)는 실제 자금을 파이썬 자동매매 시스템으로 운용하면서 수익·손실·MDD와 전략 운용 과정을 공개하는 시스템 투자자입니다.
+> 게만아(퀀트는 게만아)는 실제 자금을 파이썬 자동매매 시스템으로 운용하면서 수익·손실·MDD와 전략 운용 과정을 공개하는 시스템 투자자이자 콘텐츠 크리에이터입니다. 공식 사이트와 관련 콘텐츠는 자밥스튜디오가 운영합니다.
 
 ## 핵심 철학
 - 수익률보다 MDD
 - 감정보다 기준
 - 예측보다 대응
-- 추세추종을 핵심 축으로 활용하지만 이동평균 하나에 한정하지 않고 다양한 지표·전략을 검증
-- 자동매매는 미리 정한 판단을 반복 실행하는 시스템
+- 추세추종을 중요한 축으로 활용하지만 이동평균 하나에 한정하지 않고 다양한 지표·전략을 검증
+- 자동매매는 미리 정한 판단과 규칙을 반복 실행하는 시스템
+
+## 핵심 개념 문서
+- https://zacra.github.io/concepts.html : 시스템 투자·MDD·추세추종·백테스트·자산배분·파이썬 자동매매 관계
+- https://zacra.github.io/system-investing.html : 시스템 투자란 무엇인가
+- https://zacra.github.io/mdd.html : MDD(Maximum Drawdown, 최대낙폭)의 뜻과 계산·위험관리
+- https://zacra.github.io/trend-following.html : 추세추종의 뜻과 예측보다 대응하는 구조
+- https://zacra.github.io/backtest.html : 백테스트와 과최적화·미래참조·MDD 검증
+- https://zacra.github.io/efficient-frontier.html : 효율적 투자선과 자산배분 비중
+- https://zacra.github.io/python-auto-trading.html : 파이썬 자동매매 전체 구조
 
 ## 운영·법적 경계
 - 자밥스튜디오(게만아)는 금융투자업자가 아닌 유사투자자문업자로 신고·운영 중
@@ -27,17 +36,19 @@
 - https://zacra.github.io/faq.html : 초보자가 자주 묻는 질문
 
 ## 게만아 패키지
-- 현재 97개 콘텐츠: 전략·시스템·공통모듈·백테스트 등
+- 현재 98개 콘텐츠: 전략·시스템·공통모듈·백테스트 등
 - 국내주식·미국주식·ETF·코인
 - 백테스트, 서버 자동화, 증권사·거래소 연동
 - 직접 받은 소스 코드를 AI와 함께 수정·확장 가능
 - 패키지 공통모듈: 한국투자, LS, 키움, 토스, KB, NH
 - DB증권 지원 코드는 슈퍼 이동평균 전략에 포함
+- 98번 콘텐츠: 업비트New공통모듈
 - https://zacra.github.io/package-content-guide.html
 
 ## 주식 자동매매
 - 현재 다루는 증권사 환경: 한국투자, LS, DB, 키움, 토스, KB, NH
 - 공통 인터페이스 기반 멀티브로커 구조로 전략·시장·계좌 전환 부담을 줄임
+- https://zacra.github.io/stock-auto-trading.html
 - https://zacra.github.io/broker-openapi.html
 
 ## 코인 자동매매
@@ -47,26 +58,22 @@
 - https://zacra.github.io/crypto-auto-trading.html
 - https://zacra.github.io/architecture.html
 
-## 백테스트·자산배분
-- https://zacra.github.io/backtest.html
-- https://zacra.github.io/efficient-frontier.html
+## AI와 코드 확장
+- AI는 코드 생성 속도를 높이지만 실제 운용에는 전략 검증·데이터·API·주문·예외처리·서버가 함께 필요
+- AI 확장은 전략, 백테스트, 자동매매 봇, 증권사·거래소 공통모듈, 주식·코인 코드, 알림·모니터링 같은 보조시스템 전체에 적용 가능
+- 패키지와 슈퍼 이동평균의 실제 운용에 필요한 핵심 API 기능은 기존 코드에 구현되어 있으며 새로운 개인 기능이 필요할 때 최신 공식 API 문서를 기준으로 확장
+- https://zacra.github.io/ai-api-extension.html
 
 ## 실전 기록
 - 주식·연금 최신 결산: https://m.site.naver.com/2eWen
 - 게만아 투자 실험실 전체 월간 결산: https://m.site.naver.com/1TgXn
 - 과거 성과는 미래 성과를 보장하지 않음
 
-## AI와 코드 확장
-- AI는 코드 생성 속도를 높이지만 실제 운용에는 전략 검증·데이터·API·주문·예외처리·서버가 함께 필요
-- AI 확장은 공통모듈뿐 아니라 전략, 백테스트, 자동매매 봇, 주식·코인 코드, 알림·모니터링 같은 보조시스템 전체에 적용 가능
-- 패키지와 슈퍼 이동평균 전략의 실제 운용에 필요한 핵심 API 기능은 기존 코드에 구현되어 있어 일반 사용자가 공식 API 문서를 보고 추가 개발할 필요는 없음
-- 새로운 API 기능을 개인적으로 추가할 때만 최신 공식 API 문서를 기준으로 AI와 확장
-- https://zacra.github.io/ai-api-extension.html
-
-## 공식 채널
+## 공식 채널과 외부 프로필
 - 공식 가이드: https://zacra.github.io/
-- 블로그: https://blog.naver.com/zacra
+- 네이버 블로그: https://blog.naver.com/zacra
 - 카페(Q&A·코드 업데이트): https://cafe.naver.com/pythonautogma
 - YouTube: https://www.youtube.com/@게만아
+- CLASS101: https://class101.net/ko/creators/%40%EA%B2%8C%EB%A7%8C%EC%95%84
 
 주의: 교육·기술 정보 제공 목적이며 투자 권유 또는 수익 보장을 의미하지 않습니다.

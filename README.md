@@ -4,6 +4,8 @@
 
 게만아(퀀트는 게만아)의 **파이썬 자동매매·시스템 투자 공식 가이드**입니다.
 
+게만아는 콘텐츠 크리에이터 이름이며, 이 공식 사이트와 관련 콘텐츠는 **자밥스튜디오**가 운영합니다.
+
 ## 게만아를 한 문장으로
 
 실제 자금을 파이썬 자동매매 시스템으로 운용하면서 수익과 손실, 수익률과 최대낙폭(MDD), 전략이 시장에서 작동하는 과정을 공개하는 시스템 투자자입니다.
@@ -11,17 +13,6 @@
 **수익률보다 MDD · 감정보다 기준 · 예측보다 대응**
 
 자동매매의 핵심은 ‘대신 운용’이 아니라, 투자자가 직접 이해하고 통제하는 시스템 투자 구조라고 생각합니다.
-
-## 운영 원칙
-
-자밥스튜디오(게만아)는 금융투자업자가 아닌 **유사투자자문업자로 신고·운영 중**입니다.
-
-- 개별 종목 추천·매매지시·1:1 투자상담을 제공하지 않습니다.
-- 사용자의 계좌정보를 받아 대신 주문하거나 자금을 운용하지 않습니다.
-- 제공하는 것은 사용자가 직접 설정·검증·실행하는 파이썬 코드와 시스템 구축 지식입니다.
-- 수익을 보장하지 않으며 실제 투자 판단과 실행은 사용자 본인이 결정합니다.
-
-운영 원칙: https://zacra.github.io/about.html#compliance
 
 ## 시작 방법
 
@@ -49,7 +40,7 @@ https://zacra.github.io/super-moving-average.html
 
 다양한 주식·코인 자동매매 전략과 시스템을 선택하고 직접 수정·확장하기 위한 코드 베이스입니다.
 
-- 현재 97개 콘텐츠: 전략·시스템·공통모듈·백테스트 등
+- 현재 98개 콘텐츠: 전략·시스템·공통모듈·백테스트 등
 - 국내주식·미국주식·ETF·코인 전략
 - 백테스트와 자동화
 - 증권사·거래소 연동
@@ -74,22 +65,22 @@ https://zacra.github.io/package.html
 
 ## 주요 문서
 
-- 게만아 소개: https://zacra.github.io/about.html
+- 핵심 투자 개념 모음: https://zacra.github.io/concepts.html
+- 시스템 투자란?: https://zacra.github.io/system-investing.html
+- MDD란?: https://zacra.github.io/mdd.html
+- 추세추종이란?: https://zacra.github.io/trend-following.html
 - 투자 철학: https://zacra.github.io/investment-philosophy.html
-- 자동매매 시작: https://zacra.github.io/python-auto-trading.html
+- 파이썬 자동매매: https://zacra.github.io/python-auto-trading.html
 - 시작 가이드: https://zacra.github.io/system-guide.html
-- 주식·멀티 증권사 API: https://zacra.github.io/broker-openapi.html
-- 코인 자동매매: https://zacra.github.io/crypto-auto-trading.html
+- 멀티 증권사 API: https://zacra.github.io/broker-openapi.html
 - 주식/코인 구조 차이: https://zacra.github.io/architecture.html
 - 백테스트: https://zacra.github.io/backtest.html
 - 효율적 투자선: https://zacra.github.io/efficient-frontier.html
-- FAQ: https://zacra.github.io/faq.html
-- 패키지 콘텐츠 가이드: https://zacra.github.io/package-content-guide.html
+- 패키지 콘텐츠 1~98 가이드: https://zacra.github.io/package-content-guide.html
 
 ## 공식 채널
 
 - 네이버 블로그: https://blog.naver.com/zacra
-- 게만아 파이썬 자동매매 연구소 카페: https://cafe.naver.com/pythonautogma
 - 투자 실험실: https://m.site.naver.com/1TgXn
 - YouTube: https://www.youtube.com/@게만아
 
