@@ -40,7 +40,7 @@ https://zacra.github.io/super-moving-average.html
 
 다양한 주식·코인 자동매매 전략과 시스템을 선택하고 직접 수정·확장하기 위한 코드 베이스입니다.
 
-- 현재 99개 콘텐츠: 전략·시스템·공통모듈·백테스트 등
+- 다양한 콘텐츠: 전략·시스템·공통모듈·백테스트 등
 - 국내주식·미국주식·ETF·코인 전략
 - 백테스트와 자동화
 - 증권사·거래소 연동
@@ -76,7 +76,7 @@ https://zacra.github.io/package.html
 - 주식/코인 구조 차이: https://zacra.github.io/architecture.html
 - 백테스트: https://zacra.github.io/backtest.html
 - 효율적 투자선: https://zacra.github.io/efficient-frontier.html
-- 패키지 콘텐츠 1~98 가이드: https://zacra.github.io/package-content-guide.html
+- 패키지 콘텐츠 전체 가이드: https://zacra.github.io/package-content-guide.html
 
 ## 공식 채널
 
