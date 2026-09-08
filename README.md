@@ -23,7 +23,17 @@
 
 https://zacra.github.io/starter.html
 
-### 2. 슈퍼 이동평균 자산배분
+### 2. 실행 환경 — GMA Runner 또는 AWS
+
+자동매매를 시작하기 위해 AWS 서버가 항상 필수인 것은 아닙니다.
+
+- **GMA Runner**: Windows·Mac PC에서 Python 파일 수동 실행, 예약 실행, 로그 확인
+- **AWS 등 서버**: 24시간 안정 운용, 고정 IP, PC 종료·절전의 영향을 피하고 싶을 때 권장
+- GMA Runner는 현재 패키지와 슈퍼 이동평균 이용자에게 함께 제공
+
+https://zacra.github.io/gma-runner.html
+
+### 3. 슈퍼 이동평균 자산배분
 
 주식·ETF 장기투자 시스템 하나에 집중하고 싶은 분을 위한 대표 전략입니다.
 
@@ -36,7 +46,7 @@ https://zacra.github.io/starter.html
 
 https://zacra.github.io/super-moving-average.html
 
-### 3. 게만아 파이썬 자동매매 패키지
+### 4. 게만아 파이썬 자동매매 패키지
 
 다양한 주식·코인 자동매매 전략과 시스템을 선택하고 직접 수정·확장하기 위한 코드 베이스입니다.
 
@@ -44,7 +54,7 @@ https://zacra.github.io/super-moving-average.html
 - 국내주식·미국주식·ETF·코인 전략
 - 백테스트와 자동화
 - 증권사·거래소 연동
-- 서버/crontab 가이드
+- GMA Runner 또는 서버/crontab 자동 실행
 - AI와 함께 수정·확장
 
 https://zacra.github.io/package.html
@@ -72,6 +82,7 @@ https://zacra.github.io/package.html
 - 투자 철학: https://zacra.github.io/investment-philosophy.html
 - 파이썬 자동매매: https://zacra.github.io/python-auto-trading.html
 - 시작 가이드: https://zacra.github.io/system-guide.html
+- GMA Runner: https://zacra.github.io/gma-runner.html
 - 멀티 증권사 API: https://zacra.github.io/broker-openapi.html
 - 주식/코인 구조 차이: https://zacra.github.io/architecture.html
 - 백테스트: https://zacra.github.io/backtest.html
