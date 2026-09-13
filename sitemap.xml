@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://zacra.github.io/</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-09-13</lastmod>
   </url>
   <url>
     <loc>https://zacra.github.io/about.html</loc>
@@ -14,11 +14,11 @@
   </url>
   <url>
     <loc>https://zacra.github.io/system-guide.html</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-09-13</lastmod>
   </url>
   <url>
     <loc>https://zacra.github.io/super-moving-average.html</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-09-13</lastmod>
   </url>
   <url>
     <loc>https://zacra.github.io/package.html</loc>
@@ -50,11 +50,11 @@
   </url>
   <url>
     <loc>https://zacra.github.io/efficient-frontier.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-13</lastmod>
   </url>
   <url>
     <loc>https://zacra.github.io/backtest.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-13</lastmod>
   </url>
   <url>
     <loc>https://zacra.github.io/architecture.html</loc>
@@ -66,7 +66,7 @@
   </url>
   <url>
     <loc>https://zacra.github.io/faq.html</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-09-13</lastmod>
   </url>
   <url>
     <loc>https://zacra.github.io/sources.html</loc>
@@ -114,7 +114,7 @@
   </url>
   <url>
     <loc>https://zacra.github.io/trend-following.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-13</lastmod>
   </url>
 <url><loc>https://zacra.github.io/concepts.html</loc><lastmod>2026-09-04</lastmod></url>  <url>
     <loc>https://zacra.github.io/gma-runner.html</loc>
