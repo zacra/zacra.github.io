@@ -96,7 +96,7 @@ https://zacra.github.io/super-moving-average.html
 - 공식 아카이브: https://zacra.github.io/investment-lab.html
 - 구조화 데이터: `data/investment-lab.json`
 - 정적 HTML 생성: `python3 tools/build_investment_lab.py`
-- NaverBlogAuto에서 게시글 자동 등록: `python -m uploader.publish_investment_lab --job jobs/<slot>/<date>`
+- NaverBlogAuto에서 자동 등록·공개: `python -m uploader.publish_investment_lab --job jobs/<slot>/<date> --publish` (`--publish` 생략 시 로컬 미리보기만 생성)
 - 과거 네이버 기록: https://m.site.naver.com/1TgXn
 
 ## 공식 채널
