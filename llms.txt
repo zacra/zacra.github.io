@@ -81,8 +81,7 @@
 
 ## 실전 기록
 - 게만아 투자 실험실 공식 아카이브(Threads 확정 문구와 네이버 원문 연결): https://zacra.github.io/investment-lab.html
-- 주식·연금 최신 결산: https://m.site.naver.com/2eWen
-- 게만아 투자 실험실 전체 월간 결산: https://m.site.naver.com/1TgXn
+- 투자 실험실 결산: https://m.site.naver.com/1TgXn
 - 과거 성과는 미래 성과를 보장하지 않음
 
 ## 공식 채널과 외부 프로필

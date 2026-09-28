@@ -145,7 +145,7 @@ def render_cards(entries: list[dict]) -> str:
             '<p>게만아가 실제 자금을 시스템으로 운용하며 남긴 투자 실험을 요약해 소개합니다. '
             '이전 기록은 네이버 투자 실험실에서 확인할 수 있습니다.</p>'
             '<p><a class="btn primary" href="https://m.site.naver.com/1TgXn" '
-            'rel="noopener noreferrer" target="_blank">네이버 투자 실험실 보기 →</a></p>'
+            'rel="noopener noreferrer" target="_blank">투자 실험실 결산 →</a></p>'
             '</section>'
         )
     grouped: dict[str, list[dict]] = defaultdict(list)
