@@ -89,6 +89,16 @@ https://zacra.github.io/super-moving-average.html
 - 효율적 투자선: https://zacra.github.io/efficient-frontier.html
 - 패키지 콘텐츠 전체 가이드: https://zacra.github.io/package-content-guide.html
 
+## 게만아 투자 실험실 아카이브
+
+발행한 투자 실험 기록을 날짜별로 짧게 요약해 네이버 원문과 연결합니다. Threads에 게시한 확정 문구도 함께 보존하고, 원문 썸네일은 네이버가 제공하는 이미지 URL을 사용합니다. 이미지 파일을 GitHub에 복제하지 않습니다.
+
+- 공식 아카이브: https://zacra.github.io/investment-lab.html
+- 구조화 데이터: `data/investment-lab.json`
+- 정적 HTML 생성: `python3 tools/build_investment_lab.py`
+- NaverBlogAuto에서 게시글 자동 등록: `python -m uploader.publish_investment_lab --job jobs/<slot>/<date>`
+- 과거 네이버 기록: https://m.site.naver.com/1TgXn
+
 ## 공식 채널
 
 - 네이버 블로그: https://blog.naver.com/zacra
