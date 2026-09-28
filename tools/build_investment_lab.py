@@ -19,7 +19,7 @@ SITEMAP_FILE = ROOT / "sitemap.xml"
 TAG_ORDER = (
     "미국주식", "국내주식", "코인", "ETF", "연금", "ISA",
     "스마트스플릿", "자산배분", "전략대결", "단타", "중장기",
-    "추세추종", "결산", "백테스트", "실계좌",
+    "추세추종", "결산", "백테스트", "실계좌", "파이썬자동매매",
 )
 FILTERS = (
     ("전체", "all"), ("미국주식", "미국주식"), ("국내주식", "국내주식"),
@@ -92,6 +92,8 @@ def load_entries() -> tuple[dict, list[dict]]:
             fail(f"{where}.tags는 2~4개여야 합니다")
         if len(set(tags)) != len(tags) or any(tag not in TAG_ORDER for tag in tags):
             fail(f"{where}.tags에 중복 또는 미등록 태그가 있습니다")
+        if "파이썬자동매매" not in tags:
+            fail(f"{where}.tags에는 파이썬자동매매가 필요합니다")
         url = normalized_naver_url(entry["url"] if isinstance(entry["url"], str) else "")
         if url in seen_urls:
             fail(f"네이버 원문 URL 중복: {url} ({seen_urls[url]} / {entry['id']})")
@@ -116,7 +118,7 @@ def render_entry(entry: dict) -> str:
             f'<a class="lab-link-card-image" href="{html.escape(entry["url"], quote=True)}" '
             f'rel="noopener noreferrer" target="_blank" aria-label="네이버 원문 열기: {html.escape(entry["title"], quote=True)}">'
             f'<img class="lab-thumbnail" src="{html.escape(entry["thumbnail"], quote=True)}" '
-            f'alt="" loading="lazy" decoding="async"></a>'
+            f'alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a>'
         )
     threads_lines = "\n".join(html.escape(line) for line in entry["threads_text"].splitlines())
     return (
@@ -126,7 +128,7 @@ def render_entry(entry: dict) -> str:
         f'{html.escape(entry["date"].replace("-", "."))}</time></p>'
         f'<h3>{html.escape(entry["title"])}</h3>'
         f'<p class="lab-summary">{html.escape(entry["summary"])}</p>'
-        f'<details class="lab-threads"><summary>Threads 게시 문구</summary>'
+        f'<details class="lab-threads"><summary>요약 내용 보기</summary>'
         f'<div class="lab-threads-text">{threads_lines}</div></details>'
         f'<div class="lab-tags" aria-label="태그">{tag_markup}</div>'
         f'<p class="lab-original"><a href="{html.escape(entry["url"], quote=True)}" '
