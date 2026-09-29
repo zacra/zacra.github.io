@@ -61,6 +61,21 @@
       ],
       "url": "https://blog.naver.com/zacra/224426037351",
       "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA5MjlfMjk4/MDAxNzkwNjY0NTcxOTI5.kaqf5oCIq-c7thq0DP5qwqGSzLcORAnHQoL3gtuOrIsg.cg2VUgY6Y83yugKapRm690xQ55lcTFfkUYj0IaH7ujAg.PNG/weekly_chart.png?type=s3"
+    },
+    {
+      "id": "2026-09-29-tue-coinone-bots3-3",
+      "date": "2026-09-29",
+      "title": "[게만아 투자 실험실 - 화] 100만원씩 맡긴 비트코인 이더리움 자동매매 봇 3종 대결! 3주차 성적표",
+      "summary": "1위 더블이동 1d+4h 1,022,415원(+2.24%)",
+      "threads_text": "[게만아 투자실험실 · 화]\n코인원 BTC·ETH 봇 3종 대결 3주차\n\n이번 주 총평가 순위\n1위 더블이동 1d+4h 1,022,415원(+2.24%)\n2위 안전전략 1,018,721원(+1.87%)\n3위 스마트스플릿 1,012,982원(+1.30%)\n\n세 봇 모두 조정, 순위는 그대로입니다.\n격차는 아직 1만원 안쪽이에요.\n\n거래소 API로 전략만 다르게 대결!\n일주일에 한 번씩 결과를 계속 기록하고 있습니다. :)\n\n※ 현재 평가금 기준 기록이며 미래 성과를 의미하지 않습니다.",
+      "tags": [
+        "코인",
+        "전략대결",
+        "실계좌",
+        "파이썬자동매매"
+      ],
+      "url": "https://blog.naver.com/zacra/224426134122",
+      "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA5MjlfMjQ2/MDAxNzkwNjY3NjIzNDU3.cqx62_KXAM0f4r9uJJ66MpY3R4HjoPMiFR_vKylktYkg.PxCd-c0Ox9T9B_830-8SVQVja_YVTbjPVJ2aqOSJW18g.PNG/ranking_week3.png?type=s3"
     }
   ]
 }
