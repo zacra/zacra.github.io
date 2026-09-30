@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-30",
+  "updated_at": "2026-10-01",
   "entries": [
     {
       "id": "2026-09-28-mon-tqqq-soxl-36",
@@ -106,6 +106,21 @@
       ],
       "url": "https://blog.naver.com/zacra/224427301958",
       "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA5MzBfOTMg/MDAxNzkwNzU1ODg5NTYy.CaiSV3E-QlhpyxBqJVBDzjt_1BBISYzU5c0hu77dPMsg.Z1fyCa9KK0phS_79eXOunsKSiBmpQ_vefOBcSo3Qa8Eg.PNG/weekly_chart.png?type=s3"
+    },
+    {
+      "id": "2026-10-01-thu-upbit-54",
+      "date": "2026-10-01",
+      "title": "[게만아 투자 실험실 - 목] +162만원(+3.91%) 비트코인 업비트 파이썬 자동매매 54차 체크",
+      "summary": "일주일 간 실계좌 평가금 변화 · 현재까지 기록된 최대 낙폭 MDD 약 -18%",
+      "threads_text": "[게만아 투자실험실 · 목]\n비트코인 업비트 파이썬 자동매매 54차\n\n일주일 간 실계좌 평가금 변화\n41,297,409원 → 42,913,594원\n평가금 +1,616,185원(+3.91%)\n\n현재까지 기록된 최대 낙폭 MDD 약 -18%\n\n이번 주 수익을 낸 뒤\n지금은 다시 현금 대기 구간입니다.\n\n※ 현재 평가금 기준 기록이며 미래 성과를 의미하지 않습니다.",
+      "tags": [
+        "코인",
+        "실계좌",
+        "결산",
+        "파이썬자동매매"
+      ],
+      "url": "https://blog.naver.com/zacra/224427819899",
+      "thumbnail": "https://blogthumb.pstatic.net/MjAyNjEwMDFfMjY5/MDAxNzkwODA0MTgyNDA1.pegi_Jq-jJIhuvlAdQmdzhuKOZ16U4Lh0m5aoBu5c4cg.Ut1n6UlZ_ScMh1oJ1YOMYhHMcp-lEnDmnPZueRVFIaUg.PNG/ma_chart.png?type=s3"
     }
   ]
 }
