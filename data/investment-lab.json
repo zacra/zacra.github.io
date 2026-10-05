@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-05",
+  "updated_at": "2026-10-06",
   "entries": [
     {
       "id": "2026-09-28-mon-tqqq-soxl-36",
@@ -226,6 +226,21 @@
       ],
       "url": "https://blog.naver.com/zacra/224431907167",
       "thumbnail": "https://blogthumb.pstatic.net/MjAyNjEwMDVfMTEw/MDAxNzkxMTYyOTg1NTA5.uIjx-CGk76ibUIX2pdBWa3FJyEExFMBnINKEu9KhPl8g.hHYBv0mj77TuQTHCxa4USXjxZQCLpO6UpRo7F0kZSU4g.PNG/weekly_chart.png?type=s3"
+    },
+    {
+      "id": "2026-10-06-tue-stablecoin-ttasopal-55",
+      "date": "2026-10-06",
+      "title": "[게만아 투자 실험실 - 화] +5만원(+0.62%) 테더(USDT), 유에스디코인(USDC) 스테이블 코인 떨사오팔 자동매매 전략 55차 체크",
+      "summary": "일주일 간 실계좌 평가금 변화 · 현재까지 기록된 최대 낙폭 MDD 약 -4%",
+      "threads_text": "[게만아 투자실험실 · 화]\n코인원 스테이블 슈퍼 스플릿 55차\n\n일주일 간 실계좌 평가금 변화\n7,236,671원 → 7,281,865원\n평가금 +45,194원(+0.62%)\n\n현재까지 기록된 최대 낙폭 MDD 약 -4%\n\n파킹통장 대용으로 만든 전략으로\n매주 한 번씩 실계좌 결과를 기록하고 있습니다. :)\n\n※ 현재 평가금 기준 기록이며 미래 성과를 의미하지 않습니다.",
+      "tags": [
+        "코인",
+        "스마트스플릿",
+        "실계좌",
+        "파이썬자동매매"
+      ],
+      "url": "https://blog.naver.com/zacra/224432551230",
+      "thumbnail": "https://blogthumb.pstatic.net/MjAyNjEwMDZfMjUz/MDAxNzkxMjM5MzYyMDcz.zPW_jCY7Kf2Mv1ZPnhWH3FNVd9v2oMjl7L43ifIVcKgg.jrjaNWqKSeQfHcgUJZ3cThL34M0F0gSS0v5e99ItKekg.JPEG/trade_chart_original.jpg?type=s3"
     }
   ]
 }
