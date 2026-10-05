@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-04",
+  "updated_at": "2026-10-05",
   "entries": [
     {
       "id": "2026-09-28-mon-tqqq-soxl-36",
@@ -196,6 +196,21 @@
       ],
       "url": "https://blog.naver.com/zacra/224430859340",
       "thumbnail": "https://blogthumb.pstatic.net/MjAyNjEwMDRfOTIg/MDAxNzkxMDY5NTQ1NzMy.7T3k4BmlgmAwZq9K0KGWURbQ9nRkKOWRQF107au0gYkg.nGvQtCIY05Ww9YwT90GpjKm7C8VJn6Thjr_YxWlD-8Ig.PNG/performance_chart.png?type=s3"
+    },
+    {
+      "id": "2026-10-05-mon-bots5-duel-5",
+      "date": "2026-10-05",
+      "title": "[게만아 투자 실험실 - 월] 100만원씩 맡긴 주식 단타 자동매매 봇 5개 대결! 5주차 성적표",
+      "summary": "1위 V1 한투 1,037,947원(+0.15%)",
+      "threads_text": "[게만아 투자 실험실 · 월]\n주식 단타 봇 5개 대결 5주차\n\n이번 주 총평가 순위\n1위 V1 한투 1,037,947원(+0.15%)\n2위 NEW LS 1,031,253원(+2.05%)\n3위 V4 KB 994,907원(-0.99%)\n4위 V2 키움 981,563원(+3.66%)\n5위 V3 DB 954,263원(+2.95%)\n\nV1이 5주 연속 1위, 하위권 V2·V3는 이번 주 반등했습니다.\n\n증권사 API를 활용해 각기 다른 전략으로 대결!\n일주일에 한 번씩 결과를 계속 기록하고 있습니다. :)\n\n※ 현재 평가금 기준 기록이며 미래 성과를 의미하지 않습니다.",
+      "tags": [
+        "국내주식",
+        "전략대결",
+        "실계좌",
+        "파이썬자동매매"
+      ],
+      "url": "https://blog.naver.com/zacra/224431710432",
+      "thumbnail": "https://blogthumb.pstatic.net/MjAyNjEwMDVfMTgy/MDAxNzkxMTYxOTIzMDE3.Sz0XMGx2FUO-JmIj0c9Ohdr9-BRrkxJ75iFtYvsFrjsg.y_G0YpqoIxAcrYWwgb-Xcskqsy-57UAxxvRCCqdILHwg.PNG/new_chart.png?type=s3"
     }
   ]
 }
