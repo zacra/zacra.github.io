@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-06",
+  "updated_at": "2026-10-07",
   "entries": [
     {
       "id": "2026-09-28-mon-tqqq-soxl-36",
@@ -271,6 +271,21 @@
       ],
       "url": "https://blog.naver.com/zacra/224433080705",
       "thumbnail": "https://blogthumb.pstatic.net/MjAyNjEwMDZfODgg/MDAxNzkxMjcwMTcyNzk5.Kf60MUoG0kvOkiT9Xs8Qk7faQfGic78E9rEx3L5PJGUg.9yq2EYrIKUsyNLzfKwPt0j69gzU5_suqTyV2UzjMyJ8g.JPEG/account_original.jpg?type=s3"
+    },
+    {
+      "id": "2026-10-07-wed-rsi-sector-vb-39",
+      "date": "2026-10-07",
+      "title": "[게만아 투자 실험실 - 수] -1만원(-0.72%) 연금 계좌 섹터 RSI 변동성 돌파 자동매매 전략 39차 체크",
+      "summary": "일주일 간 실계좌 평가금 변화 · 현재까지 기록된 최대 낙폭 MDD 약 -8%",
+      "threads_text": "[게만아 투자실험실 · 수]\n연금 계좌 섹터 RSI 변동성 돌파 39차\n\n일주일 간 실계좌 평가금 변화\n1,409,145원 → 1,398,955원\n평가금 -10,190원(-0.72%)\n\n현재까지 기록된 최대 낙폭 MDD 약 -8%\n\n변동성 돌파 기준이 되는 K값을\n정기적으로 다시 구해 적용하는데\n이번에 백테스트를 워크포워드 방식으로 미래참조 없이\n검증해봤습니다. :)\n\n※ 현재 평가금 기준 기록이며 미래 성과를 의미하지 않습니다.",
+      "tags": [
+        "국내주식",
+        "연금",
+        "실계좌",
+        "파이썬자동매매"
+      ],
+      "url": "https://blog.naver.com/zacra/224434407856",
+      "thumbnail": "https://blogthumb.pstatic.net/MjAyNjEwMDdfNjgg/MDAxNzkxMzY2NTU5MDA0.QtgNcHEX35c41OweD1lgBQQre9BrSGzL6W8TINhXrMMg.Jh1TEIHbwGKNscACLDD_Vml-jbfCldmkWVTvcg8sgBkg.PNG/bt_chart.png?type=s3"
     }
   ]
 }
