@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <script defer src="/assets/analytics.js"></script>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>오프라인 자동매매 셋업데이 관심 등록 | 노트북으로 함께 세팅하는 실습 자리</title>
+  <meta name="description" content="오프라인 자동매매 셋업데이는 증권사 API 연결, 슈퍼 이동평균 전략 설정, GMA Runner 실행·자동 실행 설정, 로그 확인을 노트북으로 직접 함께 해보는 실습 자리입니다. 정식 모집 전 관심 등록을 받고 있습니다."/>
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/>
+  <link rel="canonical" href="https://zacra.github.io/setup-day.html"/>
+  <link rel="stylesheet" href="/assets/style.css"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="ko_KR"/>
+  <meta property="og:title" content="오프라인 자동매매 셋업데이 관심 등록"/>
+  <meta property="og:description" content="증권사 API 연결 → 슈퍼 이동평균 전략 설정 → GMA Runner 실행 → 자동 실행 → 로그 확인을 노트북으로 함께 해보는 실습 자리. 정식 모집 전 관심 등록 중입니다."/>
+  <meta property="og:url" content="https://zacra.github.io/setup-day.html"/>
+  <meta property="og:image" content="https://zacra.github.io/assets/og-default.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="오프라인 자동매매 셋업데이 관심 등록"/>
+  <meta name="twitter:description" content="노트북으로 직접 자동매매 환경을 세팅하고 실행해보는 실습 자리. 관심 등록만으로 결제나 참가 의무는 생기지 않습니다."/>
+  <meta name="twitter:image" content="https://zacra.github.io/assets/og-default.png"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://zacra.github.io/setup-day.html#page","name":"오프라인 자동매매 셋업데이 관심 등록","url":"https://zacra.github.io/setup-day.html","inLanguage":"ko-KR","dateModified":"2026-10-07","author":{"@id":"https://zacra.github.io/#person"},"publisher":{"@id":"https://zacra.github.io/#organization"},"about":[{"@type":"Thing","name":"파이썬 자동매매"},{"@type":"Thing","name":"GMA Runner"},{"@type":"Thing","name":"슈퍼 이동평균"}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://zacra.github.io/"},{"@type":"ListItem","position":2,"name":"오프라인 자동매매 셋업데이","item":"https://zacra.github.io/setup-day.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"셋업데이는 정식 모집인가요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 아직 정식 모집이 아니며 필요한 분이 얼마나 되는지 확인하기 위한 관심 등록 단계입니다. 관심 있는 분이 충분하면 실제 일정을 잡습니다."}},{"@type":"Question","name":"관심 등록을 하면 결제나 참가 의무가 생기나요?","acceptedAnswer":{"@type":"Answer","text":"관심 등록만으로 결제나 참가 의무가 생기지는 않습니다."}},{"@type":"Question","name":"참가하려면 무엇을 미리 준비해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"사용할 증권사 계좌와 API Key 발급까지는 미리 완료하고 오시는 것을 전제로 합니다. 현장에서는 실제 연결과 실행에 집중합니다."}},{"@type":"Question","name":"투자 상담도 받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 특정 종목 추천, 개인별 투자상담, 계좌 진단, 매수·매도 판단, 포트폴리오 자문 등 개인 투자에 대한 상담은 진행하지 않습니다."}}]}]}</script>
+  <link href="/favicon.ico" rel="icon" sizes="any"/>
+  <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+  <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+  <link href="/site.webmanifest" rel="manifest"/>
+  <meta name="theme-color" content="#0f6a66"/>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+<header class="site-header"><nav class="nav" aria-label="주요 메뉴">
+<a class="brand" href="/"><img src="/favicon-32x32.png" alt="" aria-hidden="true" style="width:28px;height:28px;border-radius:7px;vertical-align:middle;margin-right:8px;box-shadow:0 1px 4px rgba(0,0,0,.18);"/>게만아 <small>공식 가이드</small></a>
+<div class="nav-links"><a href="/investment-philosophy.html">투자 철학</a><a href="/system-guide.html">시작 가이드</a><a href="/investment-lab.html">투자 실험실</a><a href="/super-moving-average.html">슈퍼 이동평균</a><a href="/package.html">패키지</a><a href="/starter.html">무료 Starter</a><a href="/faq.html">FAQ</a></div>
+</nav></header>
+<main id="main">
+<div class="breadcrumb"><a href="/">홈</a> › 오프라인 자동매매 셋업데이</div>
+<p class="eyebrow">정식 모집 전 · 관심 등록 단계</p>
+<h1>오프라인 자동매매 셋업데이 — 노트북으로 처음 한 번, 같이 세팅해보는 자리</h1>
+<p class="lead">서버를 구축하거나 어려운 개발을 하는 자리가 아닙니다. <strong>증권사 API 연결 · 슈퍼 이동평균 전략 설정 · GMA Runner 실행 · 자동 실행 설정 · 실행 결과와 로그 확인</strong>까지를 노트북으로 직접 함께 해보는 실습 자리입니다.</p>
+
+<section class="callout">
+<h2>아직 정식 모집은 아닙니다</h2>
+<p>필요한 분이 얼마나 되는지 먼저 확인하려고 <strong>관심 등록</strong>을 받고 있습니다. 관심 있는 분이 충분하면 실제 일정을 잡습니다. <strong>관심 등록만으로 결제나 참가 의무가 생기지는 않습니다.</strong></p>
+<div class="actions"><a class="btn primary" href="https://forms.gle/WdjQjM8cL4dwiTUL6" target="_blank" rel="noopener noreferrer">오프라인 자동매매 셋업데이 관심 등록 →</a></div>
+</section>
+
+<section>
+<h2>현장에서 함께 해보는 것</h2>
+<div class="grid cards">
+<article class="card"><h3>증권사 API 연결</h3><p>미리 발급해 온 API Key로 실제 연결이 되는지 확인합니다.</p></article>
+<article class="card"><h3>슈퍼 이동평균 전략 설정</h3><p>전략 파일을 열고 내 환경에 맞게 설정하는 흐름을 따라갑니다.</p></article>
+<article class="card"><h3>GMA Runner 실행</h3><p>Python 파일을 수동으로 한 번 실행해 결과를 확인합니다. <a href="/gma-runner.html">GMA Runner 소개 →</a></p></article>
+<article class="card"><h3>자동 실행 설정</h3><p>정상 동작을 확인한 뒤 원하는 일정으로 자동 실행을 등록합니다.</p></article>
+<article class="card"><h3>실행 결과·로그 확인</h3><p>성공·실패 상태와 로그를 보는 법, 오류가 났을 때 어디를 볼지 확인합니다.</p></article>
+</div>
+</section>
+
+<section>
+<h2>이런 분께 필요한 자리입니다</h2>
+<ul class="check">
+<li>“코드는 받았는데 어디서부터 시작해야 할지 모르겠다.”</li>
+<li>“API Key는 받았는데 실제 실행까지가 막막하다.”</li>
+<li>“처음 한 번만 옆에서 같이 해보면 할 수 있을 것 같다.”</li>
+</ul>
+<p>완전 처음이라 생소한 분이 <strong>‘내가 직접 자동매매 환경을 세팅하고 실행할 수 있게 되는 것’</strong>이 필요할 때를 위한 자리입니다.</p>
+<p>이미 가이드를 보고 잘 세팅해서 사용하고 계신 분이라면 굳이 참석하실 필요가 없습니다. 이미 자동매매를 잘 사용하고 계신 분께는 이번 내용이 뻔할 수도 있습니다.</p>
+</section>
+
+<section class="notice">
+<h2>참가 전 준비</h2>
+<p>참가 시에는 <strong>사용할 증권사 계좌와 API Key 발급까지는 미리 완료하고 오시는 것</strong>을 전제로 합니다. 현장에서는 실제 연결과 실행에 집중합니다. 발급받은 API Key·Secret·토큰은 비밀번호와 같은 정보이므로 다른 사람에게 보여주거나 공개 채널에 올리지 않도록 주의해 주세요.</p>
+<p>증권사별 API 발급 방법은 <a href="/broker-openapi.html">주식·증권사 API 가이드</a>와 <a href="/system-guide.html">시작 가이드</a>를 참고하세요.</p>
+</section>
+
+<section class="callout">
+<h2>📌 미리 말씀드리는 범위</h2>
+<p>이번 셋업데이는 <strong>자동매매 환경 구축과 코드 실행을 위한 실습 자리</strong>입니다. 특정 종목 추천, 개인별 투자상담, 계좌 진단, 매수·매도 판단이나 포트폴리오 자문 등 <strong>개인 투자에 대한 상담은 진행하지 않습니다.</strong></p>
+</section>
+
+<section>
+<h2>자주 묻는 질문</h2>
+<div class="faq">
+<details open><summary>셋업데이는 정식 모집인가요?</summary><p>아닙니다. 아직 정식 모집이 아니며, 필요한 분이 얼마나 되는지 확인하는 관심 등록 단계입니다. 관심 있는 분이 충분하면 실제 일정을 잡습니다. 일정·장소 등은 확정되면 따로 안내합니다.</p></details>
+<details><summary>관심 등록을 하면 결제나 참가 의무가 생기나요?</summary><p>관심 등록만으로 결제나 참가 의무가 생기지는 않습니다.</p></details>
+<details><summary>증권사 계좌나 API Key가 아직 없는데 참석할 수 있나요?</summary><p>참가 시 증권사 계좌와 API Key 발급은 미리 완료하고 오시는 것을 전제로 합니다. 현장 시간은 실제 연결과 실행에 쓰기 위해서입니다.</p></details>
+<details><summary>투자 상담이나 종목 추천도 받을 수 있나요?</summary><p>아닙니다. 종목 추천, 개인별 투자상담, 계좌 진단, 매수·매도 판단, 포트폴리오 자문은 진행하지 않습니다.</p></details>
+<details><summary>이미 자동매매를 잘 쓰고 있는데 참석해야 하나요?</summary><p>이미 가이드를 보고 잘 세팅해서 사용하고 계신다면 굳이 참석하지 않으셔도 됩니다.</p></details>
+</div>
+<div class="actions"><a class="btn primary" href="https://forms.gle/WdjQjM8cL4dwiTUL6" target="_blank" rel="noopener noreferrer">관심 등록하러 가기 →</a><a class="btn" href="/gma-runner.html">GMA Runner 먼저 보기</a></div>
+</section>
+
+<p class="updated">문서 업데이트: 2026-10-07</p>
+</main>
+<footer class="site-footer"><div class="footer-inner">
+<p><strong>게만아</strong> · 주식·ETF·코인 파이썬 자동매매·백테스트·API 공식 가이드</p>
+<p>셋업데이는 자동매매 환경 구축과 코드 실행을 위한 실습 자리이며 투자 자문·종목 추천·계좌 진단을 제공하지 않습니다. 과거 성과는 미래 성과를 보장하지 않습니다.</p>
+<p><a href="/system-guide.html">시작 가이드</a> · <a href="/gma-runner.html">GMA Runner</a> · <a href="/faq.html">FAQ</a> · 마지막 업데이트 2026-10-07</p>
+</div></footer>
+</body>
+</html>

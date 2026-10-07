@@ -83,6 +83,7 @@ https://zacra.github.io/super-moving-average.html
 - 파이썬 자동매매: https://zacra.github.io/python-auto-trading.html
 - 시작 가이드: https://zacra.github.io/system-guide.html
 - GMA Runner: https://zacra.github.io/gma-runner.html
+- 오프라인 자동매매 셋업데이(관심 등록): https://zacra.github.io/setup-day.html
 - 멀티 증권사 API: https://zacra.github.io/broker-openapi.html
 - 주식/코인 구조 차이: https://zacra.github.io/architecture.html
 - 백테스트: https://zacra.github.io/backtest.html

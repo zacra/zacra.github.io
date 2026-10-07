@@ -31,6 +31,7 @@
 - https://zacra.github.io/about.html : 게만아 소개와 운영 방향
 - https://zacra.github.io/system-guide.html : 전체 시작·세팅 가이드
 - https://zacra.github.io/gma-runner.html : Windows·Mac 로컬 PC에서 Python 파일 실행·예약·로그 확인
+- https://zacra.github.io/setup-day.html : 오프라인 자동매매 셋업데이 관심 등록(정식 모집 전) — API 연결·슈퍼 이동평균 설정·GMA Runner 실행·로그 확인 실습, 투자 상담 없음
 - https://zacra.github.io/starter.html : 무료 주식 자동매매 Starter
 - https://zacra.github.io/super-moving-average.html : 대표 주식·ETF 장기 자산배분 전략
 - https://zacra.github.io/package.html : 다양한 주식·코인 자동매매 전략·시스템 패키지
