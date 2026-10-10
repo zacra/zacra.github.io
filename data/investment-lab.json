@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-10",
+  "updated_at": "2026-10-11",
   "entries": [
     {
       "id": "2026-09-28-mon-tqqq-soxl-36",
@@ -376,6 +376,21 @@
       ],
       "url": "https://blog.naver.com/zacra/224436921235",
       "thumbnail": "https://blogthumb.pstatic.net/MjAyNjEwMTBfNzkg/MDAxNzkxNTkzOTkzNzYw.XxA1USw_29hDjg-RJa_BzBKap7HlSi58QYgmtOe9tvYg.R-cR4p8QvzEeVZL99q6LDHWqtpbW2jncPaYcmMh6I2Ig.PNG/weekly_chart.png?type=s3"
+    },
+    {
+      "id": "2026-10-11-sun-kr-superma-55",
+      "date": "2026-10-11",
+      "title": "[게만아 투자 실험실 - 일] +2만원(+0.03%) 주식 장기투자 전략 슈퍼 이동평균 자산배분 자동매매 55차 운용 체크",
+      "summary": "일주일 간 실계좌 평가금 변화 · 현재까지 기록된 최대 낙폭 MDD 약 -8.7%",
+      "threads_text": "[게만아 투자실험실 · 일]\n연금계좌 슈퍼 이동평균 자산배분 55차\n\n일주일 간 실계좌 평가금 변화\n70,489,244원 → 70,513,109원\n평가금 +23,865원(+0.03%)\n\n현재까지 기록된 최대 낙폭 MDD 약 -8.7%\n\n백테스트는 미래참조를 하지 않는\n롤링 워크포워드 방식으로 검증했습니다.\n\n현재 절반 정도는 자동으로 파킹 ETF에 두고\n전략대로 운용 중입니다 :)\n\n※ 현재 평가금 기준 기록이며 미래 성과를 의미하지 않습니다.",
+      "tags": [
+        "국내주식",
+        "자산배분",
+        "연금",
+        "파이썬자동매매"
+      ],
+      "url": "https://blog.naver.com/zacra/224437724635",
+      "thumbnail": "https://blogthumb.pstatic.net/MjAyNjEwMTFfMzEg/MDAxNzkxNjczNzgwOTcz.g87rOmuDVueUCl1a7r7a4k5MkxCEd8PuLFkWABMbaQEg.ia1cjfNAVYmD-aNlOFRA79VFHl6wj1yKSDp7DNzC1y4g.PNG/weekly_chart.png?type=s3"
     }
   ]
 }
