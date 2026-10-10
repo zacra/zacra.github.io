@@ -361,6 +361,21 @@
       ],
       "url": "https://blog.naver.com/zacra/224436837114",
       "thumbnail": "https://blogthumb.pstatic.net/MjAyNjEwMTBfMTIz/MDAxNzkxNTg1NDYzMzUw.qGPrvQma2aZfOtuVM6cUF4_sKANswxSl-hLL0yf36Usg.PJLdEq7lbhNnOo92PNKU0ccgKc5Mm5UjlEwxGmst2jUg.PNG/ma_chart.png?type=s3"
+    },
+    {
+      "id": "2026-10-10-sat-lev-inv-49",
+      "date": "2026-10-10",
+      "title": "[게만아 투자 실험실 - 토] +9만원(+3.48%) 레버리지 ETF & 인버스 ETF 투자 파이썬 자동매매 전략 49차 체크!",
+      "summary": "일주일 간 실계좌 확정손익\n게만아 패키지 32번 위아래 변동성 돌파 -12,558원",
+      "threads_text": "[게만아 투자 실험실 · 토]\n레버리지·인버스 ETF 전략 49차\n\n일주일 간 실계좌 확정손익\n게만아 패키지 32번 위아래 변동성 돌파 -12,558원\n게만아 패키지 37번 코스닥피레인 +106,104원\n합계 +93,546원 (ISA 5% 배정금 대비 +3.48%)\n\n50주 누적 확정손익은 +259,839원\n\n이번 주는 코스닥피레인이 위아래 변동성 돌파 전략의 손실을 만회했습니다.\n증권사 API로 파이썬 자동매매로 구현해 운용하고 있습니다. :)\n\n※ 확정손익 기준 기록이며 미래 성과를 의미하지 않습니다.",
+      "tags": [
+        "ETF",
+        "실계좌",
+        "결산",
+        "파이썬자동매매"
+      ],
+      "url": "https://blog.naver.com/zacra/224436921235",
+      "thumbnail": "https://blogthumb.pstatic.net/MjAyNjEwMTBfNzkg/MDAxNzkxNTkzOTkzNzYw.XxA1USw_29hDjg-RJa_BzBKap7HlSi58QYgmtOe9tvYg.R-cR4p8QvzEeVZL99q6LDHWqtpbW2jncPaYcmMh6I2Ig.PNG/weekly_chart.png?type=s3"
     }
   ]
 }
