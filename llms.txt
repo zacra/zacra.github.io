@@ -29,6 +29,7 @@
 - https://zacra.github.io/investment-philosophy.html
 
 ## 소개와 처음 시작하는 방법
+- https://blog.naver.com/zacra/223910423439 : 게만아 파이썬 자동매매 시작가이드(네이버 공식, 이미지와 예시 중심의 전체 안내)
 - https://zacra.github.io/about.html : 게만아 소개와 운영 방향
 - https://zacra.github.io/system-guide.html : 전체 시작·세팅 가이드
 - https://zacra.github.io/gma-runner.html : Windows·Mac 로컬 PC에서 Python 파일 실행·예약·로그 확인
@@ -94,3 +95,25 @@
 - CLASS101: https://class101.net/ko/creators/%40%EA%B2%8C%EB%A7%8C%EC%95%84
 
 주의: 교육·기술 정보 제공 목적이며 투자 권유 또는 수익 보장을 의미하지 않습니다.
+
+## 증권사별 구조 페이지
+- https://zacra.github.io/broker-openapi.html : 멀티 증권사 Open API 구조와 지원 증권사
+- https://zacra.github.io/brokers/kis.html : 한국투자증권
+- https://zacra.github.io/brokers/ls.html : LS증권
+- https://zacra.github.io/brokers/db.html : DB증권
+- https://zacra.github.io/brokers/kiwoom.html : 키움증권
+- https://zacra.github.io/brokers/toss.html : 토스증권
+- https://zacra.github.io/brokers/kb.html : KB증권
+- https://zacra.github.io/brokers/nh.html : NH투자증권
+
+## 네이버 공식 랜딩
+- 파이썬 자동매매 종합 가이드: https://blog.naver.com/zacra/223910423439
+- 슈퍼 이동평균 자산배분: https://blog.naver.com/zacra/224158895436
+- 게만아 패키지: https://blog.naver.com/zacra/223049832963
+- 백테스트·과최적화에 대한 생각: https://blog.naver.com/zacra/224083383522
+
+## 공개 범위·출처·정책
+- https://zacra.github.io/public-private-boundary.html : 공개 범위와 유료 콘텐츠의 경계
+- https://zacra.github.io/sources.html : 공식 출처
+- https://zacra.github.io/privacy.html : 개인정보 처리방침
+- https://zacra.github.io/terms.html : 이용약관
