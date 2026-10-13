@@ -9,7 +9,7 @@
 (() => {
   'use strict';
 
-  const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // TODO: 실제 GA4 측정 ID로 교체
+  const GA_MEASUREMENT_ID = 'G-4VNRFRTG68';
 
   // 실제 측정 ID가 입력되기 전에는 아무 데이터도 전송하지 않습니다.
   if (!/^G-[A-Z0-9]+$/i.test(GA_MEASUREMENT_ID) || GA_MEASUREMENT_ID.includes('XXXX')) {
