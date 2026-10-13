@@ -21,7 +21,7 @@
 <meta name="twitter:description" content="20만원에 단독 구매하거나 게만아 50만원 패키지에 포함해 이용할 수 있는 대표 주식·ETF 장기 시스템 슈퍼 이동평균 자산배분 V2. 효율적 투자선, CORE·FIXED·FAST·SLOW 추세 대응, 현금 비중 관리와 Rolling / Walk-Forward 백테스트를 결합합니다.">
 <meta name="twitter:image" content="https://zacra.github.io/assets/og-default.png">
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"슈퍼 이동평균 자산배분 V2","name":"슈퍼 이동평균 자산배분 V2","description":"20만원 단독 구매 또는 50만원 게만아 패키지에 포함해 이용할 수 있으며, 효율적 투자선과 CORE·FIXED·FAST·SLOW 추세 대응, 현금 비중 관리, Rolling / Walk-Forward 백테스트를 결합한 주식·ETF 장기 시스템을 설명합니다.","url":"https://zacra.github.io/super-moving-average.html","inLanguage":"ko-KR","dateModified":"2026-09-27","author":{"@type":"Person","name":"게만아","alternateName":"퀀트는 게만아","url":"https://zacra.github.io/about.html","sameAs":["https://blog.naver.com/zacra","https://www.youtube.com/@게만아","https://class101.net/ko/creators/%40%EA%B2%8C%EB%A7%8C%EC%95%84"]},"publisher":{"@type":"Organization","name":"자밥스튜디오","url":"https://zacra.github.io/","brand":{"@type":"Brand","name":"게만아"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"슈퍼 이동평균 자산배분 V2","name":"슈퍼 이동평균 자산배분 V2","description":"20만원 단독 구매 또는 50만원 게만아 패키지에 포함해 이용할 수 있으며, 효율적 투자선과 CORE·FIXED·FAST·SLOW 추세 대응, 현금 비중 관리, Rolling / Walk-Forward 백테스트를 결합한 주식·ETF 장기 시스템을 설명합니다.","url":"https://zacra.github.io/super-moving-average.html","inLanguage":"ko-KR","dateModified":"2026-10-13","author":{"@type":"Person","name":"게만아","alternateName":"퀀트는 게만아","url":"https://zacra.github.io/about.html","sameAs":["https://blog.naver.com/zacra","https://www.youtube.com/@게만아","https://class101.net/ko/creators/%40%EA%B2%8C%EB%A7%8C%EC%95%84"]},"publisher":{"@type":"Organization","name":"자밥스튜디오","url":"https://zacra.github.io/","brand":{"@type":"Brand","name":"게만아"}}}</script>
 
   <link href="/favicon.ico" rel="icon" sizes="any"/>
   <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
@@ -135,7 +135,7 @@
 <h2>증권사 구조 — 전략은 유지하고 API 레이어를 바꿉니다</h2>
 <p><strong>슈퍼 이동평균 전략에는 DB증권으로 운용할 수 있는 한국·미국 계좌용 코드가 포함</strong>되어 있습니다. 다른 증권사 환경으로 전환할 때는 게만아 패키지에서 제공되는 해당 증권사 공통모듈을 활용합니다.</p>
 <p>게만아의 주식 코드에서 중요한 점은 증권사가 달라질 때 전략의 이동평균·비중조절·리밸런싱 로직을 전부 다시 만드는 것이 아니라, <strong>Broker · Market · 계좌 설정에 맞는 Common/API Helper를 불러와 같은 전략 로직을 재사용하는 방향</strong>으로 구성할 수 있다는 점입니다.</p>
-<pre><code>Broker = "DBI"       # 필요에 따라 KIS / LS / KIW / TOSS / KB / NH 등
+<pre><code>Broker = "DBI"       # 필요에 따라 KIS / LS / KIW / TOSS / KB / NH / MR 등
 Market = "KR"        # KR / US
 accountMode = "REAL" # 설정된 계좌 모드</code></pre>
 <p>즉 <strong>DB증권 지원 코드는 슈퍼 이동평균 자산배분 전략 구성 안에 포함</strong>됩니다. 슈퍼 이동평균 V2는 게만아 패키지에도 포함되므로 패키지 구매자도 이 DB 지원 코드를 함께 이용할 수 있습니다. 다른 증권사로 전환할 때는 패키지의 해당 증권사 공통모듈을 활용합니다.</p>
@@ -202,12 +202,12 @@ accountMode = "REAL" # 설정된 계좌 모드</code></pre>
 <p><a class="btn primary" href="/package.html">50만원 게만아 패키지 구성 보기 →</a></p>
 </section>
 
-<p class="updated">문서 업데이트: 2026-09-27</p>
+<p class="updated">문서 업데이트: 2026-10-13</p>
 </main>
 <footer class="site-footer"><div class="footer-inner">
 <p><strong>게만아</strong> · 주식·ETF·코인 파이썬 자동매매·백테스트·API 공식 가이드</p>
 <p>교육·기술 정보 제공 목적이며 특정 금융상품의 추천 또는 수익 보장이 아닙니다. 증권사 API 사양은 변경될 수 있으므로 실제 구현 전 공식 문서를 확인하세요.</p>
-<p><a href="https://blog.naver.com/zacra" target="_blank" rel="noopener noreferrer">네이버 블로그</a> · <a href="/sources.html">공식 출처</a> · 마지막 업데이트 2026-09-27</p>
+<p><a href="https://blog.naver.com/zacra" target="_blank" rel="noopener noreferrer">네이버 블로그</a> · <a href="/sources.html">공식 출처</a> · 마지막 업데이트 2026-10-13</p>
 </div></footer>
 </body>
 </html>
