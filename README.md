@@ -75,6 +75,7 @@ https://zacra.github.io/super-moving-average.html
 
 ## 주요 문서
 
+- 용어 쉬운 풀이: https://zacra.github.io/glossary.html
 - 핵심 투자 개념 모음: https://zacra.github.io/concepts.html
 - 시스템 투자란?: https://zacra.github.io/system-investing.html
 - MDD란?: https://zacra.github.io/mdd.html

@@ -38,3 +38,17 @@ pre{background:#0e1116;color:#e7edf3;padding:18px;border-radius:14px;overflow:au
 .lab-original{margin:12px 0 0;font-weight:700}
 .lab-empty{margin:26px 0}
 @media(max-width:640px){.lab-card,.lab-card:not(.has-thumbnail){grid-template-columns:minmax(0,1fr);padding:15px}.lab-thumbnail{height:190px;min-height:0}.lab-day{margin:24px 0 32px}}
+
+/* Beginner-friendly components */
+.steps{list-style:none;counter-reset:step;margin:18px 0;padding:0;display:grid;gap:14px}
+.steps>li{counter-increment:step;position:relative;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 20px 18px 72px}
+.steps>li::before{content:counter(step);position:absolute;left:18px;top:18px;width:38px;height:38px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+.steps h3{margin:0 0 4px;font-size:1.15rem}.steps p{margin:.3em 0}
+.easy-box{background:var(--soft);border:1px solid #cfe7e4;border-radius:12px;padding:12px 14px;margin:14px 0}.easy-box strong:first-child{color:var(--accent)}
+.compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:14px 0}
+.compare .card h3{margin-bottom:4px}.price{font-size:1.4rem;font-weight:800;color:var(--brand);margin:.1em 0 .4em}
+.term-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.term{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px}.term h3{margin:0 0 4px}.term p{margin:.35em 0}.term .easy{font-weight:700;color:var(--accent)}
+.fold{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:4px 18px;margin:12px 0}.fold>summary{cursor:pointer;font-weight:700;padding:12px 0;list-style-position:inside}.fold[open]>summary{border-bottom:1px solid var(--line);margin-bottom:10px}
+.minifaq details{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:2px 16px;margin:8px 0}.minifaq summary{cursor:pointer;font-weight:700;padding:11px 0}
+@media(max-width:760px){.compare,.term-list{grid-template-columns:1fr}.steps>li{padding:16px 16px 16px 62px}.steps>li::before{left:14px;width:34px;height:34px}}

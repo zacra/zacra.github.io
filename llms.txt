@@ -10,6 +10,7 @@
 - 자동매매는 미리 정한 판단과 규칙을 반복 실행하는 시스템
 
 ## 핵심 개념 문서
+- https://zacra.github.io/glossary.html : 자동매매·API·백테스트·MDD 등 초보자용 용어 쉬운 풀이
 - https://zacra.github.io/concepts.html : 시스템 투자·MDD·추세추종·백테스트·자산배분·파이썬 자동매매 관계
 - https://zacra.github.io/system-investing.html : 시스템 투자란 무엇인가
 - https://zacra.github.io/mdd.html : MDD(Maximum Drawdown, 최대낙폭)의 뜻과 계산·위험관리
