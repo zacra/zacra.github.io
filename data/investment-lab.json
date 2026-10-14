@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-13",
+  "updated_at": "2026-10-14",
   "entries": [
     {
       "id": "2026-09-28-mon-tqqq-soxl-36",
@@ -466,6 +466,21 @@
       ],
       "url": "https://blog.naver.com/zacra/224440447898",
       "thumbnail": "https://blogthumb.pstatic.net/MjAyNjEwMTNfMjA0/MDAxNzkxODc5NTI3MzQ4.nd7eBbL7vF_XbK9POqZkobc6u-UQTojl7zW27-3sJA8g.xjTS5c413Yu61JXN11AXaWtecgVhC54_8oj2JYUp8OMg.PNG/01_chart_safe.png?type=s3"
+    },
+    {
+      "id": "2026-10-14-wed-snow-kr-isa-56",
+      "date": "2026-10-14",
+      "title": "[게만아 투자 실험실 - 수] -57만원(-1.06%) 스노우 한국형 동적 자산배분 전략 및 ISA계좌 56차 체크",
+      "summary": "일주일 간 실계좌 평가금 변화",
+      "threads_text": "[게만아 투자 실험실 · 수]\n스노우 한국형 동적 자산배분 · ISA 56차\n\n일주일 간 실계좌 평가금 변화\n53,755,796원 → 53,185,877원\n평가금 -569,919원(-1.06%)\n\n현재까지 기록된 \n계좌 최대 낙폭 MDD 약 -12%\n\n지난주 오른 폭보다 더 빠진 한 주였어요.\n여러 전략을 실계좌로 직접 운용 중입니다 :)\n\n※ 현재 평가금 기준 기록이며 미래 성과를 의미하지 않습니다.",
+      "tags": [
+        "국내주식",
+        "자산배분",
+        "ISA",
+        "파이썬자동매매"
+      ],
+      "url": "https://blog.naver.com/zacra/224441904858",
+      "thumbnail": "https://blogthumb.pstatic.net/MjAyNjEwMTRfMTM2/MDAxNzkxOTg1NjE0MDA3.DyFOiO2zhBH22Jd-vwuj1xQvv1TmK3usIoU62hlF_Aog.M49lrXITd_A952AmXZ1L47n3kxPHlcd9KVy32WKyCGsg.PNG/09_bt_my_cagr.png?type=s3"
     }
   ]
 }
