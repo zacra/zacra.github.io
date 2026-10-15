@@ -73,6 +73,18 @@
     const sourcePage = window.location.pathname || '/';
     const normalizedHref = `${url.origin}${url.pathname}`.replace(/\/$/, '');
 
+    // 토스 H5 게임 링크 클릭
+    if (url.hostname === 'minion.toss.im') {
+      const card = link.closest('.game-card');
+      sendEvent('game_play_click', {
+        game_name: card && card.querySelector('h2') ? cleanText(card.querySelector('h2').textContent) : linkText,
+        source_page: sourcePage,
+        link_url: url.href,
+        destination_type: 'toss_game'
+      });
+      return;
+    }
+
     // 패키지 / 슈퍼 이동평균 구매 버튼 클릭: 가장 중요한 전환 지표
     const purchase = PURCHASE_LINKS[normalizedHref];
     if (purchase) {
