@@ -66,3 +66,7 @@ pre{background:#0e1116;color:#e7edf3;padding:18px;border-radius:14px;overflow:au
 .game-thumb{position:relative}.game-badge{position:absolute;left:14px;top:14px;z-index:2;background:linear-gradient(135deg,#ffb300,#ff6d00);color:#fff;font-weight:900;letter-spacing:.06em;font-size:.95rem;padding:6px 14px;border-radius:999px;box-shadow:0 3px 10px rgba(0,0,0,.3)}
 .game-card.featured{border:2px solid #ffb300;box-shadow:0 8px 28px rgba(255,150,0,.22)}.game-card.featured h2{font-size:1.9rem}
 .game-nav-best{background:#ff8f00;color:#fff;border-radius:999px;padding:1px 8px;font-size:.75rem;font-weight:900;margin-right:4px}
+.mobile-notice{background:#fff4e0;border:2px solid #ffb300;border-radius:14px;padding:14px 18px;margin:18px 0 6px}.mobile-notice p{margin:.3em 0}
+.game-actions{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin:14px 0 8px}.game-actions>div{flex:1 1 220px}.game-note{font-size:.82rem;color:var(--muted);margin:.5em 0 0}
+.game-qr{display:none;margin:0;text-align:center;font-size:.72rem;color:var(--muted);flex:0 0 auto}.game-qr img{display:block;width:104px;height:104px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:4px;margin:0 auto 4px}
+@media (hover:hover) and (pointer:fine){.game-qr{display:block}}
