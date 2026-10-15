@@ -70,3 +70,4 @@ pre{background:#0e1116;color:#e7edf3;padding:18px;border-radius:14px;overflow:au
 .game-actions{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin:14px 0 8px}.game-actions>div{flex:1 1 220px}.game-note{font-size:.82rem;color:var(--muted);margin:.5em 0 0}
 .game-qr{display:none;margin:0;text-align:center;font-size:.72rem;color:var(--muted);flex:0 0 auto}.game-qr img{display:block;width:104px;height:104px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:4px;margin:0 auto 4px}
 @media (hover:hover) and (pointer:fine){.game-qr{display:block}}
+.hero.compact{padding:0}.hero.compact h1{font-size:clamp(1.65rem,6.2vw,2.5rem);margin:.15em 0 .3em}.hero.compact .lead{margin:.3em 0 1em;font-size:1rem}
