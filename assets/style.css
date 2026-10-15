@@ -71,3 +71,7 @@ pre{background:#0e1116;color:#e7edf3;padding:18px;border-radius:14px;overflow:au
 .game-qr{display:none;margin:0;text-align:center;font-size:.72rem;color:var(--muted);flex:0 0 auto}.game-qr img{display:block;width:104px;height:104px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:4px;margin:0 auto 4px}
 @media (hover:hover) and (pointer:fine){.game-qr{display:block}}
 .hero.compact{padding:0}.hero.compact h1{font-size:clamp(1.65rem,6.2vw,2.5rem);margin:.15em 0 .3em}.hero.compact .lead{margin:.3em 0 1em;font-size:1rem}
+.game-strip{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 14px 10px 10px;text-decoration:none;color:var(--text)}
+.game-strip:hover{border-color:#ffb300}.game-strip img{width:96px;height:auto;aspect-ratio:1932/828;object-fit:cover;border-radius:8px;flex:0 0 auto}
+.game-strip span{display:flex;flex-direction:column;min-width:0;flex:1}.game-strip small{color:var(--muted);font-size:.86rem}.game-strip em{font-style:normal;font-weight:700;color:#075985;white-space:nowrap;font-size:.92rem}
+@media(max-width:520px){.game-strip em{display:none}.game-strip img{width:80px}}
