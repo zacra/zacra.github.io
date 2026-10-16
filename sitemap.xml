@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://zacra.github.io/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
   </url>
   <url>
     <loc>https://zacra.github.io/about.html</loc>
@@ -22,11 +22,11 @@
   </url>
   <url>
     <loc>https://zacra.github.io/package.html</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-16</lastmod>
   </url>
   <url>
     <loc>https://zacra.github.io/package-content-guide.html</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-16</lastmod>
   </url>
   <url>
     <loc>https://zacra.github.io/python-auto-trading.html</loc>
@@ -143,5 +143,9 @@
   <url>
     <loc>https://zacra.github.io/terms.html</loc>
     <lastmod>2026-08-26</lastmod>
+  </url>
+  <url>
+    <loc>https://zacra.github.io/strategies.html</loc>
+    <lastmod>2026-10-16</lastmod>
   </url>
 </urlset>

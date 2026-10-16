@@ -75,3 +75,14 @@ pre{background:#0e1116;color:#e7edf3;padding:18px;border-radius:14px;overflow:au
 .game-strip:hover{border-color:#ffb300}.game-strip img{width:96px;height:auto;aspect-ratio:1932/828;object-fit:cover;border-radius:8px;flex:0 0 auto}
 .game-strip span{display:flex;flex-direction:column;min-width:0;flex:1}.game-strip small{color:var(--muted);font-size:.86rem}.game-strip em{font-style:normal;font-weight:700;color:#075985;white-space:nowrap;font-size:.92rem}
 @media(max-width:520px){.game-strip em{display:none}.game-strip img{width:80px}}
+
+/* Strategy catalog */
+.strat-nav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 6px}.strat-nav a{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 14px;text-decoration:none;color:var(--text);font-weight:700;font-size:.92rem}.strat-nav span{color:var(--accent);margin-left:2px}
+.strat-search{margin:14px 0 26px}.strat-search label{font-weight:700;margin-right:8px}.strat-search input{font:inherit;padding:9px 12px;border:1px solid var(--line);border-radius:10px;min-width:min(340px,100%)}#strat-status{color:var(--muted);font-size:.9rem;margin-left:8px}
+.strat-section[hidden],.strat[hidden]{display:none!important}.strat-section{scroll-margin-top:84px}.strat-section h2 small{font-size:.9rem;color:var(--muted);font-weight:600;margin-left:6px}
+.strat-desc{margin:.2em 0 1em;color:var(--muted)}.strat-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.strat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;scroll-margin-top:84px}.strat h3{margin:0 0 6px;font-size:1.05rem;line-height:1.5}.strat p{margin:.5em 0}
+.strat-no{display:inline-block;min-width:2em;text-align:center;background:var(--accent);color:#fff;border-radius:8px;padding:0 8px;font-size:.82rem;font-weight:800;margin-right:4px;vertical-align:.1em}
+.strat-meta{list-style:none;padding:0;margin:6px 0;display:flex;flex-wrap:wrap;gap:6px}.strat-meta li{font-size:.8rem;background:var(--soft);border-radius:999px;padding:2px 10px}.strat-meta b{color:var(--accent);margin-right:3px}
+.strat-links{font-size:.9rem;display:flex;gap:12px;flex-wrap:wrap;align-items:center}.strat-date{color:var(--muted);font-size:.82rem}
+@media(max-width:760px){.strat-list{grid-template-columns:1fr}}

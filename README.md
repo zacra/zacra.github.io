@@ -90,6 +90,7 @@ https://zacra.github.io/super-moving-average.html
 - 주식/코인 구조 차이: https://zacra.github.io/architecture.html
 - 백테스트: https://zacra.github.io/backtest.html
 - 효율적 투자선: https://zacra.github.io/efficient-frontier.html
+- 전략·시스템 카탈로그: https://zacra.github.io/strategies.html
 - 패키지 콘텐츠 전체 가이드: https://zacra.github.io/package-content-guide.html
 
 ## 게만아 투자 실험실 아카이브
@@ -126,3 +127,9 @@ AI 확장은 증권사 공통모듈에만 한정되지 않습니다. 주식·코
 게만아 패키지와 슈퍼 이동평균 V2를 실제로 운용하는 데 필요한 핵심 API 기능은 이미 구현되어 있으므로, 일반 사용자가 증권사 공식 API 문서를 보고 처음부터 추가 개발할 필요는 없습니다. 현재 코드에 없는 새로운 API 기능을 개인적으로 추가할 때만 공식 문서를 기준으로 확장하면 됩니다.
 
 - 전체 코드 AI 확장 가이드: https://zacra.github.io/ai-api-extension.html
+
+## 전략·시스템 카탈로그 관리
+
+- 데이터: `data/strategies.json` (전략마다 번호·제목·분류·시장·대상·요약·주기·원본 포스팅 링크)
+- 새 전략을 추가하면 entries에 항목 하나를 더하고 `python3 tools/build_strategies.py`를 실행합니다. 페이지와 구조화 데이터, sitemap 날짜가 함께 갱신됩니다.
+- 요약에는 성과 수치(연복리·MDD 등)와 소스 코드·파라미터를 넣지 않습니다.
