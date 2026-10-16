@@ -100,11 +100,11 @@
 
 ## 증권사별 구조 페이지
 - https://zacra.github.io/broker-openapi.html : 멀티 증권사 Open API 구조와 지원 증권사
-- https://zacra.github.io/brokers/kis.html : 한국투자증권
+- https://zacra.github.io/brokers/kis.html : 한국투자증권 KIS Open API — 앱키·접근토큰, 계좌번호+상품코드(일반 01·연금 22), 모의투자, 다계좌, 분봉 제약
 - https://zacra.github.io/brokers/ls.html : LS증권
 - https://zacra.github.io/brokers/db.html : DB증권
-- https://zacra.github.io/brokers/kiwoom.html : 키움증권
-- https://zacra.github.io/brokers/toss.html : 토스증권
+- https://zacra.github.io/brokers/kiwoom.html : 키움증권 REST API — API 사용신청, 허용 IP 필수, 실전·모의 도메인, 다계좌, 국내주식 공통모듈
+- https://zacra.github.io/brokers/toss.html : 토스증권 Open API — Open API Key 발급, 허용 IP, OAuth 2.0, 국내·미국주식, 통합 계좌 1개
 - https://zacra.github.io/brokers/kb.html : KB증권
 - https://zacra.github.io/brokers/nh.html : NH투자증권
 
