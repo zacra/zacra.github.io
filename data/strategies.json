@@ -1060,7 +1060,11 @@
     "https://blog.naver.com/zacra/224078862799"
    ],
    "post_date": "20251117",
-   "broker": "KIW"
+   "broker": "KIW",
+   "internal": {
+    "label": "키움증권 API 가이드",
+    "url": "/brokers/kiwoom.html"
+   }
   },
   {
    "code": 78,
@@ -1074,7 +1078,11 @@
     "https://blog.naver.com/zacra/224098287075"
    ],
    "post_date": "20251204",
-   "broker": "KIS"
+   "broker": "KIS",
+   "internal": {
+    "label": "한국투자증권 API 가이드",
+    "url": "/brokers/kis.html"
+   }
   },
   {
    "code": 79,
@@ -1205,7 +1213,11 @@
     "https://blog.naver.com/zacra/224316896322"
    ],
    "post_date": "20260615",
-   "broker": "TOSS"
+   "broker": "TOSS",
+   "internal": {
+    "label": "토스증권 API 가이드",
+    "url": "/brokers/toss.html"
+   }
   },
   {
    "code": 89,
@@ -1404,7 +1416,11 @@
     "https://blog.naver.com/zacra/224440650160"
    ],
    "post_date": null,
-   "broker": "MR"
+   "broker": "MR",
+   "internal": {
+    "label": "메리츠증권 API 가이드",
+    "url": "/brokers/mr.html"
+   }
   },
   {
    "code": "S",
