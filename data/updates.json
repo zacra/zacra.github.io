@@ -126,6 +126,28 @@
        "/server-stability.html"
       ]
      ]
+    },
+    {
+     "type": "공식 가이드",
+     "text": "<strong>거래소·증권사 API 가이드를 공식 문서와 대조해 보완</strong>했습니다. 코인원 허용 IP 필수, 빗썸 API 키 유효기간 1년, 업비트 요청 수 제한 정책, 바이낸스 조건부 주문의 Algo 주문 API 이전(2025-12-09), 메리츠·KB증권 서비스 상태를 반영했습니다.",
+     "links": [
+      [
+       "코인원",
+       "/exchanges/coinone.html"
+      ],
+      [
+       "빗썸",
+       "/exchanges/bithumb.html"
+      ],
+      [
+       "바이낸스",
+       "/exchanges/binance.html"
+      ],
+      [
+       "메리츠증권",
+       "/brokers/mr.html"
+      ]
+     ]
     }
    ]
   }
