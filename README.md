@@ -87,6 +87,7 @@ https://zacra.github.io/super-moving-average.html
 - GMA Runner: https://zacra.github.io/gma-runner.html
 - 오프라인 자동매매 셋업데이(관심 등록): https://zacra.github.io/setup-day.html
 - 멀티 증권사 API: https://zacra.github.io/broker-openapi.html
+- 증권사 API가 불안정할 때(재시도·타임아웃·호출 제한 대응): https://zacra.github.io/api-reliability.html
 - 주식/코인 구조 차이: https://zacra.github.io/architecture.html
 - 백테스트: https://zacra.github.io/backtest.html
 - 효율적 투자선: https://zacra.github.io/efficient-frontier.html
