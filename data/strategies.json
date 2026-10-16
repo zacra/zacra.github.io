@@ -1046,7 +1046,11 @@
     "https://blog.naver.com/zacra/224069770862"
    ],
    "post_date": "20251109",
-   "broker": "LS"
+   "broker": "LS",
+   "internal": {
+    "label": "LS증권 API 가이드",
+    "url": "/brokers/ls.html"
+   }
   },
   {
    "code": 77,
@@ -1309,7 +1313,11 @@
     "https://blog.naver.com/zacra/224372922844"
    ],
    "post_date": "20260809",
-   "broker": "KB"
+   "broker": "KB",
+   "internal": {
+    "label": "KB증권 API 가이드",
+    "url": "/brokers/kb.html"
+   }
   },
   {
    "code": 96,
@@ -1323,7 +1331,11 @@
     "https://blog.naver.com/zacra/224378296327"
    ],
    "post_date": "20260814",
-   "broker": "NH"
+   "broker": "NH",
+   "internal": {
+    "label": "NH투자증권 API 가이드",
+    "url": "/brokers/nh.html"
+   }
   },
   {
    "code": 97,

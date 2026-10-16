@@ -89,8 +89,8 @@ pre{background:#0e1116;color:#e7edf3;padding:18px;border-radius:14px;overflow:au
 .strat-special{border:2px solid #ffb300;box-shadow:0 6px 20px rgba(255,150,0,.16);grid-column:1/-1}.strat-no.special{background:linear-gradient(135deg,#ffb300,#ff6d00);min-width:2em}
 .table-wrap th[scope="row"]{white-space:nowrap;width:7.5em;vertical-align:top;text-align:left}
 h1,h2{word-break:keep-all;overflow-wrap:break-word}
-@media(max-width:640px){#top3 .table-wrap{border:0;background:transparent;overflow:visible}#top3 table,#top3 tbody,#top3 tr,#top3 th,#top3 td{display:block;width:100%}#top3 thead{display:none}#top3 tr{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:10px 0}#top3 th[scope="row"]{width:auto;font-size:1rem;padding:0 0 6px;border:0;color:var(--accent)}#top3 td{border:0;padding:5px 0}#top3 td::before{content:attr(data-label);display:block;font-size:.78rem;font-weight:700;color:var(--muted)}}
-@media(max-width:640px){#top3 table{min-width:0}#top3 th[scope="row"]{background:transparent}}
+@media(max-width:640px){#top3 .table-wrap,#more5 .table-wrap{border:0;background:transparent;overflow:visible}#top3 table,#more5 table,#top3 tbody,#more5 tbody,#top3 tr,#more5 tr,#top3 th,#more5 th,#top3 td,#more5 td{display:block;width:100%}#top3 thead,#more5 thead{display:none}#top3 tr,#more5 tr{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:10px 0}#top3 th[scope="row"],#more5 th[scope="row"]{width:auto;font-size:1rem;padding:0 0 6px;border:0;color:var(--accent)}#top3 td,#more5 td{border:0;padding:5px 0}#top3 td::before,#more5 td::before{content:attr(data-label);display:block;font-size:.78rem;font-weight:700;color:var(--muted)}}
+@media(max-width:640px){#top3 table,#more5 table{min-width:0}#top3 th[scope="row"],#more5 th[scope="row"]{background:transparent}}
 
 /* 전략·시스템 카탈로그 강조 */
 .nav-links a.nav-cta{background:var(--accent);color:#fff;font-weight:700;padding:3px 13px;border-radius:999px;line-height:1.6}
