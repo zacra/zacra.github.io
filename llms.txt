@@ -33,6 +33,7 @@
 - https://zacra.github.io/about.html : 게만아 소개와 운영 방향
 - https://zacra.github.io/system-guide.html : 전체 시작·세팅 가이드
 - https://zacra.github.io/gma-runner.html : Windows·Mac 로컬 PC에서 Python 파일 실행·예약·로그 확인
+- https://zacra.github.io/server-stability.html : 자동매매 서버(AWS)가 멈추지 않게 하는 법 — crontab timeout·중복 실행 방지(singleton)·실행 시점 분산·서버 감시 알림·t2 vs t3, 서버 정지 경험
 - https://zacra.github.io/setup-day.html : 오프라인 자동매매 셋업데이 관심 등록(정식 모집 전) — API 연결·슈퍼 이동평균 설정·GMA Runner 실행·로그 확인 실습, 투자 상담 없음
 - https://zacra.github.io/starter.html : 무료 주식 자동매매 Starter (한국투자·LS·키움·토스·KB·NH·DB·메리츠증권 중 한 곳 선택)
 - https://zacra.github.io/super-moving-average.html : 대표 주식·ETF 장기 자산배분 전략 (효율적 투자선·CORE/FIXED/FAST/SLOW·Rolling Walk-Forward 검증·최근 상장 ETF 단계적 편입)

@@ -88,6 +88,7 @@ https://zacra.github.io/super-moving-average.html
 - 오프라인 자동매매 셋업데이(관심 등록): https://zacra.github.io/setup-day.html
 - 멀티 증권사 API: https://zacra.github.io/broker-openapi.html
 - 증권사 API가 불안정할 때(재시도·타임아웃·호출 제한 대응): https://zacra.github.io/api-reliability.html
+- 자동매매 서버 안정화(timeout·중복 실행 방지·서버 감시): https://zacra.github.io/server-stability.html
 - 코인 거래소별 가이드: https://zacra.github.io/exchanges/upbit.html · bithumb.html · coinone.html · binance.html
 - 주식/코인 구조 차이: https://zacra.github.io/architecture.html
 - 백테스트: https://zacra.github.io/backtest.html
