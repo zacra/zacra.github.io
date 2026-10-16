@@ -759,7 +759,11 @@
    "urls": [
     "https://blog.naver.com/zacra/223508324003"
    ],
-   "post_date": "20240710"
+   "post_date": "20240710",
+   "internal": {
+    "label": "코인원 API 가이드",
+    "url": "/exchanges/coinone.html"
+   }
   },
   {
    "code": 55,
@@ -837,7 +841,11 @@
    "urls": [
     "https://blog.naver.com/zacra/223582852975"
    ],
-   "post_date": "20240913"
+   "post_date": "20240913",
+   "internal": {
+    "label": "빗썸 API 가이드",
+    "url": "/exchanges/bithumb.html"
+   }
   },
   {
    "code": 61,
@@ -1099,7 +1107,11 @@
    "urls": [
     "https://blog.naver.com/zacra/224111785921"
    ],
-   "post_date": "20251216"
+   "post_date": "20251216",
+   "internal": {
+    "label": "바이낸스 API 가이드",
+    "url": "/exchanges/binance.html"
+   }
   },
   {
    "code": 80,
@@ -1362,7 +1374,11 @@
     "https://blog.naver.com/zacra/224397809843"
    ],
    "post_date": "20260901",
-   "broker": "UPBIT"
+   "broker": "UPBIT",
+   "internal": {
+    "label": "업비트 API 가이드",
+    "url": "/exchanges/upbit.html"
+   }
   },
   {
    "code": 99,
