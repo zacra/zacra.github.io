@@ -1166,6 +1166,26 @@
   </div>
 </details>
 
+<details class="content-item" id="content-104" data-search="104 코인더블이동평균 일봉 + 4시간 전략 코인 더블 이동평균 일봉 4시간 4시간봉 4h 업비트 코인원 빗썸 upbit coinone bithumb">
+  <summary><span class="num">[104]</span> 코인더블이동평균 일봉 + 4시간 전략</summary>
+  <div class="content-body">
+    <h3>관련 설명</h3>
+    <div class="guide-links"><a class="btn" href="https://blog.naver.com/zacra/224444067342" target="_blank" rel="noopener noreferrer">필독 포스팅 열기 →</a></div>
+    <h3>crontab 등록 예시</h3>
+    <pre><code>0 17 1 * * python3 /var/autobot/MakeDoubleMa_Upbit.py
+0 20 * * 0 python3 /var/autobot/MakeDoubleMa_4h_Upbit.py
+0 */1 * * * python3 /var/autobot/Ma_Double_Upbit_1d4h_Bot.py
+
+0 18 2 * * python3 /var/autobot/MakeDoubleMa_Coinone.py
+0 21 * * 0 python3 /var/autobot/MakeDoubleMa_4h_Coinone.py
+0 */1 * * * python3 /var/autobot/Ma_Double_Coinone_1d4h_Bot.py
+
+0 19 3 * * python3 /var/autobot/MakeDoubleMa_Bithumb.py
+0 22 * * 0 python3 /var/autobot/MakeDoubleMa_4h_Bithumb.py
+0 */1 * * * python3 /var/autobot/Ma_Double_Bithumb_1d4h_Bot.py</code></pre>
+  </div>
+</details>
+
 </div>
 </section>
 
