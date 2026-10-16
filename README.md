@@ -93,6 +93,7 @@ https://zacra.github.io/super-moving-average.html
 - 백테스트: https://zacra.github.io/backtest.html
 - 효율적 투자선: https://zacra.github.io/efficient-frontier.html
 - 전략·시스템 카탈로그: https://zacra.github.io/strategies.html
+- 업데이트 노트: https://zacra.github.io/updates.html
 - 패키지 콘텐츠 전체 가이드: https://zacra.github.io/package-content-guide.html
 
 ## 게만아 투자 실험실 아카이브
@@ -136,3 +137,9 @@ AI 확장은 증권사 공통모듈에만 한정되지 않습니다. 주식·코
 - 새 전략을 추가하면 entries에 항목 하나를 더하고 `python3 tools/build_strategies.py`를 실행합니다. 페이지와 구조화 데이터, sitemap 날짜가 함께 갱신됩니다.
 - 번호 없이 맨 앞에 둘 스페셜 항목은 `"code": "S"`, `"special": true`로 넣습니다(분류 안에서 가장 먼저 표시, `internal`로 사이트 내부 페이지 링크 추가 가능).
 - 요약에는 성과 수치(연복리·MDD 등)와 소스 코드·파라미터를 넣지 않습니다.
+
+
+## 업데이트 노트 관리
+- 데이터: `data/updates.json` (entries 맨 앞에 날짜·제목·항목을 추가)
+- 새 업데이트를 추가한 뒤 `python3 tools/build_updates.py`를 실행하면 `updates.html`과 사이트맵 lastmod가 갱신됩니다.
+- 성과·수익률 수치는 싣지 않습니다.
