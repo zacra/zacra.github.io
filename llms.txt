@@ -100,7 +100,7 @@
 
 ## 증권사별 구조 페이지
 - https://zacra.github.io/broker-openapi.html : 멀티 증권사 Open API 구조와 지원 증권사
-- https://zacra.github.io/api-reliability.html : 증권사 API가 불안정할 때 자동매매 대응 — 호출 간 대기·응답 대기 제한(타임아웃)·호출 제한 시 대기 후 재시도·네트워크 단절 재시도·토큰 재발급·주문 중복 방지, 증권사별 응답 코드 차이(메리츠 예시)
+- https://zacra.github.io/api-reliability.html : 증권사 API가 불안정할 때 자동매매 대응 — 호출 간 대기·응답 대기 제한(타임아웃)·호출 제한 시 대기 후 재시도·네트워크 단절 재시도·토큰 재발급·주문 중복 방지, 증권사별 응답 코드를 공통 기준으로 추상화해 처리
 - https://zacra.github.io/brokers/kis.html : 한국투자증권 KIS Open API — 앱키·접근토큰, 계좌번호+상품코드(일반 01·연금 22), 모의투자, 다계좌, 분봉 제약
 - https://zacra.github.io/brokers/ls.html : LS증권 Open API — 투혼 앱 신청(xingAPI·OPEN API·해외주식 API), 미국주식 거래신청·실시간 시세신청 선행, 다계좌 yaml, 패키지 76번
 - https://zacra.github.io/brokers/db.html : DB증권 Open API — 국내·미국주식, 미국 종목코드 표기(BRK.B), 슈퍼 이동평균 자산배분 V2 구성에 포함
