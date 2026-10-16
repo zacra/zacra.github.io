@@ -116,7 +116,7 @@
 - https://zacra.github.io/crypto-auto-trading.html : 파이썬 코인 자동매매 구조(거래소별 공통모듈, 현물·선물, 주문 안전장치)
 - https://zacra.github.io/exchanges/upbit.html : 업비트 API — 키 발급·허용 IP 필수, 메인·서브포켓과 포켓별 API 키, 포켓 단위 호출 한도, pyupbit 없이 REST 직접 호출(패키지 98번)
 - https://zacra.github.io/exchanges/bithumb.html : 빗썸 API — 키 발급(허용 IP 필수·입출금 권한 제외), API 2.0, 타임프레임, 패키지 60번
-- https://zacra.github.io/exchanges/coinone.html : 코인원 API — 통합 API 관리에서 키 발급, 별도 IP 입력 없음, 포트폴리오별 API 키, 패키지 54번
+- https://zacra.github.io/exchanges/coinone.html : 코인원 API — 통합 API 관리에서 키 발급, 허용 IP 등록 필요, 포트폴리오별 API 키, 패키지 54번
 - https://zacra.github.io/exchanges/binance.html : 바이낸스 API — ccxt, 현물과 선물 API 차이, 헤지 모드, 스탑·트레일링 스탑 주문, 선물 스탑 트레이더(패키지 79번)
 
 ## 네이버 공식 랜딩
