@@ -1,19 +1,122 @@
 {
  "updated_at": "2026-10-16",
- "types": ["패키지", "전략", "무료 Starter", "공식 가이드"],
+ "types": [
+  "패키지",
+  "전략",
+  "무료 Starter",
+  "공식 가이드"
+ ],
  "entries": [
   {
    "date": "2026-10-16",
    "title": "패키지 104번 추가, 슈퍼 이동평균 V2 업데이트, Starter 메리츠증권, 공식 가이드 확충",
    "items": [
-    {"type": "패키지", "text": "패키지 104번 <strong>코인 더블 이동평균 일봉 + 4시간 전략</strong>(업비트·빗썸·코인원)이 추가됐습니다. 일봉과 4시간봉 더블 이동평균을 함께 쓰고 워크포워드 롤링 백테스트 코드가 포함됩니다.", "links": [["전략 카탈로그에서 보기", "/strategies.html#s-104"], ["필독 포스팅·crontab 예시", "/package-content-guide.html#content-104"]]},
-    {"type": "패키지", "text": "패키지 103번 <strong>메리츠증권 파이썬 공통모듈</strong>(REST 베타)을 증권사 가이드에 반영했습니다. 국내·미국주식을 지원하며 모의투자는 제공되지 않습니다.", "links": [["메리츠증권 API 가이드", "/brokers/mr.html"]]},
-    {"type": "전략", "text": "<strong>슈퍼 이동평균 V2</strong>에 최근 상장 ETF를 관측 일봉 수에 따라 단계적으로 편입하는 규칙이 추가됐습니다. 백테스트·자동매매 봇·포트폴리오 점검 코드에 같은 규칙이 들어 있습니다.", "links": [["단계별 기준 보기", "/super-moving-average.html#new-etf"]]},
-    {"type": "무료 Starter", "text": "무료 Starter 지원 증권사에 <strong>메리츠증권</strong>이 추가됐습니다. 메리츠증권은 국내주식과 미국주식을 모두 이용할 수 있습니다.", "links": [["무료 Starter 보기", "/starter.html"]]},
-    {"type": "공식 가이드", "text": "<strong>코인 거래소 API 가이드</strong>를 업비트·빗썸·코인원·바이낸스별로 신설했습니다. 키 발급, 허용 IP, 업비트 포켓, 바이낸스 선물 스탑 주문 등을 정리했습니다.", "links": [["업비트", "/exchanges/upbit.html"], ["빗썸", "/exchanges/bithumb.html"], ["코인원", "/exchanges/coinone.html"], ["바이낸스", "/exchanges/binance.html"]]},
-    {"type": "공식 가이드", "text": "<strong>증권사 API 가이드</strong>를 메리츠증권 신설과 LS·DB·KB·NH투자증권 보강으로 확충했습니다. 증권사별 신청 순서, 설정 파일 예시, 주의할 점을 담았고 8개 증권사를 비교하는 표를 추가했습니다.", "links": [["멀티 증권사 API 비교", "/broker-openapi.html"]]},
-    {"type": "공식 가이드", "text": "<strong>증권사 API가 불안정할 때의 대응</strong>(호출 간 대기, 응답 대기 제한, 한도 초과 시 재시도, 토큰 재발급, 주문 중복 방지)을 정리한 가이드를 신설했습니다.", "links": [["대응 가이드 보기", "/api-reliability.html"]]},
-    {"type": "공식 가이드", "text": "<strong>전략·시스템 카탈로그</strong>를 메뉴의 강조 버튼으로 노출하고, 패키지 전략을 유형별로 정리한 목록에 104번까지 반영했습니다.", "links": [["전략·시스템 카탈로그", "/strategies.html"]]}
+    {
+     "type": "패키지",
+     "text": "패키지 104번 <strong>코인 더블 이동평균 일봉 + 4시간 전략</strong>(업비트·빗썸·코인원)이 추가됐습니다. 일봉과 4시간봉 더블 이동평균을 함께 쓰고 워크포워드 롤링 백테스트 코드가 포함됩니다.",
+     "links": [
+      [
+       "전략 카탈로그에서 보기",
+       "/strategies.html#s-104"
+      ],
+      [
+       "필독 포스팅·crontab 예시",
+       "/package-content-guide.html#content-104"
+      ]
+     ]
+    },
+    {
+     "type": "패키지",
+     "text": "패키지 103번 <strong>메리츠증권 파이썬 공통모듈</strong>(REST 베타)을 증권사 가이드에 반영했습니다. 국내·미국주식을 지원하며 모의투자는 제공되지 않습니다.",
+     "links": [
+      [
+       "메리츠증권 API 가이드",
+       "/brokers/mr.html"
+      ]
+     ]
+    },
+    {
+     "type": "전략",
+     "text": "<strong>슈퍼 이동평균 V2</strong>에 최근 상장 ETF를 관측 일봉 수에 따라 단계적으로 편입하는 규칙이 추가됐습니다. 백테스트·자동매매 봇·포트폴리오 점검 코드에 같은 규칙이 들어 있습니다.",
+     "links": [
+      [
+       "단계별 기준 보기",
+       "/super-moving-average.html#new-etf"
+      ]
+     ]
+    },
+    {
+     "type": "무료 Starter",
+     "text": "무료 Starter 지원 증권사에 <strong>메리츠증권</strong>이 추가됐습니다. 메리츠증권은 국내주식과 미국주식을 모두 이용할 수 있습니다.",
+     "links": [
+      [
+       "무료 Starter 보기",
+       "/starter.html"
+      ]
+     ]
+    },
+    {
+     "type": "공식 가이드",
+     "text": "<strong>코인 거래소 API 가이드</strong>를 업비트·빗썸·코인원·바이낸스별로 신설했습니다. 키 발급, 허용 IP, 업비트 포켓, 바이낸스 선물 스탑 주문 등을 정리했습니다.",
+     "links": [
+      [
+       "업비트",
+       "/exchanges/upbit.html"
+      ],
+      [
+       "빗썸",
+       "/exchanges/bithumb.html"
+      ],
+      [
+       "코인원",
+       "/exchanges/coinone.html"
+      ],
+      [
+       "바이낸스",
+       "/exchanges/binance.html"
+      ]
+     ]
+    },
+    {
+     "type": "공식 가이드",
+     "text": "<strong>증권사 API 가이드</strong>를 메리츠증권 신설과 LS·DB·KB·NH투자증권 보강으로 확충했습니다. 증권사별 신청 순서, 설정 파일 예시, 주의할 점을 담았고 8개 증권사를 비교하는 표를 추가했습니다.",
+     "links": [
+      [
+       "멀티 증권사 API 비교",
+       "/broker-openapi.html"
+      ]
+     ]
+    },
+    {
+     "type": "공식 가이드",
+     "text": "<strong>증권사 API가 불안정할 때의 대응</strong>(호출 간 대기, 응답 대기 제한, 한도 초과 시 재시도, 토큰 재발급, 주문 중복 방지)을 정리한 가이드를 신설했습니다.",
+     "links": [
+      [
+       "대응 가이드 보기",
+       "/api-reliability.html"
+      ]
+     ]
+    },
+    {
+     "type": "공식 가이드",
+     "text": "<strong>전략·시스템 카탈로그</strong>를 메뉴의 강조 버튼으로 노출하고, 패키지 전략을 유형별로 정리한 목록에 104번까지 반영했습니다.",
+     "links": [
+      [
+       "전략·시스템 카탈로그",
+       "/strategies.html"
+      ]
+     ]
+    },
+    {
+     "type": "공식 가이드",
+     "text": "<strong>용어 쉬운 풀이</strong>에 접근 토큰, 호출 제한, 타임아웃, 재시도, 허용 IP, 현물·선물, 헤지 모드, 업비트 포켓, 슈퍼 이동평균 4개 축 같은 실전 용어를 추가했습니다.",
+     "links": [
+      [
+       "용어 쉬운 풀이",
+       "/glossary.html"
+      ]
+     ]
+    }
    ]
   }
  ]
