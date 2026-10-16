@@ -81,7 +81,8 @@ def fmt_date(d: str | None) -> str:
 def main() -> None:
     data = json.loads(DATA_FILE.read_text(encoding="utf-8"))
     cats = data["categories"]
-    entries = sorted(data["entries"], key=lambda e: e["code"])
+    entries = sorted(data["entries"], key=lambda e: (not e.get("special"), e["code"] if isinstance(e["code"], int) else 0))
+    numbered = [e for e in entries if not e.get("special")]
     updated = data["updated_at"]
     by_cat: dict[str, list[dict]] = {c["name"]: [] for c in cats}
     for e in entries:
@@ -131,12 +132,15 @@ def main() -> None:
             for i, u in enumerate(e["urls"], 1):
                 label = "원본 포스팅(네이버)" if len(e["urls"]) == 1 else f"원본 포스팅 {i}(네이버)"
                 links.append(f'<a href="{esc(u)}" target="_blank" rel="noopener noreferrer">{label} →</a>')
+            if e.get("internal"):
+                links.append(f'<a href="{esc(e["internal"]["url"])}">{esc(e["internal"]["label"])} →</a>')
             date = fmt_date(e.get("post_date"))
             if date:
                 links.append(f'<span class="strat-date">게시 {date}</span>')
+            special = bool(e.get("special"))
             cards.append(
-                f'<article class="strat" id="s-{e["code"]}">'
-                f'<h3><span class="strat-no">{e["code"]}</span> {esc(e["title"])}</h3>'
+                f'<article class="strat{" strat-special" if special else ""}" id="s-{e["code"]}">'
+                f'<h3><span class="strat-no{" special" if special else ""}">{e["code"]}</span> {esc(e["title"])}</h3>'
                 f'<ul class="strat-meta">{"".join(meta)}</ul>'
                 f'<p>{esc(e["summary"])}</p>'
                 f'<p class="strat-links">{" ".join(links)}</p></article>')
@@ -147,10 +151,10 @@ def main() -> None:
 
     body = f"""<main id="main"><div class="breadcrumb"><a href="/">홈</a> › <a href="/package.html">패키지</a> › 전략·시스템 카탈로그</div>
 <h1>게만아 패키지 전략·시스템 카탈로그</h1>
-<p class="lead">게만아 패키지에 들어 있는 주식·ETF·코인 자동매매 <strong>전략과 시스템 {len(entries)}개</strong>를 유형별로 정리한 목록입니다. 전략마다 어떤 시장에서 무엇을 대상으로 어떤 주기로 실행되는지 한눈에 보고, 자세한 설명은 원본 포스팅에서 이어서 확인하세요.</p>
+<p class="lead">게만아 패키지에 들어 있는 주식·ETF·코인 자동매매 <strong>전략과 시스템 {len(numbered)}개</strong>를 유형별로 정리한 목록입니다. 전략마다 어떤 시장에서 무엇을 대상으로 어떤 주기로 실행되는지 한눈에 보고, 자세한 설명은 원본 포스팅에서 이어서 확인하세요.</p>
 <div class="notice"><p><strong>이 목록을 읽는 법</strong></p>
 <ul>
-<li>앞의 번호는 <a href="/package-content-guide.html">패키지 콘텐츠 번호</a>와 같습니다. 번호별 필독 포스팅과 crontab 예시는 그 페이지에 있습니다.</li>
+<li>앞의 번호는 <a href="/package-content-guide.html">패키지 콘텐츠 번호</a>와 같습니다. 번호별 필독 포스팅과 crontab 예시는 그 페이지에 있습니다. 번호 대신 <b>S</b>가 붙은 것은 번호 없이 맨 앞에 둔 스페셜(대표) 전략입니다.</li>
 <li>교육·기술 정보 제공 목적이며 종목 추천이나 수익 보장이 아닙니다. <strong>과거 성과 수치는 일부러 싣지 않았습니다.</strong> 원본 포스팅의 수치는 당시 조건의 과거 결과입니다.</li>
 <li>같은 전략도 시장·기간·비용 가정에 따라 결과가 달라지고, 일부 전략은 이후 개선판이나 다른 전략으로 대체됐다고 포스팅에 밝혀 두었습니다.</li>
 <li>주식 전략은 증권사 공통모듈로 증권사를 바꿔 쓰는 구조를 지향하며, 지원 범위는 콘텐츠마다 다릅니다. <a href="/broker-openapi.html">멀티 증권사 API 구조 보기 →</a></li>
