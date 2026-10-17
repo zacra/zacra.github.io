@@ -1,60 +1,71 @@
 {
- "updated_at": "2026-10-16",
+ "updated_at": "2026-10-17",
  "categories": [
   {
    "id": "asset-allocation",
    "name": "자산배분",
-   "desc": "주식·채권·금·원자재 등 여러 자산에 나눠 담고, 고정 비중으로 두거나 모멘텀·이동평균에 따라 비중을 조절하는 전략입니다."
+   "desc": "주식·채권·금·원자재 등 여러 자산에 나눠 담고, 고정 비중으로 두거나 모멘텀·이동평균에 따라 비중을 조절하는 전략입니다.",
+   "ranked": true
   },
   {
    "id": "momentum",
    "name": "모멘텀·섹터",
-   "desc": "추세가 강한 ETF·섹터를 골라 투자하는 전략입니다."
+   "desc": "추세가 강한 ETF·섹터를 골라 투자하는 전략입니다.",
+   "ranked": true
   },
   {
    "id": "split",
    "name": "분할매매",
-   "desc": "한 번에 사고팔지 않고 나눠서 매수·매도해 평균 단가와 변동 위험을 관리하는 전략입니다."
+   "desc": "한 번에 사고팔지 않고 나눠서 매수·매도해 평균 단가와 변동 위험을 관리하는 전략입니다.",
+   "ranked": true
   },
   {
    "id": "long-short",
    "name": "양방향·헷지",
-   "desc": "레버리지·인버스 ETF나 선물의 롱·숏을 함께 써서 상승·하락 양쪽에 대응하는 구조입니다. 위험이 큰 구조이므로 포스팅의 위험 설명을 꼭 확인하세요."
+   "desc": "레버리지·인버스 ETF나 선물의 롱·숏을 함께 써서 상승·하락 양쪽에 대응하는 구조입니다. 위험이 큰 구조이므로 포스팅의 위험 설명을 꼭 확인하세요.",
+   "ranked": true
   },
   {
    "id": "breakout",
    "name": "변동성 돌파·단타",
-   "desc": "가격이 일정 기준을 돌파할 때 진입하고 짧게 정리하는 단기 전략입니다."
+   "desc": "가격이 일정 기준을 돌파할 때 진입하고 짧게 정리하는 단기 전략입니다.",
+   "ranked": true
   },
   {
    "id": "quant",
    "name": "퀀트·종목선정",
-   "desc": "시가총액·거래대금·보유 성과 같은 기준으로 종목을 고르는 전략입니다."
+   "desc": "시가총액·거래대금·보유 성과 같은 기준으로 종목을 고르는 전략입니다.",
+   "ranked": true
   },
   {
    "id": "coin-spot",
    "name": "코인 현물",
-   "desc": "업비트·빗썸·코인원·바이낸스 현물에서 쓰는 전략입니다."
+   "desc": "업비트·빗썸·코인원·바이낸스 현물에서 쓰는 전략입니다.",
+   "ranked": true
   },
   {
    "id": "coin-futures",
    "name": "코인 선물",
-   "desc": "바이낸스 선물(롱·숏·레버리지)에서 쓰는 전략입니다. 청산 위험이 크므로 초보자에게 권하지 않는다는 설명이 포스팅에 포함돼 있습니다."
+   "desc": "바이낸스 선물(롱·숏·레버리지)에서 쓰는 전략입니다. 청산 위험이 크므로 초보자에게 권하지 않는다는 설명이 포스팅에 포함돼 있습니다.",
+   "ranked": true
   },
   {
    "id": "helper",
    "name": "보조 시스템",
-   "desc": "어떤 전략에도 붙여 쓰는 분할 주문, 스탑 주문, 비중 조절, 서버 감시 같은 부품입니다."
+   "desc": "어떤 전략에도 붙여 쓰는 분할 주문, 스탑 주문, 비중 조절, 서버 감시 같은 부품입니다.",
+   "ranked": false
   },
   {
    "id": "tools",
    "name": "백테스트·도구",
-   "desc": "백테스트나 데이터 수집을 주된 목적으로 한 독립 도구만 모았습니다. 다른 번호의 전략에도 백테스트 코드가 함께 들어 있는 경우가 많지만 전략마다 다르므로, 해당 전략의 원본 포스팅에서 확인하세요."
+   "desc": "백테스트나 데이터 수집을 주된 목적으로 한 독립 도구만 모았습니다. 다른 번호의 전략에도 백테스트 코드가 함께 들어 있는 경우가 많지만 전략마다 다르므로, 해당 전략의 원본 포스팅에서 확인하세요.",
+   "ranked": false
   },
   {
    "id": "modules",
    "name": "공통모듈",
-   "desc": "증권사·거래소 API를 같은 방식으로 쓰게 해주는 연결 모듈입니다."
+   "desc": "증권사·거래소 API를 같은 방식으로 쓰게 해주는 연결 모듈입니다.",
+   "ranked": false
   }
  ],
  "entries": [
@@ -69,7 +80,8 @@
    "urls": [
     "https://blog.naver.com/zacra/222923418760"
    ],
-   "post_date": "20221108"
+   "post_date": "20221108",
+   "rank": 12
   },
   {
    "code": 2,
@@ -82,7 +94,8 @@
    "urls": [
     "https://blog.naver.com/zacra/222936160836"
    ],
-   "post_date": "20221123"
+   "post_date": "20221123",
+   "rank": 5
   },
   {
    "code": 3,
@@ -108,7 +121,8 @@
    "urls": [
     "https://blog.naver.com/zacra/222949269705"
    ],
-   "post_date": "20221207"
+   "post_date": "20221207",
+   "rank": 3
   },
   {
    "code": 5,
@@ -121,7 +135,8 @@
    "urls": [
     "https://blog.naver.com/zacra/222954263002"
    ],
-   "post_date": "20221213"
+   "post_date": "20221213",
+   "rank": 1
   },
   {
    "code": 6,
@@ -135,7 +150,8 @@
     "https://blog.naver.com/zacra/222967138965",
     "https://blog.naver.com/zacra/222969725781"
    ],
-   "post_date": "20221227"
+   "post_date": "20221227",
+   "rank": 2
   },
   {
    "code": 7,
@@ -148,7 +164,8 @@
    "urls": [
     "https://blog.naver.com/zacra/222979124069"
    ],
-   "post_date": "20230109"
+   "post_date": "20230109",
+   "rank": 20
   },
   {
    "code": 8,
@@ -161,7 +178,8 @@
    "urls": [
     "https://blog.naver.com/zacra/222981499437"
    ],
-   "post_date": "20230111"
+   "post_date": "20230111",
+   "rank": 14
   },
   {
    "code": 9,
@@ -174,7 +192,8 @@
    "urls": [
     "https://blog.naver.com/zacra/222988877129"
    ],
-   "post_date": "20230119"
+   "post_date": "20230119",
+   "rank": 4
   },
   {
    "code": 10,
@@ -213,7 +232,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223005881442"
    ],
-   "post_date": "20230205"
+   "post_date": "20230205",
+   "rank": 2
   },
   {
    "code": 13,
@@ -226,7 +246,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223009649644"
    ],
-   "post_date": "20230208"
+   "post_date": "20230208",
+   "rank": 4
   },
   {
    "code": 14,
@@ -291,7 +312,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223042245494"
    ],
-   "post_date": "20230312"
+   "post_date": "20230312",
+   "rank": 3
   },
   {
    "code": 19,
@@ -317,7 +339,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223052327452"
    ],
-   "post_date": "20230322"
+   "post_date": "20230322",
+   "rank": 15
   },
   {
    "code": 21,
@@ -343,7 +366,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223067918613"
    ],
-   "post_date": "20230407"
+   "post_date": "20230407",
+   "rank": 15
   },
   {
    "code": 23,
@@ -356,7 +380,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223074617299"
    ],
-   "post_date": "20230414"
+   "post_date": "20230414",
+   "rank": 6
   },
   {
    "code": 24,
@@ -369,7 +394,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223078498415"
    ],
-   "post_date": "20230418"
+   "post_date": "20230418",
+   "rank": 7
   },
   {
    "code": 25,
@@ -382,7 +408,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223083723474"
    ],
-   "post_date": "20230424"
+   "post_date": "20230424",
+   "rank": 9
   },
   {
    "code": 26,
@@ -395,7 +422,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223085637779"
    ],
-   "post_date": "20230426"
+   "post_date": "20230426",
+   "rank": 6
   },
   {
    "code": 27,
@@ -408,7 +436,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223087788229"
    ],
-   "post_date": "20230428"
+   "post_date": "20230428",
+   "rank": 8
   },
   {
    "code": 28,
@@ -421,7 +450,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223097613599"
    ],
-   "post_date": "20230509"
+   "post_date": "20230509",
+   "rank": 3
   },
   {
    "code": 29,
@@ -434,7 +464,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223102715455"
    ],
-   "post_date": "20230515"
+   "post_date": "20230515",
+   "rank": 1
   },
   {
    "code": 30,
@@ -447,7 +478,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223110831744"
    ],
-   "post_date": "20230524"
+   "post_date": "20230524",
+   "rank": 3
   },
   {
    "code": 31,
@@ -460,7 +492,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223122965642"
    ],
-   "post_date": "20230607"
+   "post_date": "20230607",
+   "rank": 16
   },
   {
    "code": 32,
@@ -473,7 +506,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223128702427"
    ],
-   "post_date": "20230614"
+   "post_date": "20230614",
+   "rank": 1
   },
   {
    "code": 33,
@@ -486,7 +520,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223145929993"
    ],
-   "post_date": "20230703"
+   "post_date": "20230703",
+   "rank": 3
   },
   {
    "code": 34,
@@ -499,7 +534,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223153229412"
    ],
-   "post_date": "20230711"
+   "post_date": "20230711",
+   "rank": 19
   },
   {
    "code": 35,
@@ -512,7 +548,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223155000345"
    ],
-   "post_date": "20230713"
+   "post_date": "20230713",
+   "rank": 8
   },
   {
    "code": 36,
@@ -525,7 +562,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223170880153"
    ],
-   "post_date": "20230731"
+   "post_date": "20230731",
+   "rank": 10
   },
   {
    "code": 37,
@@ -538,7 +576,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223177598281"
    ],
-   "post_date": "20230807"
+   "post_date": "20230807",
+   "rank": 5
   },
   {
    "code": 38,
@@ -551,7 +590,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223200777920"
    ],
-   "post_date": "20230902"
+   "post_date": "20230902",
+   "rank": 10
   },
   {
    "code": 39,
@@ -564,7 +604,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223202898685"
    ],
-   "post_date": "20230905"
+   "post_date": "20230905",
+   "rank": 18
   },
   {
    "code": 40,
@@ -577,7 +618,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223212623984"
    ],
-   "post_date": "20230915"
+   "post_date": "20230915",
+   "rank": 14
   },
   {
    "code": 41,
@@ -590,7 +632,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223240069613"
    ],
-   "post_date": "20231018"
+   "post_date": "20231018",
+   "rank": 5
   },
   {
    "code": 42,
@@ -603,7 +646,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223244683902"
    ],
-   "post_date": "20231023"
+   "post_date": "20231023",
+   "rank": 16
   },
   {
    "code": 43,
@@ -629,7 +673,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223281275891"
    ],
-   "post_date": "20231202"
+   "post_date": "20231202",
+   "rank": 6
   },
   {
    "code": 45,
@@ -642,7 +687,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223314161797"
    ],
-   "post_date": "20240106"
+   "post_date": "20240106",
+   "rank": 7
   },
   {
    "code": 46,
@@ -668,7 +714,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223403166183"
    ],
-   "post_date": "20240402"
+   "post_date": "20240402",
+   "rank": 13
   },
   {
    "code": 48,
@@ -694,7 +741,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223419399142"
    ],
-   "post_date": "20240418"
+   "post_date": "20240418",
+   "rank": 9
   },
   {
    "code": 50,
@@ -707,7 +755,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223449598379"
    ],
-   "post_date": "20240517"
+   "post_date": "20240517",
+   "rank": 13
   },
   {
    "code": 51,
@@ -720,7 +769,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223451342123"
    ],
-   "post_date": "20240519"
+   "post_date": "20240519",
+   "rank": 5
   },
   {
    "code": 52,
@@ -733,7 +783,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223473233858"
    ],
-   "post_date": "20240608"
+   "post_date": "20240608",
+   "rank": 3
   },
   {
    "code": 53,
@@ -763,7 +814,8 @@
    "internal": {
     "label": "코인원 API 가이드",
     "url": "/exchanges/coinone.html"
-   }
+   },
+   "rank": 11
   },
   {
    "code": 55,
@@ -776,7 +828,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223530451234"
    ],
-   "post_date": "20240730"
+   "post_date": "20240730",
+   "rank": 2
   },
   {
    "code": 56,
@@ -802,7 +855,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223559959653"
    ],
-   "post_date": "20240825"
+   "post_date": "20240825",
+   "rank": 1
   },
   {
    "code": 58,
@@ -815,7 +869,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223570808965"
    ],
-   "post_date": "20240903"
+   "post_date": "20240903",
+   "rank": 12
   },
   {
    "code": 59,
@@ -845,7 +900,8 @@
    "internal": {
     "label": "빗썸 API 가이드",
     "url": "/exchanges/bithumb.html"
-   }
+   },
+   "rank": 5
   },
   {
    "code": 61,
@@ -858,7 +914,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223589057576"
    ],
-   "post_date": "20240919"
+   "post_date": "20240919",
+   "rank": 4
   },
   {
    "code": 62,
@@ -871,7 +928,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223603456956"
    ],
-   "post_date": "20241001"
+   "post_date": "20241001",
+   "rank": 4
   },
   {
    "code": 63,
@@ -923,7 +981,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223919665446"
    ],
-   "post_date": "20250702"
+   "post_date": "20250702",
+   "rank": 1
   },
   {
    "code": 67,
@@ -936,7 +995,8 @@
    "urls": [
     "https://blog.naver.com/zacra/223921683677"
    ],
-   "post_date": "20250704"
+   "post_date": "20250704",
+   "rank": 2
   },
   {
    "code": 68,
@@ -1137,7 +1197,8 @@
    "urls": [
     "https://blog.naver.com/zacra/224141005095"
    ],
-   "post_date": "20260109"
+   "post_date": "20260109",
+   "rank": 4
   },
   {
    "code": 82,
@@ -1189,7 +1250,8 @@
    "urls": [
     "https://blog.naver.com/zacra/224253259587"
    ],
-   "post_date": "20260415"
+   "post_date": "20260415",
+   "rank": 17
   },
   {
    "code": 86,
@@ -1246,7 +1308,8 @@
    "urls": [
     "https://blog.naver.com/zacra/224342425920"
    ],
-   "post_date": "20260710"
+   "post_date": "20260710",
+   "rank": 1
   },
   {
    "code": 90,
@@ -1285,7 +1348,8 @@
    "urls": [
     "https://blog.naver.com/zacra/224355896695"
    ],
-   "post_date": "20260723"
+   "post_date": "20260723",
+   "rank": 1
   },
   {
    "code": 93,
@@ -1298,7 +1362,8 @@
    "urls": [
     "https://blog.naver.com/zacra/224370434227"
    ],
-   "post_date": "20260806"
+   "post_date": "20260806",
+   "rank": 2
   },
   {
    "code": 94,
@@ -1360,7 +1425,8 @@
    "urls": [
     "https://blog.naver.com/zacra/224385440673"
    ],
-   "post_date": "20260821"
+   "post_date": "20260821",
+   "rank": 2
   },
   {
    "code": 98,
@@ -1391,7 +1457,8 @@
    "urls": [
     "https://blog.naver.com/zacra/224400812412"
    ],
-   "post_date": "20260904"
+   "post_date": "20260904",
+   "rank": 7
   },
   {
    "code": 100,
@@ -1404,7 +1471,8 @@
    "urls": [
     "https://blog.naver.com/zacra/224416440719"
    ],
-   "post_date": "20260918"
+   "post_date": "20260918",
+   "rank": 11
   },
   {
    "code": 101,
@@ -1417,7 +1485,8 @@
    "urls": [
     "https://blog.naver.com/zacra/224429688789"
    ],
-   "post_date": "20261002"
+   "post_date": "20261002",
+   "rank": 4
   },
   {
    "code": 102,
@@ -1430,7 +1499,8 @@
    "urls": [
     "https://blog.naver.com/zacra/224435647436"
    ],
-   "post_date": "20261008"
+   "post_date": "20261008",
+   "rank": 1
   },
   {
    "code": 103,
