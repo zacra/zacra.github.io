@@ -3,7 +3,7 @@
 
 사용법:  python3 tools/rank_by_calmar.py <마스터표.md> [--agg max|median] [--min-years 2.0] [--show]
 
-- 이 저장소는 공개되므로 Calmar 등 세부 수치는 저장하지 않고, 분류 안의 순위(rank)만 저장합니다.
+- 분류 안의 순위(rank)만 data/strategies.json 에 저장합니다.
 - 번호마다 하나의 대표값을 쓰며, 아래 조건을 모두 만족하는 행만 비교 대상입니다.
     · 구분이 '백테스트'이고 상태가 '성공'이며 Calmar가 숫자
     · 포트폴리오가 TOTAL / 기본 / 포트폴리오 종합 (개별 종목·고정 모드 행은 제외)
