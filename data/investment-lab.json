@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-16",
+  "updated_at": "2026-10-17",
   "entries": [
     {
       "id": "2026-09-28-mon-tqqq-soxl-36",
@@ -541,6 +541,21 @@
       ],
       "url": "https://blog.naver.com/zacra/224443793636",
       "thumbnail": "https://blogthumb.pstatic.net/MjAyNjEwMTZfMjM3/MDAxNzkyMTI3ODEwNzY2.G_WrfG3vVEj-NZg36Ufkz_vrv-BUyjRtPqv7eXAspCAg.6aqfG4i5_zdQggJTPuB63sT9eiRNJ_DgAr6fhupGVqMg.PNG/bt_chart.png?type=s3"
+    },
+    {
+      "id": "2026-10-17-sat-lev-inv-50",
+      "date": "2026-10-17",
+      "title": "[게만아 투자 실험실 - 토] -9만원(-3.28%) 레버리지 ETF & 인버스 ETF 투자 파이썬 자동매매 전략 50차 체크!",
+      "summary": "일주일 간 실계좌 확정손익\n게만아 패키지 32번 위아래 변동성 돌파 -87,356원",
+      "threads_text": "[게만아 투자 실험실 · 토]\n레버리지·인버스 ETF 전략 50차\n\n일주일 간 실계좌 확정손익\n게만아 패키지 32번 위아래 변동성 돌파 -87,356원\n게만아 패키지 37번 코스닥피레인 0원 (이번 주 확정매매 없음)\n합계 -87,356원 (ISA 5% 배정금 대비 -3.28%)\n\n51주 누적 확정손익은 +172,483원\n\n이번 주는 코스닥피레인 쪽 확정매매가 없었고, 위아래 변동성 돌파만 반영됐습니다.\n증권사 API로 파이썬 자동매매 봇을 돌려 주간으로 기록 중입니다. :)\n\n※ 확정손익 기준 기록이며 미래 성과를 의미하지 않습니다.",
+      "tags": [
+        "국내주식",
+        "ISA",
+        "실계좌",
+        "파이썬자동매매"
+      ],
+      "url": "https://blog.naver.com/zacra/224444441435",
+      "thumbnail": "https://blogthumb.pstatic.net/MjAyNjEwMTdfNjUg/MDAxNzkyMTkyODg1MDAz.aLEwxCxCrShs77s0BHzrPP0B4f_iOE0l03VTYKSim_gg.sfEqLsVb_0XqymsQoVrQFK5EOba9vSYEQQTvt6W-uZUg.PNG/weekly_chart.png?type=s3"
     }
   ]
 }
