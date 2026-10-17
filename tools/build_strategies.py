@@ -55,6 +55,11 @@ FOOT = """</main><footer class="site-footer"><div class="footer-inner">
 </div></footer>
 <script>
 (function(){{
+  var h=document.querySelector('.site-header'),b=document.getElementById('cta-bar'),r=document.documentElement;
+  function set(){{r.style.setProperty('--hdr',(h?h.offsetHeight:0)+'px');r.style.setProperty('--cta',(b?b.offsetHeight:0)+'px');}}
+  set();window.addEventListener('resize',set);window.addEventListener('load',set);
+}})();
+(function(){{
   var q=document.getElementById('strat-q');if(!q)return;
   var cards=[].slice.call(document.querySelectorAll('.strat'));
   var sections=[].slice.call(document.querySelectorAll('.strat-section'));
@@ -156,6 +161,7 @@ def main() -> None:
 
     body = f"""<main id="main"><div class="breadcrumb"><a href="/">홈</a> › <a href="/package.html">패키지</a> › 전략·시스템 카탈로그</div>
 <h1>게만아 패키지 전략·시스템 카탈로그</h1>
+<div class="cta-bar" id="cta-bar"><span class="cta-text"><strong>이 전략·시스템 전부가 게만아 패키지에 포함됩니다</strong> · 500,000원</span><a class="cta-btn" href="https://www.latpeed.com/products/Wxjik" target="_blank" rel="noopener noreferrer"><span class="long">네이버페이·카카오페이·카드로 시작하기</span><span class="short">시작하기</span></a></div>
 <p class="lead">게만아 패키지의 주식·ETF·코인 자동매매 <strong>전략과 시스템 {len(numbered)}개</strong>를 유형별로 정리했습니다. 시장·대상·실행 주기를 한눈에 보고, 자세한 설명은 원본 포스팅에서 확인하세요.</p>
 <div class="notice"><ul>
 <li>번호는 <a href="/package-content-guide.html">패키지 콘텐츠 번호</a>와 같고, <b>S</b>는 번호 없는 스페셜(대표) 전략입니다.</li>
@@ -167,7 +173,7 @@ def main() -> None:
 {"".join(sections)}
 <section class="callout"><h2>전략을 직접 써보려면</h2>
 <p>전략 코드는 게만아 패키지에 포함돼 있고, 무료 Starter로 전체 흐름을 먼저 체험할 수 있습니다.</p>
-<div class="actions"><a class="btn primary" href="/package.html">패키지 보기</a><a class="btn" href="/starter.html">무료 Starter</a><a class="btn" href="/system-guide.html">시작 가이드</a></div></section>
+<div class="actions"><a class="btn primary" href="https://www.latpeed.com/products/Wxjik" target="_blank" rel="noopener noreferrer">패키지 시작하기 · 500,000원</a><a class="btn" href="/starter.html">무료 Starter</a><a class="btn" href="/system-guide.html">시작 가이드</a></div></section>
 <p class="updated">문서 업데이트: {updated} · 교육·기술 정보 제공 목적이며 투자 권유가 아닙니다.</p>
 """
     page = HEAD.format(title=esc(TITLE), desc=esc(DESC), url=URL, ogt=esc(OG_TITLE), ogd=esc(OG_DESC),
