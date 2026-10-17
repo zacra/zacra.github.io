@@ -143,10 +143,9 @@ AI 확장은 증권사 공통모듈에만 한정되지 않습니다. 주식·코
 ## 업데이트 노트 관리
 - 데이터: `data/updates.json` (entries 맨 앞에 날짜·제목·항목을 추가)
 - 새 업데이트를 추가한 뒤 `python3 tools/build_updates.py`를 실행하면 `updates.html`과 사이트맵 lastmod가 갱신됩니다.
-- 성과·수익률 수치는 싣지 않습니다.
 
 ## 카탈로그 정렬(Calmar 순) 관리
 - 정렬: 슈퍼 이동평균(S) 먼저 → 각 유형에서 백테스트 Calmar 높은 순 → 백테스트가 없거나 비교 불가한 전략은 번호순. 보조 시스템·백테스트 도구·공통모듈은 번호순입니다.
 - 순위 갱신: `python3 tools/rank_by_calmar.py <패키지 백테스트 마스터 표.md>` 실행 후 `python3 tools/build_strategies.py`
-- 공개 저장소이므로 Calmar 등 세부 수치는 저장하지 않고 분류 안의 순위(`rank`)만 `data/strategies.json`에 저장합니다.
+- `data/strategies.json`에는 분류 안의 순위(`rank`)만 저장합니다.
 - 기본 규칙: 구분=백테스트·상태=성공·포트폴리오 TOTAL/기본/포트폴리오 종합·기간 2년 이상, 번호에 여러 버전이 있으면 최댓값(`--agg median`으로 중앙값 사용 가능, `--min-years`로 기간 기준 조정)

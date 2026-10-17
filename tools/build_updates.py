@@ -3,7 +3,6 @@
 
 새 업데이트를 추가하려면 data/updates.json 의 entries 맨 앞에 항목을 추가하고
 `python3 tools/build_updates.py` 를 실행하세요. 페이지·사이트맵(lastmod)이 함께 갱신됩니다.
-성과·수익률 수치는 싣지 않습니다.
 """
 import json
 import re
@@ -66,7 +65,7 @@ def main() -> None:
         blocks.append(f'<section class="upd" id="u-{e["date"]}"><h2><time datetime="{e["date"]}">{e["date"]}</time> · {e["title"]}</h2><ul class="upd-list">{"".join(lis)}</ul></section>')
 
     main_html = f'''<main id="main"><div class="breadcrumb"><a href="/">홈</a> › {OGT}</div><p class="eyebrow">UPDATES</p><h1>게만아 업데이트 노트</h1>
-<p class="lead">게만아 패키지에 <strong>추가된 콘텐츠</strong>, 슈퍼 이동평균 <strong>업데이트</strong>, 무료 Starter <strong>지원 증권사</strong>, 공식 가이드의 <strong>최신 변경</strong>을 날짜별로 정리합니다. 날짜는 이 사이트에 반영한 날 기준이며, 성과·수익률 수치는 싣지 않습니다.</p>
+<p class="lead">게만아 패키지에 <strong>추가된 콘텐츠</strong>, 슈퍼 이동평균 <strong>업데이트</strong>, 무료 Starter <strong>지원 증권사</strong>, 공식 가이드의 <strong>최신 변경</strong>을 날짜별로 정리합니다. 날짜는 이 사이트에 반영한 날 기준입니다.</p>
 <div class="easy-box"><p><strong>이 페이지는 이렇게 쓰세요</strong> · 새로 들어온 패키지 번호와 바뀐 규칙을 한눈에 보고, 자세한 설명은 각 링크와 네이버 공식 포스팅에서 확인하세요. 전체 목록은 <a href="/strategies.html">전략·시스템 카탈로그</a>와 <a href="/package-content-guide.html">패키지 콘텐츠 전체 가이드</a>에 있습니다.</p></div>
 {"".join(blocks)}
 <section class="notice"><h2>확인할 때 참고하세요</h2><p>각 항목의 상세 사양과 최신 안내는 네이버 블로그의 공식 포스팅이 가장 정확합니다. 증권사·거래소의 정책과 API 사양은 바뀔 수 있으므로 실제 사용 전에 공식 문서를 확인하세요. 이 사이트는 교육·기술 정보 제공 목적이며 투자 권유나 수익 보장이 아닙니다.</p></section>
