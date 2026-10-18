@@ -30,6 +30,16 @@
        "/strategies.html"
       ]
      ]
+    },
+    {
+     "type": "공식 가이드",
+     "text": "게임 페이지에 <strong>무한더던전</strong>을 추가했습니다. 코인공주에 이은 두 번째 메인 게임입니다.",
+     "links": [
+      [
+       "게임 보기",
+       "/games.html#infinite-dungeon"
+      ]
+     ]
     }
    ]
   },
