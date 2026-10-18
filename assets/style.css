@@ -89,8 +89,8 @@ pre{background:#0e1116;color:#e7edf3;padding:18px;border-radius:14px;overflow:au
 .strat-special{border:2px solid #ffb300;box-shadow:0 6px 20px rgba(255,150,0,.16);grid-column:1/-1}.strat-no.special{background:linear-gradient(135deg,#ffb300,#ff6d00);min-width:2em}
 .table-wrap th[scope="row"]{white-space:nowrap;width:7.5em;vertical-align:top;text-align:left}
 h1,h2{word-break:keep-all;overflow-wrap:break-word}
-@media(max-width:640px){#top3 .table-wrap,#more5 .table-wrap,#agestage .table-wrap,#six .table-wrap,#cls .table-wrap{border:0;background:transparent;overflow:visible}#top3 table,#more5 table,#agestage table,#six table,#cls table,#top3 tbody,#more5 tbody,#agestage tbody,#six tbody,#cls tbody,#top3 tr,#more5 tr,#agestage tr,#six tr,#cls tr,#top3 th,#more5 th,#agestage th,#six th,#cls th,#top3 td,#more5 td,#agestage td,#six td,#cls td{display:block;width:100%}#top3 thead,#more5 thead,#agestage thead,#six thead,#cls thead{display:none}#top3 tr,#more5 tr,#agestage tr,#six tr,#cls tr{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:10px 0}#top3 th[scope="row"],#more5 th[scope="row"],#agestage th[scope="row"],#six th[scope="row"],#cls th[scope="row"]{width:auto;font-size:1rem;padding:0 0 6px;border:0;color:var(--accent)}#top3 td,#more5 td,#agestage td,#six td,#cls td{border:0;padding:5px 0}#top3 td::before,#more5 td::before,#agestage td::before,#six td::before,#cls td::before{content:attr(data-label);display:block;font-size:.78rem;font-weight:700;color:var(--muted)}}
-@media(max-width:640px){#top3 table,#more5 table,#agestage table,#six table,#cls table{min-width:0}#top3 th[scope="row"],#more5 th[scope="row"],#agestage th[scope="row"],#six th[scope="row"],#cls th[scope="row"]{background:transparent}}
+@media(max-width:640px){#top3 .table-wrap,#more5 .table-wrap,#cmp .table-wrap,#agestage .table-wrap,#six .table-wrap,#cls .table-wrap{border:0;background:transparent;overflow:visible}#top3 table,#more5 table,#cmp table,#agestage table,#six table,#cls table,#top3 tbody,#more5 tbody,#cmp tbody,#agestage tbody,#six tbody,#cls tbody,#top3 tr,#more5 tr,#cmp tr,#agestage tr,#six tr,#cls tr,#top3 th,#more5 th,#cmp th,#agestage th,#six th,#cls th,#top3 td,#more5 td,#cmp td,#agestage td,#six td,#cls td{display:block;width:100%}#top3 thead,#more5 thead,#cmp thead,#agestage thead,#six thead,#cls thead{display:none}#top3 tr,#more5 tr,#cmp tr,#agestage tr,#six tr,#cls tr{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:10px 0}#top3 th[scope="row"],#more5 th[scope="row"],#cmp th[scope="row"],#agestage th[scope="row"],#six th[scope="row"],#cls th[scope="row"]{width:auto;font-size:1rem;padding:0 0 6px;border:0;color:var(--accent)}#top3 td,#more5 td,#cmp td,#agestage td,#six td,#cls td{border:0;padding:5px 0}#top3 td::before,#more5 td::before,#cmp td::before,#agestage td::before,#six td::before,#cls td::before{content:attr(data-label);display:block;font-size:.78rem;font-weight:700;color:var(--muted)}}
+@media(max-width:640px){#top3 table,#more5 table,#cmp table,#agestage table,#six table,#cls table{min-width:0}#top3 th[scope="row"],#more5 th[scope="row"],#cmp th[scope="row"],#agestage th[scope="row"],#six th[scope="row"],#cls th[scope="row"]{background:transparent}}
 
 /* 전략·시스템 카탈로그 강조 */
 .nav-links a.nav-cta{background:var(--accent);color:#fff;font-weight:700;padding:3px 13px;border-radius:999px;line-height:1.6}
@@ -117,3 +117,11 @@ h1,h2{word-break:keep-all;overflow-wrap:break-word}
 .cta-bar .cta-btn:hover{filter:brightness(.96)}
 .cta-bar .cta-btn .short{display:none}
 @media(max-width:760px){.cta-bar{padding:8px 10px;gap:8px}.cta-bar .cta-text{font-size:.82rem}.cta-bar .cta-btn{padding:7px 12px}.cta-bar .cta-btn .long{display:none}.cta-bar .cta-btn .short{display:inline}}
+
+/* 카탈로그 대표 전략 */
+.pillars{margin:18px 0 8px}.pillars h2{margin-bottom:.2em}.pillars>p{margin:.2em 0 .9em;color:var(--muted)}
+.pillar-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.pillar{background:#fff;border:2px solid #ffb300;border-radius:14px;padding:16px 18px;box-shadow:0 6px 20px rgba(255,150,0,.12)}
+.pillar-tag{display:inline-block;margin:0 0 .3em;background:var(--accent);color:#fff;font-weight:800;font-size:.8rem;border-radius:999px;padding:1px 12px}
+.pillar h3{margin:.2em 0 .3em}.pillar p{margin:.3em 0}
+@media(max-width:760px){.pillar-grid{grid-template-columns:1fr}}

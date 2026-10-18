@@ -42,6 +42,7 @@ HEAD = """<!doctype html><html lang="ko"><head>
 <a href="/python-auto-trading.html">자동매매 시작</a>
 <a href="/system-guide.html">시작 가이드</a>
 <a href="/investment-lab.html">투자 실험실</a><a href="/super-moving-average.html">슈퍼 이동평균</a>
+<a href="/coin-double-ma.html">코인 더블 이평</a>
 <a href="/package.html">패키지</a>
 <a class="nav-cta" href="/strategies.html" aria-current="page">전략 카탈로그</a>
 <a href="/broker-openapi.html">멀티 증권사 API</a>
@@ -119,6 +120,22 @@ def main() -> None:
     ]}
     jsonld = json.dumps(ld, ensure_ascii=False, separators=(",", ":"))
 
+    pillar_cards = []
+    for e in sorted((x for x in data["entries"] if x.get("pillar")), key=lambda x: x["pillar"].get("order", 9)):
+        pl = e["pillar"]
+        btns = []
+        if e.get("internal"):
+            btns.append(f'<a class="btn primary" href="{esc(e["internal"]["url"])}">전략 자세히 보기 →</a>')
+        if e.get("urls"):
+            btns.append(f'<a href="{esc(e["urls"][0])}" target="_blank" rel="noopener noreferrer">원본 포스팅(네이버) →</a>')
+        pillar_cards.append(
+            f'<article class="pillar"><p class="pillar-tag">{esc(pl["tag"])}</p><h3>{esc(e["title"])}</h3>'
+            f'<p>{esc(pl["blurb"])}</p><p class="strat-links">{" ".join(btns)}</p></article>')
+    pillars = ("" if not pillar_cards else
+               '<section class="pillars"><h2>장기투자 대표 전략 · 주식 1개, 코인 1개</h2>'
+               '<p>하나씩만 꼽는다면 이 두 가지입니다. 둘 다 게만아 패키지에 포함되어 있습니다.</p>'
+               f'<div class="pillar-grid">{"".join(pillar_cards)}</div></section>')
+
     chips = "".join(
         f'<a href="#c-{c["id"]}">{esc(c["name"])} <span>{len(by_cat[c["name"]])}</span></a>' for c in cats)
 
@@ -168,6 +185,7 @@ def main() -> None:
 <li>각 유형은 백테스트 <a href="/glossary.html#calmar">Calmar 지수</a>(수익률÷최대낙폭)가 높은 순이며, 백테스트가 없는 전략은 뒤에 번호순입니다. 결과는 포트폴리오·기간에 따라 달라지니 <strong>직접 백테스트로 확인</strong>해 보세요.</li>
 <li>교육·기술 정보 제공 목적이며 종목 추천이나 수익 보장이 아닙니다.</li>
 </ul></div>
+{pillars}
 <p class="strat-nav">{chips}</p>
 <p class="strat-search"><label for="strat-q">전략 검색</label> <input id="strat-q" type="search" placeholder="예: 올웨더, 업비트, 트레일링, TQQQ" autocomplete="off"/> <span id="strat-status" role="status"></span></p>
 {"".join(sections)}

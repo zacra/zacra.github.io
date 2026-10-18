@@ -1500,7 +1500,16 @@
     "https://blog.naver.com/zacra/224435647436"
    ],
    "post_date": "20261008",
-   "rank": 1
+   "rank": 1,
+   "pillar": {
+    "order": 2,
+    "tag": "코인 대표",
+    "blurb": "여러 코인에 FAST·SLOW 더블 이동평균과 하락 추세 필터를 적용해 낙폭을 관리하는 코인 현물 장기 전략입니다. 업비트·빗썸·코인원을 지원합니다."
+   },
+   "internal": {
+    "label": "코인 더블 이동평균 전략 페이지",
+    "url": "/coin-double-ma.html"
+   }
   },
   {
    "code": 103,
@@ -1536,6 +1545,11 @@
    "internal": {
     "label": "슈퍼 이동평균 안내 페이지",
     "url": "/super-moving-average.html"
+   },
+   "pillar": {
+    "order": 1,
+    "tag": "주식·ETF 대표",
+    "blurb": "효율적 투자선으로 비중을 정하고 CORE·FIXED·FAST·SLOW 네 축으로 추세에 대응하며, 조건이 꺼진 비중은 현금으로 남기는 주식·ETF 장기 자산배분 시스템입니다."
    }
   },
   {
