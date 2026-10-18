@@ -57,12 +57,12 @@ pre{background:#0e1116;color:#e7edf3;padding:18px;border-radius:14px;overflow:au
 .game-nav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 0}.game-nav a{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 14px;text-decoration:none;color:var(--text);font-weight:700;font-size:.93rem}
 .game-list{display:grid;gap:22px;margin:26px 0}
 .game-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;scroll-margin-top:84px}
-.game-thumb{display:block;background:var(--soft)}.game-thumb img{display:block;width:100%;height:auto;aspect-ratio:1932/828;object-fit:cover}
+.game-thumb{display:block;background:var(--soft)}.game-thumb img{display:block;width:100%;height:auto;aspect-ratio:1932/828;object-fit:contain}
 .game-body{padding:20px 22px 22px}.game-body h2{margin:.1em 0 0;font-size:1.6rem}
 .game-genre{margin:0;font-size:.85rem;font-weight:700;color:var(--accent)}.game-sub{margin:.1em 0 .7em;color:var(--muted);font-weight:700}
 .game-facts{list-style:none;padding:0;margin:12px 0;display:flex;gap:8px;flex-wrap:wrap}.game-facts li{font-size:.84rem;background:var(--soft);border-radius:999px;padding:3px 11px}
 .game-actions{margin:14px 0 8px}
-@media(min-width:900px){.game-card{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}.game-thumb img{height:100%;aspect-ratio:auto;min-height:300px}}
+@media(min-width:900px){.game-list{grid-template-columns:repeat(6,minmax(0,1fr))}.game-card{grid-column:span 2;display:flex;flex-direction:column}.game-card.featured{grid-column:span 3}.game-card .game-body{flex:1}.game-card:not(.featured) .game-body{padding:16px 18px 18px}.game-card:not(.featured) h2{font-size:1.35rem}}
 .game-thumb{position:relative}.game-badge{position:absolute;left:14px;top:14px;z-index:2;background:linear-gradient(135deg,#ffb300,#ff6d00);color:#fff;font-weight:900;letter-spacing:.06em;font-size:.95rem;padding:6px 14px;border-radius:999px;box-shadow:0 3px 10px rgba(0,0,0,.3)}
 .game-card.featured{border:2px solid #ffb300;box-shadow:0 8px 28px rgba(255,150,0,.22)}.game-card.featured h2{font-size:1.9rem}
 .game-nav-best{background:#ff8f00;color:#fff;border-radius:999px;padding:1px 8px;font-size:.75rem;font-weight:900;margin-right:4px}
