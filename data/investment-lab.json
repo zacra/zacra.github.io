@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-17",
+  "updated_at": "2026-10-18",
   "entries": [
     {
       "id": "2026-09-28-mon-tqqq-soxl-36",
@@ -571,6 +571,21 @@
       ],
       "url": "https://blog.naver.com/zacra/224444856081",
       "thumbnail": "https://blogthumb.pstatic.net/MjAyNjEwMTdfOTAg/MDAxNzkyMjI5MzE4ODk2.vrxR-Q96pWqR0KJcYh_RW2tU5m-JCLBacFLS7ywziFcg.E4chZAkN5Gdy9QhmBnimtTORAeeOPo6EISkyCaAexPkg.JPEG/account_original.jpg?type=s3"
+    },
+    {
+      "id": "2026-10-18-sun-kr-superma-56",
+      "date": "2026-10-18",
+      "title": "[게만아 투자 실험실 - 일] -70만원(-0.99%) 주식 장기투자 전략 슈퍼 이동평균 자산배분 자동매매 56차 운용 체크",
+      "summary": "일주일 간 실계좌 평가금 변화 · 현재까지 기록된 최대 낙폭 MDD 약 -9.2%",
+      "threads_text": "[게만아 투자 실험실 · 일]\n연금계좌 슈퍼 이동평균 자산배분 56차\n\n일주일 간 실계좌 평가금 변화\n70,513,109원 → 69,817,316원\n평가금 -695,793원(-0.99%)\n\n현재까지 기록된 최대 낙폭 MDD 약 -9.2%\n\n제가 동적자산배분 전략을 개발해 운용하는 이유는 간단합니다.\n지금 같은 하락장에 타격이 없어 마음이 편하기 때문이에요.\n\n지속가능한 투자를 하려면\n슈퍼이동평균 자산배분 전략 ㅎ\n\n※ 현재 평가금 기준 기록이며 미래 성과를 의미하지 않습니다.",
+      "tags": [
+        "국내주식",
+        "자산배분",
+        "연금",
+        "파이썬자동매매"
+      ],
+      "url": "https://blog.naver.com/zacra/224445311126",
+      "thumbnail": "https://blogthumb.pstatic.net/MjAyNjEwMThfMTky/MDAxNzkyMjc3ODE4NzE4.q6b-B2pZoVfc1ko435SlOdoRf4gR9NUr7zGBrzvlwk8g.EX5KbcivzKqALpAqwacPVQnEERmyRyZ-pH_u5k-_B64g.PNG/weekly_chart.png?type=s3"
     }
   ]
 }
