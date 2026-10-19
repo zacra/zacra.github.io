@@ -34,12 +34,15 @@
     'https://forms.gle/fF2nEigv7uodQ7EZ9': { event_name: 'package_purchase_click', payment_method: 'bank_transfer' },
     'https://www.latpeed.com/products/Wxjik': { event_name: 'package_purchase_click', payment_method: 'card_simplepay' },
     'https://forms.gle/HooXu7DNkubKexhP6': { event_name: 'superma_purchase_click', payment_method: 'bank_transfer' },
-    'https://www.latpeed.com/products/XJLqa': { event_name: 'superma_purchase_click', payment_method: 'card_simplepay' }
+    'https://www.latpeed.com/products/XJLqa': { event_name: 'superma_purchase_click', payment_method: 'card_simplepay' },
+    'https://forms.gle/Vo12qoKfoNiFjGeP7': { event_name: 'coinma_purchase_click', payment_method: 'bank_transfer' },
+    'https://www.latpeed.com/products/dSahg': { event_name: 'coinma_purchase_click', payment_method: 'card_simplepay' }
   };
 
   const PRODUCT_PAGES = {
     '/package.html': 'package_page_click',
     '/super-moving-average.html': 'superma_page_click',
+    '/coin-double-ma.html': 'coinma_page_click',
     '/starter.html': 'starter_page_click'
   };
 

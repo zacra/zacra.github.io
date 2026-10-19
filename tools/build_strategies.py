@@ -128,12 +128,15 @@ def main() -> None:
             btns.append(f'<a class="btn primary" href="{esc(e["internal"]["url"])}">전략 자세히 보기 →</a>')
         if e.get("urls"):
             btns.append(f'<a href="{esc(e["urls"][0])}" target="_blank" rel="noopener noreferrer">원본 포스팅(네이버) →</a>')
+        if pl.get("buy"):
+            btns.append(f'<a class="btn accent" href="{esc(pl["buy"])}" target="_blank" rel="noopener noreferrer">단독 20만원 시작하기</a>')
+        price = f'<p class="pillar-price">{esc(pl["price"])}</p>' if pl.get("price") else ""
         pillar_cards.append(
-            f'<article class="pillar"><p class="pillar-tag">{esc(pl["tag"])}</p><h3>{esc(e["title"])}</h3>'
+            f'<article class="pillar"><p class="pillar-tag">{esc(pl["tag"])}</p><h3>{esc(e["title"])}</h3>{price}'
             f'<p>{esc(pl["blurb"])}</p><p class="strat-links">{" ".join(btns)}</p></article>')
     pillars = ("" if not pillar_cards else
                '<section class="pillars"><h2>장기투자 대표 전략 · 주식 1개, 코인 1개</h2>'
-               '<p>하나씩만 꼽는다면 이 두 가지입니다. 둘 다 게만아 패키지에 포함되어 있습니다.</p>'
+               '<p>하나씩만 꼽는다면 이 두 가지입니다. 둘 다 게만아 패키지에 포함되어 있고, 각각 200,000원 단독 상품으로도 이용할 수 있습니다.</p>'
                f'<div class="pillar-grid">{"".join(pillar_cards)}</div></section>')
 
     chips = "".join(
@@ -190,7 +193,7 @@ def main() -> None:
 <p class="strat-search"><label for="strat-q">전략 검색</label> <input id="strat-q" type="search" placeholder="예: 올웨더, 업비트, 트레일링, TQQQ" autocomplete="off"/> <span id="strat-status" role="status"></span></p>
 {"".join(sections)}
 <section class="callout"><h2>전략을 직접 써보려면</h2>
-<p>전략 코드는 게만아 패키지에 포함돼 있고, 무료 Starter로 전체 흐름을 먼저 체험할 수 있습니다.</p>
+<p>전략 코드는 게만아 패키지에 포함돼 있고, 무료 Starter로 전체 흐름을 먼저 체험할 수 있습니다. 주식·ETF 장기 전략 하나만 원한다면 <a href="/super-moving-average.html">슈퍼 이동평균 V2 단독 20만원</a>, 코인 장기 전략 하나만 원한다면 <a href="/coin-double-ma.html">코인 더블 이동평균 New 단독 20만원</a>도 있습니다.</p>
 <div class="actions"><a class="btn primary" href="https://www.latpeed.com/products/Wxjik" target="_blank" rel="noopener noreferrer">패키지 시작하기 · 500,000원</a><a class="btn" href="/starter.html">무료 Starter</a><a class="btn" href="/system-guide.html">시작 가이드</a></div></section>
 <p class="updated">문서 업데이트: {updated} · 교육·기술 정보 제공 목적이며 투자 권유가 아닙니다.</p>
 """
