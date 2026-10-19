@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-18",
+  "updated_at": "2026-10-19",
   "entries": [
     {
       "id": "2026-09-28-mon-tqqq-soxl-36",
@@ -586,6 +586,21 @@
       ],
       "url": "https://blog.naver.com/zacra/224445311126",
       "thumbnail": "https://blogthumb.pstatic.net/MjAyNjEwMThfMTky/MDAxNzkyMjc3ODE4NzE4.q6b-B2pZoVfc1ko435SlOdoRf4gR9NUr7zGBrzvlwk8g.EX5KbcivzKqALpAqwacPVQnEERmyRyZ-pH_u5k-_B64g.PNG/weekly_chart.png?type=s3"
+    },
+    {
+      "id": "2026-10-19-mon-tqqq-soxl-39",
+      "date": "2026-10-19",
+      "title": "[게만아 투자 실험실 - 월] -26만원(-7.00%) TQQQ, SOXL 떨사오팔 전략 스마트 스플릿 자동매매 39차 체크",
+      "summary": "일주일 간 실계좌 평가금 변화 · 현재까지 기록된 최대 낙폭 MDD 약 -20%",
+      "threads_text": "[게만아 투자 실험실 · 월]\nTQQQ·SOXL 스마트 스플릿 39차\n\n일주일 간 실계좌 평가금 변화\n3,662,108원 → 3,405,587원\n평가금 -256,521원(-7.00%)\n\n현재까지 기록된 최대 낙폭 MDD 약 -20%\n\n개인적으로 역추세는 물리면 끝장이라\n선호하지 않지만 많은 분들이 떨사오팔을 해서\n만든 전략입니다.\n\n주가 하락 환율 하락 이중고로 낙폭이 -20%까지 커졌네요.\n\n※ 현재 평가금 기준 기록이며 미래 성과를 의미하지 않습니다.",
+      "tags": [
+        "미국주식",
+        "스마트스플릿",
+        "실계좌",
+        "파이썬자동매매"
+      ],
+      "url": "https://blog.naver.com/zacra/224446728049",
+      "thumbnail": "https://blogthumb.pstatic.net/MjAyNjEwMTlfMzgg/MDAxNzkyMzk2MjY2MzY5.NcxXHMHRjqe4EiMUxjKVnCaHOgP3MKU3frx2E8XX9MAg.Uns2GOnhOcN2B42jAiRIys6Xc4VEY2c68py3iIS0A3Ig.JPEG/account_original.jpg?type=s3"
     }
   ]
 }
