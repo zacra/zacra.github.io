@@ -128,3 +128,4 @@ h1,h2{word-break:keep-all;overflow-wrap:break-word}
 
 .pillar-price{margin:.1em 0 .5em;font-weight:800;color:var(--brand);font-size:.95rem}
 @media(min-width:761px){.grid.cards.two{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.game-qrs{display:flex;gap:12px;flex:0 0 auto}.game-actions>.game-qrs{flex:0 0 auto}
