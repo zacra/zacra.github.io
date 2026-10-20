@@ -1,6 +1,6 @@
 {
-  "buildId": "coinprincess-onestore-connected-20261020-2ac7005dd1ef",
-  "builtAt": "2026-10-20T04:28:46.415281+00:00",
+  "buildId": "coinprincess-onestore-pns-result-20261020-f09d6ab28979",
+  "builtAt": "2026-10-20T05:02:20.613703+00:00",
   "platform": "onestore",
   "sdkVersion": "1.1.0",
   "edition": "free",
@@ -20,6 +20,8 @@
   "billingEnvironment": "Sandbox",
   "profile": "game-with-server-verification",
   "contentFiles": 517,
-  "contentFingerprint": "2ac7005dd1ef25b50a4084403e507b978195157bb130e36eab231a070c2704f9",
-  "nativeMonetizationVerified": false
+  "contentFingerprint": "f09d6ab28979d860608f90d75c265193edff3bd82b6258d7bd86b65490ed7426",
+  "nativeMonetizationVerified": false,
+  "nativeSandboxPaymentVerified": true,
+  "nativePaymentResultFixVerified": false
 }
