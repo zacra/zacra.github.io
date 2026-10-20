@@ -131,3 +131,4 @@ h1,h2{word-break:keep-all;overflow-wrap:break-word}
 .game-qrs{display:flex;gap:12px;flex:0 0 auto}.game-actions>.game-qrs{flex:0 0 auto}
 .store-badge{display:inline-block;vertical-align:middle;margin:2px 0 0 4px;border-radius:12px}.store-badge img{display:block;height:46px;width:auto}
 @media(max-width:560px){.store-badge{margin-left:0}}
+.game-actions .store-badge:first-child{margin-left:0}
