@@ -1,6 +1,6 @@
 {
-  "buildId": "coinprincess-onestore-test-20261020-fc938bae54be",
-  "builtAt": "2026-10-19T23:47:32.619049+00:00",
+  "buildId": "coinprincess-onestore-interstitial-20261020-81b42d57abdd",
+  "builtAt": "2026-10-20T02:40:10.132172+00:00",
   "platform": "onestore",
   "sdkVersion": "1.1.0",
   "edition": "free",
@@ -10,11 +10,13 @@
   "monetization": {
     "iap": false,
     "rewarded": false,
-    "interstitial": false
+    "interstitial": true
   },
+  "placementIds": {
+    "interstitial": "xBC7B-7GGY-6RTE-77Y8",
+    "rewarded": "xBC7B-7GGY-6RTE-77Y8"
+  },
+  "placementIdSource": "user supplied; console type not independently verified",
   "contentFiles": 517,
-  "contentBytes": 10946108,
-  "contentFingerprint": "fc938bae54be567199a0a3bfa3b2b2a038eb960a4275aafa8390d71c7e3fc88e",
-  "deploymentAliasOf": "https://zacra.github.io/play/coinprincess/",
-  "deployedAt": "2026-10-20T02:31:41.606404+00:00"
+  "contentFingerprint": "81b42d57abddf0c44217d89f8a748b89be594fadbc08160658f040bfc8a6821b"
 }
