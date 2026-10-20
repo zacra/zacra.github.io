@@ -1,6 +1,6 @@
 {
-  "buildId": "coinprincess-onestore-ad-ids-corrected-20261020-49423e81b57a",
-  "builtAt": "2026-10-20T03:28:22.596556+00:00",
+  "buildId": "coinprincess-onestore-connected-20261020-2ac7005dd1ef",
+  "builtAt": "2026-10-20T04:28:46.415281+00:00",
   "platform": "onestore",
   "sdkVersion": "1.1.0",
   "edition": "free",
@@ -8,15 +8,18 @@
   "productId": "0001010855",
   "url": "https://zacra.github.io/play/coinprincess-v2/",
   "monetization": {
-    "iap": false,
-    "rewarded": false,
+    "iap": true,
+    "rewarded": true,
     "interstitial": true
   },
   "placementIds": {
     "interstitial": "xBC7B-7GGY-6RTE-77Y8",
     "rewarded": "xVGTC-RHWR-9U9R-8P4T"
   },
-  "placementIdSource": "User screenshot 2026-10-20 12:23",
+  "verificationApi": "https://13.125.74.39/onestore/coinprincess/api",
+  "billingEnvironment": "Sandbox",
+  "profile": "game-with-server-verification",
   "contentFiles": 517,
-  "contentFingerprint": "49423e81b57ad3d67d1a9ba6a89a6da815441084673150408473f32908fac443"
+  "contentFingerprint": "2ac7005dd1ef25b50a4084403e507b978195157bb130e36eab231a070c2704f9",
+  "nativeMonetizationVerified": false
 }
