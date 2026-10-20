@@ -1,0 +1,17 @@
+{
+  "buildId": "coinprincess-iap-flow-test-20261020-2aa28eefe469",
+  "builtAt": "2026-10-20T01:27:02.943688+00:00",
+  "platform": "onestore",
+  "sdkVersion": "1.1.0",
+  "productId": "0001010855",
+  "url": "https://zacra.github.io/play/coinprincess-iap-test-v2/",
+  "profile": "sdk-payment-flow-test",
+  "purchaseRequests": true,
+  "serverVerification": false,
+  "itemGrants": false,
+  "consumeOrAcknowledge": false,
+  "requiresConsoleSandboxAccount": true,
+  "contentFingerprint": "2aa28eefe46922db6d4cfce40530c8ca6ef2661e9cde99a866e98fa38a7ecc00",
+  "deploymentAliasOf": "https://zacra.github.io/play/coinprincess-iap-test/",
+  "deployedAt": "2026-10-20T02:31:41.649354+00:00"
+}
