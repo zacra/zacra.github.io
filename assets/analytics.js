@@ -77,7 +77,7 @@
     const normalizedHref = `${url.origin}${url.pathname}`.replace(/\/$/, '');
 
     // 토스 H5 게임 링크 클릭
-    if (url.hostname === 'minion.toss.im' || url.hostname === 'onesto.re') {
+    if (url.hostname === 'minion.toss.im' || url.hostname === 'tossminiapp.com' || url.hostname === 'onesto.re') {
       const card = link.closest('.game-card');
       sendEvent('game_play_click', {
         game_name: card && card.querySelector('h2') ? cleanText(card.querySelector('h2').textContent) : linkText,
