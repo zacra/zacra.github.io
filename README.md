@@ -124,6 +124,7 @@ https://zacra.github.io/coin-double-ma.html
 
 - 파이썬 자동매매 종합 가이드: https://blog.naver.com/zacra/223910423439
 - 슈퍼 이동평균 자산배분: https://blog.naver.com/zacra/224158895436
+- 슈퍼 이동평균 자산배분 V3: https://blog.naver.com/zacra/224449438693
 - 게만아 패키지: https://blog.naver.com/zacra/223049832963
 - 백테스트·과최적화에 대한 생각: https://blog.naver.com/zacra/224083383522
 
