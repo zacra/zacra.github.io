@@ -40,7 +40,7 @@
 - https://zacra.github.io/coin-double-ma.html : 대표 코인 현물 장기 전략 코인 더블 이동평균 New(20만원 단독 상품 또는 패키지 102번 포함) — FAST·SLOW 더블 이동평균, 하락 추세 필터, Rolling Walk-Forward 검증, 업비트·빗썸·코인원
 - https://zacra.github.io/package.html : 다양한 주식·코인 자동매매 전략·시스템 패키지
 - https://zacra.github.io/faq.html : 초보자가 자주 묻는 질문
-- https://zacra.github.io/games.html : 게만아(게임 만드는 아빠)가 만든 모바일 웹게임(토스·원스토어) — 메인 게임 코인공주(토스·원스토어)·무한더던전, 패스랜드·방치머지스윗·무기전쟁
+- https://zacra.github.io/games.html : 게만아(게임 만드는 아빠)가 만든 모바일 웹게임(토스·원스토어) — 메인 게임 코인공주(토스·원스토어)·무한더던전·무한더던전2, 패스랜드·방치머지스윗·무기전쟁
 
 ## 게만아 패키지
 - 신규 판매가: 500,000원
