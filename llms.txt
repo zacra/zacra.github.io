@@ -36,7 +36,7 @@
 - https://zacra.github.io/server-stability.html : 자동매매 서버(AWS)가 멈추지 않게 하는 법 — crontab timeout·중복 실행 방지(singleton)·실행 시점 분산·서버 감시 알림·t2 vs t3, 서버 정지 경험
 - https://zacra.github.io/setup-day.html : 오프라인 자동매매 셋업데이 관심 등록(정식 모집 전) — API 연결·슈퍼 이동평균 설정·GMA Runner 실행·로그 확인 실습, 투자 상담 없음
 - https://zacra.github.io/starter.html : 무료 주식 자동매매 Starter (한국투자·LS·키움·토스·KB·NH·DB·메리츠증권 중 한 곳 선택)
-- https://zacra.github.io/super-moving-average.html : 대표 주식·ETF 장기 자산배분 전략 (효율적 투자선·CORE/FIXED/FAST/SLOW·Rolling Walk-Forward 검증·최근 상장 ETF 단계적 편입)
+- https://zacra.github.io/super-moving-average.html : 대표 주식·ETF 장기 자산배분 전략 (V3 기본형: 포트폴리오와 투자 비중만 설정 / V2 커스텀형: 효율적 투자선·CORE/FIXED/FAST/SLOW 직접 조절, Rolling Walk-Forward 검증, 최근 상장 ETF 단계적 편입)
 - https://zacra.github.io/coin-double-ma.html : 대표 코인 현물 장기 전략 코인 더블 이동평균 New(20만원 단독 상품 또는 패키지 102번 포함) — FAST·SLOW 더블 이동평균, 하락 추세 필터, Rolling Walk-Forward 검증, 업비트·빗썸·코인원
 - https://zacra.github.io/package.html : 다양한 주식·코인 자동매매 전략·시스템 패키지
 - https://zacra.github.io/faq.html : 초보자가 자주 묻는 질문
@@ -45,7 +45,7 @@
 ## 게만아 패키지
 - 신규 판매가: 500,000원
 - 기존 게만아 패키지 전체 콘텐츠 + 슈퍼 이동평균 자산배분 V2 + 코인 더블 이동평균 New 통합
-- 슈퍼 이동평균 자산배분 V2(주식·ETF 대표 장기 전략)는 200,000원에 단독 선택 가능하며, 500,000원 게만아 파이썬 자동매매 패키지에도 포함
+- 슈퍼 이동평균 자산배분(주식·ETF 대표 장기 전략, 포트폴리오와 투자 비중만 정하는 V3 기본형 + 직접 조절하는 V2 커스텀형)은 200,000원에 단독 선택 가능하며, 500,000원 게만아 파이썬 자동매매 패키지에도 포함
 - 코인 더블 이동평균 New(코인 현물 대표 장기 전략, 업비트·빗썸·코인원)도 200,000원에 단독 선택 가능하며, 패키지 102번에도 포함
 - 단독 상품 구매자는 기존 구매금액을 인정받아 상위 패키지로 차액 업그레이드 가능(zacra007@gmail.com 문의)
 - 코인 장기투자만 한다면 주식 전략이 포함된 패키지를 구매할 필요가 없음

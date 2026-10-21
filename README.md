@@ -52,7 +52,7 @@ https://zacra.github.io/gma-runner.html
 - GMA Runner 또는 서버/crontab 자동 실행
 - AI와 함께 수정·확장
 
-슈퍼 이동평균 V2는 효율적 투자선과 CORE·FIXED·FAST·SLOW 구조, 현금 비중 관리, Rolling / Walk-Forward 백테스트를 결합한 대표 주식·ETF 장기 시스템입니다.
+슈퍼 이동평균 자산배분은 효율적 투자선과 CORE·FIXED·FAST·SLOW 구조, 현금 비중 관리, Rolling / Walk-Forward 백테스트를 결합한 대표 주식·ETF 장기 시스템입니다. 최신 V3는 포트폴리오와 투자 비중만 정하면 되도록 설정을 전략 내부에서 처리하는 기본형이고, V2는 직접 조절하는 커스텀형으로 함께 제공됩니다.
 
 코인 더블 이동평균 New는 업비트·빗썸·코인원에서 FAST·SLOW 더블 이동평균과 하락 추세 대응 게이트로 낙폭을 관리하는 대표 코인 현물 장기 시스템입니다. 패키지 102번 콘텐츠를 코인 장기투자에 집중하려는 분들을 위해 단독 상품으로도 구성했습니다.
 
