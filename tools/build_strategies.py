@@ -127,7 +127,7 @@ def main() -> None:
         if e.get("internal"):
             btns.append(f'<a class="btn primary" href="{esc(e["internal"]["url"])}">전략 자세히 보기 →</a>')
         if e.get("urls"):
-            btns.append(f'<a href="{esc(e["urls"][0])}" target="_blank" rel="noopener noreferrer">원본 포스팅(네이버) →</a>')
+            btns.append(f'<a class="btn" href="{esc(e["urls"][0])}" target="_blank" rel="noopener noreferrer">백테스트 결과 보기 (네이버) →</a>')
         if pl.get("buy"):
             btns.append(f'<a class="btn accent" href="{esc(pl["buy"])}" target="_blank" rel="noopener noreferrer">단독 20만원 시작하기</a>')
         price = f'<p class="pillar-price">{esc(pl["price"])}</p>' if pl.get("price") else ""
