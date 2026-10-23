@@ -76,7 +76,7 @@
     const sourcePage = window.location.pathname || '/';
     const normalizedHref = `${url.origin}${url.pathname}`.replace(/\/$/, '');
 
-    // 토스 H5 게임 링크 클릭
+    // 게임 링크 클릭(토스·원스토어)
     if (url.hostname === 'minion.toss.im' || url.hostname === 'tossminiapp.com' || url.hostname === 'onesto.re') {
       const card = link.closest('.game-card');
       sendEvent('game_play_click', {
