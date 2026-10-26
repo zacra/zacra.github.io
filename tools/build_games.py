@@ -229,9 +229,8 @@ def main():
     DETAIL_DIR.mkdir(exist_ok=True)
     for g in games:
         make_og(g)
-        # games.html 배치 순서를 지켜 현재 게임 다음 3개를 보여준다(끝에서는 처음으로 이어짐)
-        i = games.index(g)
-        others = [games[(i + k) % len(games)] for k in (1, 2, 3)]
+        # games.html 배치 순서(1순위부터)대로 현재 게임을 제외한 앞의 3개를 보여준다
+        others = [o for o in games if o["id"] != g["id"]][:3]
         (DETAIL_DIR / f"{g['id']}.html").write_text(detail_page(g, s, others, updated), encoding="utf-8")
     update_sitemap(games, updated)
     print(f"games.html + {len(games)} detail pages")
