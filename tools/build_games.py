@@ -179,12 +179,17 @@ def detail_page(g, tpl, others, updated):
     tail = tpl[tpl.index("</main><footer"):]
     tail = re.sub(r"마지막 업데이트 [0-9-]+", f"마지막 업데이트 {updated}", tail)
     nav = tpl[tpl.index("</head>"): tpl.index('<main id="main">')]
-    links = " · ".join(f'<a href="/games/{o["id"]}.html">{o["name"]}</a>' for o in others)
+    thumbs = "".join(
+        f'<a class="other-card" href="/games/{o["id"]}.html" aria-label="{o["name"]} 소개 페이지로 이동">'
+        f'<img src="{o["image"]["src"]}" alt="{o["image"]["alt"]}" width="{o["image"]["width"]}" height="{o["image"]["height"]}" loading="lazy" decoding="async"/>'
+        f'<span class="other-name">{o["name"]}</span><span class="other-sub">{o["sub"]}</span></a>'
+        for o in others
+    )
     main = (
         f'<main id="main"><div class="breadcrumb"><a href="/">홈</a> › <a href="/games.html">게임</a> › {g["name"]}</div>\n'
         f'<div class="game-list single">\n{card(g, True)}\n</div>\n'
-        f'<p class="game-back"><a class="btn primary" href="/games.html">다른 게임 보기 →</a></p>\n'
-        f'<p class="game-others">다른 게임: {links}</p>\n'
+        f'<section class="other-games"><h2>다른 게임도 해보세요</h2><div class="other-grid">{thumbs}</div>\n'
+        f'<p class="game-back"><a class="btn primary" href="/games.html">다른 게임 보기 →</a></p></section>\n'
         f'<p class="updated">문서 업데이트: {updated} · 게임은 모바일에서 실행돼요.</p>\n'
     )
     return head + nav + main + tail
@@ -224,7 +229,9 @@ def main():
     DETAIL_DIR.mkdir(exist_ok=True)
     for g in games:
         make_og(g)
-        others = [o for o in games if o["id"] != g["id"]]
+        # games.html 배치 순서를 지켜 현재 게임 다음 3개를 보여준다(끝에서는 처음으로 이어짐)
+        i = games.index(g)
+        others = [games[(i + k) % len(games)] for k in (1, 2, 3)]
         (DETAIL_DIR / f"{g['id']}.html").write_text(detail_page(g, s, others, updated), encoding="utf-8")
     update_sitemap(games, updated)
     print(f"games.html + {len(games)} detail pages")
