@@ -88,6 +88,17 @@
       return;
     }
 
+    // 게임 목록에서 게임별 소개 페이지로 이동
+    if (url.origin === window.location.origin && /^\/games\/[a-z0-9-]+\.html$/.test(url.pathname) && link.closest('.game-card')) {
+      const card = link.closest('.game-card');
+      sendEvent('game_detail_click', {
+        game_name: card.querySelector('h2') ? cleanText(card.querySelector('h2').textContent) : linkText,
+        source_page: sourcePage,
+        destination_path: url.pathname
+      });
+      return;
+    }
+
     // 패키지 / 슈퍼 이동평균 구매 버튼 클릭: 가장 중요한 전환 지표
     const purchase = PURCHASE_LINKS[normalizedHref];
     if (purchase) {

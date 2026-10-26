@@ -69,14 +69,32 @@ def card(g, detail_page=False):
     fold = '<details class="fold" open>' if detail_page else '<details class="fold">'
     return (
         f'<article class="{cls}" id="{gid}">\n'
-        f'<a class="game-thumb" href="{top}" target="_blank" rel="noopener noreferrer" aria-label="{name} 모바일에서 플레이">{badge}'
-        f'<img src="{im["src"]}" alt="{im["alt"]}" width="{im["width"]}" height="{im["height"]}" loading="lazy" decoding="async"/></a>\n'
+        f'<div class="game-thumb">{badge}'
+        f'<img src="{im["src"]}" alt="{im["alt"]}" width="{im["width"]}" height="{im["height"]}" loading="lazy" decoding="async"/></div>\n'
         f'<div class="game-body">\n<p class="game-genre">{g["genre"]}</p>\n<h2>{name}</h2>\n<p class="game-sub">{g["sub"]}</p>\n'
         f'<p>{g["summary"]}</p>\n'
         f'<ul class="game-facts">{"".join(f"<li>{f}</li>" for f in g["facts"])}</ul>\n'
         f'<div class="game-actions"><div>{buttons}<p class="game-note">{note(g)}</p></div>\n'
         f'<div class="game-qrs">{figs}</div></div>\n'
         f'{fold}<summary>자세한 소개 보기</summary>{g["detail"]}</details>{more}\n'
+        f'</div></article>'
+    )
+
+
+def list_card(g):
+    """games.html용 간단 카드: 이미지·짧은 설명·[게임하러가기] → 상세 페이지."""
+    name, gid, im = g["name"], g["id"], g["image"]
+    badge = '<span class="game-badge" aria-label="대표 게임">BEST</span>' if g["featured"] else ""
+    cls = "game-card featured" if g["featured"] else "game-card"
+    url = f"/games/{gid}.html"
+    return (
+        f'<article class="{cls}" id="{gid}">\n'
+        f'<a class="game-thumb" href="{url}" aria-label="{name} 소개 페이지로 이동">{badge}'
+        f'<img src="{im["src"]}" alt="{im["alt"]}" width="{im["width"]}" height="{im["height"]}" loading="lazy" decoding="async"/></a>\n'
+        f'<div class="game-body">\n<p class="game-genre">{g["genre"]}</p>\n<h2>{name}</h2>\n<p class="game-sub">{g["sub"]}</p>\n'
+        f'<p>{g["summary"]}</p>\n'
+        f'<ul class="game-facts">{"".join(f"<li>{f}</li>" for f in g["facts"])}</ul>\n'
+        f'<p class="game-go"><a class="btn primary" href="{url}" aria-label="{name} 게임하러가기">게임하러가기 →</a></p>\n'
         f'</div></article>'
     )
 
@@ -192,7 +210,7 @@ def main():
     # 목록 페이지: 카드 영역
     a = s.index('<div class="game-list">\n') + len('<div class="game-list">\n')
     b = s.index('\n</div>\n<section class="notice">')
-    s = s[:a] + "\n".join(card(g) for g in games) + s[b:]
+    s = s[:a] + "\n".join(list_card(g) for g in games) + s[b:]
     # ItemList JSON-LD
     m = [x for x in re.finditer(r'<script type="application/ld\+json">(.*?)</script>', s, re.S) if '"ItemList"' in x.group(1)][0]
     d = json.loads(m.group(1))
