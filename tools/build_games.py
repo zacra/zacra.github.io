@@ -221,6 +221,11 @@ def main():
     d = json.loads(m.group(1))
     d["itemListElement"] = [{"@type": "ListItem", "position": i + 1, "item": video_game(g)} for i, g in enumerate(games)]
     s = s[: m.start(1)] + compact(d) + s[m.end(1):]
+    # 제목·설명에 나열된 게임 이름 순서를 data/games.json 순서에 맞춘다
+    alt = "|".join(sorted((re.escape(g["name"]) for g in games), key=len, reverse=True))
+    for sep in ("·", ", "):
+        pat = re.compile(rf"(?:{alt})(?:{re.escape(sep)}(?:{alt})){{{len(games) - 1}}}")
+        s = pat.sub(sep.join(g["name"] for g in games), s)
     s = re.sub(r"문서 업데이트: [0-9-]+", f"문서 업데이트: {updated}", s)
     s = re.sub(r"마지막 업데이트 [0-9-]+", f"마지막 업데이트 {updated}", s)
     s = re.sub(r'"dateModified":"[0-9-]+"', f'"dateModified":"{updated}"', s)
