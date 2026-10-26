@@ -76,14 +76,14 @@
     const sourcePage = window.location.pathname || '/';
     const normalizedHref = `${url.origin}${url.pathname}`.replace(/\/$/, '');
 
-    // 게임 링크 클릭(토스·원스토어)
-    if (url.hostname === 'minion.toss.im' || url.hostname === 'tossminiapp.com' || url.hostname === 'onesto.re') {
+    // 게임 링크 클릭(토스·원스토어·App Store)
+    if (url.hostname === 'minion.toss.im' || url.hostname === 'tossminiapp.com' || url.hostname === 'onesto.re' || url.hostname === 'apps.apple.com') {
       const card = link.closest('.game-card');
       sendEvent('game_play_click', {
         game_name: card && card.querySelector('h2') ? cleanText(card.querySelector('h2').textContent) : linkText,
         source_page: sourcePage,
         link_url: url.href,
-        destination_type: url.hostname === 'onesto.re' ? 'onestore_game' : 'toss_game'
+        destination_type: url.hostname === 'apps.apple.com' ? 'appstore_game' : (url.hostname === 'onesto.re' ? 'onestore_game' : 'toss_game')
       });
       return;
     }
