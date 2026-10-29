@@ -144,3 +144,5 @@ h1,h2{word-break:keep-all;overflow-wrap:break-word}
 .other-name{display:block;padding:10px 12px 0;font-weight:800}.other-sub{display:block;padding:2px 12px 12px;font-size:.84rem;color:var(--muted)}
 @media(max-width:640px){.other-grid{gap:8px}.other-card{border-radius:10px}.other-card img{aspect-ratio:4/3}.other-name{padding:7px 8px 0;font-size:.84rem;line-height:1.3}.other-sub{display:none}.other-name:last-child{padding-bottom:9px}.other-games h2{font-size:1.05rem}}
 .game-actions>.game-qrs{flex:1 1 100%;margin-top:6px}.game-actions>div:first-child{flex:1 1 100%}
+.games-hero{margin:18px 0 0}.games-hero img{display:block;width:100%;height:auto;aspect-ratio:21/9;object-fit:cover;border-radius:18px;border:1px solid var(--line)}.games-hero figcaption{margin-top:8px;font-size:.86rem;color:var(--muted);text-align:center}
+@media(max-width:640px){.games-hero img{aspect-ratio:16/10;border-radius:14px}}
