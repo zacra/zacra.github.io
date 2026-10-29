@@ -18,7 +18,7 @@ OG_DIR = ROOT / "assets" / "games" / "og"
 SITE = "https://zacra.github.io"
 AUTHOR = {"@type": "Person", "name": "게만아", "alternateName": "게임 만드는 아빠", "url": f"{SITE}/about.html"}
 
-STORE_LABEL = {"toss": "Toss", "onestore": "ONE store", "appstore": "iOS"}
+STORE_LABEL = {"toss": "Toss", "onestore": "ONE store", "appstore": "iOS", "googleplay": "Android"}
 
 
 def page_url(g):
@@ -26,17 +26,40 @@ def page_url(g):
 
 
 def store_list(g):
-    return [STORE_LABEL[k] for k in ("toss", "onestore", "appstore") if k in g["stores"]]
+    return [STORE_LABEL[k] for k in ("toss", "onestore", "appstore", "googleplay") if k in g["stores"]]
 
 
 def same_as(g):
-    return [g["stores"][k] for k in ("toss", "onestore", "appstore") if k in g["stores"]]
+    return [g["stores"][k] for k in ("toss", "onestore", "appstore", "googleplay") if k in g["stores"]]
 
 
 def note(g):
-    if "appstore" in g["stores"]:
-        return "토스·원스토어는 해당 앱이 설치된 휴대폰에서, App Store는 iPhone·iPad에서 실행돼요"
+    st = g["stores"]
+    if "appstore" in st or "googleplay" in st:
+        extra = " · ".join(x for x in (["App Store는 iPhone·iPad에서"] if "appstore" in st else []) + (["Google Play는 Android에서"] if "googleplay" in st else []))
+        return f"토스·원스토어는 해당 앱이 설치된 휴대폰에서, {extra} 실행돼요"
     return "토스·원스토어 앱이 설치된 휴대폰에서 실행돼요"
+
+
+def play_button(url, name, label, icon):
+    return (
+        f'<a class="play-btn" href="{url}" target="_blank" rel="noopener noreferrer" aria-label="{name} {label}">'
+        f'<img src="/assets/games/brand/{icon}" alt="" width="28" height="28" loading="lazy" decoding="async"/><span>{label}</span></a>'
+    )
+
+
+def ensure_qr(slug, suffix, url):
+    """QR 파일이 없으면 만든다(qrcode 모듈이 있을 때)."""
+    out = ROOT / "assets" / "games" / f"qr-{slug}{suffix}.svg"
+    if out.exists():
+        return
+    try:
+        import qrcode
+        import qrcode.image.svg
+    except ImportError:
+        print(f"[경고] {out.name} 없음: qrcode 모듈이 없어 만들지 못했습니다")
+        return
+    qrcode.make(url, image_factory=qrcode.image.svg.SvgPathImage, border=2).save(out)
 
 
 def card(g, detail_page=False):
@@ -51,15 +74,21 @@ def card(g, detail_page=False):
         f'<a class="play-btn" href="{st["onestore"]}" target="_blank" rel="noopener noreferrer" aria-label="{name} 원스토어에서 플레이">'
         f'<img src="/assets/games/brand/onestore-icon.png" alt="" width="28" height="28" loading="lazy" decoding="async"/><span>원스토어에서 플레이</span></a>'
     )
+    row2 = ""
     if "appstore" in st:
-        buttons += (
-            f'<div class="store-badges"><a class="appstore-badge" href="{st["appstore"]}" target="_blank" rel="noopener noreferrer" aria-label="{name} App Store에서 다운로드">'
-            f'<img src="/assets/games/brand/appstore-badge-kr.svg" alt="App Store에서 다운로드" width="149" height="46" loading="lazy" decoding="async"/></a></div>'
-        )
+        row2 += play_button(st["appstore"], name, "App Store에서 다운로드", "appstore-icon.png")
+    if "googleplay" in st:
+        row2 += (" " if row2 else "") + play_button(st["googleplay"], name, "Google Play에서 다운로드", "googleplay-icon.png")
+    if row2:
+        buttons += f'<div class="store-badges">{row2}</div>'
     slug = gid
     qrs = [("", "토스", st["toss"]), ("-onestore", "원스토어", st["onestore"])]
     if "appstore" in st:
         qrs.append(("-appstore", "App Store", st["appstore"]))
+    if "googleplay" in st:
+        qrs.append(("-googleplay", "Google Play", st["googleplay"]))
+    for suf, _, u in qrs:
+        ensure_qr(slug, suf, u)
     figs = "".join(
         f'<figure class="game-qr"><img src="/assets/games/qr-{slug}{suf}.svg" alt="{name} {label} 실행 QR 코드" width="104" height="104" loading="lazy"/>'
         f'<figcaption>{label} · 휴대폰 카메라로 스캔</figcaption></figure>'
