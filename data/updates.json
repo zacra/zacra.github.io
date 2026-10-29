@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-26",
+ "updated_at": "2026-10-29",
  "types": [
   "패키지",
   "전략",
@@ -7,6 +7,32 @@
   "공식 가이드"
  ],
  "entries": [
+  {
+   "date": "2026-10-29",
+   "title": "게임 페이지에 동물 댄서 추가, Google Play 링크 추가",
+   "items": [
+    {
+     "type": "공식 가이드",
+     "text": "새 게임 <strong>동물 댄서</strong>를 게임 페이지에 추가했습니다. 귀여운 동물을 합쳐 모으고 춤을 감상하는 힐링 머지 게임으로, 원스토어·Google Play·iOS App Store에서 만날 수 있습니다.",
+     "links": [
+      [
+       "동물 댄서 보기",
+       "/games/animal-dancer.html"
+      ]
+     ]
+    },
+    {
+     "type": "공식 가이드",
+     "text": "코인공주·무한더던전2·무기전쟁의 <strong>Google Play</strong> 링크를 추가했고, 게임 소개 페이지의 스토어 버튼을 정리했습니다.",
+     "links": [
+      [
+       "게임 보기",
+       "/games.html"
+      ]
+     ]
+    }
+   ]
+  },
   {
    "date": "2026-10-26",
    "title": "게임별 소개 페이지 추가",

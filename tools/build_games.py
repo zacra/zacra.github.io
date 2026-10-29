@@ -35,10 +35,13 @@ def same_as(g):
 
 def note(g):
     st = g["stores"]
+    phone = [n for k, n in (("toss", "토스"), ("onestore", "원스토어")) if k in st]
     extra = (["App Store는 iPhone·iPad"] if "appstore" in st else []) + (["Google Play는 Android 기기"] if "googleplay" in st else [])
+    if extra and phone:
+        return f"{'·'.join(phone)}는 해당 앱이 설치된 휴대폰에서, {', '.join(extra)}에서 실행돼요"
     if extra:
-        return f"토스·원스토어는 해당 앱이 설치된 휴대폰에서, {', '.join(extra)}에서 실행돼요"
-    return "토스·원스토어 앱이 설치된 휴대폰에서 실행돼요"
+        return f"{', '.join(extra)}에서 실행돼요"
+    return f"{'·'.join(phone)} 앱이 설치된 휴대폰에서 실행돼요"
 
 
 def play_button(url, name, label, icon):
@@ -65,15 +68,14 @@ def ensure_qr(slug, suffix, url):
 def card(g, detail_page=False):
     st, name, gid = g["stores"], g["name"], g["id"]
     im = g["image"]
-    top = st["toss"]
     badge = '<span class="game-badge" aria-label="대표 게임">BEST</span>' if g["featured"] else ""
     cls = "game-card featured" if g["featured"] else "game-card"
-    buttons = (
-        f'<a class="play-btn" href="{st["toss"]}" target="_blank" rel="noopener noreferrer" aria-label="{name} 토스에서 플레이">'
-        f'<img src="/assets/games/brand/toss-icon.png" alt="" width="28" height="28" loading="lazy" decoding="async"/><span>토스에서 플레이</span></a> '
-        f'<a class="play-btn" href="{st["onestore"]}" target="_blank" rel="noopener noreferrer" aria-label="{name} 원스토어에서 플레이">'
-        f'<img src="/assets/games/brand/onestore-icon.png" alt="" width="28" height="28" loading="lazy" decoding="async"/><span>원스토어에서 플레이</span></a>'
-    )
+    row1 = []
+    if "toss" in st:
+        row1.append(play_button(st["toss"], name, "토스에서 플레이", "toss-icon.png"))
+    if "onestore" in st:
+        row1.append(play_button(st["onestore"], name, "원스토어에서 플레이", "onestore-icon.png"))
+    buttons = " ".join(row1)
     row2 = ""
     if "appstore" in st:
         row2 += play_button(st["appstore"], name, "App Store에서 다운로드", "appstore-icon.png")
@@ -82,7 +84,11 @@ def card(g, detail_page=False):
     if row2:
         buttons += f'<div class="store-badges">{row2}</div>'
     slug = gid
-    qrs = [("", "토스", st["toss"]), ("-onestore", "원스토어", st["onestore"])]
+    qrs = []
+    if "toss" in st:
+        qrs.append(("", "토스", st["toss"]))
+    if "onestore" in st:
+        qrs.append(("-onestore", "원스토어", st["onestore"]))
     if "appstore" in st:
         qrs.append(("-appstore", "App Store", st["appstore"]))
     if "googleplay" in st:
@@ -253,7 +259,7 @@ def main():
     # 제목·설명에 나열된 게임 이름 순서를 data/games.json 순서에 맞춘다
     alt = "|".join(sorted((re.escape(g["name"]) for g in games), key=len, reverse=True))
     for sep in ("·", ", "):
-        pat = re.compile(rf"(?:{alt})(?:{re.escape(sep)}(?:{alt})){{{len(games) - 1}}}")
+        pat = re.compile(rf"(?:{alt})(?:{re.escape(sep)}(?:{alt})){{4,}}")
         s = pat.sub(sep.join(g["name"] for g in games), s)
     s = re.sub(r"문서 업데이트: [0-9-]+", f"문서 업데이트: {updated}", s)
     s = re.sub(r"마지막 업데이트 [0-9-]+", f"마지막 업데이트 {updated}", s)

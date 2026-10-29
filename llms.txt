@@ -40,9 +40,10 @@
 - https://zacra.github.io/coin-double-ma.html : 대표 코인 현물 장기 전략 코인 더블 이동평균 New(20만원 단독 상품 또는 패키지 102번 포함) — FAST·SLOW 더블 이동평균, 하락 추세 필터, Rolling Walk-Forward 검증, 업비트·빗썸·코인원
 - https://zacra.github.io/package.html : 다양한 주식·코인 자동매매 전략·시스템 패키지
 - https://zacra.github.io/faq.html : 초보자가 자주 묻는 질문
-- https://zacra.github.io/games.html : 게만아(게임 만드는 아빠)가 만든 모바일 게임(토스·원스토어) — 메인 게임 코인공주·무한더던전, 무한더던전2, 무기전쟁·패스랜드·방치머지스윗 (모두 토스·원스토어에서 플레이 가능, 코인공주·무한더던전·무한더던전2는 iOS App Store에서, 코인공주·무한더던전2·무기전쟁은 Google Play에서도 다운로드 가능)
+- https://zacra.github.io/games.html : 게만아(게임 만드는 아빠)가 만든 모바일 게임 — 메인 게임 코인공주·무한더던전, 동물 댄서, 무한더던전2, 무기전쟁, 패스랜드, 방치머지스윗 (토스·원스토어·iOS App Store·Google Play에서 게임별로 플레이·다운로드 가능)
 - https://zacra.github.io/games/coin-princess.html : 게만아의 모바일 게임 코인공주 소개와 토스·원스토어 플레이 링크 · iOS App Store·Google Play 링크
 - https://zacra.github.io/games/infinite-dungeon.html : 게만아의 모바일 게임 무한더던전 소개와 토스·원스토어 플레이 링크 · iOS App Store 링크
+- https://zacra.github.io/games/animal-dancer.html : 게만아의 모바일 게임 동물 댄서 소개와 원스토어 플레이·iOS App Store·Google Play 링크
 - https://zacra.github.io/games/infinite-dungeon-2.html : 게만아의 모바일 게임 무한더던전2 소개와 토스·원스토어 플레이 링크 · iOS App Store·Google Play 링크
 - https://zacra.github.io/games/weapon-war.html : 게만아의 모바일 게임 무기전쟁 소개와 토스·원스토어 플레이 링크 · Google Play 링크
 - https://zacra.github.io/games/passland.html : 게만아의 모바일 게임 패스랜드 소개와 토스·원스토어 플레이 링크
