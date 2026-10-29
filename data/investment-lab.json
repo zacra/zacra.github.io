@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-28",
+  "updated_at": "2026-10-29",
   "entries": [
     {
       "id": "2026-09-28-mon-tqqq-soxl-36",
@@ -871,6 +871,21 @@
       ],
       "url": "https://blog.naver.com/zacra/224456846240",
       "thumbnail": "https://blogthumb.pstatic.net/MjAyNjEwMjhfMjU3/MDAxNzkzMTc0ODExMTYw.6LfOvlol_nXp2uDlNz0kAGRCs1VoEel7zjW_Y05CD20g.yf7QmVg2CkNeZtAg5tSo6NQCjK9gpUUU3ejfs3ERG2Mg.PNG/bt_my_chart.png?type=s3"
+    },
+    {
+      "id": "2026-10-29-thu-ttasopal-smart-split-43",
+      "date": "2026-10-29",
+      "title": "[게만아 투자 실험실 - 목] -1만원(-0.62%) 떨사오팔 스마트 스플릿 자동매매 전략 43차 체크",
+      "summary": "일주일 간 실계좌 평가금 변화 · 현재까지 기록된 최대 낙폭 MDD 약 -9.9%",
+      "threads_text": "[게만아 투자 실험실 · 목]\n떨사오팔 스마트 스플릿 43차\n\n일주일 간 실계좌 평가금 변화\n1,954,475원 → 1,942,383원\n평가금 -12,092원(-0.62%)\n\n현재까지 기록된 최대 낙폭 MDD 약 -9.9%\n\n이번 주부터 포트폴리오를 바꿔 운용을 이어갑니다.\n파이썬 자동매매로 매주 결과를 계속 기록하고 있습니다 :)\n\n※ 현재 평가금 기준 기록이며 미래 성과를 의미하지 않습니다.",
+      "tags": [
+        "국내주식",
+        "스마트스플릿",
+        "실계좌",
+        "파이썬자동매매"
+      ],
+      "url": "https://blog.naver.com/zacra/224457980092",
+      "thumbnail": "https://blogthumb.pstatic.net/MjAyNjEwMjlfMTcz/MDAxNzkzMjU5NjM4NTky.Fih4YlK4o3yhrVA9VDKv0X_0jt2iVGMt7z6PFSp019kg._cEShrcjhHH-QwDUfCWIVidfRs54WPbeAYYqOLX8ylYg.PNG/bt_chart.png?type=s3"
     }
   ]
 }
