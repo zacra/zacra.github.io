@@ -35,9 +35,9 @@ def same_as(g):
 
 def note(g):
     st = g["stores"]
-    if "appstore" in st or "googleplay" in st:
-        extra = " · ".join(x for x in (["App Store는 iPhone·iPad에서"] if "appstore" in st else []) + (["Google Play는 Android에서"] if "googleplay" in st else []))
-        return f"토스·원스토어는 해당 앱이 설치된 휴대폰에서, {extra} 실행돼요"
+    extra = (["App Store는 iPhone·iPad"] if "appstore" in st else []) + (["Google Play는 Android 기기"] if "googleplay" in st else [])
+    if extra:
+        return f"토스·원스토어는 해당 앱이 설치된 휴대폰에서, {', '.join(extra)}에서 실행돼요"
     return "토스·원스토어 앱이 설치된 휴대폰에서 실행돼요"
 
 
