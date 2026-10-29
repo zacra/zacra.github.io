@@ -146,3 +146,4 @@ h1,h2{word-break:keep-all;overflow-wrap:break-word}
 .game-actions>.game-qrs{flex:1 1 100%;margin-top:6px}.game-actions>div:first-child{flex:1 1 100%}
 .games-hero{margin:18px 0 0}.games-hero img{display:block;width:100%;height:auto;aspect-ratio:21/9;object-fit:cover;border-radius:18px;border:1px solid var(--line)}.games-hero figcaption{margin-top:8px;font-size:.86rem;color:var(--muted);text-align:center}
 @media(max-width:640px){.games-hero img{aspect-ratio:16/10;border-radius:14px}}
+.intro-anim{margin:18px 0 6px;max-width:440px}.intro-anim img{display:block;width:100%;height:auto;aspect-ratio:1/1;border-radius:18px;border:1px solid var(--line);background:#fff}
