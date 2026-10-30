@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-21",
+ "updated_at": "2026-10-30",
  "categories": [
   {
    "id": "asset-allocation",
@@ -1569,6 +1569,19 @@
     "https://blog.naver.com/zacra/224444067342"
    ],
    "post_date": null
+  },
+  {
+   "code": 105,
+   "title": "코인 슈퍼스플릿 (USDT·USDC 그리드, 업비트·빗썸·코인원)",
+   "category": "분할매매",
+   "market": "업비트·빗썸·코인원 현물",
+   "assets": "테더(USDT)·USDC 등 스테이블코인(예시 기본 USDT)",
+   "summary": "코인판에서 달러처럼 보이는 스테이블코인을 대상으로, 배정 금액을 여러 칸으로 나눠 내려오면 사고 조금 위에서 파는 그리드(떨사오팔) 전략입니다. 5분봉 5이동평균으로 시작·정리 타이밍을 참고하며, 수수료가 있는 거래소에서는 갭(예: 1원→2원)을 키우는 편이 안전합니다. 학습·확장용 템플릿으로 AI와 함께 변형할 수 있습니다.",
+   "cycle": "1분 간격(crontab)",
+   "urls": [
+    "https://blog.naver.com/zacra/224458931774"
+   ],
+   "post_date": "20261030"
   }
  ]
 }
