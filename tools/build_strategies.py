@@ -183,7 +183,7 @@ def main() -> None:
 <h1>게만아 패키지 전략·시스템 카탈로그</h1>
 <div class="cta-bar" id="cta-bar"><span class="cta-text"><strong>이 전략·시스템 전부가 게만아 패키지에 포함됩니다</strong> · 500,000원</span><a class="cta-btn" href="https://www.latpeed.com/products/Wxjik" target="_blank" rel="noopener noreferrer"><span class="long">네이버페이·카카오페이·카드로 시작하기</span><span class="short">시작하기</span></a></div>
 <p class="lead">게만아 패키지의 주식·ETF·코인 자동매매 <strong>전략과 시스템 {len(numbered)}개</strong>를 유형별로 정리했습니다. 시장·대상·실행 주기를 한눈에 보고, 자세한 설명은 원본 포스팅에서 확인하세요.</p>
-<figure class="intro-anim"><a href="/package.html" aria-label="게만아 파이썬 자동매매 패키지 소개 보기"><img src="/assets/intro/package.webp" alt="게만아 파이썬 자동매매 패키지 소개 이미지: AI로 자동매매 코드, 이제 금방 만듭니다. 그런데 그 코드, 내 계좌에 바로 연결해도 될까요?" width="640" height="640" decoding="async"/></a></figure>
+<div class="intro-pair"><figure class="intro-anim"><a href="https://blog.naver.com/zacra/223910423439" rel="noopener noreferrer" target="_blank" aria-label="게만아 파이썬 자동매매 시작가이드 보기 (네이버)"><img src="/assets/intro/start-guide.webp" alt="계만아 시스템 투자 시작 가이드 소개 이미지: 투자가 어려운 이유 — 손실 앞에선 망설이고, 수익 앞에선 조급해집니다" width="640" height="640" decoding="async"/></a><figcaption>시작가이드 (네이버)</figcaption></figure><figure class="intro-anim"><a href="/package.html" aria-label="게만아 파이썬 자동매매 패키지 소개 보기"><img src="/assets/intro/package.webp" alt="게만아 파이썬 자동매매 패키지 소개 이미지: AI로 자동매매 코드, 이제 금방 만듭니다. 그런데 그 코드, 내 계좌에 바로 연결해도 될까요?" width="640" height="640" decoding="async"/></a><figcaption>패키지 소개</figcaption></figure></div>
 <div class="notice"><ul>
 <li>번호는 <a href="/package-content-guide.html">패키지 콘텐츠 번호</a>와 같고, <b>S</b>는 번호 없는 스페셜(대표) 전략입니다.</li>
 <li>각 유형은 백테스트 <a href="/glossary.html#calmar">Calmar 지수</a>(수익률÷최대낙폭)가 높은 순이며, 백테스트가 없는 전략은 뒤에 번호순입니다. 결과는 포트폴리오·기간에 따라 달라지니 <strong>직접 백테스트로 확인</strong>해 보세요.</li>
