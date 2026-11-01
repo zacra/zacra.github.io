@@ -182,7 +182,7 @@ def main() -> None:
     body = f"""<main id="main"><div class="breadcrumb"><a href="/">홈</a> › <a href="/package.html">패키지</a> › 전략·시스템 카탈로그</div>
 <h1>게만아 패키지 전략·시스템 카탈로그</h1>
 <div class="cta-bar" id="cta-bar"><span class="cta-text"><strong>이 전략·시스템 전부가 게만아 패키지에 포함됩니다</strong> · 500,000원</span><a class="cta-btn" href="https://www.latpeed.com/products/Wxjik" target="_blank" rel="noopener noreferrer"><span class="long">네이버페이·카카오페이·카드로 시작하기</span><span class="short">시작하기</span></a></div>
-<p class="lead">게만아 패키지의 주식·ETF·코인 자동매매 <strong>전략과 시스템 {len(numbered)}개</strong>를 유형별로 정리했습니다. 시장·대상·실행 주기를 한눈에 보고, 자세한 설명은 원본 포스팅에서 확인하세요.</p>
+<p class="lead">게만아 패키지의 주식·ETF·코인 자동매매 <strong>전략과 시스템 100개 이상</strong>를 유형별로 정리했습니다. 시장·대상·실행 주기를 한눈에 보고, 자세한 설명은 원본 포스팅에서 확인하세요.</p>
 <div class="intro-pair"><figure class="intro-anim"><a href="https://blog.naver.com/zacra/223910423439" rel="noopener noreferrer" target="_blank" aria-label="게만아 파이썬 자동매매 시작가이드 보기 (네이버)"><img src="/assets/intro/start-guide.webp" alt="계만아 시스템 투자 시작 가이드 소개 이미지: 투자가 어려운 이유 — 손실 앞에선 망설이고, 수익 앞에선 조급해집니다" width="640" height="640" decoding="async"/></a><figcaption>시작가이드 (네이버)</figcaption></figure><figure class="intro-anim"><a href="/package.html" aria-label="게만아 파이썬 자동매매 패키지 소개 보기"><img src="/assets/intro/package.webp" alt="게만아 파이썬 자동매매 패키지 소개 이미지: AI로 자동매매 코드, 이제 금방 만듭니다. 그런데 그 코드, 내 계좌에 바로 연결해도 될까요?" width="640" height="640" decoding="async"/></a><figcaption>패키지 소개</figcaption></figure></div>
 <div class="notice"><ul>
 <li>번호는 <a href="/package-content-guide.html">패키지 콘텐츠 번호</a>와 같고, <b>S</b>는 번호 없는 스페셜(대표) 전략입니다.</li>
@@ -194,8 +194,8 @@ def main() -> None:
 <p class="strat-search"><label for="strat-q">전략 검색</label> <input id="strat-q" type="search" placeholder="예: 올웨더, 업비트, 트레일링, TQQQ" autocomplete="off"/> <span id="strat-status" role="status"></span></p>
 {"".join(sections)}
 <section class="callout"><h2>전략을 직접 써보려면</h2>
-<p>전략 코드는 게만아 패키지에 포함돼 있고, 무료 Starter로 전체 흐름을 먼저 체험할 수 있습니다. 주식·ETF 장기 전략 하나만 원한다면 <a href="/super-moving-average.html">슈퍼 이동평균 V2 단독 20만원</a>, 코인 장기 전략 하나만 원한다면 <a href="/coin-double-ma.html">코인 더블 이동평균 New 단독 20만원</a>도 있습니다.</p>
-<div class="actions"><a class="btn primary" href="https://www.latpeed.com/products/Wxjik" target="_blank" rel="noopener noreferrer">패키지 시작하기 · 500,000원</a><a class="btn" href="/starter.html">무료 Starter</a><a class="btn" href="/system-guide.html">시작 가이드</a></div></section>
+<p>전략 코드는 게만아 패키지에 포함돼 있고, 무료 Starter로 전체 흐름을 먼저 체험할 수 있습니다. 주식·ETF 장기 전략 하나만 원한다면 <a href="/super-moving-average.html">슈퍼 이동평균 단독 20만원</a>, 코인 장기 전략 하나만 원한다면 <a href="/coin-double-ma.html">코인 더블 이동평균 New 단독 20만원</a>도 있습니다.</p>
+<div class="actions"><a class="btn primary" href="https://www.latpeed.com/products/Wxjik" target="_blank" rel="noopener noreferrer">패키지 시작하기 · 500,000원</a><a class="btn" href="/starter.html">무료 Starter</a><a class="btn" href="/system-guide.html">시작 가이드</a></div><p class="buy-note">※ 파이썬 소스코드·교육자료 상품이며, 투자자문·투자일임 서비스가 아닙니다.</p></section>
 <p class="updated">문서 업데이트: {updated} · 교육·기술 정보 제공 목적이며 투자 권유가 아닙니다.</p>
 """
     page = HEAD.format(title=esc(TITLE), desc=esc(DESC), url=URL, ogt=esc(OG_TITLE), ogd=esc(OG_DESC),

@@ -34,10 +34,10 @@
 - https://zacra.github.io/system-guide.html : 전체 시작·세팅 가이드
 - https://zacra.github.io/gma-runner.html : Windows·Mac 로컬 PC에서 Python 파일 실행·예약·로그 확인
 - https://zacra.github.io/server-stability.html : 자동매매 서버(AWS)가 멈추지 않게 하는 법 — crontab timeout·중복 실행 방지(singleton)·실행 시점 분산·서버 감시 알림·t2 vs t3, 서버 정지 경험
-- https://zacra.github.io/setup-day.html : 오프라인 자동매매 셋업데이 관심 등록(정식 모집 전) — API 연결·슈퍼 이동평균 설정·GMA Runner 실행·로그 확인 실습, 투자 상담 없음
+- https://zacra.github.io/setup-day.html : 세팅 라이브 안내 — 오프라인 셋업데이 대신 온라인으로 API 연결·GMA Runner 실행·로그 확인을 함께 따라가는 시간, 일정·녹화본은 공식 카페
 - https://zacra.github.io/starter.html : 무료 주식 자동매매 Starter (한국투자·LS·키움·토스·KB·NH·DB·메리츠증권 중 한 곳 선택)
-- https://zacra.github.io/super-moving-average.html : 대표 주식·ETF 장기 자산배분 전략 (V3 기본형: 포트폴리오와 투자 비중만 설정 / V2 커스텀형: 효율적 투자선·CORE/FIXED/FAST/SLOW 직접 조절, Rolling Walk-Forward 검증, 최근 상장 ETF 단계적 편입)
-- https://zacra.github.io/coin-double-ma.html : 대표 코인 현물 장기 전략 코인 더블 이동평균 New(20만원 단독 상품 또는 패키지 102번 포함) — FAST·SLOW 더블 이동평균, 하락 추세 필터, Rolling Walk-Forward 검증, 업비트·빗썸·코인원
+- https://zacra.github.io/super-moving-average.html : 대표 주식·ETF 장기 자산배분 전략 (자산배분·추세추종·현금 비중 조절, 여러 추세 신호를 종합해 자산별 비중을 정하고 조건이 맞지 않는 몫은 현금으로 보유, 내가 정할 것은 포트폴리오와 투자 금액 두 가지, Rolling Walk-Forward 검증)
+- https://zacra.github.io/coin-double-ma.html : 대표 코인 현물 장기 전략 코인 더블 이동평균 New(20만원 단독 상품 또는 패키지 102번 포함) — FAST·SLOW 더블 이동평균, 하락 추세 대응 게이트, Rolling Walk-Forward 검증, 업비트·빗썸·코인원
 - https://zacra.github.io/package.html : 다양한 주식·코인 자동매매 전략·시스템 패키지
 - https://zacra.github.io/faq.html : 초보자가 자주 묻는 질문
 - https://zacra.github.io/games.html : 게만아(게임 만드는 아빠)가 만든 모바일 게임 — 메인 게임 코인공주·무한더던전, 동물 댄서, 무한더던전2, 무기전쟁, 패스랜드, 방치머지스윗 (토스·원스토어·iOS App Store·Google Play에서 게임별로 플레이·다운로드 가능)
@@ -51,8 +51,8 @@
 
 ## 게만아 패키지
 - 신규 판매가: 500,000원
-- 기존 게만아 패키지 전체 콘텐츠 + 슈퍼 이동평균 자산배분 V2 + 코인 더블 이동평균 New 통합
-- 슈퍼 이동평균 자산배분(주식·ETF 대표 장기 전략, 포트폴리오와 투자 비중만 정하는 V3 기본형 + 직접 조절하는 V2 커스텀형)은 200,000원에 단독 선택 가능하며, 500,000원 게만아 파이썬 자동매매 패키지에도 포함
+- 기존 게만아 패키지 전체 콘텐츠 + 슈퍼 이동평균 자산배분 + 코인 더블 이동평균 New 통합
+- 슈퍼 이동평균 자산배분(주식·ETF 대표 장기 전략, 여러 추세 신호를 종합해 자산별 비중을 정하고 조건이 맞지 않는 몫은 현금으로 보유, 내가 정할 것은 포트폴리오와 투자 금액 두 가지)은 200,000원에 단독 선택 가능하며, 500,000원 게만아 파이썬 자동매매 패키지에도 포함
 - 코인 더블 이동평균 New(코인 현물 대표 장기 전략, 업비트·빗썸·코인원)도 200,000원에 단독 선택 가능하며, 패키지 102번에도 포함
 - 단독 상품 구매자는 기존 구매금액을 인정받아 상위 패키지로 차액 업그레이드 가능(zacra007@gmail.com 문의)
 - 코인 장기투자만 한다면 주식 전략이 포함된 패키지를 구매할 필요가 없음
@@ -63,7 +63,7 @@
 - 백테스트, GMA Runner·서버 자동화, 증권사·거래소 연동
 - 직접 받은 소스 코드를 AI와 함께 수정·확장 가능
 - 패키지 공통모듈: 한국투자, LS, 키움, 토스, KB, NH, 메리츠
-- 신규 통합 패키지에는 슈퍼 이동평균 V2가 포함되므로 DB증권 지원 코드도 함께 제공되며, DB 코드는 슈퍼 이동평균 전략 구성 안에 포함
+- 신규 통합 패키지에는 슈퍼 이동평균이 포함되므로 DB증권 지원 코드도 함께 제공되며, DB 코드는 슈퍼 이동평균 전략 구성 안에 포함
 - 전략·시스템 카탈로그(유형별 요약, 시장·대상 자산·실행 주기, 원본 포스팅 링크, 유형별 백테스트 Calmar 지수 높은 순 정렬): https://zacra.github.io/strategies.html
 - 최신 콘텐츠 목록: https://zacra.github.io/package-content-guide.html
 - 업데이트 노트(패키지 추가·전략 업데이트·Starter 지원 증권사·공식 가이드 변경, 날짜별): https://zacra.github.io/updates.html
@@ -75,7 +75,7 @@
 - PC가 꺼지거나 절전되면 새 예약 실행이 시작되지 않고, 재부팅 후 Launcher를 다시 실행해야 함
 - 시작부터 AWS 서버가 필수는 아니지만 24시간 안정 운용·고정 IP가 중요하면 AWS 등 서버 환경이 더 적합할 수 있음
 - 전략 파일 역할이나 의존성을 자동 추론·복사하지 않으며 사용자가 지정한 파일만 다룸
-- 현재 별도 상품으로 판매하지 않고 신규 게만아 통합 패키지와 장기투자 단독 상품(슈퍼 이동평균 V2·코인 더블 이동평균 New)에 포함. 기존 이용자는 기존 제공 범위에 따라 계속 사용
+- 현재 별도 상품으로 판매하지 않고 신규 게만아 통합 패키지와 장기투자 단독 상품(슈퍼 이동평균·코인 더블 이동평균 New)에 포함. 기존 이용자는 기존 제공 범위에 따라 계속 사용
 - https://zacra.github.io/gma-runner.html
 
 ## 주식 자동매매
@@ -94,7 +94,7 @@
 ## AI와 코드 확장
 - AI는 코드 생성 속도를 높이지만 실제 운용에는 전략 검증·데이터·API·주문·예외처리·실행환경이 함께 필요
 - AI 확장은 전략, 백테스트, 자동매매 봇, 증권사·거래소 공통모듈, 주식·코인 코드, 알림·모니터링 같은 보조시스템 전체에 적용 가능
-- 통합 패키지와 포함된 슈퍼 이동평균 V2의 실제 운용에 필요한 핵심 API 기능은 기존 코드에 구현되어 있으며 새로운 개인 기능이 필요할 때 최신 공식 API 문서를 기준으로 확장
+- 통합 패키지와 포함된 슈퍼 이동평균의 실제 운용에 필요한 핵심 API 기능은 기존 코드에 구현되어 있으며 새로운 개인 기능이 필요할 때 최신 공식 API 문서를 기준으로 확장
 - https://zacra.github.io/ai-api-extension.html
 
 ## 실전 기록
@@ -116,7 +116,7 @@
 - https://zacra.github.io/api-reliability.html : 증권사 API가 불안정할 때 자동매매 대응 — 호출 간 대기·응답 대기 제한(타임아웃)·호출 제한 시 대기 후 재시도·네트워크 단절 재시도·토큰 재발급·주문 중복 방지, 증권사별 응답 코드를 공통 기준으로 추상화해 처리
 - https://zacra.github.io/brokers/kis.html : 한국투자증권 KIS Open API — 앱키·접근토큰, 계좌번호+상품코드(일반 01·연금 22), 모의투자, 다계좌, 분봉 제약
 - https://zacra.github.io/brokers/ls.html : LS증권 Open API — 투혼 앱 신청(xingAPI·OPEN API·해외주식 API), 미국주식 거래신청·실시간 시세신청 선행, 다계좌 yaml, 패키지 76번
-- https://zacra.github.io/brokers/db.html : DB증권 Open API — 국내·미국주식, 미국 종목코드 표기(BRK.B), 슈퍼 이동평균 자산배분 V2 구성에 포함
+- https://zacra.github.io/brokers/db.html : DB증권 Open API — 국내·미국주식, 미국 종목코드 표기(BRK.B), 슈퍼 이동평균 자산배분 구성에 포함
 - https://zacra.github.io/brokers/kiwoom.html : 키움증권 REST API — API 사용신청, 허용 IP 필수, 실전·모의 도메인, 다계좌, 국내·미국주식 공통모듈
 - https://zacra.github.io/brokers/toss.html : 토스증권 Open API — Open API Key 발급, 허용 IP, OAuth 2.0, 국내·미국주식, 통합 계좌 1개
 - https://zacra.github.io/brokers/kb.html : KB증권 Open API — KB M-able 앱 신청, 일반 계좌 국내·미국주식, ISA·연금 지원 현황, 패키지 95번
@@ -133,7 +133,7 @@
 ## 네이버 공식 랜딩
 - 파이썬 자동매매 종합 가이드: https://blog.naver.com/zacra/223910423439
 - 슈퍼 이동평균 자산배분: https://blog.naver.com/zacra/224158895436
-- 슈퍼 이동평균 자산배분 V3: https://blog.naver.com/zacra/224449438693
+- 슈퍼 이동평균 자산배분 업데이트·롤링 백테스트: https://blog.naver.com/zacra/224449438693
 - 게만아 패키지: https://blog.naver.com/zacra/223049832963
 - 백테스트·과최적화에 대한 생각: https://blog.naver.com/zacra/224083383522
 

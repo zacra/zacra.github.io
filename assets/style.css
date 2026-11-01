@@ -149,3 +149,4 @@ h1,h2{word-break:keep-all;overflow-wrap:break-word}
 .intro-anim{margin:18px 0 6px;max-width:440px}.intro-anim img{display:block;width:100%;height:auto;aspect-ratio:1/1;border-radius:18px;border:1px solid var(--line);background:#fff}
 .intro-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:760px;margin:18px 0 6px}.intro-pair .intro-anim{margin:0;max-width:none}.intro-anim figcaption{margin-top:6px;font-size:.86rem;color:var(--muted);text-align:center}
 @media(max-width:640px){.intro-pair{grid-template-columns:1fr}}
+.buy-note{margin:8px 0 0;font-size:.82rem;color:var(--muted)}
