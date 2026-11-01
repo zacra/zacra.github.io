@@ -34,7 +34,6 @@
 - https://zacra.github.io/system-guide.html : 전체 시작·세팅 가이드
 - https://zacra.github.io/gma-runner.html : Windows·Mac 로컬 PC에서 Python 파일 실행·예약·로그 확인
 - https://zacra.github.io/server-stability.html : 자동매매 서버(AWS)가 멈추지 않게 하는 법 — crontab timeout·중복 실행 방지(singleton)·실행 시점 분산·서버 감시 알림·t2 vs t3, 서버 정지 경험
-- https://zacra.github.io/setup-day.html : 세팅 라이브 안내 — 오프라인 셋업데이 대신 온라인으로 API 연결·GMA Runner 실행·로그 확인을 함께 따라가는 시간, 일정·녹화본은 공식 카페
 - https://zacra.github.io/starter.html : 무료 주식 자동매매 Starter (한국투자·LS·키움·토스·KB·NH·DB·메리츠증권 중 한 곳 선택)
 - https://zacra.github.io/super-moving-average.html : 대표 주식·ETF 장기 자산배분 전략 (자산배분·추세추종·현금 비중 조절, 여러 추세 신호를 종합해 자산별 비중을 정하고 조건이 맞지 않는 몫은 현금으로 보유, 내가 정할 것은 포트폴리오와 투자 금액 두 가지, Rolling Walk-Forward 검증)
 - https://zacra.github.io/coin-double-ma.html : 대표 코인 현물 장기 전략 코인 더블 이동평균 New(20만원 단독 상품 또는 패키지 102번 포함) — FAST·SLOW 더블 이동평균, 하락 추세 대응 게이트, Rolling Walk-Forward 검증, 업비트·빗썸·코인원
