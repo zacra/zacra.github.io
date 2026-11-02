@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-29",
+ "updated_at": "2026-11-02",
  "games": [
   {
    "id": "coin-princess",
@@ -73,12 +73,13 @@
     "height": 828
    },
    "stores": {
+    "toss": "https://tossminiapp.com/s/F1qLxQnq",
     "onestore": "https://onesto.re/oneplay/0001011241",
     "appstore": "https://apps.apple.com/app/id1558795764",
     "googleplay": "https://play.google.com/store/apps/details?id=com.zabob.animaldancer"
    },
    "detail": "<p>나만의 힐링 비법, 동물 댄서! 어떤 동물이 나올지 모르는 귀여운 동물 머지 합성 게임이에요. 그리고 그 동물들이 춤을 춘다는 놀라운 사실!</p><p>펭귄 사장과 함께 여러 곳에서 공연을 하면서 즐거운 댄스 세상을 만들어 보세요. 코인 모으기가 힘들면 잠시 꺼두고 방치해도 괜찮아요. 이 동물 춤 머지? ^^</p><p>간단하고 쉬운 게임 방식에, 계속 업데이트되는 동물을 100마리 이상까지 만날 수 있어요. 귀여운 동물을 수집하는 재미와 개성 있는 춤을 감상하는 재미, 그리고 펭귄 사장과 동물 댄서들의 케미를 즐겨 보세요. 즐거운 음악과 춤, 그리고 귀여운 너!</p>",
-   "ld_description": "어떤 동물이 나올지 모르는 귀여운 동물 머지 합성 게임. 펭귄 사장과 함께 공연하며 100마리 이상의 동물을 수집하고 춤을 감상하는 힐링 게임입니다. 원스토어, Google Play, App Store에서 즐길 수 있습니다."
+   "ld_description": "어떤 동물이 나올지 모르는 귀여운 동물 머지 합성 게임. 펭귄 사장과 함께 공연하며 100마리 이상의 동물을 수집하고 춤을 감상하는 힐링 게임입니다. 토스, 원스토어, Google Play, App Store에서 즐길 수 있습니다."
   },
   {
    "id": "infinite-dungeon-2",
