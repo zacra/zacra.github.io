@@ -88,6 +88,12 @@
       return;
     }
 
+    // 파이썬 자동매매 체험선(메타버스)
+    if (url.hostname === 'gma.zacra007.workers.dev') {
+      sendEvent('metaverse_click', { source_page: sourcePage, link_text: linkText, link_url: url.href });
+      return;
+    }
+
     // 게임 목록에서 게임별 소개 페이지로 이동
     if (url.origin === window.location.origin && /^\/games\/[a-z0-9-]+\.html$/.test(url.pathname) && link.closest('.game-card')) {
       const card = link.closest('.game-card');
