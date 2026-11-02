@@ -135,6 +135,32 @@
    "ld_description": "작은 무기 하나에서 시작해 강력한 무기 군단을 만드세요. 합치고 진화시키며 마지막 무기 발견에 도전합니다."
   },
   {
+   "id": "dungeon-mon",
+   "featured": false,
+   "name": "던전몬",
+   "genre": "방치 · 머지 · 몬스터 수집",
+   "sub": "무한더던전 프리퀄, 방치 머지 몬스터",
+   "summary": "던전의 몬스터를 합성해 새로운 몬스터를 발견하고 진화시키세요! 열심히 수련시켜 좀비를 물리치고, 90마리의 쿨한 몬스터를 모두 수집하는 무한더던전의 프리퀄 게임입니다.",
+   "facts": [
+    "몬스터 합성·진화",
+    "90마리 몬스터 수집",
+    "무한더던전 프리퀄"
+   ],
+   "image": {
+    "src": "/assets/games/dungeon-mon.webp",
+    "alt": "던전몬 대표 이미지: 해골 전사, 외눈 노란 몬스터, 뇌가 보이는 분홍 외계인, 늑대인간이 마법진 문 앞에 선 플랫 그래픽 장면",
+    "width": 1916,
+    "height": 821
+   },
+   "stores": {
+    "toss": "https://tossminiapp.com/s/5wfu54Zu",
+    "onestore": "https://onesto.re/oneplay/0001011100",
+    "googleplay": "https://play.google.com/store/apps/details?id=com.zabob.monstertrain"
+   },
+   "detail": "<p>던전의 몬스터를 합성하여 새로운 몬스터를 발견하고 진화시키세요! 열심히 수련시켜 좀비를 물리치고, 90마리의 쿨한 몬스터를 모두 수집하세요.</p><p>요즘 핫한 Idle(방치)과 Merge(합성)를 더한 신박한 게임, 방치 머지 몬스터 던전몬! 지금 시작하세요 ^^</p><p>던전몬은 무한더던전의 프리퀄 게임입니다.</p>",
+   "ld_description": "던전의 몬스터를 합성해 새로운 몬스터를 발견하고 진화시키는 방치·머지 게임. 90마리의 몬스터를 수집하며 좀비를 물리치는 무한더던전의 프리퀄로, 토스·원스토어·Google Play에서 즐길 수 있습니다."
+  },
+  {
    "id": "passland",
    "featured": false,
    "name": "패스랜드",
