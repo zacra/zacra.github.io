@@ -88,10 +88,10 @@ def fmt_date(d: str | None) -> str:
 def main() -> None:
     data = json.loads(DATA_FILE.read_text(encoding="utf-8"))
     cats = data["categories"]
-    # 정렬: 특별 항목(S) 먼저 → 분류 안에서 Calmar 순위가 있는 전략(rank 오름차순) → 순위 없는 전략은 번호순
+    # 정렬: 특별 항목(S) 먼저 → pin_top(유형 맨 앞 고정) → Calmar 순위(rank 오름차순) → 순위 없는 전략은 번호순
     # (rank 는 tools/rank_by_calmar.py 가 저장하며 수치는 저장하지 않습니다)
-    entries = sorted(data["entries"], key=lambda e: (not e.get("special"), e.get("rank") is None, e.get("rank", 0),
-                                                       e["code"] if isinstance(e["code"], int) else 0))
+    entries = sorted(data["entries"], key=lambda e: (not e.get("special"), not e.get("pin_top"), e.get("rank") is None,
+                                                       e.get("rank", 0), e["code"] if isinstance(e["code"], int) else 0))
     numbered = [e for e in entries if not e.get("special")]
     updated = data["updated_at"]
     by_cat: dict[str, list[dict]] = {c["name"]: [] for c in cats}

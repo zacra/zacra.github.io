@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-01",
+ "updated_at": "2026-11-04",
  "categories": [
   {
    "id": "asset-allocation",
@@ -1582,6 +1582,20 @@
     "https://blog.naver.com/zacra/224458931774"
    ],
    "post_date": "20261030"
+  },
+  {
+   "code": 106,
+   "title": "바이낸스 국면전환 롱·숏 전략 (Gate 눌림 매수 + 장기 하락 추세 숏)",
+   "category": "코인 선물",
+   "market": "바이낸스 USDT-M 선물 (헤지 모드)",
+   "assets": "BTC·ETH·SOL·XRP·DOGE·BNB·ADA 등 (예시 목록, Gate·매크로는 BTC·ETH 일봉)",
+   "summary": "상승 국면(Gate 열림)에서는 15분봉 급락 눌림을 시장가 롱으로 잡고 ATR 손절·보유 시간 청산을 씁니다. 비트코인 200일선 아래·하락 중인 장기 하락 국면에서는 일봉 추세 숏을 켭니다. 두 국면이 아니면 새로 들어가지 않아 쉬는 날이 많은 전략이며, 거래소 STOP_MARKET 손절 주문을 함께 겁니다. 선물·레버리지 위험이 크니 필독 포스팅과 소액 학습을 권합니다.",
+   "cycle": "1분 간격(crontab)",
+   "urls": [
+    "https://blog.naver.com/zacra/224464635771"
+   ],
+   "post_date": "20261104",
+   "pin_top": true
   }
  ]
 }
