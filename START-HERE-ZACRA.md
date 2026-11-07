@@ -33,6 +33,7 @@ zacra.github.io/
 
 - 공식 가이드: https://zacra.github.io/
 - 시작 가이드: https://zacra.github.io/system-guide.html
+- 설치 따라하기: https://zacra.github.io/setup.html (1단계 setup-starter · 2단계 setup-runner · 3단계 setup-aws · setup-troubleshooting)
 - 무료 Starter: https://zacra.github.io/starter.html
 - 패키지: https://zacra.github.io/package.html
 - 슈퍼 이동평균: https://zacra.github.io/super-moving-average.html

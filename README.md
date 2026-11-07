@@ -33,6 +33,10 @@ https://zacra.github.io/starter.html
 
 https://zacra.github.io/gma-runner.html
 
+설치·세팅을 단계별로 따라 하려면 **설치 따라하기**를 보세요. 1단계 무료 Starter로 Python 설치와 첫 실행, 2단계 GMA Runner로 내 PC 자동 실행, 3단계 AWS 서버로 24시간 운용, 그리고 오류 해결 페이지로 구성됩니다.
+
+https://zacra.github.io/setup.html
+
 ### 3. 유료 콘텐츠 선택
 
 현재는 목적에 따라 세 가지로 선택할 수 있습니다.
@@ -90,6 +94,7 @@ https://zacra.github.io/coin-double-ma.html
 - 파이썬 자동매매: https://zacra.github.io/python-auto-trading.html
 - 시작 가이드: https://zacra.github.io/system-guide.html
 - GMA Runner: https://zacra.github.io/gma-runner.html
+- 설치 따라하기: https://zacra.github.io/setup.html
 - 멀티 증권사 API: https://zacra.github.io/broker-openapi.html
 - 증권사 API가 불안정할 때(재시도·타임아웃·호출 제한 대응): https://zacra.github.io/api-reliability.html
 - 자동매매 서버 안정화(timeout·중복 실행 방지·서버 감시): https://zacra.github.io/server-stability.html

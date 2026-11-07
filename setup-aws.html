@@ -1,0 +1,128 @@
+<!doctype html><html lang="ko"><head>
+  <script defer src="/assets/analytics.js"></script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3단계 AWS 서버로 24시간 자동매매 | EC2·탄력적 IP·FileZilla·crontab 세팅</title><meta name="description" content="AWS 서버로 파이썬 자동매매를 24시간 돌리는 방법을 따라 합니다. 계정 만들기, GMA_AutobotServer로 EC2 만들기, 탄력적 IP, FileZilla 업로드, 서버 파일 위치 규칙, 메시지 알림, crontab 등록과 UTC 시간까지 정리했습니다."><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><link rel="canonical" href="https://zacra.github.io/setup-aws.html"><link rel="stylesheet" href="/assets/style.css">
+<meta property="og:type" content="website"><meta property="og:locale" content="ko_KR"><meta property="og:title" content="3단계 · AWS 서버로 24시간 자동 실행하기"><meta property="og:description" content="AWS 서버로 파이썬 자동매매를 24시간 돌리는 방법을 따라 합니다. 계정 만들기, GMA_AutobotServer로 EC2 만들기, 탄력적 IP, FileZilla 업로드, 서버 파일 위치 규칙, 메시지 알림, crontab 등록과 UTC 시간까지 정리했습니다."><meta property="og:url" content="https://zacra.github.io/setup-aws.html"><meta property="og:image" content="https://zacra.github.io/assets/og-default.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="3단계 · AWS 서버로 24시간 자동 실행하기"><meta name="twitter:description" content="AWS 서버로 파이썬 자동매매를 24시간 돌리는 방법을 따라 합니다. 계정 만들기, GMA_AutobotServer로 EC2 만들기, 탄력적 IP, FileZilla 업로드, 서버 파일 위치 규칙, 메시지 알림, crontab 등록과 UTC 시간까지 정리했습니다."><meta name="twitter:image" content="https://zacra.github.io/assets/og-default.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","headline":"3단계 · AWS 서버로 24시간 자동 실행하기","name":"3단계 · AWS 서버로 24시간 자동 실행하기","description":"AWS 서버로 파이썬 자동매매를 24시간 돌리는 방법을 따라 합니다. 계정 만들기, GMA_AutobotServer로 EC2 만들기, 탄력적 IP, FileZilla 업로드, 서버 파일 위치 규칙, 메시지 알림, crontab 등록과 UTC 시간까지 정리했습니다.","url":"https://zacra.github.io/setup-aws.html","inLanguage":"ko-KR","dateModified":"2026-11-07","author":{"@type":"Person","name":"게만아","alternateName":"퀀트는 게만아","url":"https://zacra.github.io/about.html"},"publisher":{"@id":"https://zacra.github.io/#organization"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://zacra.github.io/"},{"@type":"ListItem","position":2,"name":"설치 따라하기","item":"https://zacra.github.io/setup.html"},{"@type":"ListItem","position":3,"name":"3단계 AWS 서버","item":"https://zacra.github.io/setup-aws.html"}]},{"@type":"FAQPage","inLanguage":"ko-KR","mainEntity":[{"@type":"Question","name":"서버 접속 창을 닫으면 봇이 멈추나요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 접속은 서버를 들여다보는 창일 뿐이라, 창을 닫거나 내 PC를 꺼도 서버의 crontab과 봇은 계속 돕니다. 블로그에 글을 올린 뒤 로그아웃해도 글이 남아 있는 것과 같습니다."}},{"@type":"Question","name":"crontab에 등록했는데 화면에 아무것도 안 나와요.","acceptedAnswer":{"@type":"Answer","text":"crontab 실행은 백그라운드라 접속 화면에는 보이지 않습니다. 메신저 알림이나 로그로 확인하세요. 봇 첫 부분에 실행 확인 메시지를 넣어 두면 '실행이 안 된 것'과 '조건이 안 맞아 매매가 없었던 것'을 구분할 수 있습니다."}},{"@type":"Question","name":"서버 시간이 한국 시간과 다른가요?","acceptedAnswer":{"@type":"Answer","text":"네. AWS 서버는 UTC를 써서 한국보다 9시간 늦습니다. 한국 시간 오전 9시는 crontab에 0시로 적습니다. 게만아의 crontab 예시는 이 서버 시간 기준입니다."}},{"@type":"Question","name":"서버 하나에 봇을 여러 개 돌려도 되나요?","acceptedAnswer":{"@type":"Answer","text":"네. crontab 줄을 늘리면 됩니다. 게만아도 서버 한 대에서 여러 봇을 돌립니다. 1분 주기 봇이 많아지면 실행 시간 제한과 중복 실행 방지를 함께 적용하세요."}}]}]}</script></head><body><a class="skip" href="#main">본문 바로가기</a><header class="site-header"><nav class="nav" aria-label="주요 메뉴">
+<a class="brand" href="/">게만아 <small>공식 가이드</small></a>
+<div class="nav-links">
+<a href="/investment-philosophy.html">투자 철학</a>
+<a href="/system-guide.html">시작 가이드</a>
+<a href="/setup.html">설치 따라하기</a>
+<a href="/investment-lab.html">투자 실험실</a><a href="/super-moving-average.html">슈퍼 이동평균</a>
+<a href="/coin-double-ma.html">코인 더블 이평</a>
+<a href="/package.html">패키지</a>
+<a class="nav-cta" href="/strategies.html">전략 카탈로그</a>
+<a href="/starter.html">무료 Starter</a>
+<a href="/faq.html">FAQ</a>
+</div></nav></header>
+<main id="main"><div class="breadcrumb"><a href="/">홈</a> › <a href="/setup.html">설치 따라하기</a> › 3단계 AWS 서버</div><p class="eyebrow">3단계 · 24시간 · 서버</p>
+<h1>AWS 서버로 24시간 자동 실행하기</h1>
+<p class="lead">PC를 꺼도 정해진 시간에 봇이 돌게 하려면 AWS 같은 개인 클라우드 서버를 씁니다. 게만아가 미리 만들어 둔 서버 이미지 <strong>GMA_AutobotServer</strong>로 서버를 만들면 폴더·crontab·기본 모듈 준비가 끝난 상태에서 시작합니다.</p>
+<div class="easy-box"><p><strong>끝나면</strong> · 서버에 올린 파이썬 파일이 crontab에 정한 주기마다 실행되고, 실행할 때마다 내 메신저로 알림이 옵니다. 서버와의 접속 창을 닫아도, 내 PC를 꺼도 서버의 봇은 계속 돕니다.</p></div>
+<nav class="stage-nav" aria-label="설치 따라하기 단계"><a href="/setup.html">전체 지도</a><a href="/setup-starter.html">1단계 · 무료 Starter</a><a href="/setup-runner.html">2단계 · GMA Runner</a><a href="/setup-aws.html" aria-current="page">3단계 · AWS 서버</a><a href="/setup-troubleshooting.html">오류 해결</a></nav>
+<section class="notice"><h2>시작 전에</h2><ul>
+<li>내 PC에 Python·VS Code가 있으면 코드를 고치기 편합니다. → <a href="/setup-starter.html#python">1단계 2~3번</a></li>
+<li>AWS 가입에 <strong>결제 카드</strong>가 필요합니다. 예전의 1년 무료(프리 티어)는 크레딧 방식으로 바뀌었고, 고정 IP(탄력적 IP)에는 서버에 연결해 두어도 소액 비용이 붙습니다. 요금과 혜택은 자주 바뀌니 <a href="https://aws.amazon.com/ko/pricing/" target="_blank" rel="noopener noreferrer">AWS 공식 요금 안내</a>에서 확인하세요.</li>
+<li>영상으로 먼저 보고 싶다면 <a href="https://blog.naver.com/zacra/223813258178" target="_blank" rel="noopener noreferrer">더 쉬워진 세팅 글</a>에 공개된 세팅 강의 3개(서버 세팅 · 스케줄러 · 메시지 보내기)를 보세요.</li>
+</ul></section>
+<ol class="steps">
+<li id="account"><h3>AWS 계정 만들기</h3>
+<ol><li><a href="https://signin.aws.amazon.com/signup?request_type=register" target="_blank" rel="noopener noreferrer">AWS 가입 페이지</a>에서 이메일과 계정 이름을 넣고, 이메일로 온 인증 코드를 입력합니다.</li>
+<li>루트 사용자 암호를 정합니다.</li>
+<li>연락처를 입력합니다. 한글로 써도 되지만 <strong>시·도 또는 리전</strong> 칸은 영문으로 씁니다.</li>
+<li>결제 카드를 등록합니다. 확인용으로 소액이 결제될 수 있습니다.</li>
+<li>전화번호 인증(SMS)을 하고, 지원 플랜은 <strong>기본 지원 - 무료</strong>를 고릅니다.</li></ol>
+<p>로그인할 때는 <strong>루트 사용자 이메일을 사용하여 로그인</strong>을 고릅니다. 콘솔 오른쪽 위 설정 아이콘에서 언어를 <strong>한국어</strong>로 바꾸면 편합니다.</p>
+<p class="ok"><strong>됐는지 확인</strong> · AWS Management Console(관리 화면)에 들어가집니다.</p>
+<p class="more">원본: <a href="https://blog.naver.com/zacra/223813258178" target="_blank" rel="noopener noreferrer">더 쉬워진 세팅 2)</a></p></li>
+
+<li id="ec2"><h3>EC2 서버 만들기 (GMA_AutobotServer)</h3>
+<ol><li>콘솔 오른쪽 위 리전을 <strong>아시아 태평양(서울)</strong>로 바꿉니다. 처음에는 미국 버지니아 등으로 되어 있을 수 있습니다.</li>
+<li>검색창에서 <strong>EC2</strong>로 들어가 <strong>인스턴스 시작</strong>을 누릅니다. AWS에서는 서버를 인스턴스라고 부릅니다.</li>
+<li>이름은 편하게 짓고, <strong>애플리케이션 및 OS 이미지</strong>에서 <code>GMA_Autobot</code>을 검색합니다. 바로 안 나오면 <strong>커뮤니티 AMI</strong> 탭을 누르고 <strong>GMA_AutobotServer</strong>를 선택합니다.</li>
+<li>인스턴스 유형은 micro 크기로 시작해도 됩니다. 새로 만든다면 t3 계열을 권장합니다(<a href="/server-stability.html">서버 안정화</a> 참고). 무료 혜택 라벨이 붙은 유형이 있다면 그것을 고르세요.</li>
+<li><strong>키 페어</strong>에서 <strong>새 키 페어 생성</strong>을 누르고 이름을 정합니다. 내려받은 <code>.pem</code> 파일은 서버 접속 열쇠입니다. <strong>잃어버리지 말고 남에게 주지 마세요.</strong></li>
+<li>나머지는 그대로 두고 오른쪽의 <strong>인스턴스 시작</strong>을 누릅니다.</li></ol>
+<figure class="shot"><img src="/assets/setup/aws-ami-search.webp" alt="EC2 인스턴스 시작 화면에서 커뮤니티 AMI의 GMA_AutobotServer 검색" width="900" height="486" loading="lazy" decoding="async"><figcaption>GMA_Autobot 검색 → 커뮤니티 AMI 탭 → GMA_AutobotServer 선택</figcaption></figure>
+<p>GMA_AutobotServer에는 <code>/var/autobot</code> 폴더, crontab, pip, 기본 모듈, 메모리 확장이 미리 되어 있습니다. AWS 쪽 이미지가 바뀌어 새로 만들게 되더라도 같은 이름으로 검색되도록 관리합니다.</p>
+<p class="ok"><strong>됐는지 확인</strong> · 인스턴스 상태가 <strong>실행 중</strong>으로 바뀝니다. 인스턴스를 선택하고 <strong>연결 → EC2 인스턴스 연결</strong> 탭에서 사용자 이름을 <code>ec2-user</code>로 바꿔 연결한 뒤, <code>crontab -l</code>과 <code>cd /var/autobot</code>을 입력해 오류 없이 실행되면 성공입니다.</p>
+<figure class="shot"><img src="/assets/setup/aws-connect.webp" alt="EC2 인스턴스 연결 후 crontab -l과 cd /var/autobot을 입력한 터미널" width="900" height="570" loading="lazy" decoding="async"><figcaption>연결 후 crontab -l, cd /var/autobot 확인</figcaption></figure>
+<p class="more">원본: <a href="https://blog.naver.com/zacra/223813258178" target="_blank" rel="noopener noreferrer">더 쉬워진 세팅 3)</a></p></li>
+
+<li id="eip"><h3>고정 IP(탄력적 IP) 연결</h3>
+<ol><li>EC2 왼쪽 메뉴의 <strong>탄력적 IP</strong> → <strong>탄력적 IP 주소 할당</strong> → 아무것도 바꾸지 않고 <strong>할당</strong></li>
+<li><strong>작업 → 탄력적 IP 주소 연결</strong> → 방금 만든 인스턴스를 고르고 <strong>연결</strong></li></ol>
+<p>탄력적 IP가 없으면 서버를 다시 시작할 때 주소가 바뀝니다. 거래소·증권사 API 키를 발급할 때 넣는 <strong>허용 IP</strong>가 바로 이 주소입니다. 내 PC에서도 테스트하려면 내 PC 공인 IP도 함께 등록하세요.</p>
+<p class="ok"><strong>됐는지 확인</strong> · 인스턴스 세부 정보에 탄력적 IP 주소가 보입니다.</p>
+<p class="more">더 편하게: <a href="https://blog.naver.com/zacra/222622754580" target="_blank" rel="noopener noreferrer">내 PC에서 직접 AWS 서버에 접속하는 방법</a> · 보안을 위해 <a href="https://blog.naver.com/zacra/222856693491" target="_blank" rel="noopener noreferrer">SSH 접속 제한하기</a></p></li>
+
+<li id="filezilla"><h3>FileZilla로 파일 올리기</h3>
+<ol><li><a href="https://filezilla-project.org/download.php" target="_blank" rel="noopener noreferrer">FileZilla</a>(FTP 프로그램)를 설치하고 실행합니다.</li>
+<li>설정(Mac은 FileZilla → 설정, Windows는 편집 → 설정)의 <strong>SFTP</strong>에서 <strong>키 파일 추가</strong>로 아까 받은 <code>.pem</code>을 등록합니다.</li>
+<li><strong>파일 → 사이트 관리자 → New site</strong>에서 프로토콜 <strong>SFTP</strong>, 사용자 <code>ec2-user</code>, 호스트에는 AWS 인스턴스 <strong>연결 → SSH 클라이언트</strong> 탭에 나오는 퍼블릭 DNS 주소(<code>…amazonaws.com</code>)를 넣고 <strong>연결</strong>합니다.</li>
+<li>처음 연결할 때 뜨는 창에서 캐시에 등록을 고르고 확인합니다.</li></ol>
+<p>왼쪽이 내 PC, 오른쪽이 서버입니다. 오른쪽 경로 칸에 <code>/var/autobot</code>을 입력해 이동한 뒤, 연습용 <code>test.py</code>(내용: <code>print("My First Bot!!!")</code>)를 끌어다 놓습니다.</p>
+<p class="ok"><strong>됐는지 확인</strong> · 서버 접속 창에서 <code>python3 /var/autobot/test.py</code>를 입력하면 <code>My First Bot!!!</code>이 출력됩니다.</p>
+<p class="stuck"><strong>막히면</strong> · 접속이 안 되거나 root로 접속했다면 → <a href="/setup-troubleshooting.html#aws-connect">오류 해결: 서버 접속·업로드</a></p></li>
+
+<li id="paths"><h3>파일 위치 규칙 (가장 많이 헷갈리는 부분)</h3>
+<p>게만아 코드는 설정 yaml과 json 파일을 <code>./</code>, 즉 <strong>명령을 실행한 위치</strong>를 기준으로 찾고 저장합니다. 서버에서 crontab은 홈 폴더(<code>/home/ec2-user</code>)에서 명령을 실행하므로 아래처럼 나눠 둡니다.</p>
+<div class="table-wrap"><table><thead><tr><th>파일</th><th>서버에서 두는 곳</th></tr></thead><tbody>
+<tr><td>봇·백테스트 파이썬 파일, 공통모듈(<code>.py</code>)</td><td><code>/var/autobot</code></td></tr>
+<tr><td>증권사 설정 <code>my증권사_StockInfo.yaml</code>, 토큰·상태 json</td><td><code>/home/ec2-user</code> (FileZilla로 접속하면 처음 보이는 폴더)</td></tr>
+</tbody></table></div>
+<ul><li>손으로 실행할 때도 <code>cd</code>로 옮겨 가지 말고 홈 폴더에서 <code>python3 /var/autobot/파일.py</code>처럼 실행합니다. 다른 폴더에서 실행하면 다른 위치의 json을 읽게 됩니다.</li>
+<li>내 PC(VS Code)나 GMA Runner에서는 모든 파일을 한 폴더(또는 Workspace)에 두면 됩니다.</li></ul>
+<p class="more">카페에 가장 자주 올라온 질문입니다: <a href="https://cafe.naver.com/pythonautogma/449" target="_blank" rel="noopener noreferrer">카페 449번 글</a> · <a href="https://cafe.naver.com/pythonautogma/752" target="_blank" rel="noopener noreferrer">카페 752번 글</a> · <a href="https://cafe.naver.com/pythonautogma/806" target="_blank" rel="noopener noreferrer">카페 806번 글</a></p></li>
+
+<li id="modules"><h3>모듈 최신화</h3>
+<p>GMA_AutobotServer에는 기본 모듈이 이미 설치되어 있습니다. 바뀐 거래소 API에 맞추려고 아래를 서버에서 한 번 실행해 두세요.</p>
+<pre><code>pip3 install --upgrade ccxt
+pip3 install requests finance-datareader pykrx bs4 plotly pandas_datareader yfinance pyupbit ccxt pyyaml pytz tendo</code></pre>
+<p>나중에 <code>ModuleNotFoundError: No module named '모듈명'</code>이 나오면 <code>pip3 install 모듈명</code>으로 설치합니다. 단, <code>myUpbitNew</code>나 <code>KIS_Common</code> 같은 게만아 공통모듈은 설치하는 것이 아니라 <strong>파일을 서버에 올려야</strong> 합니다.</p></li>
+
+<li id="alert"><h3>나에게 메시지 보내기</h3>
+<p>게만아 봇은 실행 결과를 메신저로 보내 줍니다. <a href="https://blog.naver.com/zacra/223622479916" target="_blank" rel="noopener noreferrer">메시지 보내기 글</a>을 보고 텔레그램·슬랙·디스코드·카카오톡 중 하나를 연동하세요. 웹훅 주소만 넣으면 되는 <strong>디스코드</strong>가 가장 쉽습니다.</p>
+<p>봇들은 <code>line_alert.py</code>의 <code>SendMessage</code>로 메시지를 보냅니다. 연동한 메신저 줄의 주석(<code>#</code>)을 풀면 됩니다.</p>
+<pre><code># line_alert.py — 디스코드를 연동했다면
+import discord_alert
+
+def SendMessage(msg):
+    print(msg)
+    discord_alert.SendMessage(msg)</code></pre>
+<p>알림 파일들을 <code>/var/autobot</code>에 올리고, <code>test.py</code>를 아래처럼 고쳐 다시 올립니다.</p>
+<pre><code>import line_alert
+
+print("My First Bot!!!")
+line_alert.SendMessage("My First Bot!!!")</code></pre>
+<p class="ok"><strong>됐는지 확인</strong> · <code>python3 /var/autobot/test.py</code>를 실행하자마자 내 메신저에 메시지가 옵니다.</p>
+<p class="stuck"><strong>막히면</strong> · 카카오 <code>KOE101</code>이나 메시지가 안 오는 문제는 → <a href="/setup-troubleshooting.html#alert">오류 해결: 메시지 알림</a></p></li>
+
+<li id="crontab"><h3>crontab에 등록하기</h3>
+<p>crontab은 정해진 시간마다 명령을 실행하는 서버의 스케줄러입니다. 게만아 봇은 한 번 돌고 끝나는 구조라, crontab이 주기마다 다시 실행해 줍니다.</p>
+<ol><li><code>crontab -e</code>를 입력해 편집 화면을 엽니다.</li>
+<li>키보드 <kbd>i</kbd>를 누르면 아래에 <code>-- INSERT --</code>가 보입니다.</li>
+<li>맨 위 <code>MAILTO=""</code> 아래에 <code>*/5 * * * * python3 /var/autobot/test.py</code>를 입력합니다(5분마다 실행).</li>
+<li><kbd>ESC</kbd>를 누르고 <code>:wq</code>를 입력한 뒤 <kbd>Enter</kbd>를 누르면 <code>installing new crontab</code>이 나옵니다.</li>
+<li><code>crontab -l</code>로 등록된 내용을 확인합니다.</li></ol>
+<figure class="shot"><img src="/assets/setup/aws-crontab-edit.webp" alt="crontab 편집 화면에 5분마다 test.py를 실행하는 줄을 입력한 모습" width="743" height="64" loading="lazy" decoding="async"><figcaption>MAILTO="" 아래에 실행할 줄을 넣습니다.</figcaption></figure>
+<figure class="shot"><img src="/assets/setup/aws-crontab-installed.webp" alt="crontab 저장 후 installing new crontab 메시지" width="743" height="173" loading="lazy" decoding="async"><figcaption>저장하면 installing new crontab</figcaption></figure>
+<div class="easy-box"><p><strong>서버 시간은 UTC</strong> · AWS 서버 시간은 한국보다 <strong>9시간 늦습니다.</strong> 한국 시간 오전 9시에 돌리려면 0시로 적습니다(<code>0 0 * * *</code>). 게만아 코드와 <a href="/package-content-guide.html">패키지 콘텐츠 가이드</a>의 crontab 예시는 이 서버 시간 기준입니다.</p></div>
+<p class="ok"><strong>됐는지 확인</strong> · crontab 실행은 백그라운드라 접속 화면에는 아무것도 안 보입니다. <strong>5분마다 메신저 알림이 오면 성공</strong>입니다. 확인했으면 test 줄은 지우거나 앞에 <code>#</code>을 붙여 꺼 두세요.</p>
+<ul><li>crontab 맨 위에 <code>SHELL=</code>, <code>PATH=</code> 같은 줄을 임의로 넣지 마세요. <code>MAILTO=""</code>부터 시작하면 됩니다.</li>
+<li><strong>봇을 잠깐 멈추려면</strong> crontab에서 그 줄 맨 앞에 <code>#</code>을 붙이거나, FileZilla에서 파일 이름을 바꾸면 됩니다. 다시 켤 때는 반대로 합니다. (<a href="https://blog.naver.com/zacra/222505890960" target="_blank" rel="noopener noreferrer">봇 멈추기 글</a>)</li></ul>
+<p class="more">원본: <a href="https://blog.naver.com/zacra/222496979835" target="_blank" rel="noopener noreferrer">crontab을 알아보자</a> · <a href="https://blog.naver.com/zacra/223813258178" target="_blank" rel="noopener noreferrer">더 쉬워진 세팅 6)</a></p></li>
+
+<li id="real-bot"><h3>실제 봇 올리고 등록하기</h3>
+<ol><li>봇 파일과 공통모듈은 <code>/var/autobot</code>에, 설정 yaml은 <code>/home/ec2-user</code>에 올립니다(<a href="#paths">5번 규칙</a>).</li>
+<li>API 키를 넣고(<a href="/setup-starter.html#first-run">주식</a> · <a href="/setup-runner.html#keys">코인</a>), 거래소·증권사 허용 IP에는 탄력적 IP를 등록합니다.</li>
+<li>홈 폴더에서 <code>python3 /var/autobot/봇파일.py</code>로 한 번 실행해 오류가 없는지 봅니다.</li>
+<li>코드 맨 위나 <a href="/package-content-guide.html">패키지 콘텐츠 가이드</a>의 crontab 예시를 <code>crontab -e</code>로 등록합니다.</li>
+<li>투자 비중과 주문 실행 여부를 확인합니다(<a href="/setup-runner.html#before-live">2단계 9번과 같음</a>).</li></ol>
+<p>서버 하나에 봇 여러 개를 돌릴 수 있습니다. crontab 줄만 늘리면 됩니다. 봇이 많아지면 실행 시간 제한·중복 실행 방지가 필요합니다. → <a href="/server-stability.html">서버 안정화</a></p></li>
+</ol>
+<section class="callout"><h2>서버를 그만 쓸 때</h2><p>서버(인스턴스)를 <strong>종료</strong>하고, 탄력적 IP도 <strong>해제</strong>하세요. 탄력적 IP는 해제하지 않으면 서버가 없어도 비용이 계속 나옵니다. 예전 Amazon Linux 2로 만든 서버를 옮길 때는 새 서버를 만들고 파일·crontab을 옮긴 뒤 탄력적 IP를 새 서버에 연결하면, 증권사·거래소에 등록한 IP를 그대로 쓸 수 있습니다.</p></section><section class="faq-block"><h2>자주 묻는 질문</h2><div class="faq"><details open><summary>서버 접속 창을 닫으면 봇이 멈추나요?</summary><p>아닙니다. 접속은 서버를 들여다보는 창일 뿐이라, 창을 닫거나 내 PC를 꺼도 서버의 crontab과 봇은 계속 돕니다. 블로그에 글을 올린 뒤 로그아웃해도 글이 남아 있는 것과 같습니다.</p></details><details><summary>crontab에 등록했는데 화면에 아무것도 안 나와요.</summary><p>crontab 실행은 백그라운드라 접속 화면에는 보이지 않습니다. 메신저 알림이나 로그로 확인하세요. 봇 첫 부분에 실행 확인 메시지를 넣어 두면 '실행이 안 된 것'과 '조건이 안 맞아 매매가 없었던 것'을 구분할 수 있습니다.</p></details><details><summary>서버 시간이 한국 시간과 다른가요?</summary><p>네. AWS 서버는 UTC를 써서 한국보다 9시간 늦습니다. 한국 시간 오전 9시는 crontab에 0시로 적습니다. 게만아의 crontab 예시는 이 서버 시간 기준입니다.</p></details><details><summary>서버 하나에 봇을 여러 개 돌려도 되나요?</summary><p>네. crontab 줄을 늘리면 됩니다. 게만아도 서버 한 대에서 여러 봇을 돌립니다. 1분 주기 봇이 많아지면 실행 시간 제한과 중복 실행 방지를 함께 적용하세요.</p></details></div></section><p class="updated">문서 업데이트: 2026-11-07 · 교육·기술 정보 제공 목적이며 투자 권유가 아닙니다. 설치 화면은 프로그램 업데이트로 달라질 수 있습니다.</p></main><footer class="site-footer"><div class="footer-inner">
+<p><strong>게만아</strong> · 주식·ETF·코인 파이썬 자동매매·백테스트·API 공식 가이드</p>
+<p>교육·기술 정보 제공 목적이며 특정 금융상품의 추천 또는 수익 보장이 아닙니다. 증권사·거래소 API 사양은 변경될 수 있으므로 실제 구현 전 최신 공식 문서를 확인하세요.</p><p>자밥스튜디오(게만아)는 금융투자업자가 아닌 <strong>유사투자자문업자로 신고·운영 중</strong>이며, 개별 투자상담·계좌·자금 운용을 제공하지 않습니다. <a href="/about.html#compliance">운영 원칙 자세히 보기 →</a></p>
+<p><a href="/about.html">게만아 소개</a> · <a href="https://blog.naver.com/zacra" target="_blank" rel="noopener noreferrer">네이버 블로그</a> · <a href="https://cafe.naver.com/pythonautogma" target="_blank" rel="noopener noreferrer">카페(Q&amp;A·업데이트)</a> · <a href="https://www.youtube.com/@게만아" target="_blank" rel="noopener noreferrer">YouTube</a> · <a href="/games.html">게임 만드는 아빠</a> · <a href="/glossary.html">용어 풀이</a> · <a href="/sources.html">공식 출처</a> · <a href="/faq.html">FAQ</a> · 마지막 업데이트 2026-11-07</p>
+</div></footer></body></html>

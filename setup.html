@@ -1,0 +1,72 @@
+<!doctype html><html lang="ko"><head>
+  <script defer src="/assets/analytics.js"></script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>설치·세팅 따라하기 | 무료 Starter → GMA Runner → AWS 서버, 파이썬 자동매매 3단계</title><meta name="description" content="파이썬 자동매매 설치와 세팅을 3단계로 정리했습니다. 무료 Starter로 Python·VS Code 설치와 첫 실행, GMA Runner로 내 PC 자동 실행, AWS 서버와 crontab으로 24시간 운용까지 게만아 블로그 가이드를 쉽게 다시 정리했습니다."><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><link rel="canonical" href="https://zacra.github.io/setup.html"><link rel="stylesheet" href="/assets/style.css">
+<meta property="og:type" content="website"><meta property="og:locale" content="ko_KR"><meta property="og:title" content="파이썬 자동매매 설치·세팅 따라하기 3단계"><meta property="og:description" content="파이썬 자동매매 설치와 세팅을 3단계로 정리했습니다. 무료 Starter로 Python·VS Code 설치와 첫 실행, GMA Runner로 내 PC 자동 실행, AWS 서버와 crontab으로 24시간 운용까지 게만아 블로그 가이드를 쉽게 다시 정리했습니다."><meta property="og:url" content="https://zacra.github.io/setup.html"><meta property="og:image" content="https://zacra.github.io/assets/og-default.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="파이썬 자동매매 설치·세팅 따라하기 3단계"><meta name="twitter:description" content="파이썬 자동매매 설치와 세팅을 3단계로 정리했습니다. 무료 Starter로 Python·VS Code 설치와 첫 실행, GMA Runner로 내 PC 자동 실행, AWS 서버와 crontab으로 24시간 운용까지 게만아 블로그 가이드를 쉽게 다시 정리했습니다."><meta name="twitter:image" content="https://zacra.github.io/assets/og-default.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","headline":"파이썬 자동매매 설치·세팅 따라하기 3단계","name":"파이썬 자동매매 설치·세팅 따라하기 3단계","description":"파이썬 자동매매 설치와 세팅을 3단계로 정리했습니다. 무료 Starter로 Python·VS Code 설치와 첫 실행, GMA Runner로 내 PC 자동 실행, AWS 서버와 crontab으로 24시간 운용까지 게만아 블로그 가이드를 쉽게 다시 정리했습니다.","url":"https://zacra.github.io/setup.html","inLanguage":"ko-KR","dateModified":"2026-11-07","author":{"@type":"Person","name":"게만아","alternateName":"퀀트는 게만아","url":"https://zacra.github.io/about.html"},"publisher":{"@id":"https://zacra.github.io/#organization"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://zacra.github.io/"},{"@type":"ListItem","position":2,"name":"설치 따라하기","item":"https://zacra.github.io/setup.html"}]},{"@type":"FAQPage","inLanguage":"ko-KR","mainEntity":[{"@type":"Question","name":"코딩을 몰라도 세팅할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네. 각 단계에 따라 하는 순서와 됐는지 확인하는 방법을 적었습니다. 처음부터 코드 전체를 이해할 필요는 없고, 설정값과 실행 흐름부터 익힌 뒤 필요할 때 조금씩 넓혀 가면 됩니다."}},{"@type":"Question","name":"AWS 서버가 꼭 필요한가요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 전략이 도는 시간에 PC를 켜둘 수 있다면 GMA Runner로 충분합니다. 24시간 완전 자동화가 중요하거나 API에 고정 IP를 등록해야 할 때 AWS 같은 서버가 더 편합니다."}},{"@type":"Question","name":"GMA Runner는 어디서 받나요?","acceptedAnswer":{"@type":"Answer","text":"별도로 판매하지 않고 게만아 패키지, 슈퍼 이동평균 자산배분, 코인 더블 이동평균 New 구매자의 구글 드라이브에 GMA_RUNNER.zip으로 함께 들어 있습니다. 무료 Starter에는 들어 있지 않습니다."}},{"@type":"Question","name":"Python은 몇 버전을 설치하나요?","acceptedAnswer":{"@type":"Answer","text":"3.14를 권장합니다. 3.11~3.14를 쓸 수 있고, 2026년 10월에 나온 3.15는 일부 모듈(ccxt 등)이 아직 지원하지 않아 권장하지 않습니다. 이미 3.15가 있다면 3.14를 추가로 설치하세요."}},{"@type":"Question","name":"세팅하다 막히면 어디에 물어보나요?","acceptedAnswer":{"@type":"Answer","text":"먼저 오류 해결 페이지에서 오류 문구로 찾아보세요. 없으면 이 페이지의 질문 틀로 AI에게 묻거나, 게만아 카페에 오류 출력과 일반 출력을 함께 올려 주세요."}}]}]}</script></head><body><a class="skip" href="#main">본문 바로가기</a><header class="site-header"><nav class="nav" aria-label="주요 메뉴">
+<a class="brand" href="/">게만아 <small>공식 가이드</small></a>
+<div class="nav-links">
+<a href="/investment-philosophy.html">투자 철학</a>
+<a href="/system-guide.html">시작 가이드</a>
+<a href="/setup.html">설치 따라하기</a>
+<a href="/investment-lab.html">투자 실험실</a><a href="/super-moving-average.html">슈퍼 이동평균</a>
+<a href="/coin-double-ma.html">코인 더블 이평</a>
+<a href="/package.html">패키지</a>
+<a class="nav-cta" href="/strategies.html">전략 카탈로그</a>
+<a href="/starter.html">무료 Starter</a>
+<a href="/faq.html">FAQ</a>
+</div></nav></header>
+<main id="main"><div class="breadcrumb"><a href="/">홈</a> › 설치 따라하기</div><p class="eyebrow">설치·세팅 따라하기</p>
+<h1>설치와 세팅, 3단계로 나눠 하나씩 끝내면 됩니다</h1>
+<p class="lead">Python 설치부터 내 PC 자동 실행, 24시간 AWS 서버까지. 게만아 블로그에 흩어져 있던 세팅 가이드를 <strong>순서대로 다시 정리</strong>했습니다. 한 번에 다 할 필요는 없습니다. <strong>지금 필요한 단계까지만</strong> 하면 됩니다.</p>
+<div class="easy-box"><p><strong>쉽게 말하면</strong> · 무료 Starter로 Python 설치와 첫 실행을 겪어 보고(1단계), 유료 콘텐츠는 GMA Runner로 내 PC에서 자동 실행하고(2단계), 24시간 돌리고 싶어지면 AWS 서버로 옮깁니다(3단계). 모든 단계는 <strong>할 일 → 됐는지 확인 → 막히면</strong> 순서로 적었습니다.</p></div>
+<nav class="stage-nav" aria-label="설치 따라하기 단계"><a href="/setup.html" aria-current="page">전체 지도</a><a href="/setup-starter.html">1단계 · 무료 Starter</a><a href="/setup-runner.html">2단계 · GMA Runner</a><a href="/setup-aws.html">3단계 · AWS 서버</a><a href="/setup-troubleshooting.html">오류 해결</a></nav>
+<section><h2>3단계 한눈에 보기</h2>
+<div class="stage-cards">
+<div class="card"><p class="stage-no">1단계 · 누구나 · 무료</p><h3>무료 Starter로 첫 실행</h3><p>Python·VS Code를 설치하고 무료 Starter로 증권사 API를 연결해 <strong>내 계좌 조회</strong>까지 해봅니다. 실제 주문은 하지 않습니다.</p><ul class="check"><li>Python 3.14 · VS Code 설치</li><li>모듈 설치</li><li>증권사 API 키 연결 · 잔고 조회</li></ul><a class="btn primary" href="/setup-starter.html">1단계 시작 →</a></div>
+<div class="card"><p class="stage-no">2단계 · 구매자 · 내 PC</p><h3>GMA Runner로 자동 실행</h3><p>슈퍼 이동평균·코인 더블 이동평균·패키지 코드를 Windows·Mac에서 <strong>정한 시간에 자동 실행</strong>하고 로그로 확인합니다. 서버가 없어도 됩니다.</p><ul class="check"><li>처음 3분 실습</li><li>Workspace에 파일 넣기</li><li>수동 실행 → 자동 실행 등록</li></ul><a class="btn primary" href="/setup-runner.html">2단계 보기 →</a></div>
+<div class="card"><p class="stage-no">3단계 · 24시간 · 서버</p><h3>AWS 서버로 24시간 운용</h3><p>PC를 꺼도 봇이 돌도록 AWS 서버를 만들고 crontab에 등록합니다. 미리 만들어 둔 서버 이미지를 쓰면 준비가 간단합니다.</p><ul class="check"><li>서버 만들기 · 고정 IP</li><li>FileZilla로 파일 올리기</li><li>crontab · 메시지 알림</li></ul><a class="btn primary" href="/setup-aws.html">3단계 보기 →</a></div>
+</div></section>
+<section><h2>나는 어디까지 하면 될까?</h2>
+<div class="table-wrap"><table><thead><tr><th>지금 내 상황</th><th>여기까지 하면 됩니다</th></tr></thead><tbody>
+<tr><td>파이썬 자동매매가 처음이고 먼저 체험해 보고 싶다</td><td><a href="/setup-starter.html">1단계</a>만 하면 됩니다. Starter 예시 전략은 1년에 한 번(또는 한 달에 한 번) 리밸런싱하는 구조라 서버가 필요 없습니다.</td></tr>
+<tr><td>슈퍼 이동평균·코인 더블 이동평균·패키지를 샀고, 전략이 도는 시간에 PC를 켜둘 수 있다</td><td>1단계의 <a href="/setup-starter.html#python">Python</a>·<a href="/setup-starter.html#vscode">VS Code 설치</a>를 한 뒤 <a href="/setup-runner.html">2단계</a>로 갑니다.</td></tr>
+<tr><td>PC를 꺼도 24시간 돌리고 싶다 · 밤에도 돌아야 한다 · API에 고정 IP를 등록해야 한다</td><td>1단계의 Python·VS Code 설치를 한 뒤 <a href="/setup-aws.html">3단계</a>로 갑니다. 2단계는 건너뛰어도 됩니다.</td></tr>
+<tr><td>설치는 했는데 오류가 난다</td><td><a href="/setup-troubleshooting.html">오류 해결</a>에서 오류 문구로 찾습니다.</td></tr>
+</tbody></table></div>
+<p>꼭 1 → 2 → 3 순서로 갈 필요는 없습니다. GMA Runner로 충분하다면 계속 Runner를 써도 되고, 서버에 익숙하다면 처음부터 AWS로 가도 됩니다. 어느 쪽이든 <strong>파이썬 파일은 한 번 실행되고 끝나고, 스케줄러(Runner 또는 crontab)가 정해진 시간에 다시 실행해 주는 구조</strong>는 같습니다.</p></section>
+<section><h2>시작 전 준비물</h2><ul class="check">
+<li><strong>PC 한 대</strong> — Windows 또는 Mac. 회사 PC는 프로그램 설치가 막혀 있을 수 있습니다.</li>
+<li><strong>증권사 계좌 또는 코인 거래소 계정</strong> — 주식은 한국투자·LS·키움·토스·KB·NH·DB·메리츠 중 한 곳, 코인은 업비트·빗썸·코인원(바이낸스는 패키지)</li>
+<li><strong>구글 계정</strong> — 무료 Starter 신청과 구글 드라이브 다운로드에 씁니다.</li>
+<li><strong>AWS를 쓸 경우 결제 카드</strong> — AWS 가입 때 카드 등록이 필요합니다.</li>
+<li><strong>나눠서 할 여유</strong> — 한 번에 다 하지 않아도 됩니다. 단계 하나씩 끊어서 하세요.</li>
+</ul></section>
+<section class="notice"><h2>세팅하면서 꼭 지킬 것</h2><ul>
+<li><strong>API 키·시크릿은 비밀번호입니다.</strong> 캡처해서 올리거나 카페·AI 질문에 붙여 넣지 마세요. 질문할 때는 키 부분을 지우고 올립니다.</li>
+<li><strong>거래소 API에는 출금 권한을 주지 않습니다.</strong> 조회·주문에 필요한 권한만 켭니다.</li>
+<li><strong>첫 실전은 작게 시작합니다.</strong> 투자 비중(InvestRate 등)을 낮게 두고, 주문 실행 여부 설정을 직접 확인합니다.</li>
+<li>설치 화면은 업데이트로 바뀔 수 있습니다. 화면이 조금 다르면 같은 이름의 버튼을 찾거나, 화면을 캡처해 AI에게 물어보세요.</li>
+</ul></section>
+<section><h2>막히면 이렇게 물어보세요</h2><p>요즘은 막힌 화면이나 오류 문구를 그대로 AI(ChatGPT·Claude·Gemini 등)에 붙여 넣으면 상황에 맞게 잘 안내해 줍니다. 아래 틀을 복사해 빈칸만 채우세요.</p>
+<pre><code>파이썬 자동매매 세팅 중에 막혔어. 초보자 기준으로 단계별로 알려줘.
+- 운영체제: (예: Windows 11 / macOS)
+- Python 버전: (터미널에서 python --version 또는 python3 --version 결과)
+- 하고 있던 단계: (예: 게만아 설치 따라하기 1단계 4번, 모듈 설치)
+- 실행한 명령이나 파일: (예: pip install … / DBI_KR_Test.py)
+- 오류 문구 전체:
+(여기에 붙여넣기 — API 키·시크릿·계좌번호는 지우고)</code></pre>
+<p>그래도 안 되면 <a href="https://cafe.naver.com/pythonautogma" target="_blank" rel="noopener noreferrer">게만아 카페</a>에 같은 내용(오류 출력과 일반 출력 모두)을 올려 주세요. 카페에 자주 올라온 설치·실행 오류는 <a href="/setup-troubleshooting.html">오류 해결</a> 페이지에 모아 두었습니다.</p>
+<p>단, AI가 고쳐 준 코드를 그대로 실전에 쓰는 것은 조심하세요. 그럴듯해 보여도 치명적인 오류가 숨어 있을 수 있습니다. 설치·설정 질문에 쓰고, 매매 로직을 바꿀 때는 백테스트와 소액 테스트로 꼭 확인하세요.</p></section>
+<section><h2>이 안내의 원본 블로그 글</h2><p>화면 하나하나를 더 자세히 보고 싶다면 원본 글을 함께 보세요. 이 페이지들은 아래 글을 단계별로 다시 정리한 것입니다.</p>
+<div class="link-list">
+<a href="https://blog.naver.com/zacra/224382618923" target="_blank" rel="noopener noreferrer">무료 Starter 공개<span>Starter 신청 · Python·VS Code · 모듈 설치 · 증권사 API · 첫 실행</span></a>
+<a href="https://blog.naver.com/zacra/223813258178" target="_blank" rel="noopener noreferrer">더 쉬워진 게만아 파이썬 자동매매 세팅 알아보기<span>Python·VS Code · AWS 계정·EC2·탄력적 IP · FileZilla · crontab · 메시지 알림 · 세팅 강의 영상 3개</span></a>
+<a href="https://blog.naver.com/zacra/224404670572" target="_blank" rel="noopener noreferrer">GMA Runner V1 배포 (윈도우·맥)<span>Runner 실행 · 처음 3분 실습 · 파일 넣기 · 자동 실행 등록</span></a>
+<a href="https://blog.naver.com/zacra/223086628069" target="_blank" rel="noopener noreferrer">게만아 파이썬 자동매매 패키지 세팅 안내<span>패키지 구매자용 · 실행 환경 고르기 · API 키 · 공통모듈 · 투자 비중·주문 실행 여부</span></a>
+<a href="https://blog.naver.com/zacra/224446708497" target="_blank" rel="noopener noreferrer">코인 더블 이동평균 New 자동매매 세팅 가이드<span>업비트·빗썸·코인원 · GMA Runner·AWS 실행 예시</span></a>
+</div></section>
+<section><h2>함께 보기</h2><p><a href="/system-guide.html">시작 가이드(무엇으로 시작할지)</a> · <a href="/starter.html">무료 Starter</a> · <a href="/gma-runner.html">GMA Runner 소개</a> · <a href="/server-stability.html">서버 안정화</a> · <a href="/package-content-guide.html">패키지 콘텐츠 가이드(crontab 예시)</a> · <a href="/glossary.html">용어 쉬운 풀이</a></p></section><section class="faq-block"><h2>자주 묻는 질문</h2><div class="faq"><details open><summary>코딩을 몰라도 세팅할 수 있나요?</summary><p>네. 각 단계에 따라 하는 순서와 됐는지 확인하는 방법을 적었습니다. 처음부터 코드 전체를 이해할 필요는 없고, 설정값과 실행 흐름부터 익힌 뒤 필요할 때 조금씩 넓혀 가면 됩니다.</p></details><details><summary>AWS 서버가 꼭 필요한가요?</summary><p>아닙니다. 전략이 도는 시간에 PC를 켜둘 수 있다면 GMA Runner로 충분합니다. 24시간 완전 자동화가 중요하거나 API에 고정 IP를 등록해야 할 때 AWS 같은 서버가 더 편합니다.</p></details><details><summary>GMA Runner는 어디서 받나요?</summary><p>별도로 판매하지 않고 게만아 패키지, 슈퍼 이동평균 자산배분, 코인 더블 이동평균 New 구매자의 구글 드라이브에 <code>GMA_RUNNER.zip</code>으로 함께 들어 있습니다. 무료 Starter에는 들어 있지 않습니다.</p></details><details><summary>Python은 몇 버전을 설치하나요?</summary><p>3.14를 권장합니다. 3.11~3.14를 쓸 수 있고, 2026년 10월에 나온 3.15는 일부 모듈(ccxt 등)이 아직 지원하지 않아 권장하지 않습니다. 이미 3.15가 있다면 3.14를 추가로 설치하세요.</p></details><details><summary>세팅하다 막히면 어디에 물어보나요?</summary><p>먼저 <a href="/setup-troubleshooting.html">오류 해결</a> 페이지에서 오류 문구로 찾아보세요. 없으면 이 페이지의 질문 틀로 AI에게 묻거나, 게만아 카페에 오류 출력과 일반 출력을 함께 올려 주세요.</p></details></div></section><p class="updated">문서 업데이트: 2026-11-07 · 교육·기술 정보 제공 목적이며 투자 권유가 아닙니다. 설치 화면은 프로그램 업데이트로 달라질 수 있습니다.</p></main><footer class="site-footer"><div class="footer-inner">
+<p><strong>게만아</strong> · 주식·ETF·코인 파이썬 자동매매·백테스트·API 공식 가이드</p>
+<p>교육·기술 정보 제공 목적이며 특정 금융상품의 추천 또는 수익 보장이 아닙니다. 증권사·거래소 API 사양은 변경될 수 있으므로 실제 구현 전 최신 공식 문서를 확인하세요.</p><p>자밥스튜디오(게만아)는 금융투자업자가 아닌 <strong>유사투자자문업자로 신고·운영 중</strong>이며, 개별 투자상담·계좌·자금 운용을 제공하지 않습니다. <a href="/about.html#compliance">운영 원칙 자세히 보기 →</a></p>
+<p><a href="/about.html">게만아 소개</a> · <a href="https://blog.naver.com/zacra" target="_blank" rel="noopener noreferrer">네이버 블로그</a> · <a href="https://cafe.naver.com/pythonautogma" target="_blank" rel="noopener noreferrer">카페(Q&amp;A·업데이트)</a> · <a href="https://www.youtube.com/@게만아" target="_blank" rel="noopener noreferrer">YouTube</a> · <a href="/games.html">게임 만드는 아빠</a> · <a href="/glossary.html">용어 풀이</a> · <a href="/sources.html">공식 출처</a> · <a href="/faq.html">FAQ</a> · 마지막 업데이트 2026-11-07</p>
+</div></footer></body></html>

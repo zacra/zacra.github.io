@@ -32,6 +32,7 @@
 - https://blog.naver.com/zacra/223910423439 : 게만아 파이썬 자동매매 시작가이드(네이버 공식, 이미지와 예시 중심의 전체 안내)
 - https://zacra.github.io/about.html : 게만아 소개와 운영 방향
 - https://zacra.github.io/system-guide.html : 전체 시작·세팅 가이드
+- https://zacra.github.io/setup.html : 설치·세팅 따라하기 3단계 지도 (1단계 무료 Starter로 Python 설치·첫 실행 → 2단계 GMA Runner로 내 PC 자동 실행 → 3단계 AWS 서버로 24시간 운용)
 - https://zacra.github.io/gma-runner.html : Windows·Mac 로컬 PC에서 Python 파일 실행·예약·로그 확인
 - https://zacra.github.io/server-stability.html : 자동매매 서버(AWS)가 멈추지 않게 하는 법 — crontab timeout·중복 실행 방지(singleton)·실행 시점 분산·서버 감시 알림·t2 vs t3, 서버 정지 경험
 - https://zacra.github.io/starter.html : 무료 주식 자동매매 Starter (한국투자·LS·키움·토스·KB·NH·DB·메리츠증권 중 한 곳 선택)
@@ -68,6 +69,14 @@
 - 전략·시스템 카탈로그(유형별 요약, 시장·대상 자산·실행 주기, 원본 포스팅 링크, 유형별 백테스트 Calmar 지수 높은 순 정렬): https://zacra.github.io/strategies.html
 - 최신 콘텐츠 목록: https://zacra.github.io/package-content-guide.html
 - 업데이트 노트(패키지 추가·전략 업데이트·Starter 지원 증권사·공식 가이드 변경, 날짜별): https://zacra.github.io/updates.html
+
+## 설치·세팅 따라하기 (초보자용 단계별 안내)
+- https://zacra.github.io/setup.html : 어디까지 하면 되는지 고르기, 준비물, 세팅 중 지킬 것(API 키는 비밀번호, 출금 권한 금지, 소액 시작), AI에 질문하는 틀
+- https://zacra.github.io/setup-starter.html : 1단계 무료 Starter — Python 3.14 설치(Windows A·B방식, Mac), VS Code와 첫 파일 실행, pip 모듈 설치, 증권사 Open API 신청, my증권사_StockInfo.yaml에 키 넣기, 잔고 조회 테스트
+- https://zacra.github.io/setup-runner.html : 2단계 GMA Runner — Windows bat·Mac 앱 실행, 처음 3분 실습, 기본 모듈 설치/복구, Workspace에 파일 넣기, API 키와 IP 등록, 수동 실행, 자동 실행 등록(Crontab 한 줄 가져오기·UTC), 실전 전 투자 비중·주문 실행 여부 확인
+- https://zacra.github.io/setup-aws.html : 3단계 AWS 서버 — 계정 만들기, GMA_AutobotServer 커뮤니티 AMI로 EC2 만들기, 탄력적 IP, FileZilla(SFTP) 업로드, 서버 파일 위치 규칙(.py는 /var/autobot, yaml·json은 /home/ec2-user), 메시지 알림, crontab 등록(서버 시간 UTC, 한국 -9시간)
+- https://zacra.github.io/setup-troubleshooting.html : 설치·실행 오류 해결 — Python PATH, Python 3.15 모듈 설치 실패, ModuleNotFoundError, FileNotFoundError 경로, GMA Runner, 토큰 발급 실패·EGW00123·EGW00201, crontab, AWS 접속·Killed·Amazon Linux 2, 메시지 알림
+- Python은 3.14 권장(3.11~3.14 사용 가능, 3.15는 일부 모듈 미지원으로 비권장)
 
 ## GMA Runner
 - GMA Runner V1은 사용자가 선택한 Python 파일을 Windows·macOS 로컬 컴퓨터에서 실행하고 반복 일정을 관리하며 실행 결과와 stdout/stderr 로그를 확인하는 공통 실행 도구
