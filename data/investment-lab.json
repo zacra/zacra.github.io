@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-12",
+  "updated_at": "2026-11-13",
   "entries": [
     {
       "id": "2026-09-28-mon-tqqq-soxl-36",
@@ -1261,6 +1261,21 @@
       ],
       "url": "https://blog.naver.com/zacra/224474614512",
       "thumbnail": "https://blogthumb.pstatic.net/MjAyNjExMTJfNyAg/MDAxNzk0NDc0MjUzMTQ3.pBZ7zNhXhJ0sdUATEpPkY8twZgSswa7Oy-mKKgZuB7gg.wmVBJsizVlwAh5VY97KD9Zdz0qFU7Ce4pAb9k8LQz18g.PNG/bt_chart.png?type=s3"
+    },
+    {
+      "id": "2026-11-13-fri-superma-us-61",
+      "date": "2026-11-13",
+      "title": "[게만아 투자 실험실 - 금] -10만원(-0.17%) 미국 주식 슈퍼 이동평균 자산배분 전략 61차 운용 기록",
+      "summary": "일주일 간 실계좌 평가금 변화 · 현재까지 기록된 최대 낙폭 MDD 약 -22.4%",
+      "threads_text": "[게만아 투자 실험실 · 금]\n미국 주식 슈퍼 이동평균 자산배분 61차\n\n일주일 간 실계좌 평가금 변화\n56,016,335원 → 55,919,095원\n평가금 -97,240원(-0.17%)\n\n현재까지 기록된 최대 낙폭 MDD 약 -22.4%\n\n소폭 조정이 있는 한 주였습니다.\n어찌되었던 최근 1년간 수익률이 원점이 되었네요 ㅎ\n\n※ 현재 평가금 기준 기록이며 미래 성과를 의미하지 않습니다.",
+      "tags": [
+        "미국주식",
+        "자산배분",
+        "실계좌",
+        "파이썬자동매매"
+      ],
+      "url": "https://blog.naver.com/zacra/224476156621",
+      "thumbnail": "https://blogthumb.pstatic.net/MjAyNjExMTNfMjEz/MDAxNzk0NTcyNTIxNTg5.wlqyrYnViNTB9P3n-RmkHU7VNB4GQNCf8DdoQhnvyT4g.OSHf_0R43TjU6psOEpEI0PtyR5kZVhMBHTIREvVztMwg.PNG/bt_cagr.png?type=s3"
     }
   ]
 }
