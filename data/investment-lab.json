@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-14",
+  "updated_at": "2026-11-15",
   "entries": [
     {
       "id": "2026-09-28-mon-tqqq-soxl-36",
@@ -1306,6 +1306,21 @@
       ],
       "url": "https://blog.naver.com/zacra/224477113312",
       "thumbnail": "https://blogthumb.pstatic.net/MjAyNjExMTRfMTIg/MDAxNzk0NjUwMzc2MzUx.N17In5u5uSzm5a50TVwwvaNodPMT2pPG4yABKTjXpusg.PDBxrLJx8dijx1O5ho_OFTB7_NGVPTEjf3owImE0HB4g.PNG/pkg32_bt_chart.png?type=s3"
+    },
+    {
+      "id": "2026-11-15-sun-kr-superma-60",
+      "date": "2026-11-15",
+      "title": "[게만아 투자 실험실 - 일] -13만원(-0.18%) 대표 연금계좌 파이썬 시스템 투자 60차 운용 체크",
+      "summary": "일주일 간 실계좌 평가금 변화 · 현재까지 기록된 최대 낙폭 MDD 약 -10%",
+      "threads_text": "[게만아 투자 실험실 · 일]\n대표 연금계좌 파이썬 시스템 투자 60차\n\n일주일 간 실계좌 평가금 변화\n69,263,516원 → 69,137,163원\n평가금 -126,353원(-0.18%)\n\n현재까지 기록된 최대 낙폭 MDD 약 -10%\n\n안전자산 비중이 큰 상태라\n이번 주 소폭 조정에도 낙폭이 작았습니다 :)\n\n※ 현재 평가금 기준 기록이며 미래 성과를 의미하지 않습니다.",
+      "tags": [
+        "국내주식",
+        "자산배분",
+        "연금",
+        "파이썬자동매매"
+      ],
+      "url": "https://blog.naver.com/zacra/224477898217",
+      "thumbnail": "https://blogthumb.pstatic.net/MjAyNjExMTVfMjEg/MDAxNzk0NzIyOTI4MTM1.lIEAMF0HW_aCvive4L1eMxiYHn70GTV4984SfGpIM2cg.6aYMQDmaFBm6c9Vwkm2l2Vbgn5mCWfZKEjbVhd7SM2kg.JPEG/account_summary_original.jpg?type=s3"
     }
   ]
 }
