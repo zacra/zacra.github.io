@@ -1595,7 +1595,8 @@
     "https://blog.naver.com/zacra/224464635771"
    ],
    "post_date": "20261104",
-   "pin_top": true
+   "pin_top": true,
+   "pin_order": 2
   },
   {
    "code": 107,
@@ -1634,7 +1635,9 @@
    "urls": [
     "https://blog.naver.com/zacra/224482555334"
    ],
-   "post_date": "20261118"
+   "post_date": "20261118",
+   "pin_top": true,
+   "pin_order": 1
   }
  ]
 }
