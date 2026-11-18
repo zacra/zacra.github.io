@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-17",
+ "updated_at": "2026-11-18",
  "categories": [
   {
    "id": "asset-allocation",
@@ -1622,6 +1622,19 @@
     "https://blog.naver.com/zacra/224480614494"
    ],
    "post_date": "20261117"
+  },
+  {
+   "code": 109,
+   "title": "바이낸스 국면·돌파 결합 전략 (국면 전환 롱·숏 + 15분봉 채널 돌파)",
+   "category": "코인 선물",
+   "market": "바이낸스 USDT-M 선물 (헤지 모드)",
+   "assets": "BTC·ETH·SOL·XRP·DOGE·BNB·ADA 등 (예시 목록)",
+   "summary": "106번 국면 전환 롱·숏에 15분봉 채널 돌파 롱·숏을 한 계좌에서 결합한 바이낸스 선물 전략입니다. 같은 코인은 먼저 잡은 쪽만 매매하고, 거래소 STOP_MARKET 손절을 함께 씁니다. 선물·레버리지 위험이 크니 필독 포스팅과 소액 학습을 권합니다.",
+   "cycle": "1분 간격(crontab)",
+   "urls": [
+    "https://blog.naver.com/zacra/224482555334"
+   ],
+   "post_date": "20261118"
   }
  ]
 }
