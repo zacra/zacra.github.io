@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-20",
+  "updated_at": "2026-11-21",
   "entries": [
     {
       "id": "2026-09-28-mon-tqqq-soxl-36",
@@ -1471,6 +1471,21 @@
       ],
       "url": "https://blog.naver.com/zacra/224484902563",
       "thumbnail": "https://blogthumb.pstatic.net/MjAyNjExMjBfMjg1/MDAxNzk1MTUzMzY3Mjc1.fdJcjXIsCvWfZKxoyEr0gTYlLs3Qx1cjssfxVyaNQScg.i0fG9SbENiDj4-eV-w5GnzASMg2pAuaSX8ZpFiJI5Skg.PNG/bt_chart.png?type=s3"
+    },
+    {
+      "id": "2026-11-21-sat-lev-inv-55",
+      "date": "2026-11-21",
+      "title": "[게만아 투자 실험실 - 토] -4만원(-1.70%) 레버리지 ETF 파이썬 자동매매 전략 55차 체크!",
+      "summary": "일주일 간 실계좌 확정손익\n게만아 패키지 32번 -44,097원 (ISA 5% 배정금 대비 -1.70%)",
+      "threads_text": "[게만아 투자 실험실 · 토]\n레버리지 ETF 위아래 변동성 돌파 55차\n\n일주일 간 실계좌 확정손익\n게만아 패키지 32번 -44,097원 (ISA 5% 배정금 대비 -1.70%)\n\n56주 누적 확정손익은 +38,881원\n\nMDD가 커지는 추세라 -20%를 마지노선으로 삼고 노려보고 있어요 ㅎ\n\n※ 확정손익 기준 기록이며 미래 성과를 의미하지 않습니다.",
+      "tags": [
+        "국내주식",
+        "ISA",
+        "실계좌",
+        "파이썬자동매매"
+      ],
+      "url": "https://blog.naver.com/zacra/224485701733",
+      "thumbnail": "https://blogthumb.pstatic.net/MjAyNjExMjFfMjk1/MDAxNzk1MjIxNDU0MzA0.OHJiIRYjGqRKFU_y2gzsxrZC6p_h2TKEfPV78ALHDR4g.IyXJvce50kOE3Yn0kMJ43nt7H5N0UWntCamGIVpmRvMg.PNG/pkg32_bt_chart.png?type=s3"
     }
   ]
 }
