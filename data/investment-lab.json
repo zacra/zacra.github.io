@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-22",
+  "updated_at": "2026-11-23",
   "entries": [
     {
       "id": "2026-09-28-mon-tqqq-soxl-36",
@@ -1516,6 +1516,21 @@
       ],
       "url": "https://blog.naver.com/zacra/224487288338",
       "thumbnail": "https://blogthumb.pstatic.net/MjAyNjExMjJfOTAg/MDAxNzk1MzQzMjU3OTYy.4mQ4nYYelF9lVnEJuTVPtfMbPIeLY4Ar_FjI62HPJAIg.waGLxEu2yqamZ1AxG5yvD3SayxnJly5nKi1TU_Bxojsg.PNG/bt_cagr.png?type=s3"
+    },
+    {
+      "id": "2026-11-23-mon-tqqq-soxl-44",
+      "date": "2026-11-23",
+      "title": "[게만아 투자 실험실 - 월] +1만원(+0.34%) QLD 중심 떨사오팔 전략 스마트 스플릿 자동매매 44차 체크",
+      "summary": "일주일 간 실계좌 평가금 변화",
+      "threads_text": "[게만아 투자 실험실 · 월]\nQLD 중심 떨사오팔 스마트 스플릿 44차\n\n일주일 간 실계좌 평가금 변화\n3,261,162원 → 3,272,118원\n평가금 +10,956원(+0.34%)\n\n현재까지 기록된 실계좌 최대 낙폭 MDD 약 -24%\n\nTQQQ,SOXL이 키운 낙폭을 방어하기 위해 QLD로 바꾼 것은 잘한 거 같네요. 그럼에도 현재 100%현금 구간(파킹 ETF)입니다 :)\n\n※ 현재 평가금 기준 기록이며 미래 성과를 의미하지 않습니다.",
+      "tags": [
+        "미국주식",
+        "스마트스플릿",
+        "실계좌",
+        "파이썬자동매매"
+      ],
+      "url": "https://blog.naver.com/zacra/224488231842",
+      "thumbnail": "https://blogthumb.pstatic.net/MjAyNjExMjNfODUg/MDAxNzk1Mzk5NTkyNDY1.HZZOzkFZDvI7o3TWo5IdvNOJAg-erTqiRIteCVYpin8g.H5kEDcIxQQUpwdMiMzbDd30W_S_g1S6ZBend8jPQjYwg.PNG/bt_chart.png?type=s3"
     }
   ]
 }
